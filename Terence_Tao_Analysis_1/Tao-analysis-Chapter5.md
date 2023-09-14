@@ -43,4 +43,7 @@ aszwsqb_n$ is bounded.
 
 ## 5.5 The least upper bound property  
 ### Exercise  
-* 5.5.1 
+* 5.5.1 Because M is sup(E), $M \ge x$ which x is in E. Then we could have $-M \le -x$ which x is in E. The set -E is -x which x in E, so -M is inf(-E).  
+* 5.5.2 Suppose there exists a natural number m ($L<m<K$) such that, $m/n$ and $(m - 1)/n$ are upper bound of E. If such property is true, then let $m - 1 = n$, we could deduce $n - 1$ is also an upper bound of E, induction on m eventually we could get L is an upper bound of E which is a contradiction to question setting.  
+* 5.5.3 Suppose $m \neq m^o$, then $m > m^o$ or $m < m^o$. We coulde select $m > m^o$ to prove. If $m > m^o$, then $m - 1 \ge m^o$, we know that $\frac{m - 1}{n}$ is not upper bounds for E, so $\frac{m - 1}{n} \ge \frac{m^o}{n}$ and $\frac{m^o}{n}$ is also not an upper bound for E which contradiction to question setting.  
+* 5.5.4 First question is no idea. The second question have a try: let such sequence $a_n = |q_m - q_n|$ for every $n \ge M \ge 1$, accordint to question setting we have $a_n = |q_m - q_n| \le \frac{1}{M}$ for every $n \ge 1$, use Exercise 5.4.8 get $a_n \le \frac{1}{M}$
