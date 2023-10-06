@@ -48,3 +48,5 @@ aszwsqb_n$ is bounded.
 * 5.5.3 Suppose $m \neq m^o$, then $m > m^o$ or $m < m^o$. We coulde select $m > m^o$ to prove. If $m > m^o$, then $m - 1 \ge m^o$, we know that $\frac{m - 1}{n}$ is not upper bounds for E, so $\frac{m - 1}{n} \ge \frac{m^o}{n}$ and $\frac{m^o}{n}$ is also not an upper bound for E which contradiction to question setting.  
 * 5.5.4 First question is no idea. The second question have a try: let such sequence $a_n = |q_m - q_n|$ for every $n \ge M \ge 1$, accordint to question setting we have $a_n = |q_m - q_n| \le \frac{1}{M}$ for every $n \ge 1$, use Exercise 5.4.8 get $a_n \le \frac{1}{M} \rightarrow |a_m - S| \le \frac{1}{M}$.  
 * 5.5.5 Try. If $x < y$, let $x := a_n$ and $y := b_n$, which $a_n$ and $b_n$ are rational numbers, soonly we could get $a_n < b_n$, and use Proposition 5.4.14 to get some rational number q such that $x < q < y$, let $c_n = q = q^o(q^o \in R)$ we have $a_n < c_n < b_n \rightarrow x < q^o < y$.  
+
+## 5.6 Real exponentiation, part I  
