@@ -49,14 +49,20 @@ aszwsqb_n$ is bounded.
 * 5.5.4 First question is no idea. The second question have a try: let such sequence $a_n = |q_m - q_n|$ for every $n \ge M \ge 1$, accordint to question setting we have $a_n = |q_m - q_n| \le \frac{1}{M}$ for every $n \ge 1$, use Exercise 5.4.8 get $a_n \le \frac{1}{M} \rightarrow |a_m - S| \le \frac{1}{M}$.  
 * 5.5.5 Try. If $x < y$, let $x := a_n$ and $y := b_n$, which $a_n$ and $b_n$ are rational numbers, soonly we could get $a_n < b_n$, and use Proposition 5.4.14 to get some rational number q such that $x < q < y$, let $c_n = q = q^o(q^o \in R)$ we have $a_n < c_n < b_n \rightarrow x < q^o < y$.  
 
-## Real exponentiation, Part I  
+## 5.6 Real exponentiation, Part I  
 ### Lemma 5.6.5 First, when x = 0, $x^{1/n} = [y \ge 0 \ and \  y^n \le 0]$, get E = {0}, then E is non-empty. If E is not bounded, then there will be $\forall a \in R$, we have $a \in E$. Obviously $a = x + 1 \ge x \ge y^n$, according to definition of E, it is a contradiction. Then E be bounded, and the sup(E) exists. $Exists of $x^{n/1}$ is true.  
 
 ### Lemma  5.6.6  
-(a) If $y = x^{n/1}$, supposed $y^n \neq x$, we could get $y^n < x$ or $y^n > x$.When x > 1, if $y^n > x$, then $y \notin E$ and $y > sup(E) \rightarrow y \neq x^{1/n}$, contradicition. The rest is skip.  
+(a) If $y = x^{n/1}$, supposed $y^n \neq x$, we could get $y^n < x$ or $y^n > x$. When x > 1, if $y^n > x$, then $y \notin E$ and $y > sup(E) \rightarrow y \neq x^{1/n}$, contradicition. The rest is skip.  
 (b) Skip.  
 (c) No idea. But I think the proving of $x^{1/n} \neq 0$ is the point.  
 (d) Skip.  
 (e) Skip.  
 (f) Suppose $(xy)^{1/n} = a \rightarrow a^n = xy$, $x^{1/n} = b \rightarrow b^n = x$, and $y^{1/n} = c \rightarrow c^n = y$. We could have $c^n * b^n = x*y \rightarrow (cb)^n = xy \rightarrow (xy)^{1/n} = cb \rightarrow x^{1/n}y^{1/n} = (xy)^{1/n}$.  
-(g) 
+(g) Suppose $x^{1/nm} = a$, we have $x^{1/nm} = a\Longleftrightarrow a^{nm} = x \Longleftrightarrow (a^n)^m = x \Longleftrightarrow x^{1/m} = a^n \Longleftrightarrow (x^{1/m})^{1/n} = a$, and we have $x^{1/nm} = a$, then $(x^{1/m})^{1/n} = a = x^{1/nm} \Longleftrightarrow (x^{1/m})^{1/n} = x^{1/nm}$.  
+
+### Lemma 5.6.9. 
+(a) Suppose $x^q = (x^{1/b})^a$, according to lemma 5.6.6 (c), $x^{1/b} > 0$, then no matter what a is, $x^q > 0$.  
+(b) First, suppose $q = a/b$, $r = c/d$, $x^{q+r} = x^{ad+bc/bd} = (x^{1/bd})^{ad+bc} = (x^{1/bd})^{ad}(x^{1/bd})^{bc} = x^qx^r$.  
+(c) Suppose $q = a/b$, $x^{-q} = (x^{1/b})^{-1*a} = ((x^{1/b})^a)^{-1} = 1/((x^{1/b})^a) = 1/x^q$.  
+(d) 
