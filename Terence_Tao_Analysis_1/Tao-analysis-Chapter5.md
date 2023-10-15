@@ -49,9 +49,6 @@ aszwsqb_n$ is bounded.
 * 5.5.4 First question is no idea. The second question have a try: let such sequence $a_n = |q_m - q_n|$ for every $n \ge M \ge 1$, accordint to question setting we have $a_n = |q_m - q_n| \le \frac{1}{M}$ for every $n \ge 1$, use Exercise 5.4.8 get $a_n \le \frac{1}{M} \rightarrow |a_m - S| \le \frac{1}{M}$.  
 * 5.5.5 Try. If $x < y$, let $x := a_n$ and $y := b_n$, which $a_n$ and $b_n$ are rational numbers, soonly we could get $a_n < b_n$, and use Proposition 5.4.14 to get some rational number q such that $x < q < y$, let $c_n = q = q^o(q^o \in R)$ we have $a_n < c_n < b_n \rightarrow x < q^o < y$.  
 
-<<<<<<< HEAD
-## 5.6 Real exponentiation, part I  
-=======
 ## Real exponentiation, Part I  
 ### Lemma 5.6.5 First, when x = 0, $x^{1/n} = [y \ge 0 \ and \  y^n \le 0]$, get E = {0}, then E is non-empty. If E is not bounded, then there will be $\forall a \in R$, we have $a \in E$. Obviously $a = x + 1 \ge x \ge y^n$, according to definition of E, it is a contradiction. Then E be bounded, and the sup(E) exists. $Exists of $x^{n/1}$ is true.  
 
@@ -63,4 +60,3 @@ aszwsqb_n$ is bounded.
 (e) Skip.  
 (f) Suppose $(xy)^{1/n} = a \rightarrow a^n = xy$, $x^{1/n} = b \rightarrow b^n = x$, and $y^{1/n} = c \rightarrow c^n = y$. We could have $c^n * b^n = x*y \rightarrow (cb)^n = xy \rightarrow (xy)^{1/n} = cb \rightarrow x^{1/n}y^{1/n} = (xy)^{1/n}$.  
 (g) 
->>>>>>> f5111eb4a9e43aa494063b14d81d4b1702a4077a
