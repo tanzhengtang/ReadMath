@@ -25,3 +25,4 @@ The second approach looks at the columns of the linear system. The two separate 
 `Just thinking for recommend questions`  
 * 1.2.3 Use the Gaussian Elimination will get $u + w = 2$ line. If $u = -1$ is included, the will be a point. If the fourth equation is $z = -2$, the four equations will have no solution.  
 * 1.2.10 Suppose the 3 points is on a line $y = kx + b$, then we have $y_1 = b$, $y_2 = k + b$, and $y_3 = 2k + b$, use elimination we have $y_3 = 2y_2 - y_1$.  
+* 
