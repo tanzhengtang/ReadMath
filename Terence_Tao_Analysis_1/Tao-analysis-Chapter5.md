@@ -65,4 +65,10 @@ aszwsqb_n$ is bounded.
 (a) Suppose $x^q = (x^{1/b})^a$, according to lemma 5.6.6 (c), $x^{1/b} > 0$, then no matter what a is, $x^q > 0$.  
 (b) First, suppose $q = a/b$, $r = c/d$, $x^{q+r} = x^{ad+bc/bd} = (x^{1/bd})^{ad+bc} = (x^{1/bd})^{ad}(x^{1/bd})^{bc} = x^qx^r$.  
 (c) Suppose $q = a/b$, $x^{-q} = (x^{1/b})^{-1*a} = ((x^{1/b})^a)^{-1} = 1/((x^{1/b})^a) = 1/x^q$.  
-(d) 
+(d) Let $q = a/b$. If $x > y$, we have $x^q = (x^{1/b})^a$ and $y^q = (y^{1/b})^a$, then $x^{1/b} > y^{1/b}$ according to Lemma5.6.6 (d), and we have $x^q > y^q$. The rest is skipped.  
+(e) Suppose $x > 1$, $ q = a/b$ and $r = c/d$. If $q > r \rightarrow q = r + d$ which $d > 0$, we have $x^q - x^r = x^{d+r} - x^r = x^rx^d - x^r = x^r(x^d - 1)$, obviously $x > 1$ and $d > 0$ we have $x^d > 1$, then $x^r(x^d - 1) > 0 \rightarrow x^q > x^r$. If $x^q > x^r$, suppose $q = r$ or $q < r$. If $q = r \rightarrow x^q = x^r$,contradiction. If $q < r$, by what we already proved, get $x^q < x^r$, also contradiction.  
+
+### Exercises
+* 5.6.1 See Lemma 5.6.6  
+* 5.6.2 See Lemma 5.6.9
+* If $x = 0$, $x^2 = 0 \rightarrow (x^2)^{1/2} = 0 \rightarrow (x^2)^{1/2} = x = 0$. If $x > 0$, $(x^2)^{1/2} = y \rightarrow x^2 = y^2 \rightarrow x = y = (x^2)^{1/2}$. If $x < 0$, let $x = -y$ which $y > 0$, $(x^2)^{1/2} = (-y * -y)^{1/2} = (y^2)^{1/2}$, by what we already proved $y > 0 \rightarrow y = (y^2)^{1/2}$, then $|x| = -x = y = (-y*-y)^{1/2} = (x^2)^{1/2} \rightarrow |x| = (x^2)^{1/2}.$  
