@@ -59,12 +59,12 @@ If $a$ not equal to 0 or $b$ not equal to $0$, use 2.2.8, then $a + b$ is positi
 Let $b = 0$, $0++ = 1$, and $1$ is positive. Assume $n$ is positive and exists exactly $m++ = n$ is true. Show $n++$ also have a natural number $m^o$ such that $m^o++ = n++$. Let $m^o = m++$, and $m^o ++$ is also natural number, then $m^o ++ = (m++)++ = n++$. Closed.  
 
 ### 2.2.12 Proposition (Basic properties of order for natural numbers)  
-1. (Order is reflexive) a ≥ a  
-2. (Order is transitive) If a≥b and b≥c, then a≥c  
-3. (Order is anti-symmetric) If a ≥ b and b ≥ a, then a = b  
-4. (Addition preserves order) a≥b if and only if a+c≥b+c  
-5. a<b if and only if a++≤b 
-6. a<b if and only if b=a+d for some positive number d  
+(a) (Order is reflexive) $a ≥ a$  
+(b) (Order is transitive) If $a ≥ b$ and $b ≥ c$, then $a ≥ c$  
+(c) (Order is anti-symmetric) If $a ≥ b$ and $b ≥ a$, then $a = b$  
+(d) (Addition preserves order) $a ≥ b$ if and only if $a + c ≥ b + c$  
+(e) $a<b$ if and only if $a++ ≤ b$ 
+(f) $a<b$ if and only if $b = a + d$ for some positive number $d$  
    
 * Use 2.2.11 Definition (Ordering of the natural numbers). Let n and m be natural numbers. We say that n is greater than or equal to m, and write n ≥ m or m ≤ n, iff we have n = m + a for some natural number a. We say that n is strictly greater than m, and write n > m or m < n, iff n ≥ m and $n not equal to m$
 * $a \geq a$, because $a + 0 = a$, and 0 is natural number.
