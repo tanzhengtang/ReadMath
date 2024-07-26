@@ -59,20 +59,23 @@ If $a$ not equal to 0 or $b$ not equal to $0$, use 2.2.8, then $a + b$ is positi
 Let $b = 0$, $0++ = 1$, and $1$ is positive. Assume $n$ is positive and exists exactly $m++ = n$ is true. Show $n++$ also have a natural number $m^o$ such that $m^o++ = n++$. Let $m^o = m++$, and $m^o ++$ is also natural number, then $m^o ++ = (m++)++ = n++$. Closed.  
 
 ### 2.2.12 Proposition (Basic properties of order for natural numbers)  
-(a) (Order is reflexive) $a ≥ a$  
-(b) (Order is transitive) If $a ≥ b$ and $b ≥ c$, then $a ≥ c$  
-(c) (Order is anti-symmetric) If $a ≥ b$ and $b ≥ a$, then $a = b$  
-(d) (Addition preserves order) $a ≥ b$ if and only if $a + c ≥ b + c$  
-(e) $a<b$ if and only if $a++ ≤ b$ 
-(f) $a<b$ if and only if $b = a + d$ for some positive number $d$  
-   
-* Use 2.2.11 Definition (Ordering of the natural numbers). Let n and m be natural numbers. We say that n is greater than or equal to m, and write n ≥ m or m ≤ n, iff we have n = m + a for some natural number a. We say that n is strictly greater than m, and write n > m or m < n, iff n ≥ m and $n not equal to m$
-* $a \geq a$, because $a + 0 = a$, and 0 is natural number.
-* If $a \geq b$ and $b \geq c$, then $a \geq c$. Because $b + m = a$, $c + n = b$, use $c + n$ to substitute $b$, have $c + n + m = a$, so $a \geq c$.  
-* If $a ≥ b$ and $b ≥ a$, then $a = b$. We have $a + n = b$ and $b + m = a$, then $a + n + m =  a = a + 0$, thought $n + m$ is a natural number, use 2.2.6 proposition, then have $n + m = 0$, use 2.2.9 corollary, then $n = m = 0$, so we get $a = b$.  
-* $a≥b$ if and only if $a+c≥b+c$. If $b + n = a$, we can have $a + c = b + n + c = b + c + n$, according to 2.2.11 definition, so $a+c≥b+c$. If we have $a+c≥b+c$, then $a + c = b + c + n = b + n + c$, think $b + n$ is a number, use 2.2.6 proposition, so $a = b + n$, and then $a≥b$.  
-* $a<b$ if and only if $a++≤b$. If $a < b$, according to 2.2.11 definition, we have $a + n = b$ and $n$ not equal to 0, use 2.2.10 lemma for $n$($n$ is positive), know there must be a natural number such that $m++ = n$, now we have $a + (m++) = b$, then $(a++) + m = b$, because $m$ is a natural number, So $a++≤b$. If we have $a++≤b$, then $(a++) + m = b$, then $a + (m++) = b$, because $m++$ can not be 0, So $a < b$.  
-* $a<b$ if and only if $b=a+d$ for some positive number $d$. If $a < b$, we have $a + d = b$ and $a$ not equal to $b$, assume $d$ is 0, it will get $a = b$, this is a contradiction, so $d$ not equal to 0, then $d$ is positive number. If we have $b=a+d$ for some positive number $d$,so $a \leq b$, because $d$ is positive, then $a$ not equal to $b$, so $a<b$ is true.  
+(a) (Order is reflexive) $a ≥ a$.  
+**Prof:** $a \geq a$, because $a + 0 = a$, and 0 is natural number.  
+
+(b) (Order is transitive) If $a ≥ b$ and $b ≥ c$, then $a ≥ c$.  
+**Prof:** If $a \geq b$ and $b \geq c$, then $a \geq c$. Because $b + m = a$, $c + n = b$, use $c + n$ to substitute $b$, have $c + n + m = a$, so $a \geq c$.  
+
+(c) (Order is anti-symmetric) If $a ≥ b$ and $b ≥ a$, then $a = b$.  
+**Prof:** If $a ≥ b$ and $b ≥ a$, then $a = b$. We have $a + n = b$ and $b + m = a$, then $a + n + m =  a = a + 0$, thought $n + m$ is a natural number, use 2.2.6 proposition, then have $n + m = 0$, use 2.2.9 corollary, then $n = m = 0$, so we get $a = b$.  
+
+(d) (Addition preserves order) $a ≥ b$ if and only if $a + c ≥ b + c$.  
+**Prof:** $a≥b$ if and only if $a+c≥b+c$. If $b + n = a$, we can have $a + c = b + n + c = b + c + n$, according to 2.2.11 definition, so $a+c≥b+c$. If we have $a+c≥b+c$, then $a + c = b + c + n = b + n + c$, think $b + n$ is a number, use 2.2.6 proposition, so $a = b + n$, and then $a≥b$.  
+
+(e) $a<b$ if and only if $a++ ≤ b$.  
+**Prof:** $a<b$ if and only if $a++≤b$. If $a < b$, according to 2.2.11 definition, we have $a + n = b$ and $n$ not equal to 0, use 2.2.10 lemma for $n$($n$ is positive), know there must be a natural number such that $m++ = n$, now we have $a + (m++) = b$, then $(a++) + m = b$, because $m$ is a natural number, So $a++≤b$. If we have $a++≤b$, then $(a++) + m = b$, then $a + (m++) = b$, because $m++$ can not be 0, So $a < b$.  
+
+(f) $a<b$ if and only if $b = a + d$ for some positive number $d$.  
+**Prof:** $a<b$ if and only if $b=a+d$ for some positive number $d$. If $a < b$, we have $a + d = b$ and $a$ not equal to $b$, assume $d$ is 0, it will get $a = b$, this is a contradiction, so $d$ not equal to 0, then $d$ is positive number. If we have $b=a+d$ for some positive number $d$,so $a \leq b$, because $d$ is positive, then $a$ not equal to $b$, so $a<b$ is true.  
 
 ### 2.2.13 Proposition : (Trichotomy of order for natural numbers). Let a and b be natural numbers. Then exactly one of the following statements is true: $a<b, a=b$, or $a>b$  
 * First, I want to prove that $a,b$ really just have the three relations. Obviously, there has $a = b$. Consider if $a$ not equal to $b$, use axiom 2.3 and 2.4, know that if $a,b$ is different, then their predecrssor is also different.  Recursively trace to the front,$a$ and $b$ trace same times $c$, will get $0$ not equal to $n$,$n \in N$, then $n \geq 0$, and $a$ not equal to $b$, so have $n > 0$, and $n + c > 0 + c$, so have $a > b$ or $a < b$.
