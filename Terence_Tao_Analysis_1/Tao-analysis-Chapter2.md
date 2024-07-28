@@ -72,20 +72,17 @@ Let $b = 0$, $0++ = 1$, and $1$ is positive. Assume $n$ is positive and exists e
 **Prof:** $a≥b$ if and only if $a+c≥b+c$. If $b + n = a$, we can have $a + c = b + n + c = b + c + n$, according to 2.2.11 definition, so $a+c≥b+c$. If we have $a+c≥b+c$, then $a + c = b + c + n = b + n + c$, think $b + n$ is a number, use 2.2.6 proposition, so $a = b + n$, and then $a≥b$.  
 
 (e) $a<b$ if and only if $a++ ≤ b$.  
-**Prof:** $a<b$ if and only if $a++≤b$. If $a < b$, according to 2.2.11 definition, we have $a + n = b$ and $n$ not equal to 0, use 2.2.10 lemma for $n$($n$ is positive), know there must be a natural number such that $m++ = n$, now we have $a + (m++) = b$, then $(a++) + m = b$, because $m$ is a natural number, So $a++≤b$. If we have $a++≤b$, then $(a++) + m = b$, then $a + (m++) = b$, because $m++$ can not be 0, So $a < b$.  
+**Prof:** $a<b$ if and only if $a++≤b$. If $a < b$, according to 2.2.11 definition, we have $a + n = b$ and $n$ not equal to 0, use 2.2.10 lemma for $n$($n$ is positive), there must be a natural number such that $m++ = n$, now we have $a + (m++) = b$, then $(a++) + m = b$, because $m$ is a natural number, So $a++≤b$. If we have $a++≤b$, then $(a++) + m = b$, then $a + (m++) = b$, because $m++$ can not be 0, then $a < b$.  
 
 (f) $a<b$ if and only if $b = a + d$ for some positive number $d$.  
 **Prof:** $a<b$ if and only if $b=a+d$ for some positive number $d$. If $a < b$, we have $a + d = b$ and $a$ not equal to $b$, assume $d$ is 0, it will get $a = b$, this is a contradiction, so $d$ not equal to 0, then $d$ is positive number. If we have $b=a+d$ for some positive number $d$,so $a \leq b$, because $d$ is positive, then $a$ not equal to $b$, so $a<b$ is true.  
 
-### 2.2.13 Proposition : (Trichotomy of order for natural numbers). Let a and b be natural numbers. Then exactly one of the following statements is true: $a<b, a=b$, or $a>b$  
+### 2.2.13 Proposition: (Trichotomy of order for natural numbers). Let a and b be natural numbers. Then exactly one of the following statements is true: $a<b, a=b$, or $a>b$  
 * First, I want to prove that $a,b$ really just have the three relations. Obviously, there has $a = b$. Consider if $a$ not equal to $b$, use axiom 2.3 and 2.4, know that if $a,b$ is different, then their predecrssor is also different.  Recursively trace to the front,$a$ and $b$ trace same times $c$, will get $0$ not equal to $n$,$n \in N$, then $n \geq 0$, and $a$ not equal to $b$, so have $n > 0$, and $n + c > 0 + c$, so have $a > b$ or $a < b$.
-* Prove for every $a,b$, only have one relation in the three. If have $a > b$ or $a < b$, use sixth conclusion of 2.2.12 prosition, get $a$ not equal to $b$, beacuse axiom 2.3. And if have $a = b$, can not get $a < b$ or $a > b$, because sixth conclusion of 2.2.12 prosition.
+* Prove for every $a,b$, only have one relation in the three. If have $a > b$ or $a < b$, use sixth conclusion of 2.2.12 prosition, get $a$ not equal to $b$, beacuse axiom 2.3. And if have $a = b$, can not get $a < b$ or $a > b$, because sixth conclusion of 2.2.12 prosition.  
 
-### 2.2.14 Proposition : (Strong principle of induction). Let $m_0$ be a natural number, and let $P(m)$ be a property pertaining to an number $m$. Suppose that for each $m ≥ m_0$, we have the following implication: if $P(m^′)$ is true for all natural numbers $m_0 ≤ m′ < m$, then $P(m)$ is also true. (In particular, this means that $P(m_0)$ is true, since in this case the hypothesis is vacuous.) Then we can conclude that $P(m)$ is true for all natural numbers $m ≥ m_0$.  
-* Use axiom 2.5  
-* Let $Q(n)$ is such property for all nautral number $n \geq m_0$ that $P(n)$ is true.
-* If $n \leq m_0$, $Q(n)$ is vacuous true, because the hypothesis is false. So if we set $n = 0$, $Q(n)$ must be true, because $m_0 \geq 0$.
-* Suppose $Q(n)$ is true, consider $Q(n + 1)$. If $m_0 \geq n + 1$, we have vacuous true, it is also true for $Q(n)$. If $n + 1 > m_0$, we have $m_0 \leq n < n+ 1$, because $Q(n)$ is true, so $Q(n+1)$ is also true. So this property is proved.  
+### 2.2.14 Proposition: (Strong principle of induction). Let $m_0$ be a natural number, and let $P(m)$ be a property pertaining to an arbitrary natural number $m$. Suppose that for each $m ≥ m_0$, we have the following implication: if $P(m^{\prime})$ is true for all natural numbers $m_0 ≤ m^{\prime} < m$, then $P(m)$ is also true. (In particular, this means that $P(m_0)$ is true, since in this case the hypothesis is vacuous.) Then we can conclude that $P(m)$ is true for all natural numbers $m ≥ m_0$.  
+
 
 ### Exercise
 * Exercise 2.2.1 Prove Proposition 2.2.5
