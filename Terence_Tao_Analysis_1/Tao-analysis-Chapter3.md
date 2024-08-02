@@ -1,62 +1,50 @@
----
-title: Terecent Tao Analysis I Chapter3 & Exercise
-date: 2023-3
-mathjax: true
-categories: 
-- Math
-tags: 
-- Math
----
-# Chapter 3  
-* Just to record my own thought and answer,if there has any error,please leave a message in the comment area. 
-## 3.1 Fundamentals
-###  3.1.6 Lemma (Single choice). Let A be a non-empty set. Then there exists an object x such that x ∈ A.
-* Use Axiom 3.2 (Empty set). There exists a set ∅, known as the empty set,which contains no elements, i.e., for every object x we have $x \notin ∅$.
-* Use counter-evidence.
-* Because the statment is that exists an object x such that x ∈ A, so suppose that for every object x have $x \notin A$, according to axiom 3.2, we could get A is empty set, then have a contradiction, so this lemma is true.  
+# Chapter 3 Set theory  
+## 3.1 Fundamentals  
+### Axioms  
+* 3.1 (Sets are objects). If $A$ is a set, then $A$ is also an object. In particular, given two sets $A$ and $B$, it is meaningful to ask whether $A$ is also an element of $B$.  
+* 3.2 (Empty set). There exists a set $\varnothing$, known as the empty set, which contains no elements, i.e., for every object $x$ we have $x \in \varnothing$.  
+* 3.3 (Singleton sets and pair sets). If $a$ is an object, then there exists $a$ set $\{a\}$ whose only element is $a$, i.e., for every object $y$, we have $y \in \{a\}$ if and only if $y = a$; we refer to $\{a\}$ as the singleton set whose element is $a$. Furthermore, if $a$ and $b$ are objects, then there exists a set $\{a, b\}$ whose only elements are $a$ and $b$; i.e., for every object $y$, we have $y \in \{a, b\}$ if and only if $y = a$ or $y = b$; we refer to this set as the pair set formed by $a$ and $b$.  
+* 3.4 (Pairwise union). Given any two sets $A, B$, there exists a set $A ~\cup~ B$, called the union $A ~\cup~ B$ of $A$ and $B$, whose elements consists of all the elements which belong to $A$ or $B$ or both. In other words, for any object $x$, $x \in A ~\cup~ B \Leftrightarrow (x \in A \text{~or~} x \in B)$.  
+* 3.5 (Axiom of specification). Let $A$ be a set, and for each $x \in A$, let $P(x)$ be a property pertaining to $x$ (i.e., $P(x)$ is either a true statement or a false statement). Then there exists a set, called $\{x \in A: P(x) \text{~is~true~}\}$ (or simply $\{x \in A:P(x)\}$ for short), whose elements are precisely the elements $x$ in $A$ for which $P(x)$ is true. In other words, for any object $y$, $y \in \{x \in A: P(x) \text{~is~true~}\} \Leftrightarrow (y \in A \text{~and~} P(y) \text{~is~true})$.  
 
-### 3.1.13 Lemma  If a and b are objects, then {a, b} = {a} ∪ {b}. If A, B, C are sets, then the union operation is commutative (i.e., A ∪ B = B ∪ A) and associative (i.e., (A ∪ B) ∪ C = A ∪ (B ∪ C)). Also, we have A ∪ A = A ∪ ∅ = ∅ ∪ A = A. 
-* Use Axiom 3.3 (Singleton sets and pair sets). If a is an object, then there exists a set {a} whose only element is a. if a and b are objects, then there exists a set {a, b} whose only elements are a and b.  
-* Axiom 3.4 (Pairwise union). Given any two sets A, B, there exists a set A ∪ B, called the union A ∪ B of A and B, whose elements consists of all the elements which belong to A or B or both.  
-* If a and b are objects, so exist {a, b}, {a} and {b} according to axiom 3.3. And the union of {a} and {b} means that exist a set whose elements only could be a or b, and by this way we get set {a,b}, so {a,b} = {a} ∪ {b}.
-* Commutative, if x is any element of A ∪ B, we get $x \in A$ or $x \in B$, then it also means $x \in B$ or $x \in A$, and by this way get $x \in B ∪ A$, then we know the elements of A ∪ B is equal to B ∪ A. The commutative is proved.
-* Associative: use commutative, we quickly know that (A ∪ B) ∪ C = A ∪ B ∪ C = A ∪ (B ∪ C).  
-* If we have A ∪ A, obviously A ∪ A = A. If we have A ∪ ∅, then A ∪ ∅ = ∅ ∪ A according to commutative, and because no element in ∅, then A ∪ ∅ = A = A ∪ A.  
+### Definitions  
+* 3.1.4 (Equality of sets). Two sets $A$ and $B$ are equal, $A = B$, iff every element of $A$ is an element of $B$ and vice versa. To put it another way, $A = B$ if and only if every element $x$ of $A$ belongs also to $B$, and every element $y$ of $B$ belongs also to $A$.  
+* 3.1.15 (Subsets). Let $A, B$ be sets. We say that $A$ is a subset of $B$, denoted $A \subseteq B$, iff every element of $A$ is also an element of $B$, i.e. For any object $x, x \in A \Rightarrow x \in B$. We say that $A$ is a proper subset of $B$, denoted $A \subsetneq B$, if $A \subseteq B$ and $A \ne B$.  
+* 3.1.23 (Intersections). The intersection $S_1 ~\cap~ S_2$ of two sets is defined to be the set $S_1 ~\cap~ S_2:= \{x \in S_1: x \in S_2\}$. In other words, $S_1 ~\cap~ S_2$ consists of all the elements which belong to both S1 and S2. Thus, for all objects $x, x \in S_1 ~\cap~ S_2 \Leftrightarrow x \in S_1 \text{~and~} x \in S_2$.  
+* 3.1.27 (Difference sets). Given two sets $A$ and $B$, we define the set $A − B$ or $A / B$ to be the set $A$ with any elements of $B$ removed: $A / B:= \{x \in A : x \in B\}$.  
 
-### 3.1.18 Proposition (Sets are partially ordered by set inclusion). Let A,B,C be sets. If A ⊆ B and B ⊆ C then A ⊆ C. If A ⊆ B and B ⊆ A, then A = B. Finally, if A $\subsetneq$ B and B $\subsetneq$ C then A $\subsetneq$ C.  
-* Use Definition 3.1.15 (Subsets) : Let A,B be sets. We say that A is a subset of B, denoted A ⊆ B, iff every element of A is also an element of B. We say that A is a proper subset of B, denoted A $\subsetneq$ B, if A ⊆ B and A not euqal to B.  
-* If A ⊆ B and B ⊆ C, it means every element of A is also an element of B and every element of B is in C, so if a element in A, then the must be in B, also if it in B, it must be in C, so we get the element in A must be in C, then A ⊆ C.  
-* If A ⊆ B and B ⊆ A then A = B. Suppose A not equal to B, there must be some different elements bettween A and B, so A ⊆ B or B ⊆ A or both of them be not true, this is a contradiction.  
-* if A $\subsetneq$ B and B $\subsetneq$ C then A $\subsetneq$ C. First A is a subset of C is proved. According to Definition 3.1.15, A $\subsetneq$ B means that A ⊆ B and A not euqal to B, and every element of A is also an element of B, so B have elements which A do not contain, and C have elements which B do not contain. Then we can get C have elements which A do not contain. Thought if this conclusion is not true, it will be contradictional to B $\subsetneq$ C.  
+### Lemma 3.1.6 (Single choice). Let A be a non-empty set. Then there exists an object $x$ such that $x \in A$.
+* Because the statment is that exists an object $x$ such that $x \in A$, so suppose that for every object $x$ have $x \notin A$, according to axiom 3.2, we could get $A$ is empty set, then have a contradiction, so this lemma is true.  
 
-### 3.1.28 Proposition (Sets form a boolean algebra). Let A, B, C be sets,and let X be a set containing A, B, C as subsets.  
-(a) (Minimal element) We have A ∪ ∅ = A and A ∩ ∅ = ∅.  
-* Use Definition 3.1.23 (Intersections) : The intersection S1 ∩ S2 of two sets is defined to be the set A consists of all the elements which belong to both S1 and S2.  
-* A ∩ ∅ means $x \in A$ and $x \in \empty$, because axiom 3.2, know that there is no element in $\empty$, so no element statisfy this property, then A ∩ ∅ is a empty set, it means A ∩ ∅ = ∅.
+### Lemma 3.1.13. If $a$ and $b$ are objects, then $\{a, b\} = \{a\} ~\cup~ \{b\}$. If $A, B, C$ are sets, then the union operation is commutative (i.e., $A ~\cup~ B = B ~\cup~ A$) and associative (i.e., $(A ~\cup~ B) ~\cup~ C = A ~\cup~ (B ~\cup~ C)$). Also, we have $A ~\cup~ A = A ~\cup~ ∅ = ∅ ~\cup~ A = A$.  
+* Commutative, if $x$ is any element of $A ~\cup~ B$, we get $x \in A$ or $x \in B$, then it also means $x \in B$ or $x \in A$, and by this way get $x \in B ~\cup~ A$, then we know the elements of $A ~\cup~ B$ is equal to $B ~\cup~ A$.  
+* Associative: $(A ~\cup~ B) ~\cup~ C = A ~\cup~ B ~\cup~ C = A ~\cup~ (B ~\cup~ C)$.  
+* Suppose we have $A ~\cup~ A$. Obviously $A ~\cup~ A = A$. If we have $A ~\cup~ ∅$, then $A ~\cup~ ∅ = ∅ ~\cup~ A$ according to commutative, and because no element in ∅, then $A ~\cup~ ∅ = A = A ~\cup~ A$.  
 
-(b) (Maximal element) We have A ∪ X = X and A ∩ X = A.  
-* A ∪ X = X means that every element of X is same to element in A ∪ X, and because A $\subset$ A ∪ X, so A $\subset$ X, it's obviously that A ∩ X = A. If A ∩ X = A , it means that every element of A is same to A ∩ X, then if we get a element in A, we can know that the element is in X, so we get A $\subset$ X, quickly A ∪ X = X is proved.  
+### Proposition 3.1.18 (Sets are partially ordered by set inclusion). Let $A,B,C$ be sets. If $A \subseteq B$ and $B \subseteq C$ then $A \subseteq C$. If $A \subseteq B$ and $B \subseteq A$, then $A = B$. Finally, if $A \subsetneq B$ and $B \subsetneq C$ then $A \subsetneq C$.  
+* Suppose $A \subseteq B$ and $B \subseteq A$. If $A \ne B$, there exists some objects $x \in A$ and $x \notin B$ or $y \in B$ and $y \notin A$, whatever status will make a contradiction. Thus $A = B$.  
+* Suppose $A \subsetneq B$ and $B \subsetneq C$. We already prove that $A \subseteq C$, just need prove that $A \ne C$. If $A = C$, we have $A \subsetneq B \Rightarrow C \subsetneq B$ and $B \subsetneq C$, which is a contradiction. Thus $A \subsetneq C$.  
 
-(c) (Identity) We have A ∩ A = A and A ∪ A = A.  
-* Skipped.  
+### Proposition 3.1.28 (Sets form a boolean algebra). Let $A, B, C$ be sets,and let $X$ be a set containing $A, B, C$ as subsets.  
+(a) (Minimal element) We have $A ~\cup~ \varnothing = A \text{~and~} A ~\cap~ \varnothing = \varnothing$.  
+* $A ~\cap~ \varnothing$ means $x \in A$ and $x \in \varnothing$, because axiom 3.2, know that there is no element in $\varnothing$, so no element statisfy this property, then $A ~\cap~ \varnothing$ is a empty set, it means $A ~\cap~ \varnothing = \varnothing$.  
 
-(d) (Commutativity) We have A ∪ B = B ∪ A and A ∩ B = B ∩ A.  
-* Skipped.  
+(b) (Maximal element) We have $A ~\cup~ X = X$ and $A ~\cap~ X = A$.  
+* $\forall x \in A$, because $A \subset X$, then $x \in X$. Thus $x \in A$ and $x \in X$ is true, we have $A \subset A ~\cap~ X$.  
 
-(e) (Associativity) We have (A ∪ B) ∪ C = A ∪ (B ∪ C) and (A ∩ B) ∩ C = A ∩ (B ∩ C).  
-* (A ∪ B) ∪ C and A ∪ (B ∪ C) are equal to A ∪ B ∪ C, so (A ∪ B) ∪ C = A ∪ (B ∪ C). (A ∩ B) ∩ C and A ∩ (B ∩ C) are equal to A ∩ B ∩ C, so (A ∩ B) ∩ C = A ∩ (B ∩ C). Skip the details.  
+(c) (Identity) We have $A ~\cup~ A = A$ and $A ~\cap~ A = A$.  
 
-(f) (Distributivity) We have A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C) and A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C).  
-* If we get a element x in A ∩ (B ∪ C), x is in A and in B ∪ C, then means that x is in A and in B or in C, so can get x is in A and in B or in A and in C. Then it's (A ∩ B) ∪ (A ∩ C), prove it.  
-* Use the same logical way, we can prove A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C).  
+(d) (Commutativity) We have $A ~\cup~ B = B ~\cup~ A$ and $A ~\cap~ B = B ~\cap~ A$.  
 
-(g) (Partition) We have A ∪ (X \ A) = X and A ∩ (X \ A) = ∅.  
-* If we get A ∪ (X \ A) = X, it means that every element in A ∪ (X \ A) is same to elements in X, then get A $\subset$ X, if A ∩ (X \ A) not equal to ∅, there must be some elements in A and (X \ A), but X \ A not contain elements of A, so this is contradiction.  
-~~In this proposition, I have a confusion about A ∪ (X \ A) = X. It's obviously A ∩ (X - A) = ∅ in any condition, but A ∪ (X - A) = X seem to be true only if A $\subset$ X.~~  
-*Sorry, I missed the condition that X be a set containing A, B, C as subsets. And the proof of (b) may be not right in some ways.*  
+(e) (Associativity) We have $(A ~\cup~ B) ~\cup~ C = A ~\cup~ (B ~\cup~ C)$ and $(A ~\cap~ B) ~\cap~ C = A ~\cap~ (B ~\cap~ C)$.  
 
-(h) (De Morgan laws) We have X \ (A ∪ B) = (X \ A) ∩ (X \ B) and X \ (A ∩ B) = (X \ A) ∪ (X \ B).  
-* Skipped.  
+(f) (Distributivity) We have $A ~\cap~ (B ~\cup~ C) = (A ~\cap~ B) ~\cup~ (A ~\cap~ C)$ and $A ~\cup~ (B ~\cap~ C) = (A ~\cup~ B) ~\cap~ (A ~\cup~ C)$.  
+* $\forall x \in A ~\cap~ (B ~\cup~ C) \Leftrightarrow x \in A$ and $x \in B ~\cup~ C \Leftrightarrow (x \in A$ and $x \in B)$ or $(x \in A \text{~and~} x \in C) \Leftrightarrow (A ~\cap~ B) ~\cup~ (A ~\cap~ C)$.  
+* $\forall x \in A ~\cup~ (B ~\cap~ C) \Leftrightarrow x \in A$ or $x \in B ~\cap~ C \Leftrightarrow x \in A$ or $x \in A ~\cap~ B$ or $x \in A ~\cap~ C$ or $x \in B ~\cap~ C \Leftrightarrow x \in A ~\cup~ (A ~\cap~ B) ~\cup~ (A ~\cap~ C) ~\cup~ (B ~\cap~ C) \Leftrightarrow A ~\cup~ (A ~\cap~ B) ~\cup~ (C ~\cap~ (A ~\cup~ B)) \Leftrightarrow A ~\cup~ (A ~\cap~ B) ~\cup~ (C ~\cap~ (A ~\cup~ B))$
+
+(g) (Partition) We have $A ~\cup~ (X / A) = X$ and $A ~\cap~ (X / A) = \varnothing$.  
+
+(h) (De Morgan laws) We have $X / (A ~\cup~ B) = (X / A) ~\cap~ (X / B)$ and $X / (A ~\cup~ B) = (X / A) ~\cup~ (X / B)$.  
 
 ### Exercise 
 * 3.1.1. Show that the definition of equality in Definition 3.1.4 is reflexive, symmetric, and transitive  
