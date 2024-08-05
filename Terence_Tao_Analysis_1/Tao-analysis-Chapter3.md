@@ -40,11 +40,12 @@
 
 (f) (Distributivity) We have $A ~\cap~ (B ~\cup~ C) = (A ~\cap~ B) ~\cup~ (A ~\cap~ C)$ and $A ~\cup~ (B ~\cap~ C) = (A ~\cup~ B) ~\cap~ (A ~\cup~ C)$.  
 * $\forall x \in A ~\cap~ (B ~\cup~ C) \Leftrightarrow x \in A$ and $x \in B ~\cup~ C \Leftrightarrow (x \in A$ and $x \in B)$ or $(x \in A \text{~and~} x \in C) \Leftrightarrow (A ~\cap~ B) ~\cup~ (A ~\cap~ C)$.  
-* $\forall x \in A ~\cup~ (B ~\cap~ C) \Leftrightarrow x \in A$ or $x \in B ~\cap~ C \Leftrightarrow x \in A$ or $x \in A ~\cap~ B$ or $x \in A ~\cap~ C$ or $x \in B ~\cap~ C \Leftrightarrow x \in A ~\cup~ (A ~\cap~ B) ~\cup~ (A ~\cap~ C) ~\cup~ (B ~\cap~ C) \Leftrightarrow A ~\cup~ (A ~\cap~ B) ~\cup~ (C ~\cap~ (A ~\cup~ B)) \Leftrightarrow A ~\cup~ (A ~\cap~ B) ~\cup~ (C ~\cap~ (A ~\cup~ B))$
+* $\forall x \in A ~\cup~ (B ~\cap~ C) \Leftrightarrow x \in A$ or $x \in B ~\cap~ C \Leftrightarrow x \in A$ or $x \in A ~\cap~ B$ or $x \in A ~\cap~ C$ or $x \in B ~\cap~ C \Leftrightarrow x \in A ~\cup~ (A ~\cap~ B) ~\cup~ (A ~\cap~ C) ~\cup~ (B ~\cap~ C) \Leftrightarrow A ~\cup~ (A ~\cap~ B) ~\cup~ (C ~\cap~ (A ~\cup~ B)) \Leftrightarrow A ~\cup~ (A ~\cap~ B) ~\cup~ (C ~\cap~ (A ~\cup~ B)) \Leftrightarrow  (A ~\cap~ A) ~\cup~ (A ~\cap~ B) ~\cup~ (C ~\cap~ (A ~\cup~ B)) \Leftrightarrow (A ~\cap~ (A ~\cup~ B)) ~\cup~ (C ~\cap~ (A ~\cup~ B)) \Leftrightarrow (A ~\cap~ B) ~\cup~ (A ~\cap~ C)$.  
 
 (g) (Partition) We have $A ~\cup~ (X / A) = X$ and $A ~\cap~ (X / A) = \varnothing$.  
+* 
 
-(h) (De Morgan laws) We have $X / (A ~\cup~ B) = (X / A) ~\cap~ (X / B)$ and $X / (A ~\cup~ B) = (X / A) ~\cup~ (X / B)$.  
+(h) (De Morgan laws) We have $X / (A ~\cup~ B) = (X / A) ~\cap~ (X / B)$ and $X / (A ~\cap~ B) = (X / A) ~\cup~ (X / B)$.  
 
 ### Exercise 
 * 3.1.1. Show that the definition of equality in Definition 3.1.4 is reflexive, symmetric, and transitive  
