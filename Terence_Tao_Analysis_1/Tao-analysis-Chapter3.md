@@ -6,20 +6,21 @@
 * 3.3 (Singleton sets and pair sets). If $a$ is an object, then there exists $a$ set $\{a\}$ whose only element is $a$, i.e., for every object $y$, we have $y \in \{a\}$ if and only if $y = a$; we refer to $\{a\}$ as the singleton set whose element is $a$. Furthermore, if $a$ and $b$ are objects, then there exists a set $\{a, b\}$ whose only elements are $a$ and $b$; i.e., for every object $y$, we have $y \in \{a, b\}$ if and only if $y = a$ or $y = b$; we refer to this set as the pair set formed by $a$ and $b$.  
 * 3.4 (Pairwise union). Given any two sets $A, B$, there exists a set $A ~\cup~ B$, called the union $A ~\cup~ B$ of $A$ and $B$, whose elements consists of all the elements which belong to $A$ or $B$ or both. In other words, for any object $x$, $x \in A ~\cup~ B \Leftrightarrow (x \in A \text{~or~} x \in B)$.  
 * 3.5 (Axiom of specification). Let $A$ be a set, and for each $x \in A$, let $P(x)$ be a property pertaining to $x$ (i.e., $P(x)$ is either a true statement or a false statement). Then there exists a set, called $\{x \in A: P(x) \text{~is~true~}\}$ (or simply $\{x \in A:P(x)\}$ for short), whose elements are precisely the elements $x$ in $A$ for which $P(x)$ is true. In other words, for any object $y$, $y \in \{x \in A: P(x) \text{~is~true~}\} \Leftrightarrow (y \in A \text{~and~} P(y) \text{~is~true})$.  
+* 3.6 (Replacement). Let $A$ be a set. For any object $x \in A$, and any object $y$, suppose we have a statement $P(x, y)$ pertaining to $x$ and $y$, such that for each $x \in A$ there is at most one $y$ for which $P(x, y)$ is true. Then there exists a set $\{y : P(x, y) \text{~is~true~for~some~} x \in A\}$, such that for any object $z, z \in \{y: \exist x \in A ~ st.~P(x, y)\} \Leftrightarrow P(x, z) \text{~is~true~for~some~} x \in A$
 
 ### Definitions  
 * 3.1.4 (Equality of sets). Two sets $A$ and $B$ are equal, $A = B$, iff every element of $A$ is an element of $B$ and vice versa. To put it another way, $A = B$ if and only if every element $x$ of $A$ belongs also to $B$, and every element $y$ of $B$ belongs also to $A$.  
 * 3.1.15 (Subsets). Let $A, B$ be sets. We say that $A$ is a subset of $B$, denoted $A \subseteq B$, iff every element of $A$ is also an element of $B$, i.e. For any object $x, x \in A \Rightarrow x \in B$. We say that $A$ is a proper subset of $B$, denoted $A \subsetneq B$, if $A \subseteq B$ and $A \ne B$.  
 * 3.1.23 (Intersections). The intersection $S_1 ~\cap~ S_2$ of two sets is defined to be the set $S_1 ~\cap~ S_2:= \{x \in S_1: x \in S_2\}$. In other words, $S_1 ~\cap~ S_2$ consists of all the elements which belong to both S1 and S2. Thus, for all objects $x, x \in S_1 ~\cap~ S_2 \Leftrightarrow x \in S_1 \text{~and~} x \in S_2$.  
-* 3.1.27 (Difference sets). Given two sets $A$ and $B$, we define the set $A − B$ or $A / B$ to be the set $A$ with any elements of $B$ removed: $A / B:= \{x \in A : x \in B\}$.  
+* 3.1.27 (Difference sets). Given two sets $A$ and $B$, we define the set $A − B$ or $A / B$ to be the set $A$ with any elements of $B$ removed: $A / B:= \{x \in A : x \notin B\}$.  
 
 ### Lemma 3.1.6 (Single choice). Let A be a non-empty set. Then there exists an object $x$ such that $x \in A$.
 * Because the statment is that exists an object $x$ such that $x \in A$, so suppose that for every object $x$ have $x \notin A$, according to axiom 3.2, we could get $A$ is empty set, then have a contradiction, so this lemma is true.  
 
-### Lemma 3.1.13. If $a$ and $b$ are objects, then $\{a, b\} = \{a\} ~\cup~ \{b\}$. If $A, B, C$ are sets, then the union operation is commutative (i.e., $A ~\cup~ B = B ~\cup~ A$) and associative (i.e., $(A ~\cup~ B) ~\cup~ C = A ~\cup~ (B ~\cup~ C)$). Also, we have $A ~\cup~ A = A ~\cup~ ∅ = ∅ ~\cup~ A = A$.  
+### Lemma 3.1.13. If $a$ and $b$ are objects, then $\{a, b\} = \{a\} ~\cup~ \{b\}$. If $A, B, C$ are sets, then the union operation is commutative (i.e., $A ~\cup~ B = B ~\cup~ A$) and associative (i.e., $(A ~\cup~ B) ~\cup~ C = A ~\cup~ (B ~\cup~ C)$). Also, we have $A ~\cup~ A = A ~\cup~ \varnothing = \varnothing ~\cup~ A = A$.  
 * Commutative, if $x$ is any element of $A ~\cup~ B$, we get $x \in A$ or $x \in B$, then it also means $x \in B$ or $x \in A$, and by this way get $x \in B ~\cup~ A$, then we know the elements of $A ~\cup~ B$ is equal to $B ~\cup~ A$.  
 * Associative: $(A ~\cup~ B) ~\cup~ C = A ~\cup~ B ~\cup~ C = A ~\cup~ (B ~\cup~ C)$.  
-* Suppose we have $A ~\cup~ A$. Obviously $A ~\cup~ A = A$. If we have $A ~\cup~ ∅$, then $A ~\cup~ ∅ = ∅ ~\cup~ A$ according to commutative, and because no element in ∅, then $A ~\cup~ ∅ = A = A ~\cup~ A$.  
+* Suppose we have $A ~\cup~ A$. Obviously $A ~\cup~ A = A$. If we have $A ~\cup~ \varnothing$, then $A ~\cup~ \varnothing = \varnothing ~\cup~ A$ according to commutative, and because no element in $\varnothing$, then $A ~\cup~ \varnothing = A = A ~\cup~ A$.  
 
 ### Proposition 3.1.18 (Sets are partially ordered by set inclusion). Let $A,B,C$ be sets. If $A \subseteq B$ and $B \subseteq C$ then $A \subseteq C$. If $A \subseteq B$ and $B \subseteq A$, then $A = B$. Finally, if $A \subsetneq B$ and $B \subsetneq C$ then $A \subsetneq C$.  
 * Suppose $A \subseteq B$ and $B \subseteq A$. If $A \ne B$, there exists some objects $x \in A$ and $x \notin B$ or $y \in B$ and $y \notin A$, whatever status will make a contradiction. Thus $A = B$.  
@@ -43,134 +44,159 @@
 * $\forall x \in A ~\cup~ (B ~\cap~ C) \Leftrightarrow x \in A$ or $x \in B ~\cap~ C \Leftrightarrow x \in A$ or $x \in A ~\cap~ B$ or $x \in A ~\cap~ C$ or $x \in B ~\cap~ C \Leftrightarrow x \in A ~\cup~ (A ~\cap~ B) ~\cup~ (A ~\cap~ C) ~\cup~ (B ~\cap~ C) \Leftrightarrow A ~\cup~ (A ~\cap~ B) ~\cup~ (C ~\cap~ (A ~\cup~ B)) \Leftrightarrow A ~\cup~ (A ~\cap~ B) ~\cup~ (C ~\cap~ (A ~\cup~ B)) \Leftrightarrow  (A ~\cap~ A) ~\cup~ (A ~\cap~ B) ~\cup~ (C ~\cap~ (A ~\cup~ B)) \Leftrightarrow (A ~\cap~ (A ~\cup~ B)) ~\cup~ (C ~\cap~ (A ~\cup~ B)) \Leftrightarrow (A ~\cap~ B) ~\cup~ (A ~\cap~ C)$.  
 
 (g) (Partition) We have $A ~\cup~ (X / A) = X$ and $A ~\cap~ (X / A) = \varnothing$.  
-* 
+* Suppose $A ~\cup~ (X / A) \ne X$, then $\exist x \in X st. x \notin A ~\cup~ (X / A)$ which means $x \in A ~\cap~ (X / A) = \varnothing$, this is a contradiction. Thus $A ~\cup~ (X / A) = X$.  
 
 (h) (De Morgan laws) We have $X / (A ~\cup~ B) = (X / A) ~\cap~ (X / B)$ and $X / (A ~\cap~ B) = (X / A) ~\cup~ (X / B)$.  
+* $\forall x \in X / (A ~\cup~ B) \Leftrightarrow x \in X$ and $x \notin A ~\cup~ B$, because $X$ contain the elements of $A ~\cup~ B$, which means that $X$ will remove the elements of $A$ and the elements of $B$, thus $x \notin A$ and $x \notin B$, we could get $X / (A ~\cup~ B) = (X / A) ~\cap~ (X / B)$.  
 
-### Exercise 
-* 3.1.1. Show that the definition of equality in Definition 3.1.4 is reflexive, symmetric, and transitive  
-Use Definition 3.1.4 (Equality of sets). Two sets A and B are equal, A = B, iff every element of A is an element of B and vice versa. To put it another way, A = B if and only if every element x of A belongs also to B, and every element y of B belongs also to A.  
-*Proof:* A = A is obviously true, so already be reflexive. And if A = B, then B = A. Accoding to Definition 3.1.4, so A and B have same element iff A = B, it's obviously B = A iff A and B have same element, so the symmetric is true. If A = B and B = C, then A = C. If A not equal to C, then A have element C not contain, and beacuse B = C, which means A have element B not contain, this is a contradiction to A = B, so transitive is true.  
+### Exercises 
+Exercise 3.1.1. Show that the definition of equality in Definition 3.1.4 is reflexive, symmetric, and transitive.  
+* $A = A$ is obviously true, so already be reflexive. And if $A = B$, then $B = A$. Accoding to Definition 3.1.4, so $A$ and $B$ have same element iff $A = B$, it's obviously $B = A$ iff $A$ and $B$ have same element, so the symmetric is true. If $A = B$ and $B = C$, then $A = C$. If A not equal to C, then $A$ have element $C$ not contain, and beacuse $B = C$, which means $A$ have element $B$ not contain, this is a contradiction to $A = B$, so transitive is true.  
 
-* Using only Definition 3.1.4, Axiom 3.1, Axiom 3.2, and Axiom 3.3, prove that the sets ∅, {∅}, {{∅}}, and {∅, {∅}} are all distinct (i.e., no two of them are equal to each other).  
-Axiom 3.1 (Sets are objects). If A is a set, then A is also an object. In particular, given two sets A and B, it is meaningful to ask whether A is also an element of B.  
-*Proof*: Frist I want to show that ∅, {∅}, {{∅}}, and {∅, {∅}} exist. Because of axiom 3.2, ∅ exist and it's a object becuase of axiom 3.1. So use axiom 3.3, we can get {∅}, {{∅}}, and {∅, {∅}}. Second, ∅ can be thought a {} object, {∅}, {{∅}}, and {∅, {∅}} are sets contain elements, then ∅ is not equal to others. Skip the rest.  
+Exercise 3.1.2. Using only Definition 3.1.4, Axiom 3.1, Axiom 3.2, and Axiom 3.3, prove that the sets $\empty, \{\empty\}, \{\{\empty\}\}$, and $\{\empty, \{\empty\}\}$ are all distinct (i.e., no two of them are equal to each other).  
+* $\empty$ is a set which contains nothing, then $\empty$ is a object. $\{\empty\}$ is a set which contains $\empty$ (an object), then $\{\empty\} \ne \empty$ because $\{\empty\}$ has an element. The rest is skip.  
 
-* 3.1.3. Prove the remaining claims in Lemma 3.1.13.  
-* 3.1.4. Prove the remaining claims in Proposition 3.1.18.  
-* 3.1.5. Let A,B be sets. Show that the three statements A ⊆ B, A ∪ B = B, A ∩ B = A are logically equivalent (any one of them implies the other two).  
-*Proof:* If A ⊆ B, it means every element in A is also in B, A ∪ B means that element in A or in B, because every element of A is in B, so every element in A ∪ B is in B, so get A ∪ B = B, and if A ∩ B not equal to A, means that A have some element not in B, this a contradiction to A ⊆ B, then we get A ∩ B = A. Skip the rest.  
+Exercise 3.1.3. Prove the remaining claims in Lemma 3.1.13.  
+Exercise 3.1.4. Prove the remaining claims in Proposition 3.1.18.  
+Exercise 3.1.5. Let $A, B$ be sets. Show that the three statements $A \subseteq B, A ~\cup~ B = B, A ~\cap~ B = A$ are logically equivalent (any one of them implies the other two).  
+* If $A \subseteq B, \forall x \in A ~\cup~ B \Leftrightarrow x \in B$, then $A ~\cup~ B = B$. If $A ~\cup~ B = B$, then $A \subseteq A ~\cup~ B = B$. Thus we have $A \subseteq B \Leftrightarrow A ~\cup~ B = B$.  
+* If $A ~\cup~ B = B, \forall x \in A \Rightarrow x \in B \Rightarrow x \in A ~\cap~ B$, then $A ~\cap~ B = B$. If $A ~\cap~ B = A, \forall x \in A ~\cup~ B \Rightarrow x \in A$ or $x \in B$, suppose $x \in A \Rightarrow x \in B$ since $A ~\cap~ B = A$, then we have $A ~\cup~ B = B$. Thus we have $A ~\cup~ B = B \Leftrightarrow A ~\cap~ B = A$.  
 
-* 3.1.6. Prove Proposition 3.1.28. (Hint: one can use some of these claims to prove others. Some of the claims have also appeared previously in Lemma 3.1.13.)  
+Exercise 3.1.6. Prove Proposition 3.1.28. (Hint: one can use some of these claims to prove others. Some of the claims have also appeared previously in Lemma 3.1.13.)  
+Exercise 3.1.7. Let $A,B,C$ be sets. Show that $A ~\cap~ B \subseteq A$ and $A ~\cap~ B \subseteq B$. Furthermore,show that $C \subseteq A$ and $C \subseteq B$ if and only if $C \subseteq A ~\cap~ B$. In a similar spirit, show that $A \subseteq A ~\cup~ B$ and $B \subseteq A ~\cup~ B$, and furthermore that $A \subseteq C$ and $B \subseteq C$ if and only if $A ~\cup~ B \subseteq C$.  
+* It's obviously that if we get any element in $A ~\cap~ B$, then immediately we can know that the element is in $A$ and $B$. So get $A ~\cap~ B \subseteq A$ and $A ~\cap~ B \subseteq B$.  
+* If $C \subseteq A$ and $C \subseteq B$, it means every element in $C$ is also in $A$ and $B$, quickly implies that $C \subseteq A ~\cap~ B$. Skip the rest.  
+* If $A \subseteq C$ and $B \subseteq C$, it means that every element in $A$ or every element in $B$, we can get the element is also in $C$, then $A ~\cup~ B \subseteq C$. Skip the rest.  
 
-* 3.1.7. Let A,B,C be sets. Show that A ∩ B ⊆ A and A ∩ B ⊆ B. Furthermore,show that C ⊆ A and C ⊆ B if and only if C ⊆ A ∩ B. In a similar spirit, show that A ⊆ A ∪ B and B ⊆ A ∪ B, and furthermore that A ⊆ C and B ⊆ C if and only if A ∪ B ⊆ C.  
-*Proof:*  
-It's obviously that if we get any element in A ∩ B, then immediately we can know that the element is in A and B. So get A ∩ B ⊆ A and A ∩ B ⊆ B.  
-If C ⊆ A and C ⊆ B, it means every element in C is also in A and B, quickly implies that C ⊆ A ∩ B. Skip the rest.  
-If A ⊆ C and B ⊆ C, it means that every element in A or every element in B, we can get the element is also in C, then A ∪ B ⊆ C. Skip the rest.  
+Exercise 3.1.8. Let A, B be sets. Prove the absorption laws $A ~\cap~ (A ~\cup~ B) = A$ and $A ~\cup~ (A ~\cap~ B) = A$.  
+* $A \subseteq A ~\cup~ B$, use Exercise 3.1.5, we get $A ~\cap~ (A ~\cup~ B) = A$.  
+* $A ~\cap~ B \subseteq A$, use Exercise 3.1.5 again, get $A ~\cup~ (A ~\cap~ B) = A$.  
 
-* 3.1.8. Let A, B be sets. Prove the absorption laws A ∩ (A ∪ B) = A and A ∪ (A ∩ B) = A.  
-*Proof:* If A ∩ (A ∪ B), we know A $\subset$ A ∪ B, so use (b) of Proposition 3.1.18, we get A ∩ (A ∪ B) = A. Obviously, A ∩ B $\subset$ A, by the same way, we get A ∪ (A ∩ B) = A.  
+Exercise 3.1.9. Let $A,B,X$ be sets such that $A \cup B = X$ and $A \cap B = \empty$. Show that $A = X / B$ and $B = X / A$.  
+* It's obviously that $A \subseteq X$ and $B \subseteq X$, quckily get $A \cup B = X = B \cup (X / B) \Rightarrow (B \cup (X / B)) / B = (A \cup B) / B \Rightarrow ((X / B) / B) \cup (B / B) = (A / B) \cup (B / B)$, Because $A \cap B = \empty, A / B = A$ and $(X / B) / B = X / B \Rightarrow X / B \cup \empty = A \cup \empty$, then $X / B = A$. Skip the rest.  
+* If $A \cap B = \empty, \forall x \in A$, we have $x \notin B$, then $x \in A$ and $x \notin B \Rightarrow A / B = A$.  
 
-* 3.1.9. Let A,B,X be sets such that A ∪ B = X and A ∩ B = ∅. Show that A = X \ B and B = X \ A  
-*Proof:* Use (g) and (h) of Proposition 3.1.18. It's obviously that A $\subset$ X and B $\subset$ X, beacuse of (g), quckily get A ∪ B = X = B ∪ X \ B, (B ∪ X \ B) \ B = (A ∪ B) \ B, ((X \ B) \ B) ∪ (B \ B) = (A \ B) ∪ (B \ B), Because A ∩ B = ∅, A \ B = A and (X \ B) \ B = X \ B is true, so get X \ B ∪ ∅ = A ∪ ∅, then X \ B = A. Skip the rest.  
+Exercise 3.1.10. Let $A$ and $B$ be sets. Show that the three sets $A / B, A \cap B$, and $B / A$ are disjoint, and that their union is $A \cup B$.
+* Obviously, $A / B$ and $A \cap B$ are disjoint, $B / A$ and $A \cap B$ are also disjoint. Show that $A / B$ and $B / A$ are disjoint. It's obviously that any element in $A / B$ is not in $B$, but any element in $B / A$ is in $B$, so $A / B$ and $B / A$ are disjoint.  
+* Show $(A / B) \cup (A \cap B) = A$. Suppose $(A / B) \cup (A \cap B) \ne A$, then there exists some elements $x$ such that $x$ belong to $A$ but not belong to $(A / B) \cup (A \cap B)$. If $x \notin A / B \Rightarrow x \in B \Rightarrow x \in A \cap B$, this is a contradiction. If $x \notin A \cap B \Rightarrow x \notin B \Rightarrow x \in A / B$, it's also a contradiction. Thus $(A / B) \cup (A \cap B) = A$.  
+* $(A / B) \cup (A \cap B) \cup (B / A) = (A / B) \cup (A \cap B) \cup (B / A) \cup (A \cap B) = A \cup B$.   
 
-* 3.1.10. Let A and B be sets. Show that the three sets A \ B, A ∩ B, and B \ A are disjoint, and that their union is A ∪ B.
-*Proof:* Obviously, A \ B and A ∩ B are disjoint, B \ A and A ∩ B are also disjoint. Show that A \ B and B \ A are disjoint. It's obviously that any element in A \ B is not in B, but any element in B \ A is in B, so A \ B and B \ A are disjoint.  
+Exercise 3.1.11. Show that the axiom of replacement implies the axiom of specification.  
+* Let $A$ be a set and $P(x)$ is a property pertaining to some elements $x \in A$. Suppose $Q(x, y)$ is that $y = x$ when $P(x)$ is true, and use axiom of replacement to imply the axiom of specification.  
 
-* 3.1.11. Show that the axiom of replacement implies the axiom of specification.  
-*Axiom 3.6 (Replacement).* Let A be a set. For any object x ∈ A, and any object y, suppose we have a statement P(x,y) pertaining to x and y, such that for each x ∈ A there is at most one y for which P(x,y) is true. Then there exists a set {y : P (x, y) is true for some x ∈ A}.  
-*Axiom 3.5 (Axiom of specification).* Let A be a set, and for each x ∈ A, let P(x) be a property pertaining to x (i.e., P(x) is either a true statement or a false statement). Then there exists a set, called {x ∈ A : P(x) is true} (or simply {x ∈ A : P(x)} for short), whose elements are precisely the elements x in A for which P(x) is true.  
-*Proof:* Let y is in A, assume exists such P(x,y) which statisfy axiom 3.6 that x not equal to y, so the condition "at most one y for which P(x,y)" will be a contradiction.Thought if x not equal y, P(x,y) also can be P(x,x) because x is also statisfy such property. Then we could find the P(x,y) actually is only decided by x and the property. So we get Axiom 3.5.  
+## 3.2 Russell’s paradox (Optional)  
+### Axioms  
+* 3.8 (Universal specification). (Dangerous!) Suppose for every object x we have a property P(x) pertaining to x (so that for every x, P(x) is either a true statement or a false statement). Then there exists a set $\{x : P(x) \text{~is~true~}\}$ such that for every object $y$, $y \in \{x: P(x) \text{~is~true~}\} \Leftrightarrow P(y)$ is true.   
+* 3.9 (Regularity). If $A$ is a non-empty set, then there is at least one element $x$ of $A$ which is either not a set, or is disjoint from $A$.  
 
-## 3.2 Russell’s paradox (Optional)
 ### Exercises
-* Show that the universal specification axiom, Axiom 3.8, if assumed to be true, would imply Axioms 3.2, 3.3, 3.4, 3.5, and 3.6. (If we assume that all natural numbers are objects, we also obtain Axiom 3.7.) Thus, this axiom, if permitted, would simplify the foundations of set theory tremendously (and can be viewed as one basis for an intuitive model of set theory known as “naive set theory”). Unfortunately, as we have seen, Axiom 3.8 is “too good to be true”!  
-Use Axiom 3.8 (Universal specification). (Dangerous!) Suppose for every object x we have a property P(x) pertaining to x (so that for every x, P(x) is either a true statement or a false statement).  
-Axiom 3.2. Let a such object x, its property is no element in x, and call x is empty set.  
-Axiom 3.3. Let a,b are objects. First we can assign a such property to x, x only contain one of a and b. Second we can chage this property, x contain both a and b.  
-Axiom 3.4. Let A,B are objects. Object x have such property that x contain all elements in a and b.  
-Axiom 3.5. Let A are objects. X have such property that the element in X also statisfy P(A).  
+Exercise 3.2.1. Show that the universal specification axiom, Axiom 3.8, if assumed to be true, would imply Axioms 3.2, 3.3, 3.4, 3.5, and 3.6. (If we assume that all natural numbers are objects, we also obtain Axiom 3.7.) Thus, this axiom, if permitted, would simplify the foundations of set theory tremendously (and can be viewed as one basis for an intuitive model of set theory known as “naive set theory”). Unfortunately, as we have seen, Axiom 3.8 is “too good to be true”!  
+* Axiom 3.2. Let a such object $X$, its property is no element in $X$, and call $X$ is empty set.  
+* Axiom 3.3. Let $a, b$ are objects. First we can assign a such property to $X$, $X$ only contain one of $a$ and $b$. Second we can change this property, $X$ contain both $a$ and $b$.  
+* Axiom 3.4. Let $A, B$ are objects. Object $X$ have such property that $X$ contain all elements in $A$ and $B$.  
+* Axiom 3.5. Let $A$ be set. $X$ have such property that contain all the elements in $A$ which statisfy $P(a)$.  
 
-* 3.2.2. Use the axiom of regularity (and the singleton set axiom) to show that if A is a set, then A $\notin$ A. Furthermore, show that if A and B are two sets, then either A $\notin$ B or B  $\notin$ A (or both).  
-*Proof:* 
-If A $\in$ A, use axiom 3.3, we have {A}, let {A} ∪ A = A, it's obviously contradiction to axiom 3.9.  
-If A $\in$ B and B $\in$ A, A ∪ B = {A,B}, {A,B} just contain two sets, contradiction to axiom 3.9.  
+Exercise 3.2.2. Use the axiom of regularity (and the singleton set axiom) to show that if $A$ is a set, then $A \notin A$. Furthermore, show that if $A$ and $B$ are two sets, then either $A \notin B$ or $B  \notin A$ (or both).  
+* If $A \in A$, use axiom 3.3, we have $\{A\}$, let $\{A\} \cup A = A$, it's obviously contradiction to axiom 3.9.  
+* If $A \in B$ and $B \in A, A \cup B = \{A, B\} = A, \{A, B\}$ just contain $A$ which is not disjoint from itself, contradiction to axiom 3.9.  
 
-* 3.2.3. Show (assuming the other axioms of set theory) that the universal specification axiom, Axiom 3.8, is equivalent to an axiom postulating the existence of a “universal set” Ω consisting of all objects (i.e., for all objects x, we have x ∈ Ω). In other words, if Axiom 3.8 is true, then a universal set ex- ists, and conversely, if a universal set exists, then Axiom 3.8 is true. (This may explain why Axiom 3.8 is called the axiom of universal specification). Note that if a universal set Ω existed, then we would have Ω ∈ Ω by Axiom 3.1, contradicting Exercise 3.2.2. Thus the axiom of foundation specifically rules out the axiom of universal specification.  
-*Proof:*  
-If universal specification axiom, then we can assign such property that contain all objects to a set, get the Ω set. If Ω exists, use axiom 3.5, we can assign any property to  the objects in Ω to get any sets, so we get axiom 3.8.   
+Exercise 3.2.3. Show (assuming the other axioms of set theory) that the universal specification axiom, Axiom 3.8, is equivalent to an axiom postulating the existence of a “universal set” $\Omega$ consisting of all objects (i.e., for all objects $x$, we have $x \in \Omega$). In other words, if Axiom 3.8 is true, then a universal set exists, and conversely, if a universal set exists, then Axiom 3.8 is true. (This may explain why Axiom 3.8 is called the axiom of universal specification). Note that if a universal set $\Omega$ existed, then we would have $\Omega \in \Omega$ by Axiom 3.1, contradicting Exercise 3.2.2. Thus the axiom of foundation specifically rules out the axiom of universal specification.  
+* If universal specification axiom, then we can assign such property that contain all objects to a set, get the $\Omega$ set. If $\Omega$ exists, use axiom 3.5, we can assign any property to the objects in $\Omega$ to get any sets, so we get Axiom 3.8.   
 
-## 3.3 Functions
-### Lemma 3.3.12 (Composition is associative). Let f : Z → W, g : Y → Z, and h : X → Y be functions. Then f ◦ (g ◦ h)=(f ◦ g) ◦ h.  
-* Use Definition 3.3.7 (Equality of functions). Two functions f:X→Y, g:X→Y with the same domain and range are said to be equal, f = g, if and only if f(x) = g(x) for all x ∈ X.  
-* Definition 3.3.10 (Composition). Let f : X → Y and g : Y → Z be two functions, such that the range of f is the same set as the domain of g. We then define the composition g ◦ f : X → Z of the two functions g and f to be the function defined explicitly by the formula: $(g ◦ f)(x) := g(f(x))$  
-* (f ◦ (g ◦ h))(x) = (f ◦ g ◦ h)(x) = ((f ◦ g) ◦ h)(x), so f ◦ (g ◦ h)=(f ◦ g) ◦ h.  
+## 3.3 Functions  
+### Definitions  
+* 3.1 (Functions). Let $X, Y$ be sets, and let $P(x, y)$ be a property pertaining to an object $x \in X$ and an object $y \in Y$ , such that for every $x \in X$, there is exactly one $y \in Y$ for which $P(x, y)$ is true (this is sometimes known as the vertical line test). Then we define the function $f: X \rightarrow Y $ defined by $P$ on the domain $X$ and range $Y$ to be the object which, given any input $x \in X$, assigns an output $f(x) \in Y$, defined to be the unique object $f(x)$ for which $P(x, f(x))$ is true. Thus, for any $x \in X$ and $y \in Y, y = f(x) \Leftrightarrow P(x, y)$ is true.  
+* 3.3.7 (Equality of functions). Two functions $f: X \rightarrow Y, g: X \rightarrow Y$ with the same domain and range are said to be equal, $f = g$, if and only if $f(x) = g(x)$ for all $x \in X$.  
+* 3.3.10 (Composition). Let $f: X \rightarrow Y$ and $g: Y \rightarrow Z$ be two functions, such that the range of $f$ is the same set as the domain of $g$. We then define the composition $g \circ f: X \rightarrow Z$ of the two functions $g$ and $f$ to be the function defined explicitly by the formula, $(g \circ f)(x) := g(f(x))$.  
+* 3.3.14 (One-to-one functions). A function f is one-to-one (or injective) if different elements map to different elements: $x \ne x^{\prime} \Rightarrow f(x) \ne f(x^{\prime})$. Equivalently, a function is one-to-one if $ f(x) = f(x^{\prime}) \Rightarrow x = x^{\prime}$.  
+* 3.3.17 (Onto functions). A function $f$ is onto (or surjective) if $f(X) = Y$, i.e., every element in $Y$ comes from applying $f$ to some element in $X$: For every $y \in Y$, there exists $x \in X$ such that $f(x) = y$.  
+* 3.3.20 (Bijective functions). Functions $f: X \rightarrow Y$ which are both one-to-one and onto are also called bijective or invertible. If $f$ is bijective, then for every $y \in Y$, there is exactly one $x$ such that $f(x) = y$ (there is at least one because of surjectivity, and at most one because of injectivity). This value of $x$ is denoted $f^{−1}(y)$; thus $f^{−1}$ is a function from $Y$ to $X$. We call $f^{−1}$ the inverse of $f$.  
+
+### Lemma 3.3.12 (Composition is associative). Let $f: Z \rightarrow W, g: Y \rightarrow Z$, and $h: X \rightarrow Y$ be functions. Then $f \circ (g \circ h) = (f \circ g) \circ h$.   
+* $f \circ (g \circ h)$ and $(f \circ g) \circ h$ have the same domain and range.  
+* $(f \circ (g \circ h))(x) = (f \circ g \circ h)(x) = ((f \circ g) \circ h)(x)$, so $f \circ (g \circ h)=(f \circ g) \circ h$.  
 
 ### Exercises  
-* 3.3.1. Show that the definition of equality in Definition 3.3.7 is reflexive, symmetric, and transitive. Also verify the substitution property: if $f$,$f^o$:X→Y and $g$,$g^o$:Y →Z are functions such that f = $f^o$ and g = $g^o$, then $g$ ◦ $f$ = $g^o$ ◦ $f^o$.  
-*Proof:*  
-Let f,g,h be function, it's obvious that x = x, g = g, and h = h. If x = g, then g = x is also true obviuosly. If x = g and g = h, because f,g have same domain and range, g,h have same domain and range, so f,h have same domain and range. And get any x for f, we have f(x) = g(x), and because g = h, so we have g(x) = h(x), then f(x) = h(x). So transitive is true.  
-Because f = $f^o$, then $g$ ◦ $f$ = $g$ ◦ $f^o$, Beacuse g = $g^o$, $g$ ◦ $f^o$ = $g^o$ ◦ $f^o$, so we get $g$ ◦ $f$ = $g^o$ ◦ $f^o$.  
+Exercise 3.3.1. Show that the definition of equality in Definition 3.3.7 is reflexive, symmetric, and transitive. Also verify the substitution property: if $f, f^{\prime}:X \rightarrow Y$ and $g, g^{\prime}: Y \rightarrow Z$ are functions such that $f = f^{\prime}$ and $g = g^{\prime}$, then $g \circ f = g^{\prime} \circ f^{\prime}$.  
+* Let $f,g,h$ be function, it's obvious that $x = x, g = g$, and $h = h$. If $x = g$, then $g = x$ is also true obviuosly. If $x = g$ and $g = h$, because $f,g$ have the same domain and range, $g, h$ have the same domain and range, so $f, h$ have the same domain and range. And get any $x$ for $f$, we have $f(x) = g(x)$, and because $g = h$, so we have $g(x) = h(x)$, then $f(x) = h(x)$. So transitive is true.  
+* Because $f = f^{\prime}$, then $g \circ f = g \circ f^{\prime}$, Beacuse $g = g^{\prime}, g \circ f^{\prime} = g^{\prime} \circ f^{\prime}$, so we get $g \circ f = g^{\prime} \circ f^{\prime}$.  
 
-* 3.3.2. Let f : X → Y and g : Y → Z be functions. Show that if f and g are both injective, then so is g ◦ f, similarly, show that if f and g are both surjective, then so is g ◦ f.  
-*Proof:*  
-Use Definition 3.3.14 (One-to-one functions). A function f is one-to-one (or injective) if different elements map to different elements.  
-Use Definition 3.3.17 (Onto functions). A function f is onto (or surjective) if f(X) = Y , i.e., every element in Y comes from applying f to some element in X.  
-Let x,y are different elements, then f(x),f(y) is different, and g is injective, so g(f(x)),g(f(y)) is different, then we know different x and y, g ◦ f map different elements, so g ◦ f is injective.  
-Let g:Y -> Z, f:X -> Y, beacuse g is onto, g(Y) = Z, and f(X) = Y, use substitution, then g(f(X)) = Z, so we get (g ◦ f)(X) = Z, then g ◦ f is onto.  
+Exercise 3.3.2. Let $f: X \rightarrow Y$ and $g: Y \rightarrow Z$ be functions. Show that if $f$ and $g$ are both injective, then so is $g \circ f$, similarly, show that if $f$ and $g$ are both surjective, then so is $g \circ f$.  
+* Let $x, y$ are different elements, then $f(x), f(y)$ is different, and $g$ is injective, so $g(f(x)), g(f(y))$ is different, then we know different $x$ and $y, g \circ f$ map different elements, so $g \circ f$ is injective.  
+* Suppose $f, g$ are surjective. $\forall z \in Z$, could get some elements $y$ in $Y$ such that $g(y) = z$. Similarly, for $y$ we also get $x$ in $X$ such that $f(x) = y$. Thus $\forall z \in Z, \exist x \in X, (g \circ f)(x) = z$ and $g \circ f$ is surjective.  
 
-* 3.3.3. When is the empty function injective? surjective? bijective?  
-Example 3.3.9. A rather boring example of a function is the empty function f : ∅ → X from the empty set to an arbitrary set X. Since the empty set has no elements, we do not need to specify what f does to any input. Nevertheless, just as the empty set is a set, the empty function is a function, albeit not a particularly interesting one. Note that for each set X, there is only one function from ∅ to X, since Definition 3.3.7 asserts that all functions from ∅ to X are equal (why?).  
-Test to explain the 'why', every function from ∅ to X have same domain and range, then verify that f(x) = g(x) for all x ∈ ∅. Because there is no element in ∅, this is vacuously true. So all functions are equal.  
-*Speculation:* 
-Function is injective means that different x in domain map to different y in range. ∅ have no elements means that there no different elements in domain, so that if there is no different element in range, it may be injective. Then suppose a function f: ∅->∅. This may be also true for bijective.  
-Function is surjective means that every element in range can map to element in domain. It seems be vacuously true because there is no elements in empty set.  
+Exercise 3.3.3. When is the empty function injective? surjective? bijective? Empty function is $f: \empty \rightarrow X$ from the empty set to an arbitrary set $X$.  
+* If $X$ is empty, empty function is surjective and bijective.  
+* If $X$ is none-empty, empty function is injective.  
 
-* 3.3.4. In this section we give some cancellation laws for composition. Let f:X→Y, $f^o$:X→Y, g:Y→Z, and $g^o$:Y→Z be functions. Show that if g ◦ f = g ◦ $f^o$ and g is injective, then f = $f^o$. Is the same statement true if g is not injective? Show that if g ◦ f = $g^o$ ◦ f and f is surjective, then g = $g^o$. Is the same statement true if f is not surjective?  
-*Proof:*  
-If g ◦ f = g ◦ $f^o$, g ◦ f and g ◦ $f^o$ have same domain and range, so that f and $f^o$ have same domain. (g ◦ f)(x) = (g ◦ $f^o$)(x), g(f(x)) = g($f^o$(x)), g is injective, then f(x) = $f^o$(x), so f and $f^o$ have same range and for every x have f(x) = $f^o$(x). If g is not injective, there may be have two different element let g(x) = g($x^o$), even f and $f^o$ have same different domain, them may have different range, this can also make g ◦ f = g ◦ $f^o$.  
-If g ◦ f = $g^o$ ◦ f, and f have same domain and g(f(X)) = $g^o$(f(X)), then g and $g^o$ have same domain and range. For every element in X, we have f(x) = f(x) and g(f(X)) = $g^o$(f(X)), it's obviously whatever function f is, g must equal to $g^o$.  
+Exercise 3.3.4. In this section we give some cancellation laws for composition. Let $f: X \rightarrow Y, f^{\prime}: X \rightarrow Y, g: Y \rightarrow Z$ and $g^{\prime}: Y \rightarrow Z$ be functions. Show that if $g \circ f = g \circ f^{\prime}$ and $g$ is injective, then $f = f^{\prime}$. Is the same statement true if $g$ is not injective? Show that if $g \circ f = g^\prime \circ f$ and $f$ is surjective, then $g = g^\prime$. Is the same statement true if $f$ is not surjective?  
+* If $g \circ f = g \circ f^\prime, g \circ f$ and $g \circ f^\prime$ have the same domain and range,  $f$ and $f^\prime$ have the same domain. $\forall x \in X, g(f(x)) = g(f^\prime(x))$. Let $y = f(x), y^\prime = f^\prime(x)$, since $g$ is inective, $g(y) = g(y^\prime)$ when $y = y^\prime$. Then $f(x) = f^\prime(x)$ and $f = f^\prime$. If $g$ is not injective, the statment is not true.   
+* Suppose $g \circ f = g^\prime \circ f$. $\forall y \in Y, \exist x \in X ~ st.~ f(x) = y$. Because $g(f(x)) = g^\prime(f(x)) \Rightarrow g(y) = g^\prime(y)$ for every $y$ in $Y$. Thus $g = g^\prime$. If $f$ is not surjective, then there exist some $y^\prime \in Y ~st. \exists x^\prime \notin X, f(x^\prime) = y^\prime$, it's possible that $g(y^\prime) \ne g^\prime(y^\prime)$.  
 
-* 3.3.5. Let f : X → Y and g : Y → Z be functions. Show that if g ◦ f is injective, then f must be injective. Is it true that g must also be injective? Show that if g ◦ f is surjective, then g must be surjective. Is it true that f must also be surjective?  
-*Proof:*  
-If f is not injective, there has f(x) = f($x^o$), then g(f(x)) = g(f($x^o$)), this is a contradiction. If g is not injective and f is injective, let g(y) = g($y^o$) and y is not equal $y^o$, then if y = f(x) and $y^o$ = f($x^o$), obviously that x is not equal to $x^o$, but we also have g(f(x)) = g(f($x^o$)), so that g must be injective.  
-If g is not surjective, not every element in range could find a element in domain of g, so that g ◦ f would be not surjective, this is a contradiction. If g is surjective and f is not surjective, every element in range of g could find a f(x) map to, if the f(x) exist no matter what function f is, we could find a element in domain of f. Then we have every element in range of g ◦ f, we could find a element map to in domain of g ◦ f. Then f is not must be surjective.  
+Exercise 3.3.5. Let $f: X \rightarrow Y$ and $g: Y \rightarrow Z$ be functions. Show that if $g \circ f$ is injective, then $f$ must be injective. Is it true that $g$ must also be injective? Show that if $g \circ f$ is surjective, then $g$ must be surjective. Is it true that $f$ must also be surjective?  
+* Suppose $f$ is not injective, then there exists differnt elements $x, x^\prime$ in $X$ such that $f(x) = f(x^\prime)$, and it will cause that $g(f(x)) = g(f(x^\prime))$ which means that $g \circ f$ is not injective, contradiction. If $g$ is not injective and $f$ is injective, $g \circ f$ is also injective.  
+* Suppose $g$ is not surjective, then $\exist z \in Z ~st. \exist y \notin Y, g(y) = z$ because $y = f(x)$ then we could not find a such $x$ that $g(f(x)) = z$. Thus $g \circ f$ is not surjective, contradiction. $f$ could not be surjective.  
 
-* 3.3.6. Let f : X → Y be a bijective function, and let $f^{−1}$ : Y → X be its inverse. Verify the cancellation laws $f^{−1}$(f(x)) = x for all x ∈ X and f($f^{−1}$(y)) = y for all y ∈ Y . Conclude that $f^{−1}$ is also invertible, and has f as its inverse (thus $(f^{−1})^{−1}$ = f).  
-Use definition of bijective, If f is bijective, then for every y ∈ Y , there is exactly one x such that f(x) = y. This value of x is denoted $f^{−1}$(y); thus $f^{−1}$ is a function from Y to X. We call $f^{−1}$ the inverse of f.  
-*Proof:*  
-Let x is any element in X, and have f(x) = y, according to the definition, then we have $f^{−1}$(y) = x, use substitution, we have $f^{−1}$(f(x)) = x. Similarly, we can prove f($f^{−1}$(y)) = y.  
-Obviously $(f^{−1})^{−1}$ and f have same domain and range.  Let g = $f^{-1}$, g also is bijective, obviously g($g^{−1}$(x)) = x, and we have g($f$(x)) = x, becuase g is injective, then $g^{-1}$ = f, use subtitution, get $(f^{−1})^{−1}$ = f.  
+Exercise 3.3.6. Let $f: X \rightarrow Y$ be a bijective function, and let $f^{−1}: Y \rightarrow X$ be its inverse. Verify the cancellation laws $f^{−1}(f(x)) = x$ for all $x \in X$ and $f(f^{−1}(y)) = y$ for all $y \in Y$. Conclude that $f^{−1}$ is also invertible, and has $f$ as its inverse (thus $(f^{−1})^{−1} = f$).  
+* $\forall x \in X, f(x) = y$ and $f^{-1}(y) = x$ thus $f^{−1}(f(x)) = x$. $\forall y \in Y, f^{-1}(y) = x$ and $f(x) = y$, thus $f(f^{−1}(y)) = y$.  
+* $f^{-1}(y) = x$ then its inverse $(f^{−1})^{−1}(x) = y$, and because $f^{-1}$ is $f$ inverse function then $f(x) = y = (f^{−1})^{−1}(x)$. Thus $(f^{−1})^{−1} = f$.  
 
-* 3.3.8. If X is a subset of Y , let ιX→Y : X → Y be the inclusion map from X to Y, defined by mapping x → x for all x ∈ X,i.e.,ιX→Y(x):=x for all x ∈ X. The map ιX→X is in particular called the identity map on X.  
-(a)Show that if X ⊆ Y ⊆ Z then ιY → Z ◦ ιX → Y = ιX → Z.  
-*Proof:* let g = ιX → Y, f = ιY → Z, h = ιX → Z. According to the definition, we have g(X) = X, f(Y) = Y, h(X) = X. Because g(X) = X and X ⊆ Y, then f ◦ g(X) = X and h(X) = X, so we get f ◦ g = h.  
-(b) Show that if f : A → B is any function, then f = f ◦ ιA→A = ιB→B ◦ f.  
-*Proof:* For f ◦ ιA→A, ιA→A(x) = x, then (f ◦ ιA→A)(x) = f(x). For ιB→B ◦ f, ιB→B(y) = y, then (ιB→B ◦ f)(x) = ιB→B(f(x)) = f(x).  Then we get f = f ◦ ιA→A = ιB→B ◦ f.  
-(c) Show that, if f : A → B is a bijective function, then f ◦ $f^{−1}$ = ιB→B and $f^{−1}$ ◦ f = ιA→A.  
-*Proof:* Skiped.  
-(d) Show that if X and Y are disjoint sets,and f:X → Z and g:Y → Z are functions, then there is a unique function h: X ∪ Y → Z such that h ◦ ιX→X∪Y = f and h ◦ ιY→X∪Y = g.  
-*Proof:* Let h(X) = f(X) and h(Y) = g(Y). Beacuse X ⊆ X ∪ Y and Y ⊆ X ∪ Y, use the conclusion in (b), (h ◦ ιX→X∪Y)(X) = h(X) = f(X) and (h ◦ ιY→X∪Y)(Y) = h(Y) = g(Y).  
+Exercise 3.3.7. Let $f: X \rightarrow Y$ and $g: Y \rightarrow Z$ be functions. Show that if $f$ and $g$ are bijective, then so is $g \circ f$ and we have $(g \circ f)^{−1} = f^{−1} \circ g^{−1}$.  
+* Use Exercise 3.3.5 could prove that $g \circ f$ is bijective.  
+* $\forall z \in Z, g^{-1}(z) = y, f^{-1}(y) = x \Rightarrow (f^{−1} \circ g^{−1})(z) = x$. Because $f$ and $g$ is inverse we could have $f(x) = y$ and $g(y) = x \Rightarrow (f \circ g)(x) = z \Rightarrow ((g \circ f)^{−1})(z) = x = (f^{−1} \circ g^{−1})(z)$. Thus $(g \circ f)^{−1} = f^{−1} \circ g^{−1}$.  
+
+Exercise 3.3.8. If $X$ is a subset of $Y$ , let $l_{X \rightarrow Y}: X \rightarrow Y$ be the inclusion map from $X$ to $Y$, defined by mapping $x \mapsto x$ for all $x \in X$,i.e.,$l_{X \rightarrow X} := x$ for all $x \in X$. The map $l_{X \rightarrow X}$ is in particular called the identity map on $X$.  
+(a) Show that if $X \subseteq Y \subseteq Z$ then $l_{Y \rightarrow Z} \circ l_{X \rightarrow Y} = l_{X \rightarrow Z}$.  
+(b) Show that if $f: A \rightarrow B$ is any function, then $f = f \circ l_{A \rightarrow A}  = l_{B \rightarrow B} \circ f$.  
+(c) Show that, if $f: A \rightarrow B$ is a bijective function, then $f \circ f^{−1} = l_{B \rightarrow B}$ and $f^{−1} \circ f = l_{A \rightarrow A}$.  
+(d) Show that if $X$ and $Y$ are disjoint sets,and $f: X \rightarrow Z$ and $g: Y \rightarrow Z$ are functions, then there is a unique function $h: X \cup Y \rightarrow Z$ such that $h \circ l_{X \rightarrow X \cup Y} = f$ and $h \circ l_{Y \rightarrow X \cup Y} = g$.  
+* Let $h(X) = f(X)$ and $h(Y) = g(Y)$. Then we coulde the result.  
 
 ## 3.4 Images and inverse images  
-### Definition 3.4.1 (Images of sets). If f : X → Y is a function from X to Y , and S is a set in X, we define f(S) to be the set,  f(S) := {f(x) : x ∈ S}.  
-`Ex: Note that the set f(S) is well-defined thanks to the axiom of replacement (Axiom 3.6). One can also define f(S) using the axiom of specification (Axiom 3.5) instead of replacement, but we leave this as a challenge to the reader.`  
-*Thought:*  In the condition, If we have f, X and Y. In my personal opinion, if we have Y, we can assign the f(x) = y is a property Q(n), so according to 3.5 axiom, Y is a set we can get such elements in Y which is statisfy Q(n) to bulid a set f(S).    
+### Axioms  
+* 3.10 (Power set axiom). Let $X$ and $Y$ be sets. Then there exists a set, denoted $Y^X$, which consists of all the functions from $X$ to $Y$, thus $f \in Y^X \Leftrightarrow$ ($f$ is a function with domain $X$ and range $Y$).  
+* 3.11 (Union). Let $A$ be a set, all of whose elements are themselves sets. Then there exists a set $\bigcup A$ whose elements are precisely those objects which are elements of the elements of $A$, thus for all objects $x, x \in \bigcup A \Leftrightarrow$ ($x \in S$ for some $S \in A$).   
+### Definitions  
+* 3.4.1 (Images of sets). If $f: X \rightarrow Y$ is a function from $X$ to $Y$ , and $S$ is a set in $X$, we define $f(S)$ to be the set $f(S) := \{f(x): x \in S\}$. We sometimes call $f(S)$ the forward image of $S$.  
+* 3.4.4 (Inverse images). If $U$ is a subset of $Y$ , we define the set $f^{−1}(U)$ to be the set $f^{−1}(U) := \{x \in X: f(x) \in U\}$. We call $f^{-1}(U)$ the inverse image of $U$.  
+* 
+   
+### Lemma 3.4.9. Let $X$ be a set. Then the set $Y: Y \subset X$ is a set.  
+*  
 
-### Lemma 3.4.9. Let X be a set. Then the set  $Y: Y\subset X$ is a set.  
-*Thought:*  This means all subsets of X together is a set. Obviously, the author want us to use axiom 3.10, so I guess that use 3.10 that can immediately get a set which is consists of all $X^X$ functions. So, the range of function is subset of X, in another words, we may use some way to get all subset of X from this set of funcions.  
+### Exercises  
+Exercise 3.4.1 Let $f: X \rightarrow Y$ be a bijective function, and let $f^{−1} : Y \rightarrow X$ be its inverse. Let $V$ be any subset of $Y$. Prove that the forward image of $V$ under $f^{−1}$ is the same set as the inverse image of $V$ under $f$; thus the fact that both sets are denoted by $f^{−1}(V)$ will not lead to any inconsistency.  
+* The forward image of $V$ under $f^{−1}$ is $\{f^{-1}(y): y \in V\} = F$, the inverse image of $V$ under $f$ is $\{x \in X: f(x) \in V\} = I$. If $x \in \{f^{-1}(y): y \in V\}, x = f^{-1}(y)$, because $y \in V$, $f(f^{-1}(y)) = y$ also in $V$, so $\forall x \in \{f^{-1}(y): y \in V\}$ we could have $f(x) \in V$ and $x \in X$, get $F \subseteq I$. Similarly, we could get $I \subseteq F$.  
 
-### Exercise  
-* 3.4.1 Let f : X → Y be a bijective function, and let $f^{−1}$ : Y → X be its inverse. Let V be any subset of Y. Prove that the forward image of V under $f^{−1}$ is the same set as the inverse image of V under f; thus the fact that both sets are denoted by $f^{−1}(V)$ will not lead to any inconsistency.  
-*Proof:*  
-Use the definition, we can get $f^{−1}(V)$ is such set F $(x \in V \ and \ f^{−1}(x))$, and the inverse iamge of V is I $(x \in X \ and \ f(x) \in V)$.   
-Let guess that f(I) and f(F). I is all the elements in X which statisfy $f(x) \in V$, because of bijective, every element in V is maped to a element of X, I is all of elements which $f(x) \in V$, thus f(I) = V. Next is F, F is consist of elements in X, which is every $y \in V$ and $f^{-1}(y)$ is mapped to, and f(F) is every $y \in Y$ is mapped to $x \in F$ by f, use bijective, get f(F) = V. Then f(F) = f(I), I = F.  
+Exercise 3.4.2 Let $f: X \rightarrow Y$ be a function from one set $X$ to another set $Y$ , let $S$ be a subset of $X$, and let $U$ be a subset of $Y$. What, in general, can one say about $f^{−1}(f(S))$ and $S$? What about $f(f^{−1}(U))$ and $U$?  
+* $\forall x \in S$, obviously $x \in X$ and $f(x) \in f(S)$, then we have $S \subseteq f^{−1}(f(S))$.  
+* $\forall y \in f(f^{−1}(U))$ and let $y = f(x), x \in \{x \in X: f(x) \in U\}$, then it's easy to see that $f(x) \in U \Rightarrow y \in U \Rightarrow f(f^{−1}(U)) \subseteq U$.   
 
-* 3.4.2 Let f : X → Y be a function from one set X to another set Y , let S be a subset of X, and let U be a subset of Y. What, in general, can one say about $f^{−1}(f(S))$ and S? What about $f(f^{−1}(U))$ and U?  
-*Proof*: For a in $f^{−1}(f(S))$, by definition, is that $(x \in X: f(x) \in f(S))$, choose x from X, which has such property of f(x) = a and a is in f(S). If have such a set $S^o(x\in X:x\in S)$, we can easily find every element in $S^o$ could be statisfied such property of f(x) = a and a in f(S), so we get $S \subseteq f^{−1}(f(S))$.  
-For a in $f(f^{−1}(U))$, by definition, is that $(f(y): y \in (x \in X: f(x) \in U))$, for any a, if there in X exists one y, we could find such y which statisfy property of $f(y) \in U$ and $y \in X$, so we could get $f(y) \in U$ from $f(f^{−1}(U))$. Then we have $f(f^{−1}(U)) \subseteq U$.  
+Exercise 3.4.3. Let $A, B$ be two subsets of a set $X$, and let $f: X \rightarrow Y$ be a function. Show that $f(A \cap B) \subseteq f(A) \cap f(B)$, that $f(A) / f(B) \subseteq f(A / B), f(A \cup B) = f(A) \cup f(B)$. For the first two statements, is it true that the $\subseteq$ relation can be improved to $=?$
+* $\forall y \in f(A \cap B) = \{f(x): x \in A \cap B\}$, because $x \in A \cap B$, we have $x \in A$ then $y = f(x)$ also in $f(A)$. Similarly, we could get $y \in f(B)$. Thus $f(A \cap B) \subseteq f(A) \cap f(B)$.  
+* $\forall y \in f(A) / f(B)$, let $y = f(x), f(x) \in f(A) \Rightarrow x \in A$ and $f(x) \notin f(B) \Rightarrow x \notin B$, then $y = f(x)$ which $x \in A / B \Rightarrow y \in f(A / B)$. Thus $f(A \cap B) \subseteq f(A) \cap f(B)$.  
+* Suppose $y = f(x) \in f(A \cup B)$, if $x \in A \Rightarrow y = f(x) \in f(A)$ and if $x \in B \Rightarrow y = f(x) \in f(B)$. Thus $y \in f(A) \cup f(B)$. Skip the rest.  
+* If $f$ is injective, then the $\subseteq$ relation can be improved to $=$.  
 
+Exercise 3.4.4. Let $f: X \rightarrow Y$ be a function from one set $X$ to another set $Y$, and let $U, V$ be subsets of $Y$. Show that $f^{−1}(U \cup V) = f^{−1}(U) \cup f^{−1}(V)$, that $f^{−1}(U \cap V) = f^{−1}(U) \cap f^{−1}(V)$, and that $f^{−1}(U / V) = f^{−1}(U) / f^{−1}(V)$.  
+* Easy to prove. Skip.  
+
+Exercise 3.4.5. Let $f: X \rightarrow Y$ be a function from one set $X$ to another set $Y$. Show that $f(f^{−1}(S)) = S$ for every $S \subseteq Y$ if and only if $f$ is surjective. Show that $f^{−1}(f(S)) = S$ for every $S \subseteq X$ if and only if f is injective.  
+* If $y \in S$, then there exists some element $x$ in $X$ such that $f(x) = y$
+
+Exercise 3.4.6. Prove Lemma 3.4.9. (Hint: start with the set $\{0, 1\}^X$ and apply the replacement axiom, replacing each function f with the object $f^{−1}(\{1\})$.)See also Exercise 3.5.11.  
+
+Exercise 3.4.7. Let $X, Y$ be sets. Define a partial function from $X$ to $Y$ to be any function $f: X^\prime \rightarrow Y^\prime$ whose domain $X^\prime$ is a subset of $X$, and whose range $Y^\prime′$ is a subset of $Y$. Show that the collection of all partial functions from $X$ to $Y$ is itself a set.(Hint: use Exercise 3.4.6, the power set axiom, the replacement axiom, and the union axiom.)  
+
+Exercise 3.4.8. Show that Axiom 3.4 can be deduced from Axiom 3.1, Axiom 3.3 and Axiom 3.11.  
+
+Exercise 3.4.9. Show that if $\beta$ and $\beta^\prime$ are two elements of a set $I$, and to each $\alpha \in I$ we assign a set $A_\alpha$, then $\{x \in A_\beta: x \in A_\alpha \text{~for~all~} \alpha \in I\} = \{x \in A_{β^\prime} : x \in A_\alpha \text{~for~all~} \alpha \in I\}$, and so the definition of $\bigcup_{\alpha \in I} A_\alpha$ defined in (3.3) does not depend on $\beta$. Also explain why (3.4) is true.  
+
+Exercise 3.4.10. Suppose that $I$ and $J$ are two sets, and for all $\alpha \in I \cup J$ let $A_\alpha$ be a set. Show that $(\bigcup_{\alpha \in I} A_\alpha) \cup (\bigcup_{\alpha \in J} A_\alpha) = \bigcup_{\alpha \in I \cup J} A_\alpha$. If $I$ and $J$ are non-empty, show that $(\bigcap_{\alpha \in I} A_\alpha) \cap (\bigcap_{\alpha \in J} A_\alpha) = \bigcap_{\alpha \in I \cup J} A_\alpha$.  
+
+Exercise 3.4.11. Let $X$ be a set, let $I$ be a non-empty set, and for all $\alpha ∈ I$ let
+$A_\alpha$ be a subset of $X$. Show that $X / \bigcup_{\alpha \in I} A_\alpha = \bigcap_{\alpha \in I} (X / A_\alpha)$ and $X / \bigcap_{\alpha \in I} A_\alpha = \bigcup_{\alpha \in I} (X / A_\alpha)$
+This should be compared with de Morgan’s laws in Proposition 3.1.28 (although one cannot derive the above identities directly from de Morgan’s laws, as $I$ could be infinite).  
 
 ## 3.5 Cartesian products
 
