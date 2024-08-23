@@ -183,8 +183,8 @@ Exercise 3.4.4. Let $f: X \rightarrow Y$ be a function from one set $X$ to anoth
 
 Exercise 3.4.5. Let $f: X \rightarrow Y$ be a function from one set $X$ to another set $Y$. Show that $f(f^{−1}(S)) = S$ for every $S \subseteq Y$ if and only if $f$ is surjective. Show that $f^{−1}(f(S)) = S$ for every $S \subseteq X$ if and only if f is injective.  
 * Combine with Exercise 3.4.2.  
-* Suppose $f$ is surjective. If $y \in S$, then there exists some element $x$ in $X$ such that $f(x) = y$. Now we think about $x$, because $f(x) = y$, then $x \in \{x \in X: f(x) \in S\}$. Thus $y \in f(f^{−1}(S)) \Rightarrow S \subseteq f(f^{−1}(S))$. Suppose $S \subseteq f(f^{−1}(S))$, $\forall y \in Y$ 
-* 
+* Suppose $f$ is surjective. If $y \in S$, then there exists some element $x$ in $X$ such that $f(x) = y$. Now we think about $x$, because $f(x) = y$, then $x \in \{x \in X: f(x) \in S\}$. Thus $y \in f(f^{−1}(S)) \Rightarrow S \subseteq f(f^{−1}(S))$. Suppose $S \subseteq f(f^{−1}(S))$, $\forall y \in Y$, because $Y \subseteq Y$, we have $Y \subseteq f(f^{−1}(Y))$, also $y \in f(f^{−1}(Y))$, then $y = f(x), x \in f^{-1}(Y) \Rightarrow$ for each $y$ there exists some elements $x \in X$ such that $y = f(x)$, thus $f$ is surjective.   
+* Suppose $f$ is injective. If $x \in f^{−1}(f(S)), f(x) \in f(S)$
 
 Exercise 3.4.6. Prove Lemma 3.4.9. (Hint: start with the set $\{0, 1\}^X$ and apply the replacement axiom, replacing each function f with the object $f^{−1}(\{1\})$.)See also Exercise 3.5.11.  
 
