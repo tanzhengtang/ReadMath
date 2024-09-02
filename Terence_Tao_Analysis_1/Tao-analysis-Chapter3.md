@@ -44,10 +44,12 @@
 * $\forall x \in A ~\cup~ (B ~\cap~ C) \Leftrightarrow x \in A$ or $x \in B ~\cap~ C \Leftrightarrow x \in A$ or $x \in A ~\cap~ B$ or $x \in A ~\cap~ C$ or $x \in B ~\cap~ C \Leftrightarrow x \in A ~\cup~ (A ~\cap~ B) ~\cup~ (A ~\cap~ C) ~\cup~ (B ~\cap~ C) \Leftrightarrow A ~\cup~ (A ~\cap~ B) ~\cup~ (C ~\cap~ (A ~\cup~ B)) \Leftrightarrow A ~\cup~ (A ~\cap~ B) ~\cup~ (C ~\cap~ (A ~\cup~ B)) \Leftrightarrow  (A ~\cap~ A) ~\cup~ (A ~\cap~ B) ~\cup~ (C ~\cap~ (A ~\cup~ B)) \Leftrightarrow (A ~\cap~ (A ~\cup~ B)) ~\cup~ (C ~\cap~ (A ~\cup~ B)) \Leftrightarrow (A ~\cap~ B) ~\cup~ (A ~\cap~ C)$.  
 
 (g) (Partition) We have $A ~\cup~ (X / A) = X$ and $A ~\cap~ (X / A) = \varnothing$.  
-* Suppose $A ~\cup~ (X / A) \ne X$, then $\exist x \in X st. x \notin A ~\cup~ (X / A)$ which means $x \in A ~\cap~ (X / A) = \varnothing$, this is a contradiction. Thus $A ~\cup~ (X / A) = X$.  
+* Suppose $A ~\cup~ (X / A) \ne X$, then $\exist x \in X st. x \notin A ~\cup~ (X / A)$. If $x \notin A$, and we have $x \in X$ then $x \in X / A$ which is a contradiction. If $x \notin X \ A$, then $x \in A$, which also a contradcition.  
 
 (h) (De Morgan laws) We have $X / (A ~\cup~ B) = (X / A) ~\cap~ (X / B)$ and $X / (A ~\cap~ B) = (X / A) ~\cup~ (X / B)$.  
 * $\forall x \in X / (A ~\cup~ B) \Leftrightarrow x \in X$ and $x \notin A ~\cup~ B$, because $X$ contain the elements of $A ~\cup~ B$, which means that $X$ will remove the elements of $A$ and the elements of $B$, thus $x \notin A$ and $x \notin B$, we could get $X / (A ~\cup~ B) = (X / A) ~\cap~ (X / B)$.  
+* $\forall x \in (X / A) ~\cup~ (X / B)$, suppose $x \in X / A$ with generality, then $x \in X$ and $x \notin A$, since $A = (A / B) \cup (A \cap B)$ we could get $x \notin A \cap B$. Thus $x \in X / (A \cap B)$.  
+* $\forall x \in X / (A ~\cap~ B) \Rightarrow x \in X$ and $x \notin A \cap B$, because $A \subseteq X$ we could say $x \in A$ or $x \in X / A$ then we have $x \in A$ and $x \notin A \cap B$ or $x \in X / A$ and $x \notin A \cap B \Rightarrow x \in X / A$. Similarly, we could also get $x \in X / B$ from $x \in X / (A ~\cap~ B)$. Thus $X / (A ~\cap~ B) \Rightarrow (X / A) \cup (X / B)$.  
 
 ### Exercises 
 Exercise 3.1.1. Show that the definition of equality in Definition 3.1.4 is reflexive, symmetric, and transitive.  
@@ -159,10 +161,10 @@ Exercise 3.3.8. If $X$ is a subset of $Y$ , let $l_{X \rightarrow Y}: X \rightar
 ### Definitions  
 * 3.4.1 (Images of sets). If $f: X \rightarrow Y$ is a function from $X$ to $Y$ , and $S$ is a set in $X$, we define $f(S)$ to be the set $f(S) := \{f(x): x \in S\}$. We sometimes call $f(S)$ the forward image of $S$.  
 * 3.4.4 (Inverse images). If $U$ is a subset of $Y$ , we define the set $f^{−1}(U)$ to be the set $f^{−1}(U) := \{x \in X: f(x) \in U\}$. We call $f^{-1}(U)$ the inverse image of $U$.  
-* 
    
-### Lemma 3.4.9. Let $X$ be a set. Then the set $Y: Y \subset X$ is a set.  
-*  
+### Lemma 3.4.9. Let $X$ be a set. Then the set $\{Y: Y \subset X\}$ is a set.  
+* Hint: start with the set $\{0, 1\}^X$ and apply the replacement axiom, replacing each function $f$ with the object $f^{−1}(\{1\})$  
+* Let $f: \{0, 1\} \rightarrow X$, and use Axiom 3.10 we have $F = \{0, 1\}^X$, then for any $f \in F$ give a $P(f, y)$ that $y$ is the object(set) which is the inverse images of $f$. By the replacement axiom, we have a set $\{f^{-1}(1): f \in F\}$. According to the inverse images for every $f \in F$, $f^{-1}(1)$ is a subset of $X$. Thus $\{f^{-1}(1): f \in F\} = \{Y: Y \subset X\}$ is a set.  
 
 ### Exercises  
 Exercise 3.4.1 Let $f: X \rightarrow Y$ be a bijective function, and let $f^{−1} : Y \rightarrow X$ be its inverse. Let $V$ be any subset of $Y$. Prove that the forward image of $V$ under $f^{−1}$ is the same set as the inverse image of $V$ under $f$; thus the fact that both sets are denoted by $f^{−1}(V)$ will not lead to any inconsistency.  
@@ -181,33 +183,58 @@ Exercise 3.4.3. Let $A, B$ be two subsets of a set $X$, and let $f: X \rightarro
 Exercise 3.4.4. Let $f: X \rightarrow Y$ be a function from one set $X$ to another set $Y$, and let $U, V$ be subsets of $Y$. Show that $f^{−1}(U \cup V) = f^{−1}(U) \cup f^{−1}(V)$, that $f^{−1}(U \cap V) = f^{−1}(U) \cap f^{−1}(V)$, and that $f^{−1}(U / V) = f^{−1}(U) / f^{−1}(V)$.  
 * Easy to prove. Skip.  
 
-Exercise 3.4.5. Let $f: X \rightarrow Y$ be a function from one set $X$ to another set $Y$. Show that $f(f^{−1}(S)) = S$ for every $S \subseteq Y$ if and only if $f$ is surjective. Show that $f^{−1}(f(S)) = S$ for every $S \subseteq X$ if and only if f is injective.  
+Exercise 3.4.5. Let $f: X \rightarrow Y$ be a function from one set $X$ to another set $Y$. Show that $f(f^{−1}(S)) = S$ for every $S \subseteq Y$ if and only if $f$ is surjective. Show that $f^{−1}(f(S)) = S$ for every $S \subseteq X$ if and only if $f$ is injective.  
 * Combine with Exercise 3.4.2.  
-* Suppose $f$ is surjective. If $y \in S$, then there exists some element $x$ in $X$ such that $f(x) = y$. Now we think about $x$, because $f(x) = y$, then $x \in \{x \in X: f(x) \in S\}$. Thus $y \in f(f^{−1}(S)) \Rightarrow S \subseteq f(f^{−1}(S))$. Suppose $S \subseteq f(f^{−1}(S))$, $\forall y \in Y$, because $Y \subseteq Y$, we have $Y \subseteq f(f^{−1}(Y))$, also $y \in f(f^{−1}(Y))$, then $y = f(x), x \in f^{-1}(Y) \Rightarrow$ for each $y$ there exists some elements $x \in X$ such that $y = f(x)$, thus $f$ is surjective.   
-* Suppose $f$ is injective. If $x \in f^{−1}(f(S)), f(x) \in f(S)$
+* Suppose $f$ is surjective. If $y \in S$, then there exists some element $x$ in $X$ such that $f(x) = y$. Now we think about $x$, because $f(x) = y$, then $x \in \{x \in X: f(x) \in S\}$. Thus $y \in f(f^{−1}(S)) \Rightarrow S \subseteq f(f^{−1}(S))$.  
+* Suppose $S \subseteq f(f^{−1}(S))$, $\forall y \in Y$, because $Y \subseteq Y$, we have $Y \subseteq f(f^{−1}(Y))$, also $y \in f(f^{−1}(Y))$, then $y = f(x), x \in f^{-1}(Y) \Rightarrow$ for each $y$ there exists some elements $x \in X$ such that $y = f(x)$, thus $f$ is surjective.   
+* Suppose $f$ is injective. Suppose $f^{−1}(f(S)) \not\subseteq S$ and let $x \in f^{−1}(f(S))$ and $x \notin S$. Also $f(x) \in f(S)$. Then suppose $x^\prime \in S ~st. f(x^\prime) = f(x)$, because $f$ is injective we have $x = x^\prime \Rightarrow x \in S$ which is a contradiction. Thus $f^{−1}(f(S)) \subseteq S$.  
+* Suppose $f^{−1}(f(S)) \subseteq S$. If $f$ is not injective, let $f(x) = f(x^\prime), x \in S, x^\prime \in S^\prime, S \cap S^\prime = \empty$, obviously $x^\prime \in f^{−1}(f(S))$ and $x^\prime \notin S$ which is a contradiction with $f^{−1}(f(S)) = S$ for every $S \subseteq X$. Thus $f$ is injective.  
 
-Exercise 3.4.6. Prove Lemma 3.4.9. (Hint: start with the set $\{0, 1\}^X$ and apply the replacement axiom, replacing each function f with the object $f^{−1}(\{1\})$.)See also Exercise 3.5.11.  
+Exercise 3.4.6. Prove Lemma 3.4.9. (Hint: start with the set $\{0, 1\}^X$ and apply the replacement axiom, replacing each function $f$ with the object $f^{−1}(\{1\})$.)See also Exercise 3.5.11.  
 
-Exercise 3.4.7. Let $X, Y$ be sets. Define a partial function from $X$ to $Y$ to be any function $f: X^\prime \rightarrow Y^\prime$ whose domain $X^\prime$ is a subset of $X$, and whose range $Y^\prime′$ is a subset of $Y$. Show that the collection of all partial functions from $X$ to $Y$ is itself a set.(Hint: use Exercise 3.4.6, the power set axiom, the replacement axiom, and the union axiom.)  
+Exercise 3.4.7. Let $X, Y$ be sets. Define a partial function from $X$ to $Y$ to be any function $f: X^\prime \rightarrow Y^\prime$ whose domain $X^\prime$ is a subset of $X$, and whose range $Y^\prime$ is a subset of $Y$. Show that the collection of all partial functions from $X$ to $Y$ is itself a set.(Hint: use Exercise 3.4.6, the power set axiom, the replacement axiom, and the union axiom.)  
+* $S := \{X^\prime: X^\prime \subseteq X\}, L := \{Y^\prime: Y^\prime \subseteq Y\}, F := \{(Y^\prime)^{X^\prime}\}$.  
+* Use union axiom, let $R := S \cup L$. Use replacement axiom, $P(x, y)$ is that for every $x \in $
 
 Exercise 3.4.8. Show that Axiom 3.4 can be deduced from Axiom 3.1, Axiom 3.3 and Axiom 3.11.  
+* Give two sets $A, B$. $A$ and $B$ are objects by Axiom 3.1, and we have $\{A, B\}$ by Axiom 3.3, then we could get the set $A \cup B$ exists by Axiom 3.11.  
 
-Exercise 3.4.9. Show that if $\beta$ and $\beta^\prime$ are two elements of a set $I$, and to each $\alpha \in I$ we assign a set $A_\alpha$, then $\{x \in A_\beta: x \in A_\alpha \text{~for~all~} \alpha \in I\} = \{x \in A_{β^\prime} : x \in A_\alpha \text{~for~all~} \alpha \in I\}$, and so the definition of $\bigcup_{\alpha \in I} A_\alpha$ defined in (3.3) does not depend on $\beta$. Also explain why (3.4) is true.  
+Exercise 3.4.9. Show that if $\beta$ and $\beta^\prime$ are two elements of a set $I$, and to each $\alpha \in I$ we assign a set $A_\alpha$, then $\{x \in A_\beta: x \in A_\alpha \text{~for~all~} \alpha \in I\} = \{x \in A_{β^\prime} : x \in A_\alpha \text{~for~all~} \alpha \in I\}$, and so the definition of $\bigcap_{\alpha \in I} A_\alpha$ defined in (3.3) does not depend on $\beta$. Also explain why (3.4) is true.  
+* 3.3 equation is $\bigcap_{\alpha \in I} A_\alpha := \{x \in A_\beta: x \in A_\alpha \text{~for~all~} \alpha \in I\}$, 3.4 is $y \in \bigcap_{\alpha \in I} A_\alpha \Leftrightarrow$ ($y \in A_\alpha$ for all $\alpha \in I$).  
+* If the definition of $\bigcap_{\alpha \in I} A_\alpha$ defined in (3.3) does not depend on $\beta$, let $\beta = \alpha \in I$, then $y \in \{x \in A_\alpha: x \in A_\alpha \text{~for~all~} \alpha \in I\}$, by specificatiom axiom geting the $y \in A_\alpha$ for all $\alpha \in I$ is true.  
 
 Exercise 3.4.10. Suppose that $I$ and $J$ are two sets, and for all $\alpha \in I \cup J$ let $A_\alpha$ be a set. Show that $(\bigcup_{\alpha \in I} A_\alpha) \cup (\bigcup_{\alpha \in J} A_\alpha) = \bigcup_{\alpha \in I \cup J} A_\alpha$. If $I$ and $J$ are non-empty, show that $(\bigcap_{\alpha \in I} A_\alpha) \cap (\bigcap_{\alpha \in J} A_\alpha) = \bigcap_{\alpha \in I \cup J} A_\alpha$.  
+* $x \in (\bigcup_{\alpha \in I} A_\alpha) \cup (\bigcup_{\alpha \in J} A_\alpha) \Leftrightarrow x \in A_\alpha \text{~for~some~} \alpha \in I$ or $x \in A_\alpha \text{~for~some~} \alpha \in J \Leftrightarrow x \in A_\alpha \text{~for~some~} \alpha \in I \text{~or~} \alpha \in J \Leftrightarrow x \in \bigcup_{\alpha \in I \cup J} A_\alpha$.  
+* $x \in (\bigcap_{\alpha \in I} A_\alpha) \cap (\bigcap_{\alpha \in J} A_\alpha) \Leftrightarrow x \in A_\alpha \text{~for~all~} \alpha \in I$ and $x \in A_\alpha \text{~for~all~} \alpha \in J \Leftrightarrow x \in A_\alpha \text{~for~every~elements~} \alpha \text{~both~in~I~and~J~} \Leftrightarrow x \in A_\alpha \text{~for~all~} \alpha \in I \cup J$.  
 
-Exercise 3.4.11. Let $X$ be a set, let $I$ be a non-empty set, and for all $\alpha ∈ I$ let
-$A_\alpha$ be a subset of $X$. Show that $X / \bigcup_{\alpha \in I} A_\alpha = \bigcap_{\alpha \in I} (X / A_\alpha)$ and $X / \bigcap_{\alpha \in I} A_\alpha = \bigcup_{\alpha \in I} (X / A_\alpha)$
-This should be compared with de Morgan’s laws in Proposition 3.1.28 (although one cannot derive the above identities directly from de Morgan’s laws, as $I$ could be infinite).  
+Exercise 3.4.11. Let $X$ be a set, let $I$ be a non-empty set, and for all $\alpha ∈ I$, let $A_\alpha$ be a subset of $X$. Show that $X / \bigcup_{\alpha \in I} A_\alpha = \bigcap_{\alpha \in I} (X / A_\alpha)$ and $X / \bigcap_{\alpha \in I} A_\alpha = \bigcup_{\alpha \in I} (X / A_\alpha)$. This should be compared with de Morgan’s laws in Proposition 3.1.28 (although one cannot derive the above identities directly from de Morgan’s laws, as $I$ could be infinite).  
+* $\forall x \in X / \bigcup_{\alpha \in I} A_\alpha \Leftrightarrow x \in X$ and $x \notin \bigcup_{\alpha \in I} A_\alpha \Leftrightarrow x \in X$ and $x \notin A_\alpha$ for all $\alpha \in I \Leftrightarrow \bigcap_{\alpha \in I} (X / A_\alpha)$.  
+* 
 
-## 3.5 Cartesian products
+## 3.5 Cartesian products  
+### Definitions  
+* 3.5.1 (Ordered pair). If $x$ and $y$ are any objects (possibly equal), we define the ordered pair $(x, y)$ to be a new object, consisting of $x$ as its first component and $y$ as its second component. Two ordered pairs $(x, y)$ and $(x^\prime, y^\prime)$ are considered equal if and only if both their components match, i.e $(x, y) = (x^\prime, y^\prime) \Leftrightarrow (x = x^\prime \text{~and~} y = y^\prime)$.  
+* 3.5.4 (Cartesian product). If $X$ and $Y$ are sets, then we define the Cartesian product $X * Y$ to be the collection of ordered pairs, whose first component lies in $X$ and second component lies in $Y$ , thus $X * Y = \{(x, y): x \in X, y \in Y\}$ or equivalently $a \in (X, Y) \Leftrightarrow (a = (x, y) \text{~for~some~} x \in X \text{~and~} y \in Y)$.  
+* 3.5.7 (Ordered $n$-tuple and $n$-fold Cartesian product). Let $n$ be a natural number. An ordered $n$-tuple $(x_i)_{1 \le i \le n}$ (also denoted $(x_1, ..., x_n)$) is a collection of objects $x_i$, one for every natural number $i$ between $i$ and $n$; we refer to $x_i$ as the ith component of the ordered $n$-tuple. Two ordered $n$-tuples $(x_i)_{1 \le i \le n}$ and $(y_i)_{1 \le i \le n}$ are said to be equal iff $x_i = y_i$ for all $1 \le i \le n$. If $(X_i)_{1 \le i \le n}$ is an ordered $n$-tuple of sets, we define their Cartesian product $\prod_{1 \le i \le n} X_i$ (also denoted $\prod_{i = 1}^n X_i \text{~or~} X_1 * . . . * X_n$) by $\prod_{1 \le i \le n} X_i := \{(x_i)_{1 \le i \le n} : x_i \in X_i \text{~for~all~} 1 \le i \le n\}$.  
 
-### Exercise
-* 3.5.10 If f : X → Y is a function, define the graph of f to be the subset of X × Y defined by {(x, f(x)) : x ∈ X}. Show that two functions f:X→Y, $f^o$ :X→Y are equal if and only if they have the same graph. Conversely, if G is any subset of X × Y with the property that for each x ∈ X, the set {y ∈ Y : (x,y) ∈ G} has exactly one element (or in other words, G obeys the vertical line test), show that there is exactly one function f : X → Y whose graph is equal to G.  
+### Lemma 3.5.12 (Finite choice). Let $n \ge 1$ be a natural number, and for each natural number $1 \le i \le n$, let $X_i$ be a non-empty set. Then there exists an $n$-tuple $(x_i)_{1 \le i \le n}$ such that $x_i \in X_i$ for all $1 \le i \le n$. In other words, if each $X_i$ is non-empty, then the set $\prod_{1 \le i \le n} X_i$ is also non-empty.  
+* Use induction to prove.  
+
+### Exercise  
+Exercise 3.5.1. Suppose we define the ordered pair $(x, y)$ for any objects $x$ and $y$ by the formula $(x, y) := \{\{x\}, \{x, y\}\}$ (thus using several applications of Axiom 3.3). Thus for instance $(1, 2)$ is the set $\{\{1\}, \{1, 2\}\}, (2, 1)$ is the set $\{\{2\}, \{2, 1\}\}$, and $(1, 1)$ is the set $\{\{1\}\}$. Show that such a definition indeed obeys the property (3.5), and also whenever $X$ and $Y$ are sets, the Cartesian product $X * Y$ is also a set. Thus this definition can be validly used as a definition of an ordered pair. For an additional challenge, show that the alternate definition $(x, y) := \{x, \{x, y\}\}$ also verifies (3.5) and is thus also an acceptable definition of ordered pair. (For this latter task one needs the axiom of regularity, and in particular Exercise 3.2.2.)  
+* Formula 3.5 is $a \in (X, Y) \Leftrightarrow (a = (x, y) \text{~for~some~} x \in X \text{~and~} y \in Y)$.  
+* We need to prove that $(x, y) := \{\{x\}, \{x, y\}\}$ is a ordered pair. If $(x, y) = (x^\prime, y^\prime) \Rightarrow \{\{x\}, \{x, y\}\} = \{\{x^\prime\}, \{x^\prime, y^\prime\}\} \Rightarrow x = x^\prime, y = y^\prime$. If $x = x^\prime, y = y^\prime$, then $(x, y) = \{\{x\}, \{x, y\}\} = \{\{x^\prime\}, \{x^\prime, y^\prime\}\} = (x, y)$. Thus $\{\{x\}, \{x, y\}\}$ is ordered pair.  
+* The rest is skip.  
+
+Exercise 3.5.2. Suppose we define an ordered $n$-tuple to be a surjective function $x:\{i \in N: 1 \le i \le n\} \rightarrow X$ whose range is some arbitrary set $X$ (so different ordered $n$-tuples are allowed to have different ranges); we then write $x_i$ for $x(i)$, and also write $x$ as $(x_i)_{1 \le i \le n}$. Using this definition, verify that we have $(x_i)_{1 \le i \le n} = (y_i)_{1 \le i \le n}$ if and only if $x_i = y_i$ for all $1 \le i \le n$. Also, show that if $(X_i)_{1 \le i \le n}$ are an ordered $n$-tuple of sets, then the Cartesian product, as defined in Definition 3.5.7, is indeed a set. (Hint: use Exercise 3.4.7 and the axiom of specification.)  
+* See $x$ and $y$ as functions, their domain is $1 \le i \le n$ and range is $X$. If $(x_i)_{1 \le i \le n} = (y_i)_{1 \le i \le n}$, then obviously that $x_i = y_i$ for all $1 \le i \le n$. If $x_i = y_i$ for all $1 \le i \le n$, then $\forall j \in \{1 \le i \le n\}$, we have $x(j) = y(j)$, thus $x = y$.
+
+
+Exercise 3.5.10 If f : X → Y is a function, define the graph of f to be the subset of X × Y defined by {(x, f(x)) : x ∈ X}. Show that two functions f:X→Y, $f^o$ :X→Y are equal if and only if they have the same graph. Conversely, if G is any subset of X × Y with the property that for each x ∈ X, the set {y ∈ Y : (x,y) ∈ G} has exactly one element (or in other words, G obeys the vertical line test), show that there is exactly one function f : X → Y whose graph is equal to G.  
 *Proof:* Frist, if f and $f^o$ is equal, for any x in their domain X, have $f(x) = f^o(x)$, then for any $(x,f(x))$ and $(x,f^o(x))$ also equal, which means their graph is equal. Conversely, we can induce $f = f^o$ from graph equal.  
 Second, 
 
-* 3.5.11 Show that Axiom 3.10 can in fact be deduced from Lemma 3.4.9 and the other axioms of set theory, and thus Lemma 3.4.9 can be used as an alternate formulation of the power set axiom. (Hint: for any two sets X and Y, use Lemma 3.4.9 and the axiom of specification to construct the set of all subsets of X × Y which obey the vertical line test. Then use Exercise 3.5.10 and the axiom of replacement.)  
+Exercise 3.5.11 Show that Axiom 3.10 can in fact be deduced from Lemma 3.4.9 and the other axioms of set theory, and thus Lemma 3.4.9 can be used as an alternate formulation of the power set axiom. (Hint: for any two sets X and Y, use Lemma 3.4.9 and the axiom of specification to construct the set of all subsets of X × Y which obey the vertical line test. Then use Exercise 3.5.10 and the axiom of replacement.)  
 *Proof:*  
 
 ## 3.6. Cardinality of sets  

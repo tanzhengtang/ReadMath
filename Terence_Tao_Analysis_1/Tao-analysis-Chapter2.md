@@ -32,16 +32,16 @@
 * 2.2.11 Ordering of the natural numbers. Let $n$ and $m$ be natural numbers. We say that $n$ is greater than or equal to $m$, and write $n ≥ m$ or $m ≤ n$, iff we have $n = m + a$ for some natural number $a$. We say that $n$ is strictly greater than $m$, and write $n > m$ or $m < n$, iff $n \ge m$ and $n \ne m$.  
 
 ### 2.2.2 Lemma: For any natural number $n$, $n + 0 = n$  
-Let $n = 0$, $n + 0 = 0 + 0 = 0 = n$, assume $n + 0 = n$ is true, show $(n++) + 0 = (n + 0)++ = (n++)$ is also true.  
+* Let $n = 0$, $n + 0 = 0 + 0 = 0 = n$, assume $n + 0 = n$ is true, show $(n++) + 0 = (n + 0)++ = (n++)$ is also true.  
 
 ### 2.2.3 Lemma: For any natural numbers $n$ and $m$, $n + (m++) = (n + m)++$    
-Let $n = 0$, $0 + (m++) = (m++) = (0 + m)++$, suppose $n + (m++) = (n+m)++$ is true. Show $(n++) + (m++) = (n + m(++))++ = ((n + m)++)++ = ((n++) + m)++$ is also true.
+* Let $n = 0$, $0 + (m++) = (m++) = (0 + m)++$, suppose $n + (m++) = (n+m)++$ is true. Show $(n++) + (m++) = (n + m(++))++ = ((n + m)++)++ = ((n++) + m)++$ is also true.
 
 ### 2.2.4 Proposition: (Addition is commutative). For any natural numbers $n$ and $m$, $n+m=m+n$   
-Let $n = 0$, $n + m = 0 + m = m = m + 0 = m + n$, suppose $n + m = m + n$ is true. Show $(n++) + m = (n + m)++ = (m + n)++ = m + (n++)$ is also true.  
+* Let $n = 0$, $n + m = 0 + m = m = m + 0 = m + n$, suppose $n + m = m + n$ is true. Show $(n++) + m = (n + m)++ = (m + n)++ = m + (n++)$ is also true.  
 
 ### 2.2.5 Proposition: (Addition is associative). For any natural numbers $a,b,c$, we have $(a+b)+c=a+(b+c)$  
-Let $a = 0$,$(a + b) + c = 0 + b + c = 0 + (b + c) = a + (b + c)$, suppose $(a + b) + c = a + (b + c)$ is true, show $((a++) + b) + c = ((a + b)++) + c = ((a + b) + c)++ = (a + (b + c))++ = (a++) + (b + c)$ is also true.  
+* Let $a = 0$,$(a + b) + c = 0 + b + c = 0 + (b + c) = a + (b + c)$, suppose $(a + b) + c = a + (b + c)$ is true, show $((a++) + b) + c = ((a + b)++) + c = ((a + b) + c)++ = (a + (b + c))++ = (a++) + (b + c)$ is also true.  
 
 ### 2.2.6 Proposition: (Cancellation law). Let $a,b,c$ be natural numbers such that $a + b = a + c$. Then we have $b = c$   
 * Let $a = 0$, if $a + b = b + c$, then $0 + b = 0 + c$, then $b = c$. Assume this property is true for $a$, show $a++$ is also true for this property.  
@@ -51,29 +51,29 @@ Let $a = 0$,$(a + b) + c = 0 + b + c = 0 + (b + c) = a + (b + c)$, suppose $(a +
 If $a$ is positive,then $a$ is not equal to $0$, and $b \geq 0$(informal), so $a + b$ must be successor of natural number, and according to Axiom 2.3, $a + b$ can not be 0, then $a + b$ is positive.  
 
 ### 2.2.9 Corollary: If a and b are natural numbers such that $a + b = 0$, then $a = 0$ and $b = 0$  
-If $a$ not equal to 0 or $b$ not equal to $0$, use 2.2.8, then $a + b$ is positive.  
+* If $a$ not equal to 0 or $b$ not equal to $0$, use 2.2.8, then $a + b$ is positive.  
 
 ### 2.2.10 Lemma : Let a be a positive number. Then there exists exactly one natural number b such that $b++ = a$  
-Let $b = 0$, $0++ = 1$, and $1$ is positive. Assume $n$ is positive and exists exactly $m++ = n$ is true. Show $n++$ also have a natural number $m^o$ such that $m^o++ = n++$. Let $m^o = m++$, and $m^o ++$ is also natural number, then $m^o ++ = (m++)++ = n++$. Closed.  
+* Let $b = 0$, $0++ = 1$, and $1$ is positive. Assume $n$ is positive and exists exactly $m++ = n$ is true. Show $n++$ also have a natural number $m^o$ such that $m^o++ = n++$. Let $m^o = m++$, and $m^o ++$ is also natural number, then $m^o ++ = (m++)++ = n++$. Closed.  
 
 ### 2.2.12 Proposition: (Basic properties of order for natural numbers).  
 (a) (Order is reflexive) $a ≥ a$.  
-**Prof:** $a \geq a$, because $a + 0 = a$, and 0 is natural number.  
+* $a \geq a$, because $a + 0 = a$, and 0 is natural number.  
 
 (b) (Order is transitive) If $a ≥ b$ and $b ≥ c$, then $a ≥ c$.  
-**Prof:** If $a \geq b$ and $b \geq c$, then $a \geq c$. Because $b + m = a$, $c + n = b$, use $c + n$ to substitute $b$, have $c + n + m = a$, so $a \geq c$.  
+* If $a \geq b$ and $b \geq c$, then $a \geq c$. Because $b + m = a$, $c + n = b$, use $c + n$ to substitute $b$, have $c + n + m = a$, so $a \geq c$.  
 
 (c) (Order is anti-symmetric) If $a ≥ b$ and $b ≥ a$, then $a = b$.  
-**Prof:** If $a ≥ b$ and $b ≥ a$, then $a = b$. We have $a + n = b$ and $b + m = a$, then $a + n + m =  a = a + 0$, thought $n + m$ is a natural number, use 2.2.6 proposition, then have $n + m = 0$, use 2.2.9 corollary, then $n = m = 0$, so we get $a = b$.  
+* If $a ≥ b$ and $b ≥ a$, then $a = b$. We have $a + n = b$ and $b + m = a$, then $a + n + m =  a = a + 0$, thought $n + m$ is a natural number, use 2.2.6 proposition, then have $n + m = 0$, use 2.2.9 corollary, then $n = m = 0$, so we get $a = b$.  
 
 (d) (Addition preserves order) $a ≥ b$ if and only if $a + c ≥ b + c$.  
-**Prof:** $a≥b$ if and only if $a+c≥b+c$. If $b + n = a$, we can have $a + c = b + n + c = b + c + n$, according to 2.2.11 definition, so $a+c≥b+c$. If we have $a+c≥b+c$, then $a + c = b + c + n = b + n + c$, think $b + n$ is a number, use 2.2.6 proposition, so $a = b + n$, and then $a≥b$.  
+* $a≥b$ if and only if $a+c≥b+c$. If $b + n = a$, we can have $a + c = b + n + c = b + c + n$, according to 2.2.11 definition, so $a+c≥b+c$. If we have $a+c≥b+c$, then $a + c = b + c + n = b + n + c$, think $b + n$ is a number, use 2.2.6 proposition, so $a = b + n$, and then $a≥b$.  
 
 (e) $a<b$ if and only if $a++ ≤ b$.  
-**Prof:** $a<b$ if and only if $a++≤b$. If $a < b$, according to 2.2.11 definition, we have $a + n = b$ and $n$ not equal to 0, use 2.2.10 lemma for $n$($n$ is positive), there must be a natural number such that $m++ = n$, now we have $a + (m++) = b$, then $(a++) + m = b$, because $m$ is a natural number, So $a++≤b$. If we have $a++≤b$, then $(a++) + m = b$, then $a + (m++) = b$, because $m++$ can not be 0, then $a < b$.  
+* $a<b$ if and only if $a++≤b$. If $a < b$, according to 2.2.11 definition, we have $a + n = b$ and $n$ not equal to 0, use 2.2.10 lemma for $n$($n$ is positive), there must be a natural number such that $m++ = n$, now we have $a + (m++) = b$, then $(a++) + m = b$, because $m$ is a natural number, So $a++≤b$. If we have $a++≤b$, then $(a++) + m = b$, then $a + (m++) = b$, because $m++$ can not be 0, then $a < b$.  
 
 (f) $a<b$ if and only if $b = a + d$ for some positive number $d$.  
-**Prof:** $a<b$ if and only if $b=a+d$ for some positive number $d$. If $a < b$, we have $a + d = b$ and $a$ not equal to $b$, assume $d$ is 0, it will get $a = b$, this is a contradiction, so $d$ not equal to 0, then $d$ is positive number. If we have $b=a+d$ for some positive number $d$,so $a \leq b$, because $d$ is positive, then $a$ not equal to $b$, so $a<b$ is true.  
+* $a<b$ if and only if $b=a+d$ for some positive number $d$. If $a < b$, we have $a + d = b$ and $a$ not equal to $b$, assume $d$ is 0, it will get $a = b$, this is a contradiction, so $d$ not equal to 0, then $d$ is positive number. If we have $b=a+d$ for some positive number $d$,so $a \leq b$, because $d$ is positive, then $a$ not equal to $b$, so $a<b$ is true.  
 
 ### 2.2.13 Proposition: (Trichotomy of order for natural numbers). Let a and b be natural numbers. Then exactly one of the following statements is true: $a<b, a=b$, or $a>b$  
 * First, I want to prove that $a,b$ really just have the three relations. Obviously, there has $a = b$. Consider if $a$ not equal to $b$, use axiom 2.3 and 2.4, know that if $a,b$ is different, then their predecrssor is also different.  Recursively trace to the front,$a$ and $b$ trace same times $c$, will get $0$ not equal to $n$,$n \in N$, then $n \geq 0$, and $a$ not equal to $b$, so have $n > 0$, and $n + c > 0 + c$, so have $a > b$ or $a < b$.
@@ -81,7 +81,7 @@ Let $b = 0$, $0++ = 1$, and $1$ is positive. Assume $n$ is positive and exists e
 
 ### 2.2.14 Proposition: (Strong principle of induction). Let $m_0$ be a natural number, and let $P(m)$ be a property pertaining to an arbitrary natural number $m$. Suppose that for each $m ≥ m_0$, we have the following implication: if $P(m^{\prime})$ is true for all natural numbers $m_0 ≤ m^{\prime} < m$, then $P(m)$ is also true. (In particular, this means that $P(m_0)$ is true, since in this case the hypothesis is vacuous.) Then we can conclude that $P(m)$ is true for all natural numbers $m ≥ m_0$.  
 * Hint: define $Q(n)$ to be the property that $P(m)$ is true for all $m_0 ≤ m < n$.  
-* If no anwser, please see: https://solverer.com/library/terence_tao/analysis_i/exercise_2-2-5  
+* If no anwser, please see: https://solverer.com/library/terence_tao/analysis_i/exercise_2-2-5.  
 
 
 ### Exercise
