@@ -164,7 +164,7 @@ Exercise 3.3.8. If $X$ is a subset of $Y$ , let $l_{X \rightarrow Y}: X \rightar
    
 ### Lemma 3.4.9. Let $X$ be a set. Then the set $\{Y: Y \subset X\}$ is a set.  
 * Hint: start with the set $\{0, 1\}^X$ and apply the replacement axiom, replacing each function $f$ with the object $f^{−1}(\{1\})$  
-* Let $f: \{0, 1\} \rightarrow X$, and use Axiom 3.10 we have $F = \{0, 1\}^X$, then for any $f \in F$ give a $P(f, y)$ that $y$ is the object(set) which is the inverse images of $f$. By the replacement axiom, we have a set $\{f^{-1}(1): f \in F\}$. According to the inverse images for every $f \in F$, $f^{-1}(1)$ is a subset of $X$. Thus $\{f^{-1}(1): f \in F\} = \{Y: Y \subset X\}$ is a set.  
+* Let $f: \{0, 1\} \rightarrow X$, and use Axiom 3.10 we have $F = \{0, 1\}^X$, then for any $f \in F$ give a $P(f, y)$ that $y$ is the object(set) of all object $x$ which $f(x) = 1$. By the replacement axiom, we have a set $\{f^{-1}(1): f \in F\}$. According to the inverse images for every $f \in F$, $f^{-1}(1)$ is a subset of $X$. And for any $Y \subseteq X$, we could built a function that $g(x) = 1$ if $x \in Y$ and $g(x) = 0$ if $x \notin Y$, obviously $g \in F$. Thus $\{f^{-1}(1): f \in F\} = \{Y: Y \subset X\}$ is a set.  
 
 ### Exercises  
 Exercise 3.4.1 Let $f: X \rightarrow Y$ be a bijective function, and let $f^{−1} : Y \rightarrow X$ be its inverse. Let $V$ be any subset of $Y$. Prove that the forward image of $V$ under $f^{−1}$ is the same set as the inverse image of $V$ under $f$; thus the fact that both sets are denoted by $f^{−1}(V)$ will not lead to any inconsistency.  
@@ -193,8 +193,7 @@ Exercise 3.4.5. Let $f: X \rightarrow Y$ be a function from one set $X$ to anoth
 Exercise 3.4.6. Prove Lemma 3.4.9. (Hint: start with the set $\{0, 1\}^X$ and apply the replacement axiom, replacing each function $f$ with the object $f^{−1}(\{1\})$.)See also Exercise 3.5.11.  
 
 Exercise 3.4.7. Let $X, Y$ be sets. Define a partial function from $X$ to $Y$ to be any function $f: X^\prime \rightarrow Y^\prime$ whose domain $X^\prime$ is a subset of $X$, and whose range $Y^\prime$ is a subset of $Y$. Show that the collection of all partial functions from $X$ to $Y$ is itself a set.(Hint: use Exercise 3.4.6, the power set axiom, the replacement axiom, and the union axiom.)  
-* $S := \{X^\prime: X^\prime \subseteq X\}, L := \{Y^\prime: Y^\prime \subseteq Y\}, F := \{(Y^\prime)^{X^\prime}\}$.  
-* Use union axiom, let $R := S \cup L$. Use replacement axiom, $P(x, y)$ is that for every $x \in $
+* $S := \{X^\prime: X^\prime \subseteq X\}, L := \{Y^\prime: Y^\prime \subseteq Y\}, F := \{(Y^\prime)^{X^\prime}\}$. And $\bigcup_{X^\prime \in S}\bigcup_{Y^\prime \in L} (Y^\prime)^{X^\prime}$.  
 
 Exercise 3.4.8. Show that Axiom 3.4 can be deduced from Axiom 3.1, Axiom 3.3 and Axiom 3.11.  
 * Give two sets $A, B$. $A$ and $B$ are objects by Axiom 3.1, and we have $\{A, B\}$ by Axiom 3.3, then we could get the set $A \cup B$ exists by Axiom 3.11.  
@@ -209,7 +208,6 @@ Exercise 3.4.10. Suppose that $I$ and $J$ are two sets, and for all $\alpha \in 
 
 Exercise 3.4.11. Let $X$ be a set, let $I$ be a non-empty set, and for all $\alpha ∈ I$, let $A_\alpha$ be a subset of $X$. Show that $X / \bigcup_{\alpha \in I} A_\alpha = \bigcap_{\alpha \in I} (X / A_\alpha)$ and $X / \bigcap_{\alpha \in I} A_\alpha = \bigcup_{\alpha \in I} (X / A_\alpha)$. This should be compared with de Morgan’s laws in Proposition 3.1.28 (although one cannot derive the above identities directly from de Morgan’s laws, as $I$ could be infinite).  
 * $\forall x \in X / \bigcup_{\alpha \in I} A_\alpha \Leftrightarrow x \in X$ and $x \notin \bigcup_{\alpha \in I} A_\alpha \Leftrightarrow x \in X$ and $x \notin A_\alpha$ for all $\alpha \in I \Leftrightarrow \bigcap_{\alpha \in I} (X / A_\alpha)$.  
-* 
 
 ## 3.5 Cartesian products  
 ### Definitions  
@@ -227,15 +225,43 @@ Exercise 3.5.1. Suppose we define the ordered pair $(x, y)$ for any objects $x$ 
 * The rest is skip.  
 
 Exercise 3.5.2. Suppose we define an ordered $n$-tuple to be a surjective function $x:\{i \in N: 1 \le i \le n\} \rightarrow X$ whose range is some arbitrary set $X$ (so different ordered $n$-tuples are allowed to have different ranges); we then write $x_i$ for $x(i)$, and also write $x$ as $(x_i)_{1 \le i \le n}$. Using this definition, verify that we have $(x_i)_{1 \le i \le n} = (y_i)_{1 \le i \le n}$ if and only if $x_i = y_i$ for all $1 \le i \le n$. Also, show that if $(X_i)_{1 \le i \le n}$ are an ordered $n$-tuple of sets, then the Cartesian product, as defined in Definition 3.5.7, is indeed a set. (Hint: use Exercise 3.4.7 and the axiom of specification.)  
-* See $x$ and $y$ as functions, their domain is $1 \le i \le n$ and range is $X$. If $(x_i)_{1 \le i \le n} = (y_i)_{1 \le i \le n}$, then obviously that $x_i = y_i$ for all $1 \le i \le n$. If $x_i = y_i$ for all $1 \le i \le n$, then $\forall j \in \{1 \le i \le n\}$, we have $x(j) = y(j)$, thus $x = y$.
+* See $x$ and $y$ as functions, their domain is $1 \le i \le n$ and range is $X$. If $(x_i)_{1 \le i \le n} = (y_i)_{1 \le i \le n}$, then obviously that $x_i = y_i$ for all $1 \le i \le n$. If $x_i = y_i$ for all $1 \le i \le n$, then $\forall j \in \{1 \le i \le n\}$, we have $x(j) = y(j)$, thus $x = y$.  
+* Let $1 \le i \le n$ be domain, the $X$ be range, use Exercise 3.4.7 we have a set $F$ contain all the partial functions from the subset of $1 \le i \le n$ to the subset of $X$. Use the axiom of specification, we select the functions which is a surjective function $x:\{i \in N: 1 \le i \le n\} \rightarrow X$ with range of some arbitrary subset of $X$.  
 
+Exercise 3.5.3. Show that the definitions of equality for ordered pair and ordered $n$-tuple obey the reflexivity, symmetry, and transitivity axioms.  
 
-Exercise 3.5.10 If f : X → Y is a function, define the graph of f to be the subset of X × Y defined by {(x, f(x)) : x ∈ X}. Show that two functions f:X→Y, $f^o$ :X→Y are equal if and only if they have the same graph. Conversely, if G is any subset of X × Y with the property that for each x ∈ X, the set {y ∈ Y : (x,y) ∈ G} has exactly one element (or in other words, G obeys the vertical line test), show that there is exactly one function f : X → Y whose graph is equal to G.  
-*Proof:* Frist, if f and $f^o$ is equal, for any x in their domain X, have $f(x) = f^o(x)$, then for any $(x,f(x))$ and $(x,f^o(x))$ also equal, which means their graph is equal. Conversely, we can induce $f = f^o$ from graph equal.  
-Second, 
+Exercise 3.5.4. Let A, B, C be sets. Show that $A * (B \cup C) = (A * B) \cup (A * C)$, that $A * (B \cap C) = (A * B) \cap (A * C)$, and that $A * (B / C) = (A * B) / (A * C)$. (One can of course prove similar identities in which the roles of the left and right factors of the Cartesian product are reversed.)  
+* $\forall (x, y) \in A * (B \cup C) \Leftrightarrow x \in A$ and $y \in B \cup C \Leftrightarrow (x \in A \text{~and~} y \in B) \text{~or~} (x \in A \text{~and~} y \in C) \Leftrightarrow (x, y) \in (A * B) \cup (A * C)$.  
+* Skip the rest.  
 
-Exercise 3.5.11 Show that Axiom 3.10 can in fact be deduced from Lemma 3.4.9 and the other axioms of set theory, and thus Lemma 3.4.9 can be used as an alternate formulation of the power set axiom. (Hint: for any two sets X and Y, use Lemma 3.4.9 and the axiom of specification to construct the set of all subsets of X × Y which obey the vertical line test. Then use Exercise 3.5.10 and the axiom of replacement.)  
-*Proof:*  
+Exercise 3.5.5. Let $A, B, C, D$ be sets. Show that $(A * B) \cap (C * D) = (A \cap C) * (B \cap D)$. Is it true that $(A * B) \cup (C * D) = (A \cup C) * (B \cup D)$? Is it true that $(A * B) / (C * D) = (A / C) * (B / D)$?  
+* $\forall (x, y) \in (A * B) \cap (C * D) \Leftrightarrow (x, y) \in A * B \text{~and~} (x, y) \in C * D \Leftrightarrow (x \in A \text{~and~} y \in B) \text{~and~} (x \in C \text{~and~} y \in D) \Leftrightarrow (x, y) \in (A \cap C) * (B \cap D)$.  
+* $(A * B) \cup (C * D) = (A \cup C) * (B \cup D)$ is false.  
+* $(A * B) / (C * D) = (A / C) * (B / D)$ is true.  
+
+Exercise 3.5.6. Let $A, B, C, D$ be non-empty sets. Show that $A * B \subseteq C * D$ if and only if $A \subseteq C$ and $B \subseteq D$, and that $A * B = C * D$ if and only if $A = C$ and $B = D$. What happens if the hypotheses that the $A, B, C, D$ are all non-empty are removed?  
+* If the hypotheses that the $A, B, C, D$ are all non-empty are removed, those proposition will not be true.  
+
+Exercise 3.5.7. Let $X, Y$ be sets, and let $\pi_{X * Y \rightarrow X}: X * Y \rightarrow X$ and $\pi_{X * Y \rightarrow Y}: X * Y \rightarrow Y$ be the maps $\pi_{X * Y \rightarrow X}(x, y) := x$ and $\pi_{X * Y \rightarrow Y} (x, y) := y$; these maps are known as the coordinate functions on $X * Y$ . Show that for any functions $f: Z \rightarrow X$ and $g: Z \rightarrow Y$ , there exists a unique function $h: Z \rightarrow X * Y$ such that $\pi_{X * Y \rightarrow X}  \circ h = f$ and $\pi_{X * Y \rightarrow Y}  \circ h = g$. (Compare this to the last part of Exercise 3.3.8, and to Exercise 3.1.7.) This function h is known as the direct sum of $f$ and $g$ and is denoted $h = f \oplus g$.  
+* $\forall z \in Z, h(z) := (f(z), g(z))$, then $h = f \oplus g$.  
+
+Eercise 3.5.8. Let $X_1,...,X_n$ be sets. Show that the Cartesian product $\prod_{i = 1}^n X_i$ is empty if and only if at least one of the $X_i$ is empty.  
+* If at least one of the $X_i$ is empty, then $(x_i)_{1 \le i \le n}$ could not be a object since $X_i$ does not contain any object for consisting an $n$-tuple ordered pair. Thus none-object in $\prod_{i = 1}^n X_i$.  
+* If $\prod_{i = 1}^n X_i$ is empty, suppose all of the $X_i$ is none-empty, then we could get that at least one object in $\prod_{i = 1}^n X_i$, which is a contradiction.  
+
+Exercise 3.5.9. Suppose that $I$ and $J$ are two sets, and for all $\alpha \in I$ let $A_\alpha$ be a set, and for all $\beta \in J$ let $B_\beta$ be a set. Show that $(\bigcup_{\alpha \in I} A_\alpha) \cap (\bigcup_{\beta \in J} B_\beta) = \bigcup_{(\alpha, \beta) \in I * J} (A_\alpha \cap B_\beta)$.  
+
+Exercise 3.5.10 If $f: X \rightarrow Y$ is a function, define the graph of $f$ to be the subset of $X * Y$ defined by $\{(x, f(x)): x \in X\}$. Show that two functions $f:X \rightarrow Y,f^\prime: X \rightarrow Y$ are equal if and only if they have the same graph. Conversely, if $G$ is any subset of $X * Y$ with the property that for each $x \in X$, the set $\{y \in Y: (x,y) \in G\}$ has exactly one element (or in other words, $G$ obeys the vertical line test), show that there is exactly one function $f: X \rightarrow Y$ whose graph is equal to $G$.  
+* If there exists such set $G$, suppose for each $x \in X, f(x) \in \{y \in Y: (x, y) \in G\}$, because $\{y \in Y: (x, y) \in G\}$ contain exactly one element, thus $f(x) = y$. Thus $(x, f(x)) = (x, y)$ for each $x \in X$ and $G = \{(x, f(x)): x \in X\}$.  
+
+Exercise 3.5.11 Show that Axiom 3.10 can in fact be deduced from Lemma 3.4.9 and the other axioms of set theory, and thus Lemma 3.4.9 can be used as an alternate formulation of the power set axiom. (Hint: for any two sets $X$ and $Y$, use Lemma 3.4.9 and the axiom of specification to construct the set of all subsets of $X * Y$ which obey the vertical line test. Then use Exercise 3.5.10 and the axiom of replacement.)  
+* Axiom 3.10 (Power set axiom). Let $X$ and $Y$ be sets. Then there exists a set, denoted $Y^X$, which consists of all the functions from $X$ to $Y$, thus $f \in Y^X \Leftrightarrow$ ($f$ is a function with domain $X$ and range $Y$).  
+* Lemma 3.4.9 Let $X$ be a set. Then the set $\{Y: Y \subset X\}$ is a set.  
+* Let $C = X * Y$, use Lemma 3.4.9, $H = \{M: M \subset C\}$. And use specification axiom to select all sets which statisfy the condition of $G$ in exercise 3.5.10, 
+
+Exercise 3.5.12. This exercise will establish a rigorous version of Proposition 2.1.16. Let $f: N * N \rightarrow N$ be a function, and let $c$ be a natural number. Show that there exists a function $a: N \rightarrow N$ such that $a(0) = c$ and $a(n++) = f(n, a(n))$ for all $n \in N$, and furthermore that this function is unique. (Hint: first show inductively, by a modification of the proof of Lemma 3.5.12, that for every natural number $n \in N$, there exists a unique function $a_n : {n^\prime \in N : n^\prime \le n} \rightarrow N$ such that $a_n(0) = c$ and $a_n(n^\prime ++) = f(n, a(n^\prime))$ for all $n^\prime ∈ N$ such that $n^\prime < n$.) For an additional challenge, prove this result without using any properties of the natural numbers other than the Peano axioms directly (in particular, without using the ordering of the natural numbers, and without appealing to Proposition 2.1.16). (Hint: first show inductively, using only the Peano axioms and basic set theory, that for every natural number $n \in N$, there exists a unique pair $A_n, B_n$ of subsets of $N$ which obeys the following properties: (a) $A_n \cap B_n = \empty$, (b) $A_n \cup B_n = N$, (c) $0 ∈\in A_n$, (d) $n++ ∈ B_n$, (e) Whenever $n^\prime \in B_n$, we have $n^\prime++ \in B_n$. (f) Whenever $n^\prime \in A_n$ and $n^\prime \ne n$, we have $n^\prime++ \in A_n$. Once one obtains these sets, use $A_n$ as a substitute for $\{n^\prime \in N : n^\prime ≤ n\}$ in the previous argument.  
+
+Exercise 3.5.13. The purpose of this exercise is to show that there is essentially only one version of the natural number system in set theory (cf. the discussion in Remark 2.1.12). Suppose we have a set N′ of “alternative natural numbers”, an “alternative zero” 0′, and an “alternative increment operation” which takes any alternative natural number $n^\prime \in N^\prime$ and returns another alternative natural number $n^\prime++^\prime \in N^\prime$, such that the Peano axioms (Axioms 2.1-2.5) all hold with the natural numbers, zero, and increment replaced by their alternative counterparts. Show that there exists a bijection $f: N \rightarrow N^\prime$ from the natural numbers to the alternative natural numbers such that $f(0) = 0^\prime$, and such that for any $n \in N$ and $n^\prime \in N^\prime$, we have $f(n) = n^\prime$ if and only if $f(n++) = n^\prime++^\prime$. (Hint: use Exercise 3.5.12.)  
 
 ## 3.6. Cardinality of sets  
 
