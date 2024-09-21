@@ -1,45 +1,114 @@
----
-title: Terecent Tao Analysis I Chapter5 & Exercise
-date: 2023-8
-mathjax: true
-categories: 
-- Math
-tags: 
-- Math
----
-# Chapter 5  
-* Just to record my own thought and answer,if there has any error,please leave a message in the comment area. 
-## 5.1 Cauchy sequences
+# Chapter 5 The real numbers  
+## 5.1 Cauchy sequences  
+### Definitions  
+* 5.1.1 (Sequences). Let $m$ be an integer. A sequence $(a_n)^\infty_{n = m}$ of rational numbers is any function from the set $\{n \in Z: n \ge m\}$ to $Q$, i.e., a mapping which assigns to each integer $n$ greater than or equal to $m$, a rational number $a_n$. More informally, a sequence $(a_n)^\infty_{n = 0}$ of rational numbers is a collection of rationals $a_m, a_{m + 1}, a_{m + 2}, ....$  
+* 5.1.3 ($\epsilon$-steadiness). Let $\epsilon > 0$. A sequence $(a_n)^\infty_{n = 0}$ is said to be $\epsilon$-steady iff each pair $a_j, a_k$ of sequence elements is $\epsilon$-close for every natural number $j, k$. In other words, the sequence $a_0, a_1, a_2, ...$  is $\epsilon$-steady iff $d(a_j, a_k) \le \epsilon$ for all $j, k$.  
+* 5.1.6 (Eventual $\epsilon$-steadiness). Let $\epsilon > 0$. A sequence $(a_n)^\infty_{n = 0}$ is said to be eventually $\epsilon$-steady iff the sequence $a_N, a_{N + 1}, a_{N + 2}, ...$  is $\epsilon$-steady for some natural number $N \ge 0$. In other words, the sequence $a_0, a_1, a_2, ...$ is eventually $\epsilon$-steady iff there exists an $N \ge 0$ such that $d(a_j, a_k) \ge \epsilon$ for all $j, k \ge N$.  
+* 5.1.8 (Cauchy sequences). A sequence $(a_n)^\infty_{n = 0}$ of rational numbers is said to be a Cauchy sequence iff for every rational $\epsilon > 0$, the sequence $(a_n)^\infty_{n = 0}$ is eventually $\epsilon$-steady. In other words, the sequence $a_0, a_1, a_2, ...$ is a Cauchy sequence iff for every $\epsilon > 0$, there exists an $N \ge 0$ such that $d(a_j, a_k) \le \epsilon$ for all $j, k \ge N$.  
+* 5.1.12 (Bounded sequences). Let $M \ge 0$ be rational. A finite sequence $a_0, a_1, a_2, ...a_n$ is bounded by $M$ iff $|a_i| \le M$ for all $1 \le i \le n$. An infinite sequence $(a_n)^\infty_{n = m}$ is bounded by $M$ iff $|a_i| \le M$ for all $i \ge 1$. A sequence is said to be bounded iff it is bounded by $M$ for some rational $M \ge 0$.  
+
+### Proposition 5.1.11. The sequence $a_1, a_2, a_3, ...$ defined by $a_n := 1/n$ (i.e., the sequence $1, 1/2, 1/3, ...$) is a Cauchy sequence.  
+* $\forall \epsilon > 0 \Rightarrow 1 / \epsilon > 0 \Rightarrow m \le 1 / \epsilon \le m + 1, m \in N \Rightarrow 1 / (m + 1) \le \epsilon \le 1 / m$. Let $n = m + 1, \forall j, k \ge m + 1, j \ge k$, then $|1 / j - 1 / k| = |(j - k) / jk| = (j - k) / jk$. Because $1 / (m + 1) - ((j - k) / jk) \ge 0$, thus $|1 / j - 1 / k| \le 1 / (m + 1) \le \epsilon$.  
+
+### Lemma 5.1.14 (Finite sequences are bounded). Every finite sequence $a_0, a_1, a_2, ...a_n$ is bounded.  
+
+### Lemma 5.1.15 (Cauchy sequences are bounded). Every Cauchy sequence $(a_n)^\infty_{n = 1}$ is bounded.  
+* If $a_n$ is a Cauchy sequences, then there exist an $N$ such that $d(a_i,a_j) \le ε$ for $i,j \ge N$. $a_1....a_{N - 1}$ is a finite sequence so has a limit value $M$, and for $n \ge N$, because of $d(a_i,a_j) \le ε$ for $i, j \ge N$, we could select $a_N$ as a base number, obviously for $n \ge N$, $|a_n| \le |a_N| + ε$. Then foa all $a_n, a_n \le max(M,a_N + ε)$.  
+
 ### Exercise  
-* 5.1.1 If $a_n$ is a Cauchy sequences, then there exist a N such that $d(a_i,a_j) \le ε$ for $i,j \ge N$. $a_i....a_{N - 1}$ is finite sequence so has a limit value M, and for $n \ge N$, because of $d(a_i,a_j) \le ε$ for $i,j \ge N$, we could select $a_N$ as base number, obviously for $n \ge N$, $|a_n| \le |a_N| + ε$. Then all $a_n \le max(M,a_N + ε)$.  
+Exercise 5.1.1. Prove Lemma 5.1.15. (Hint: use the fact that an is eventually $1$-steady, and thus can be split into a finite sequence and a $1$-steady sequence. Then use Lemma 5.1.14 for the finite part. Note there is nothing special about the number $1$ used here; any other positive number would have sufficed.)  
 
 ## 5.2 Equivalent Cauchy sequences  
-### Exercise  
-* 5.2.1 Skip.   
-* 5.2.2 Skip.  
+### Definitions  
+* 5.2.1 ($\epsilon$-close sequences). Let $(a_n)^\infty_{n = 0}$ and $(b_n)^\infty_{n = 0}$ be two sequences, and let $\epsilon > 0$. We say that the sequence $(a_n)^\infty_{n = 0}$ is $\epsilon$-close to $(b_n)^\infty_{n = 0}$ iff $a_n$ is $\epsilon$-close to $b_n$ for each $n \in N$. In other words, the sequence $a_0, a_1, a_2, ...$  is $\epsilon$-close to the sequence $b_0, b_1, b_2, ...$ iff $|a_n − b_n| \le \epsilon$ for all $n = 0, 1, 2, ....$  
+* 5.2.3 (Eventually $\epsilon$-close sequences). Let $(a_n)^\infty_{n = 0}$ and $(b_n)^\infty_{n = 0}$ be two sequences, and let $\epsilon > 0$. We say that the sequence $(a_n)^\infty_{n = 0}$ is eventually $\epsilon$-close to $(b_n)^\infty_{n = 0}$ iff there exists an $N \ge 0$ such that the sequences $(a_n)^\infty_{n = N}$ and $(b_n)^\infty_{n = N}$ are $\epsilon$-close. In other words, $a_0, a_1, a_2, ...$ is eventually $\epsilon$-close to $b_0, b_1, b_2, ...$ iff there exists an $N \ge 0$ such that $|a_n − b_n| \le \epsilon$ for all $n \ge N$.  
+* 5.2.6 (Equivalent sequences). Two sequences $(a_n)^\infty_{n = 0}$ and $(b_n)^\infty_{n = 0}$ are equivalent iff for each rational $\epsilon > 0$, the sequences $(a_n)^\infty_{n = 0}$ and $(b_n)^\infty_{n = 0}$ are eventually $\epsilon$-close. In other words, $a_0, a_1, a_2, ...$ and $b_0, b_1, b_2, ...$ are equivalent iff for every rational $\epsilon > 0$, there exists an $N \ge 0$ such that $|a_n − b_n| \le \epsilon$ for all $n \ge N$.  
 
+### Proposition 5.2.8. Let $(a_n)^\infty_{n = 0}$ and $(b_n)^\infty_{n = 0}$ be the sequences $a_n = 1 + 10^ {−n}$ and $b_n = 1 − 10^{−n}$. Then the sequences $a_n, b_n$ are equivalent.  
+
+### Exercise  
+Exercise 5.2.1. Show that if $(a_n)^\infty_{n = 1}$ and $(b_n)^\infty_{n = 1}$ are equivalent sequences of rationals, then $(a_n)^\infty_{n = 1}$ is a Cauchy sequence if and only if $(b_n)^\infty_{n = 1}$ is a Cauchy sequence.  
+Exercise 5.2.2. Let $\epsilon > 0$. Show that if $(a_n)^\infty_{n = 1}$ and $(b_n)^\infty_{n = 1}$ are eventually $\epsilon$-close, then $(a_n)^\infty_{n = 1}$ is bounded if and only if $(b_n)^\infty_{n = 1}$ is bounded.  
+ 
 ## 5.3 The construction of the real numbers  
-### Lemma 5.3.14 Since we already know that $|b_{n0} − b_n| ≤ ε/2$ for all n ≥ N, we thus conclude from the triangle inequality (how?)  
-* $ε/2 \ge |b_{n0} − b_n| \ge ||b_{n0}| − |b_n|| \rightarrow ||b_{n0}| − |b_n|| \le ε/2 \rightarrow -ε/2 \le |b_{n0}| − |b_n| \le ε/2 \rightarrow -ε/2 + |b_{n0}| \le |b_n|$, we know that $|b_{n0}| > ε \rightarrow |b_{n0}| - ε/2 > ε - ε/2 \rightarrow |b_{n0}| - ε/2 > ε/2$, then $ε/2 < -ε/2 + |b_{n0}| \le |b_n|$  
+### Definitions  
+* 5.3.1 (Real numbers). A real number is defined to be an object of the form $LIM_{n \rightarrow \infty} a_n$, where $(a_n)^\infty_{n = 1}$ is a Cauchy sequence of rational numbers. Two real numbers $LIM_{n \rightarrow \infty} a_n$ and $LIM_{n \rightarrow \infty} b_n$ are said to be equal iff $(a_n)^\infty_{n = 1}$ and $(b_n)^\infty_{n = 1}$ are equivalent Cauchy sequences.The set of all real numbers is denoted $R$.  
+* 5.3.4 (Addition of reals). Let $x = LIM_{n \rightarrow \infty} a_n$ an and $y = LIM_{n \rightarrow \infty} b_n$ be real numbers. Then we define the sum $x + y$ to be $x + y := LIM_{n \rightarrow \infty} (a_n + b_n)$.  
+* 5.3.9 (Multiplication of reals). Let $x = LIM_{n \rightarrow \infty} a_n$ an and $y = LIM_{n \rightarrow \infty} b_n$ be real numbers. Then we define the product $xy$ to be $xy := LIM_{n \rightarrow \infty} a_nb_n$.  
+* 5.3.12 (Sequences bounded away from zero). A sequence $(a_n)^\infty_{n = 1}$ of rational numbers is said to be bounded away from zero iff there exists a rational number $c > 0$ such that $|a_n| \ge c$ for all $n \ge 1$.  
+* 5.3.16 (Reciprocals of real numbers). Let $x$ be a non-zero real number. Let $(a_n)^\infty_{n = 1}$ be a Cauchy sequence bounded away from zero such that $x = LIM_{n \rightarrow \infty} a_n$ (such a sequence exists by Lemma 5.3.14). Then we define the reciprocal $x^{−1}$ by the formula $x^{-1} = LIM_{n \rightarrow \infty} a^{-1}_n$. (From Lemma 5.3.15 we know that $x^{−1}$ is a real number.)  
+* 
+
+### Proposition 5.3.3 (Formal limits are well-defined). Let $x = LIM_{n \rightarrow \infty} a_n, y = LIM_{n \rightarrow \infty} b_n$, and $z = LIM_{n \rightarrow \infty} c_n$ be real numbers. Then, with the above definition of equality for real numbers, we have $x = x$. Also, if $x = y$, then $y = x$. Finally, if $x = y$ and $y = z$, then $x = z$.  
+
+### Lemma 5.3.6 (Sum of Cauchy sequences is Cauchy). Let $x = LIM_{n \rightarrow \infty} a_n$ an and $y = LIM_{n \rightarrow \infty} b_n$ be real numbers. Then $x + y$ is also a real number (i.e., $(a_n + b_n)^\infty_{n = 1}$ is a Cauchy sequence of rationals ).  
+
+### Lemma 5.3.7 (Sums of equivalent Cauchy sequences are equivalent). Let $x = LIM_{n \rightarrow \infty} a_n$ an and $y = LIM_{n \rightarrow \infty} b_n$, and $x^\prime = LIM_{n \rightarrow \infty} a^\prime_n$ be real numbers. Suppose that $x = x^\prime$. Then we have $x + y = x^\prime + y$.  
+
+### 5.3.10 (Multiplication is well defined). Let $x = LIM_{n \rightarrow \infty} a_n, y = LIM_{n \rightarrow \infty} b_n$, and $x^\prime = LIM_{n \rightarrow \infty} a^\prime_n$ be real numbers. Then $xy$ is also a real number. Furthermore, if $x = x^\prime$, then $xy = x^\prime y$.  
+
+### Proposition 5.3.11. All the laws of algebra from Proposition 4.1.6 hold not only for the integers, but for the reals as well.  
+
+### Lemma 5.3.14. Let $x$ be a non-zero real number. Then $x = LIM_{n \rightarrow \infty} a_n$ for some Cauchy sequence $(a_n)^\infty_{n = 1}$ which is bounded away from zero.  
+
+### Lemma 5.3.15. Suppose that $(a_n)^\infty_{n = 1}$ is a Cauchy sequence which is bounded away from zero. Then the sequence $(a^{-1}_n)^\infty_{n = 1}$ is also a Cauchy sequence.  
+
+### Lemma 5.3.17 (Reciprocation is well defined). Let $(a_n)^\infty_{n = 1}$ and $(b_n)^\infty_{n = 1}$ be two Cauchy sequences bounded away from zero such that $LIM_{n \rightarrow \infty} a_n = LIM_{n \rightarrow \infty} b_n$ (i.e., the two sequences are equivalent). Then $LIM_{n \rightarrow \infty} a^{-1}_n = LIM_{n \rightarrow \infty} b^{-1}_n$.  
 
 ### Exercise  
-* 5.3.1 Skip.  
-* 5.3.2 Skip.  
-* 5.3.3 If $\lim_{n\rightarrow \infty}a = \lim_{n\rightarrow \infty}b \rightarrow |a - b| < ε$ for every $ε > 0$. If $a \neq b$, we will find a ration number ε such that $|a - b| = d > ε$, then contradiction.  
-* 5.3.4 Because $a_n = b_n$, them are eventually ε-close, and use 5.2.2 $''
-aszwsqb_n$ is bounded.  
-* 5.3.5 Skip.  
+Exercise 5.3.1. Prove Proposition 5.3.3. (Hint: you may find Proposition 4.3.7 to be useful.)  
+Exercise 5.3.2. Prove Proposition 5.3.10. (Hint: again, Proposition 4.3.7 may be useful.)  
+Exercise 5.3.3. Let $a, b$ be rational numbers. Show that $a = b$ if and only if $LIM_{n \rightarrow \infty} a = LIM_{n \rightarrow \infty} b$ (i.e., the Cauchy sequences $a, a, a, a, ...$ and $b, b, b, b ...$ equivalent if and only if $a = b$). This allows us to embed the rational numbers inside the real numbers in a well-defined manner.  
+* If $LIM_{n\rightarrow \infty}a = LIM_{n\rightarrow \infty}b \rightarrow |a - b| < \epsilon$ for every $\epsilon > 0$. If $a \neq b$, we will find a rational number $\epsilon$ such that $|a - b| = d > ε$, then contradiction.  
+
+Exercise 5.3.4. Let $(a_n)^\infty_{n = 0}$ be a sequence of rational numbers which is bounded. Let $(b_n)^\infty_{n = 0}$ be another sequence of rational numbers which is equivalent to $(a_n)^\infty_{n = 0}$. Show that $(b_n)^\infty_{n = 0}$ is also bounded. (Hint: use Exercise 5.2.2.)  
+* Because $a_n = b_n$, them are eventually $\epsilon$-close, and $b_n$ is bounded by Exercise 5.2.2.  
+
+Exercise 5.3.5. Show that $LIM_{n \rightarrow \infty} 1 / n = 0$.  
 
 ## 5.4 Ordering the reals  
+### Definitions  
+* 5.4.1 Let $(a_n)^\infty_{n = 1}$ be a sequence of rationals. We say that this sequence is positively bounded away from zero iff we have a positive rational $c > 0$ such that $a_n \ge c$ for all $n \ge 1$ (in particular, the sequence is entirely positive). The sequence is negatively bounded away from zero iff we have a negative rational $−c < 0$ such that $a_n \le − c$ for all $n \ge 1$ (in particular, the sequence is entirely negative).  
+* 5.4.3. A real number $x$ is said to be positive iff it can be written as $x = LIM_{n \rightarrow \infty} a_n$ for some Cauchy sequence $(a_n)^\infty_{n = 1}$ which is positively bounded away from zero. $x$ is said to be negative iff it can be written as $x = LIM_{n \rightarrow \infty} a_n$ for some sequence $(a_n)^\infty_{n = 1}$ which is negatively bounded away from zero.  
+* 5.4.5 (Absolute value). Let $x$ be a real number. We define the absolute value $|x|$ of $x$ to equal $x$ if $x$ is positive, $−x$ when $x$ is negative, and $0$ when $x$ is zero.  
+* 5.4.6 (Ordering of the real numbers). Let $x$ and $y$ be real numbers. We say that $x$ is greater than $y$, and write $x > y$, if $x − y$ is a positive real number, and $x < y$ iff $x − y$ is a negative real number. We define $x \ge y$ iff $x > y$ or $x = y$, and similarly define $x \le y$.  
+* 
+
+### Proposition 5.4.4 (Basic properties of positive reals). For every real number $x$, exactly one of the following three statements is true: (a) $x$ is zero; (b) $x$ is positive; (c) $x$ is negative. A real number $x$ is negative if and only if $−x$ is positive. If $x$ and $y$ are positive, then so are $x + y$ and $xy$.  
+* Suppose $x$ is a real number, then $x = LIM_{n \rightarrow \infty} a_n$. And we have $0 = (0)^\infty_{n = 1}$. According to the definition all $a_n$ are rational numbers. Compared with $(0)^\infty_{n = 1}$, eventually $a_n$ just be only one of $0, a_n > 0$ or $a_n < 0$ by Lemma 4.2.7, then the rest is easy to prove.  
+
+### Proposition 5.4.7. All the claims in Proposition 4.2.9 which held for rationals, continue to hold for real numbers.  
+
+### Proposition 5.4.8. Let $x$ be a positive real number. Then $x^{−1}$ is also positive. Also, if $y$ is another positive number and $x > y$, then $x^{−1} < y^{−1}$.  
+
+### Proposition 5.4.9 (The non-negative reals are closed). Let $a_0, a_1, a_2, ...$  be a Cauchy sequence of non-negative rational numbers. Then $LIM_{n \rightarrow \infty} a_n$ is a non-negative real number.  
+
+### Corollary 5.4.10. Let $(a_n)^\infty_{n = 1}$ and $(b_n)^\infty_{n = 1}$ be Cauchy sequences of rationals such that $a_n \ge b_n$ for all $n ≥ 1$. Then $LIM_{n \rightarrow \infty} a_n \ge LIM_{n \rightarrow \infty} b_n$.  
+
+### Proposition 5.4.12 (Bounding of reals by rationals). Let $x$ be a positive real number. Then there exists a positive rational number $q$ such that $q \le x$, and there exists a positive integer $N$ such that $x \le N$.  
+
+### Corollary 5.4.13 (Archimedean property). Let $x$ and $\epsilon$ be any positive real numbers. Then there exists a positive integer $M$ such that $M\epsilon > x$.  
+
+### Proposition 5.4.14. Given any two real numbers $x < y$, we can find a rational number $q$ such that $x < q < y$.  
+
 ### Exercise  
-* 5.4.1 Skip.  
-* 5.4.2 Skip.  
-* 5.4.3 Like Proposition 4.4.2. We could set the real number x be a rational number sequence $a_n$ and use the Proposition 5.4.4, the rest skip.  
-* 5.4.4 If $x > 0 \rightarrow x^{-1} > 0 \rightarrow x^{-1} < M + 1 = N \rightarrow x > N^{-1}$.  
-* 5.4.5 If $x < y \rightarrow x + d = y$, d is a positive number, so we have $d > 1/n > 0$, q and r is rational number. Then $x < x + 1/N < x + d = y \rightarrow x < \frac{Nx + 1}{N} < x + d$, $Nx$ is a real, we have $n \le Nx < n + 1 \rightarrow \frac{n}{N} < x < \frac{n + 1}{N}$, then use $n$ to substitute $Nx$, $x < \frac{Nx + 1}{N} < x + d \rightarrow x < \frac{n + 1}{N} \le \frac{Nx + 1}{N} < x + d$, the $\frac{n + 1}{N}$ is the rational number we want.   
-* 5.4.6 Skip.  
-* 5.4.7 If $x \le y + ε$, suppose $x > y \rightarrow x = y + d$, d is a positive real, we have $y + d \le y + ε \rightarrow d \le ε$ for all real numbers $ε > 0$, use Proposition 5.4.12, we could always find a number r(r > 0) such that $r \le d$. Contradiction. The rest is skip.  
-* 5.4.8 Suppose $\lim_{n\rightarrow\infty}a_n = y > x$, then have a rational number $y > q > x$, suppose $(b_n) = q$, then we have $b_n = q > x \ge a_n \rightarrow b_n > a_n$, use Corollary 5.4.10, we could deduce that $lim_{n\rightarrow\infty}b_n > lim_{n\rightarrow\infty}a_n$, contradiction. The rest is skip.  
+Exercise 5.4.1. Prove Proposition 5.4.4. (Hint: if $x$ is not zero, and $x$ is the formal limit of some sequence $(a_n)^\infty_{n = 1}$, then this sequence cannot be eventually $\epsilon$-close to the zero sequence $(0)^\infty_{n = 1}$ for every single $\epsilon > 0$. Use this to show that the sequence $(a_n)^\infty_{n = 1}$ is eventually either positively bounded away from zero or negatively bounded away from zero.)  
+Exercise 5.4.2. Prove the remaining claims in Proposition 5.4.7.  
+Exercise 5.4.3. Show that for every real number $x$ there is exactly one integer $N$ such that $N \le x < N + 1$. (This integer $N$ is called the integer part of $x$, and is sometimes denoted $N =  \lfloor x \rfloor$.)  
+* Suppose $x > 0$. By Proposition 5.4.12, $\exist q \in Q, st.\  q \le x \Rightarrow \exist n \in N, st.\  n \le q < n + 1$
+
+Exercise 5.4.4. Show that for any positive real number $x > 0$ there exists a positive integer $N$ such that $x > 1 / N > 0$.  
+* $x > 0 \rightarrow x^{-1} > 0 \rightarrow x^{-1} < M + 1 = N \rightarrow x > N^{-1}$.  
+
+Exercise 5.4.5. Prove Proposition 5.4.14. (Hint: use Exercise 5.4.4. You may also need to argue by contradiction.)  
+* If $x < y \rightarrow x + d = y$, $d$ is a positive real number, so we have $d > 1/n > 0$ by Exercise 5.4.4. Then $x < x + 1/N < x + d = y \Rightarrow x < \frac{Nx + 1}{N} < x + d$. For $Nx$ is a real number, $n \le Nx < n + 1 \Rightarrow \frac{n}{N} \le x < \frac{n + 1}{N}$, then use $n$ to substitute $Nx$, $x < \frac{Nx + 1}{N} < x + d \Rightarrow x < \frac{n + 1}{N} \le \frac{Nx + 1}{N} < x + d$, the $\frac{n + 1}{N}$ is the rational number we want.  
+
+Exercise 5.4.6. Let $x, y$ be real numbers and let $\epsilon > 0$ be a positive real. Show that $|x − y| < \epsilon$ if and only if $y − \epsilon < x < y + \epsilon$, and that $|x − y| \le \epsilon$ if and only if $y − \epsilon \le x \le y + \epsilon$.  
+Exercise 5.4.7. Let $x$ and $y$ be real numbers. Show that $x \le y + \epsilon$ for all real numbers $\epsilon > 0$ if and only if $x \le y$. Show that $|x − y| \le ε$ for all real numbers $\epsilon > 0$ if and only if $x = y$.  
+* If $x \le y + ε$, suppose $x > y \Rightarrow x = y + d, d$ is a positive real number, we have $y + d \le y + \epsilon \Rightarrow d \le ε$ for all real numbers $ε > 0$, use Proposition 5.4.12, we could find a rational number $q$ such that $q \le d$. This is a contradiction. The rest is skip.  
+
+Exercise 5.4.8. Let $(a_n)^\infty_{n = 1}$ be a Cauchy sequence of rationals, and let $x$ be a real number. Show that if $a_n \le x$ for all $n \ge 1$, then $LIM_{n \rightarrow \infty} a_n \le x$. Similarly, show that if $a_n \ge x$ for all $n \ge 1$, then $LIM_{n \rightarrow \infty} a_n \ge x$. (Hint: prove by contradiction. Use Proposition 5.4.14 to find a rational between $LIM_{n \rightarrow \infty} a_n$ and $x$, and then use Proposition 5.4.9 or Corollary 5.4.10.)  
+* Suppose $LIM_{n\rightarrow\infty}a_n = y \ and \ y > x$, then have a rational number $y > q > x$, let $(b_n)^\infty_{n = 1} = q$ for all $n \ge 1$, then $b_n > a_n$, use Corollary 5.4.10, we could deduce that $lim_{n\rightarrow\infty}b_n > lim_{n\rightarrow\infty}a_n$, contradiction. The rest is skip.  
 
 ## 5.5 The least upper bound property  
 ### Exercise  

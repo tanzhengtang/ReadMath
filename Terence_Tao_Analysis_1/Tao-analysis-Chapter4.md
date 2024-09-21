@@ -109,7 +109,7 @@ Exercise 4.2.6. Show that if $x, y, z$ are rational numbers such that $x < y$ an
 * 4.3.9 (Exponentiation to a natural number). Let $x$ be a rational number. To raise $x$ to the power $0$, we define $x^0 := 1$; in particular we define $0^0 := 1$. Now suppose inductively that $x^n$ has been defined for some natural number $n$, then we define $x^{n+ 1} := x^n * x$.  
 * 4.3.11 (Exponentiation to a negative number). Let $x$ be a non-zero rational number. Then for any negative integer $−n$, we define $x^{−n} := 1/x^n$.  
 
-### Proposition 4.3.3 (Basic properties of absolute value and distance). Let x, y, z be rational numbers.  
+### Proposition 4.3.3 (Basic properties of absolute value and distance). Let $x, y, z$ be rational numbers.  
 (a) (Non-degeneracy of absolute value) We have $|x| \ge 0$. Also, $|x| = 0$ if and only if $x$ is $0$.  
 (b) (Triangle inequality for absolute value) We have $|x + y| \le |x|+|y|$.  
 (c) We have the inequalities $−y \le x \le y$ if and only if $y \ge | x|$. In particular, we have $−|x| \le x \le |x|$.  
@@ -118,7 +118,7 @@ Exercise 4.2.6. Show that if $x, y, z$ are rational numbers such that $x < y$ an
 (f) (Symmetry of distance) $d(x, y) = d(y, x)$.  
 (g) (Triangle inequality for distance) $d(x, z) \le d(x, y) + d(y, z)$.  
 
-### Proposition 4.3.7. Let x, y, z, w be rational numbers.  
+### Proposition 4.3.7. Let $x, y, z, w$ be rational numbers.  
 (a) If $x = y$, then $x$ is $\epsilon$-close to $y$ for every $\epsilon > 0$. Conversely, if $x$ is $\epsilon$-close to $y$ for every $\epsilon > 0$, then we have $x = y$.  
 (b) Let $\epsilon > 0$. If $x$ is $\epsilon$-close to $y$, then $y$ is $\epsilon$-close to $x$.  
 (c) Let $\epsilon, \delta > 0$. If $x$ is $ε$-close to $y$, and $y$ is $\delta$-close to $z$, then $x$ and $z$ are $(\epsilon + \delta)$-close.  
@@ -171,7 +171,6 @@ Exercise 4.3.5. Prove that $2^N ≥ N$ for all positive integers $N$. (Hint: use
 ### Proposition 4.4.3 (Interspersing of rationals by rationals). If $x$ and $y$ are two rationals such that $x < y$, then there exists a third rational $z$ such that $x < z < y$.  
 
 ### Proposition 4.4.4. There does not exist any rational number $x$ for which $x^2 = 2$.  
-* 
 
 ### Proposition 4.4.5. For every rational number $\epsilon > 0$, there exists a non-negative rational number $x$ such that $x^2 < 2 < (x + \epsilon)^2$.  
 * Suppose $\epsilon^2 > 2$, let $x = 0 \Rightarrow x^2 < 2$ and $2 < \epsilon^2 + x^2 \le \epsilon^2 + 2x\epsilon + x^2 = (x + \epsilon)^2$.  
@@ -180,14 +179,19 @@ Exercise 4.3.5. Prove that $2^N ≥ N$ for all positive integers $N$. (Hint: use
 ### Exercise  
 Exercise 4.4.1. Prove Proposition 4.4.1. (Hint: use Proposition 2.3.9.)  
 Exercise 4.4.2. A definition: a sequence $a_0, a_1, a_2, ...$ of numbers (natural numbers, integers, rationals, or reals) is said to be in infinite descent if we have $a_n > a_{n+1}$ for all natural numbers $n$ (i.e., $a_0 > a_1 > a_2 > ....$).  
-(a) Prove the principle of infinite descent: that it is not possible to have a sequence of natural numbers which is in infinite descent. (Hint: assume for sake of contradiction that you can find a sequence of natural numbers which is in infinite descent. Since all the an are natural numbers, you know that $a_n \ge 0$ for all $n$. Now use induction to show in fact that $a_n \ge k$ for all $k \in N$ and all $n \in N$, and obtain a contradiction.)  
+(a) Prove the principle of infinite descent: that it is not possible to have a sequence of natural numbers which is in infinite descent. (Hint: assume for sake of contradiction that you can find a sequence of natural numbers which is in infinite descent. Since all the $a_n$ are natural numbers, you know that $a_n \ge 0$ for all $n$. Now use induction to show in fact that $a_n \ge k$ for all $k \in N$ and all $n \in N$, and obtain a contradiction.)  
+* Suppose there exists a sequence($a_n$) of natural numbers which is in infinite descent. Since $a_n \in N$ then $a_n \ge 0$, and Suppose $a_n \ge k$ consider $a_n \ge k++$
 
 (b) Does the principle of infinite descent work if the sequence $a_1, a_2, a_3, ...$ is allowed to take integer values instead of natural number values? What about if it is allowed to take positive rational values instead of natural numbers? Explain.  
-  
+* Taking integer values instead of natural number values is allowed. $\forall p \in Z$, it's easy to get $p - q < p, q \in Z, q > 0$.  
+* Taking positive rational values instead of natural numbers is not allowed. $\forall x \in Q^+, x = p / q$ and $p, q \in N, q \ne 0$. See $(p, q) \rightarrow x$, then it's still a sequence of natural numbers which is in infinite descent. Thus it's not allowed.  
+
 Exercise 4.4.3. Fill in the gaps marked (why?) in the proof of Proposition 4.4.4.  
-* 4.4.3 (a) Every natural number is either even or odd, but not both (why?)  
-If a is even and odd, then a = 2k + 1 = 2f, which k and f is natural number, 2k + 1 = 2f, but we could find this equation is no solution in natural number, so contradiction.  
-(b) If p is odd, then $p^2$ is also odd (why?)  
-p  = 2k + 1, $p^2 = p * p = (2k + 1)(2k + 1)=4k^2 + 4k + 1 = 4k(k + 1) + 1 = 2 * 2k(k+1) + 1$, let 2k(k+1) is a natural number f, we have $2*f + 1$, which also a odd.  
-(c) Since $p^2 = 2q^2$, we have q < p (why?)  
-$p^2 = q^2 + q^2 \rightarrow q^2 < p^2 \rightarrow q < p$.  
+(a) Every natural number is either even or odd, but not both (why?)  
+* If a is even and odd, then $a = 2k + 1 = 2f$, which $k$ and $f$ is natural number, $2k + 1 = 2f$, but we could find this equation is no solution in natural number, so contradiction.  
+
+(b) If $p$ is odd, then $p^2$ is also odd (why?)  
+* $p  = 2k + 1, p^2 = p * p = (2k + 1)(2k + 1) = 4k^2 + 4k + 1 = 4k(k + 1) + 1 = 2 * 2k(k+1) + 1$, let $2k(k+1)$ is a natural number $f$, we have $2*f + 1$, which also a odd number.  
+
+(c) Since $p^2 = 2q^2$, we have $q < p$ (why?)  
+* $p^2 = q^2 + q^2 \rightarrow q^2 < p^2 \rightarrow q < p$.  
