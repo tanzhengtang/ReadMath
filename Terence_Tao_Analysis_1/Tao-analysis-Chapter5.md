@@ -98,7 +98,7 @@ Exercise 5.4.3. Show that for every real number $x$ there is exactly one integer
 * Suppose $x > 0$. By Proposition 5.4.12, $\exist q \in Q, st.\  q \le x \Rightarrow \exist n \in N, st.\  n \le q < n + 1$
 
 Exercise 5.4.4. Show that for any positive real number $x > 0$ there exists a positive integer $N$ such that $x > 1 / N > 0$.  
-* $x > 0 \rightarrow x^{-1} > 0 \rightarrow x^{-1} < M + 1 = N \rightarrow x > N^{-1}$.  
+* $x > 0 \Rightarrow x^{-1} > 0 \Rightarrow x^{-1} < M + 1 = N \Rightarrow x > N^{-1}$.  
 
 Exercise 5.4.5. Prove Proposition 5.4.14. (Hint: use Exercise 5.4.4. You may also need to argue by contradiction.)  
 * If $x < y \rightarrow x + d = y$, $d$ is a positive real number, so we have $d > 1/n > 0$ by Exercise 5.4.4. Then $x < x + 1/N < x + d = y \Rightarrow x < \frac{Nx + 1}{N} < x + d$. For $Nx$ is a real number, $n \le Nx < n + 1 \Rightarrow \frac{n}{N} \le x < \frac{n + 1}{N}$, then use $n$ to substitute $Nx$, $x < \frac{Nx + 1}{N} < x + d \Rightarrow x < \frac{n + 1}{N} \le \frac{Nx + 1}{N} < x + d$, the $\frac{n + 1}{N}$ is the rational number we want.  
@@ -108,10 +108,32 @@ Exercise 5.4.7. Let $x$ and $y$ be real numbers. Show that $x \le y + \epsilon$ 
 * If $x \le y + ε$, suppose $x > y \Rightarrow x = y + d, d$ is a positive real number, we have $y + d \le y + \epsilon \Rightarrow d \le ε$ for all real numbers $ε > 0$, use Proposition 5.4.12, we could find a rational number $q$ such that $q \le d$. This is a contradiction. The rest is skip.  
 
 Exercise 5.4.8. Let $(a_n)^\infty_{n = 1}$ be a Cauchy sequence of rationals, and let $x$ be a real number. Show that if $a_n \le x$ for all $n \ge 1$, then $LIM_{n \rightarrow \infty} a_n \le x$. Similarly, show that if $a_n \ge x$ for all $n \ge 1$, then $LIM_{n \rightarrow \infty} a_n \ge x$. (Hint: prove by contradiction. Use Proposition 5.4.14 to find a rational between $LIM_{n \rightarrow \infty} a_n$ and $x$, and then use Proposition 5.4.9 or Corollary 5.4.10.)  
-* Suppose $LIM_{n\rightarrow\infty}a_n = y \ and \ y > x$, then have a rational number $y > q > x$, let $(b_n)^\infty_{n = 1} = q$ for all $n \ge 1$, then $b_n > a_n$, use Corollary 5.4.10, we could deduce that $lim_{n\rightarrow\infty}b_n > lim_{n\rightarrow\infty}a_n$, contradiction. The rest is skip.  
+* Let $a_n \le x$ for all $n \ge 1$ be the condition. Suppose $LIM_{n\rightarrow\infty}a_n = y$  and $y > x$, then have a rational number $y > q > x$. Let $(b_n)^\infty_{n = 1} = q$ for all $n \ge 1$, then $a_n \le x < b_n \Rightarrow LIM_{n\rightarrow\infty}a_n < LIM_{n\rightarrow\infty}b_n$ by Corollary 5.4.10, but already have $LIM_{n\rightarrow\infty}a_n > LIM_{n\rightarrow\infty}b_n$, contradiction.  
 
 ## 5.5 The least upper bound property  
+### Definitions  
+* 5.5.1 (Upper bound). Let $E$ be a subset of $R$, and let $M$ be a real number. We say that $M$ is an upper bound for $E$, iff we have $x \le M$ for every element $x$ in $E$.  
+* 5.5.5 (Least upper bound). Let $E$ be a subset of $R$, and $M$ be a real number. We say that $M$ is a least upper bound for $E$ iff (a) $M$ is an upper bound for $E$, and also (b) any other upper bound $M^\prime$ for $E$ must be larger than or equal to $M$.  
+* 5.5.10 (Supremum). Let $E$ be a subset of the real numbers. If $E$ is non-empty and has some upper bound, we define $sup(E)$ to be the least upper bound of $E$ (this is well-defined by Theorem 5.5.9). We introduce two additional symbols, $+\infty$ and $−\infty$. If $E$ is non-empty and has no upper bound, we set $sup(E) := +\infty$; if $E$ is empty, we set $sup(E) := −\infty$. We refer to $sup(E)$ as the supremum of $E$, and also denote it by sup $E$.  
+
+### Proposition 5.5.8 (Uniqueness of least upper bound). Let $E$ be a subset of $R$. Then $E$ can have at most one least upper bound.  
+
+### Theorem 5.5.9 (Existence of least upper bound). Let $E$ be a non-empty subset of $R$. If $E$ has an upper bound, (i.e., $E$ has some upper bound $M$), then it must have exactly one least upper bound.  
+
+### Proposition 5.5.12. There exists a positive real number $x$ such that $x^2 = 2$.  
+
 ### Exercise  
+Exercise 5.5.1. Let $E$ be a subset of the real numbers $R$, and suppose that $E$ has a least upper bound $M$ which is a real number, i.e., $M = sup(E)$. Let $−E$ be the set
+$−E := \{−x : x \in E\}$. Show that $−M$ is the greatest lower bound of $−E$, i.e., $−M = inf( −E)$.  
+
+Exercise 5.5.2. Let $E$ be a non-empty subset of $R$, let $n \ge 1$ be an integer, and let $L < K$ be integers. Suppose that $K / n$ is an upper bound for $E$, but that $L/n$ is not an upper bound for $E$. Without using Theorem 5.5.9, show that there exists an integer $L < m \ge K$ such that $m / n$ is an upper bound for $E$, bu that $(m − 1) / n$ is not an upper bound for $E$. (Hint: prove by contradiction, and use induction. It may also help to draw a picture of the situation.)  
+
+Exercise 5.5.3. Let $E$ be a non-empty subset of $R$, let $n \ge 1$ be an integer, and let $m, m^\prime$ be integers with the properties that $m / n$ and $m^\prime / n$ are upper bounds for $E$, but $(m − 1) / n$ and $(m^\prime − 1) / n$ are not upper bounds for $E$. Show that $m = m^\prime$. This shows that the integer $m$ constructed in Exercise 5.5.2 is unique. (Hint: again, drawing a picture will be helpful.)  
+
+Exercise 5.5.4. Let $q_1, q_2, q_3, ...$  be a sequence of rational numbers with the property that $|q_n − q_{n^\prime}| \le 1 / M$ whenever $M \ge 1$ is an integer and $n, n^\prime \ge M$. Show that $q_1, q_2, q_3, ...$ is a Cauchy sequence. Furthermore, if $S := LIM_{n\rightarrow\infty}q_n$, show that $|q_M − S| \le 1 / M$ for every $M \ge 1$. (Hint: use Exercise 5.4.8.)  
+
+Exercise 5.5.5. Establish an analogue of Proposition 5.4.14, in which “rational” is replaced by “irrational”.  
+
 * 5.5.1 Because M is sup(E), $M \ge x$ which x is in E. Then we could have $-M \le -x$ which x is in E. The set -E is -x which x in E, so -M is inf(-E).  
 * 5.5.2 Suppose there exists a natural number m ($L<m<K$) such that, $m/n$ and $(m - 1)/n$ are upper bound of E. If such property is true, then let $m - 1 = n$, we could deduce $n - 1$ is also an upper bound of E, induction on m eventually we could get L is an upper bound of E which is a contradiction to question setting.  
 * 5.5.3 Suppose $m \neq m^o$, then $m > m^o$ or $m < m^o$. We coulde select $m > m^o$ to prove. If $m > m^o$, then $m - 1 \ge m^o$, we know that $\frac{m - 1}{n}$ is not upper bounds for E, so $\frac{m - 1}{n} \ge \frac{m^o}{n}$ and $\frac{m^o}{n}$ is also not an upper bound for E which contradiction to question setting.  
