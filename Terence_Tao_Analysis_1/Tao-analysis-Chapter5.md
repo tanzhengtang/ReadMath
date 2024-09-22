@@ -90,19 +90,18 @@ Exercise 5.3.5. Show that $LIM_{n \rightarrow \infty} 1 / n = 0$.
 ### Corollary 5.4.13 (Archimedean property). Let $x$ and $\epsilon$ be any positive real numbers. Then there exists a positive integer $M$ such that $M\epsilon > x$.  
 
 ### Proposition 5.4.14. Given any two real numbers $x < y$, we can find a rational number $q$ such that $x < q < y$.  
+* If $x < y \rightarrow x + d = y$, $d$ is a positive real number, so we have $d > 1/n > 0$ by Exercise 5.4.4. Then $x < x + 1/N < x + d = y \Rightarrow x < \frac{Nx + 1}{N} < x + d$. For $Nx$ is a real number, $n \le Nx < n + 1 \Rightarrow \frac{n}{N} \le x < \frac{n + 1}{N}$, then use $n$ to substitute $Nx$, $x < \frac{Nx + 1}{N} < x + d \Rightarrow x < \frac{n + 1}{N} \le \frac{Nx + 1}{N} < x + d$, the $\frac{n + 1}{N}$ is the rational number we want.  
 
 ### Exercise  
 Exercise 5.4.1. Prove Proposition 5.4.4. (Hint: if $x$ is not zero, and $x$ is the formal limit of some sequence $(a_n)^\infty_{n = 1}$, then this sequence cannot be eventually $\epsilon$-close to the zero sequence $(0)^\infty_{n = 1}$ for every single $\epsilon > 0$. Use this to show that the sequence $(a_n)^\infty_{n = 1}$ is eventually either positively bounded away from zero or negatively bounded away from zero.)  
 Exercise 5.4.2. Prove the remaining claims in Proposition 5.4.7.  
 Exercise 5.4.3. Show that for every real number $x$ there is exactly one integer $N$ such that $N \le x < N + 1$. (This integer $N$ is called the integer part of $x$, and is sometimes denoted $N =  \lfloor x \rfloor$.)  
-* Suppose $x > 0$. By Proposition 5.4.12, $\exist q \in Q, st.\  q \le x \Rightarrow \exist n \in N, st.\  n \le q < n + 1$
+* Suppose $x > 0$, by Proposition 5.4.12, $\exist n + 1 \in N, st.\ x < n + 1$. Let $S = \{n: x < n + 1\}$ and $n = min(S)$, then $n \le x < n + 1$.  
 
 Exercise 5.4.4. Show that for any positive real number $x > 0$ there exists a positive integer $N$ such that $x > 1 / N > 0$.  
 * $x > 0 \Rightarrow x^{-1} > 0 \Rightarrow x^{-1} < M + 1 = N \Rightarrow x > N^{-1}$.  
 
 Exercise 5.4.5. Prove Proposition 5.4.14. (Hint: use Exercise 5.4.4. You may also need to argue by contradiction.)  
-* If $x < y \rightarrow x + d = y$, $d$ is a positive real number, so we have $d > 1/n > 0$ by Exercise 5.4.4. Then $x < x + 1/N < x + d = y \Rightarrow x < \frac{Nx + 1}{N} < x + d$. For $Nx$ is a real number, $n \le Nx < n + 1 \Rightarrow \frac{n}{N} \le x < \frac{n + 1}{N}$, then use $n$ to substitute $Nx$, $x < \frac{Nx + 1}{N} < x + d \Rightarrow x < \frac{n + 1}{N} \le \frac{Nx + 1}{N} < x + d$, the $\frac{n + 1}{N}$ is the rational number we want.  
-
 Exercise 5.4.6. Let $x, y$ be real numbers and let $\epsilon > 0$ be a positive real. Show that $|x − y| < \epsilon$ if and only if $y − \epsilon < x < y + \epsilon$, and that $|x − y| \le \epsilon$ if and only if $y − \epsilon \le x \le y + \epsilon$.  
 Exercise 5.4.7. Let $x$ and $y$ be real numbers. Show that $x \le y + \epsilon$ for all real numbers $\epsilon > 0$ if and only if $x \le y$. Show that $|x − y| \le ε$ for all real numbers $\epsilon > 0$ if and only if $x = y$.  
 * If $x \le y + ε$, suppose $x > y \Rightarrow x = y + d, d$ is a positive real number, we have $y + d \le y + \epsilon \Rightarrow d \le ε$ for all real numbers $ε > 0$, use Proposition 5.4.12, we could find a rational number $q$ such that $q \le d$. This is a contradiction. The rest is skip.  
@@ -123,10 +122,10 @@ Exercise 5.4.8. Let $(a_n)^\infty_{n = 1}$ be a Cauchy sequence of rationals, an
 ### Proposition 5.5.12. There exists a positive real number $x$ such that $x^2 = 2$.  
 
 ### Exercise  
-Exercise 5.5.1. Let $E$ be a subset of the real numbers $R$, and suppose that $E$ has a least upper bound $M$ which is a real number, i.e., $M = sup(E)$. Let $−E$ be the set
-$−E := \{−x : x \in E\}$. Show that $−M$ is the greatest lower bound of $−E$, i.e., $−M = inf( −E)$.  
+Exercise 5.5.1. Let $E$ be a subset of the real numbers $R$, and suppose that $E$ has a least upper bound $M$ which is a real number, i.e., $M = sup(E)$. Let $−E$ be the set $−E := \{−x : x \in E\}$. Show that $−M$ is the greatest lower bound of $−E$, i.e., $−M = inf( −E)$.  
+* $\forall x \in E, x \le M \Rightarrow -x \ge -M$. Let $x^\prime = -x$, obviously $x^\prime \in -E$ and $x^\prime \ge -M$, then $-M$ is a lower bound of $-E$. Suppose there exists a lower bound $-M^\prime$ of $-E$ such that $-M^\prime > -M$, then we could get $M^\prime < M$ which will lead $M$ is not the least upper bound of $E$. This a contradiction.  
 
-Exercise 5.5.2. Let $E$ be a non-empty subset of $R$, let $n \ge 1$ be an integer, and let $L < K$ be integers. Suppose that $K / n$ is an upper bound for $E$, but that $L/n$ is not an upper bound for $E$. Without using Theorem 5.5.9, show that there exists an integer $L < m \ge K$ such that $m / n$ is an upper bound for $E$, bu that $(m − 1) / n$ is not an upper bound for $E$. (Hint: prove by contradiction, and use induction. It may also help to draw a picture of the situation.)  
+Exercise 5.5.2. Let $E$ be a non-empty subset of $R$, let $n \ge 1$ be an integer, and let $L < K$ be integers. Suppose that $K / n$ is an upper bound for $E$, but that $L/n$ is not an upper bound for $E$. Without using Theorem 5.5.9, show that there exists an integer $L < m \le K$ such that $m / n$ is an upper bound for $E$, bu that $(m − 1) / n$ is not an upper bound for $E$. (Hint: prove by contradiction, and use induction. It may also help to draw a picture of the situation.)  
 
 Exercise 5.5.3. Let $E$ be a non-empty subset of $R$, let $n \ge 1$ be an integer, and let $m, m^\prime$ be integers with the properties that $m / n$ and $m^\prime / n$ are upper bounds for $E$, but $(m − 1) / n$ and $(m^\prime − 1) / n$ are not upper bounds for $E$. Show that $m = m^\prime$. This shows that the integer $m$ constructed in Exercise 5.5.2 is unique. (Hint: again, drawing a picture will be helpful.)  
 
