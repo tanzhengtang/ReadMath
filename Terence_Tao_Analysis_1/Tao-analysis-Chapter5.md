@@ -79,7 +79,7 @@ Exercise 5.3.5. Show that $LIM_{n \rightarrow \infty} 1 / n = 0$.
 * 5.4.6 (Ordering of the real numbers). Let $x$ and $y$ be real numbers. We say that $x$ is greater than $y$, and write $x > y$, if $x − y$ is a positive real number, and $x < y$ iff $x − y$ is a negative real number. We define $x \ge y$ iff $x > y$ or $x = y$, and similarly define $x \le y$.  
 
 ### Proposition 5.4.4 (Basic properties of positive reals). For every real number $x$, exactly one of the following three statements is true: (a) $x$ is zero; (b) $x$ is positive; (c) $x$ is negative. A real number $x$ is negative if and only if $−x$ is positive. If $x$ and $y$ are positive, then so are $x + y$ and $xy$.  
-* Suppose $x$ is a real number, then $x = LIM_{n \rightarrow \infty} a_n$. And we have $0 = (0)^\infty_{n = 1}$. According to the definition all $a_n$ are rational numbers. Compared with $(0)^\infty_{n = 1}$, eventually $a_n$ just be only one of $0, a_n > 0$ or $a_n < 0$ by Lemma 4.2.7, then the rest is easy to prove.  
+* Suppose $x$ is a real number, then $x = LIM_{n \rightarrow \infty} a_n$. And $\forall \epsilon > 0, \exists m \in N \ st. \ i, j \ge m, |a_i - a_j| \le \epsilon$. By Lemma 4.2.7, $a_i$ just be only one of $0, a_i > 0$ or $a_i < 0$. If $a_i$ is determined then $a_j$ is also determined by $a_i$, i.e. $a_i = 0 \Rightarrow a_j = 0$, this could be prove by contradiction(skip this proof). Then use Lemma 5.3.14, it's easy to get a sequence $(a_n)^\infty_{n = 1}$ and $a_n = 0, a_n < 0$ or $a_n > 0$ for all $n \ge 1$.  
 
 ### Proposition 5.4.7. All the claims in Proposition 4.2.9 which held for rationals, continue to hold for real numbers.  
 
@@ -100,7 +100,7 @@ Exercise 5.3.5. Show that $LIM_{n \rightarrow \infty} 1 / n = 0$.
 Exercise 5.4.1. Prove Proposition 5.4.4. (Hint: if $x$ is not zero, and $x$ is the formal limit of some sequence $(a_n)^\infty_{n = 1}$, then this sequence cannot be eventually $\epsilon$-close to the zero sequence $(0)^\infty_{n = 1}$ for every single $\epsilon > 0$. Use this to show that the sequence $(a_n)^\infty_{n = 1}$ is eventually either positively bounded away from zero or negatively bounded away from zero.)  
 Exercise 5.4.2. Prove the remaining claims in Proposition 5.4.7.  
 Exercise 5.4.3. Show that for every real number $x$ there is exactly one integer $N$ such that $N \le x < N + 1$. (This integer $N$ is called the integer part of $x$, and is sometimes denoted $N =  \lfloor x \rfloor$.)  
-* Suppose $x > 0$, by Proposition 5.4.12, $\exists n + 1 \in N, st.\ x < n + 1$. Let $S = \{n: x < n + 1\}$ and $n = min(S)$, then $n \le x < n + 1$.  
+* Suppose $x > 0$, by Proposition 5.4.12, $\exists n + 1 \in N, st.\ x < n + 1$. Let $S = \lbrace n: x < n + 1 \rbrace$ and $n = min(S)$, then $n \le x < n + 1$.  
 
 Exercise 5.4.4. Show that for any positive real number $x > 0$ there exists a positive integer $N$ such that $x > 1 / N > 0$.  
 * $x > 0 \Rightarrow x^{-1} > 0 \Rightarrow x^{-1} < M + 1 = N \Rightarrow x > N^{-1}$.  
