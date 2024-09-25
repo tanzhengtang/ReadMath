@@ -28,8 +28,12 @@ Exercise 5.1.1. Prove Lemma 5.1.15. (Hint: use the fact that an is eventually $1
 
 ### Exercise  
 Exercise 5.2.1. Show that if $(a_n)^\infty_{n = 1}$ and $(b_n)^\infty_{n = 1}$ are equivalent sequences of rationals, then $(a_n)^\infty_{n = 1}$ is a Cauchy sequence if and only if $(b_n)^\infty_{n = 1}$ is a Cauchy sequence.  
+* Skip some steps of proof.  
+* Suppose $(a_n)^\infty_{n = 1}$ is a Cauchy sequence. $\forall \epsilon > 0, |b_i - b_j| = |(b_i - a_i) + (a_i - b_j)| \le |b_i - a_i| + |a_i - b_j| \le 3 / \epsilon + |(a_i - a_j) + (a_j - b_j)| \le 3 / \epsilon + |a_i - a_j| + |a_j - a_j| \le 3 / \epsilon + 3 / \epsilon + 3 / \epsilon = \epsilon$.  
+
 Exercise 5.2.2. Let $\epsilon > 0$. Show that if $(a_n)^\infty_{n = 1}$ and $(b_n)^\infty_{n = 1}$ are eventually $\epsilon$-close, then $(a_n)^\infty_{n = 1}$ is bounded if and only if $(b_n)^\infty_{n = 1}$ is bounded.  
- 
+* Suppose $(a_n)^\infty_{n = 1}$ is bounded. $\forall \epsilon > 0, |a_n - b_n| < \epsilon \Rightarrow a_n - \epsilon < b_n < a_n + \epsilon \Rightarrow (b_n)^\infty_{n = 1}$ is bounded.  
+
 ## 5.3 The construction of the real numbers  
 ### Definitions  
 * 5.3.1 (Real numbers). A real number is defined to be an object of the form $LIM_{n \rightarrow \infty} a_n$, where $(a_n)^\infty_{n = 1}$ is a Cauchy sequence of rational numbers. Two real numbers $LIM_{n \rightarrow \infty} a_n$ and $LIM_{n \rightarrow \infty} b_n$ are said to be equal iff $(a_n)^\infty_{n = 1}$ and $(b_n)^\infty_{n = 1}$ are equivalent Cauchy sequences.The set of all real numbers is denoted $R$.  
@@ -37,7 +41,6 @@ Exercise 5.2.2. Let $\epsilon > 0$. Show that if $(a_n)^\infty_{n = 1}$ and $(b_
 * 5.3.9 (Multiplication of reals). Let $x = LIM_{n \rightarrow \infty} a_n$ an and $y = LIM_{n \rightarrow \infty} b_n$ be real numbers. Then we define the product $xy$ to be $xy := LIM_{n \rightarrow \infty} a_nb_n$.  
 * 5.3.12 (Sequences bounded away from zero). A sequence $(a_n)^\infty_{n = 1}$ of rational numbers is said to be bounded away from zero iff there exists a rational number $c > 0$ such that $|a_n| \ge c$ for all $n \ge 1$.  
 * 5.3.16 (Reciprocals of real numbers). Let $x$ be a non-zero real number. Let $(a_n)^\infty_{n = 1}$ be a Cauchy sequence bounded away from zero such that $x = LIM_{n \rightarrow \infty} a_n$ (such a sequence exists by Lemma 5.3.14). Then we define the reciprocal $x^{−1}$ by the formula $x^{-1} = LIM_{n \rightarrow \infty} a^{-1}_n$. (From Lemma 5.3.15 we know that $x^{−1}$ is a real number.)  
-* 
 
 ### Proposition 5.3.3 (Formal limits are well-defined). Let $x = LIM_{n \rightarrow \infty} a_n, y = LIM_{n \rightarrow \infty} b_n$, and $z = LIM_{n \rightarrow \infty} c_n$ be real numbers. Then, with the above definition of equality for real numbers, we have $x = x$. Also, if $x = y$, then $y = x$. Finally, if $x = y$ and $y = z$, then $x = z$.  
 
@@ -50,10 +53,12 @@ Exercise 5.2.2. Let $\epsilon > 0$. Show that if $(a_n)^\infty_{n = 1}$ and $(b_
 ### Proposition 5.3.11. All the laws of algebra from Proposition 4.1.6 hold not only for the integers, but for the reals as well.  
 
 ### Lemma 5.3.14. Let $x$ be a non-zero real number. Then $x = LIM_{n \rightarrow \infty} a_n$ for some Cauchy sequence $(a_n)^\infty_{n = 1}$ which is bounded away from zero.  
+* $x \ne 0 \Rightarrow (a_n)^\infty_{n = 1} \ne (0)^\infty_{n = 1} \Rightarrow \exists \epsilon > 0, \exists N_0 > 0, \ st. \ n \ge N_0, |a_n - 0| \ge \epsilon$. And $(a_n)^\infty_{n = 1}$ is a Cauchy sequence, then $\exists N_a > 0, \ st. n, m \ge N_a \ |a_n - a_m| \le \epsilon$. If $n, m \ge max(N_0, N_a)$ then $|a_n - a_m| \le \epsilon$ and $|a_n| \ge \epsilon, |a_m| \ge \epsilon$. Obviously, $a_ma_n > 0$ must be true.  
+* Let $c \ne 0$ and $\begin{matrix} b_n :=\begin{cases}c,&\text{if} ~ n \le N \\a_n,&\text{if} ~ n \ge N\end{cases}\end{matrix}$. Obviously $b_n = a_n$, and $b_n$ is bounded away from zero.  
 
-### Lemma 5.3.15. Suppose that $(a_n)^\infty_{n = 1}$ is a Cauchy sequence which is bounded away from zero. Then the sequence $(a^{-1}_n)^\infty_{n = 1}$ is also a Cauchy sequence.  
+### Lemma 5.3.15. Suppose that $(a_n)^\infty_{n = 1}$ is a Cauchy sequence which is bounded away from zero. Then the sequence $(a_n^{-1})^\infty_{n = 1}$ is also a Cauchy sequence.  
 
-### Lemma 5.3.17 (Reciprocation is well defined). Let $(a_n)^\infty_{n = 1}$ and $(b_n)^\infty_{n = 1}$ be two Cauchy sequences bounded away from zero such that $LIM_{n \rightarrow \infty} a_n = LIM_{n \rightarrow \infty} b_n$ (i.e., the two sequences are equivalent). Then $LIM_{n \rightarrow \infty} a^{-1}_n = LIM_{n \rightarrow \infty} b^{-1}_n$.  
+### Lemma 5.3.17 (Reciprocation is well defined). Let $(a_n)^\infty_{n = 1}$ and $(b_n)^\infty_{n = 1}$ be two Cauchy sequences bounded away from zero such that $LIM_{n \rightarrow \infty} a_n = LIM_{n \rightarrow \infty} b_n$ (i.e., the two sequences are equivalent). Then $LIM_{n \rightarrow \infty} a_n^{-1} = LIM_{n \rightarrow \infty} b_n^{-1}$.  
 
 ### Exercise  
 Exercise 5.3.1. Prove Proposition 5.3.3. (Hint: you may find Proposition 4.3.7 to be useful.)  
@@ -72,7 +77,6 @@ Exercise 5.3.5. Show that $LIM_{n \rightarrow \infty} 1 / n = 0$.
 * 5.4.3. A real number $x$ is said to be positive iff it can be written as $x = LIM_{n \rightarrow \infty} a_n$ for some Cauchy sequence $(a_n)^\infty_{n = 1}$ which is positively bounded away from zero. $x$ is said to be negative iff it can be written as $x = LIM_{n \rightarrow \infty} a_n$ for some sequence $(a_n)^\infty_{n = 1}$ which is negatively bounded away from zero.  
 * 5.4.5 (Absolute value). Let $x$ be a real number. We define the absolute value $|x|$ of $x$ to equal $x$ if $x$ is positive, $−x$ when $x$ is negative, and $0$ when $x$ is zero.  
 * 5.4.6 (Ordering of the real numbers). Let $x$ and $y$ be real numbers. We say that $x$ is greater than $y$, and write $x > y$, if $x − y$ is a positive real number, and $x < y$ iff $x − y$ is a negative real number. We define $x \ge y$ iff $x > y$ or $x = y$, and similarly define $x \le y$.  
-* 
 
 ### Proposition 5.4.4 (Basic properties of positive reals). For every real number $x$, exactly one of the following three statements is true: (a) $x$ is zero; (b) $x$ is positive; (c) $x$ is negative. A real number $x$ is negative if and only if $−x$ is positive. If $x$ and $y$ are positive, then so are $x + y$ and $xy$.  
 * Suppose $x$ is a real number, then $x = LIM_{n \rightarrow \infty} a_n$. And we have $0 = (0)^\infty_{n = 1}$. According to the definition all $a_n$ are rational numbers. Compared with $(0)^\infty_{n = 1}$, eventually $a_n$ just be only one of $0, a_n > 0$ or $a_n < 0$ by Lemma 4.2.7, then the rest is easy to prove.  
@@ -96,7 +100,7 @@ Exercise 5.3.5. Show that $LIM_{n \rightarrow \infty} 1 / n = 0$.
 Exercise 5.4.1. Prove Proposition 5.4.4. (Hint: if $x$ is not zero, and $x$ is the formal limit of some sequence $(a_n)^\infty_{n = 1}$, then this sequence cannot be eventually $\epsilon$-close to the zero sequence $(0)^\infty_{n = 1}$ for every single $\epsilon > 0$. Use this to show that the sequence $(a_n)^\infty_{n = 1}$ is eventually either positively bounded away from zero or negatively bounded away from zero.)  
 Exercise 5.4.2. Prove the remaining claims in Proposition 5.4.7.  
 Exercise 5.4.3. Show that for every real number $x$ there is exactly one integer $N$ such that $N \le x < N + 1$. (This integer $N$ is called the integer part of $x$, and is sometimes denoted $N =  \lfloor x \rfloor$.)  
-* Suppose $x > 0$, by Proposition 5.4.12, $\exist n + 1 \in N, st.\ x < n + 1$. Let $S = \{n: x < n + 1\}$ and $n = min(S)$, then $n \le x < n + 1$.  
+* Suppose $x > 0$, by Proposition 5.4.12, $\exists n + 1 \in N, st.\ x < n + 1$. Let $S = \{n: x < n + 1\}$ and $n = min(S)$, then $n \le x < n + 1$.  
 
 Exercise 5.4.4. Show that for any positive real number $x > 0$ there exists a positive integer $N$ such that $x > 1 / N > 0$.  
 * $x > 0 \Rightarrow x^{-1} > 0 \Rightarrow x^{-1} < M + 1 = N \Rightarrow x > N^{-1}$.  
@@ -126,11 +130,15 @@ Exercise 5.5.1. Let $E$ be a subset of the real numbers $R$, and suppose that $E
 * $\forall x \in E, x \le M \Rightarrow -x \ge -M$. Let $x^\prime = -x$, obviously $x^\prime \in -E$ and $x^\prime \ge -M$, then $-M$ is a lower bound of $-E$. Suppose there exists a lower bound $-M^\prime$ of $-E$ such that $-M^\prime > -M$, then we could get $M^\prime < M$ which will lead $M$ is not the least upper bound of $E$. This a contradiction.  
 
 Exercise 5.5.2. Let $E$ be a non-empty subset of $R$, let $n \ge 1$ be an integer, and let $L < K$ be integers. Suppose that $K / n$ is an upper bound for $E$, but that $L/n$ is not an upper bound for $E$. Without using Theorem 5.5.9, show that there exists an integer $L < m \le K$ such that $m / n$ is an upper bound for $E$, but that $(m − 1) / n$ is not an upper bound for $E$. (Hint: prove by contradiction, and use induction. It may also help to draw a picture of the situation.)  
-* Suppose $n = 1$ and all the $m(L < m \le K)$ are upper bounds of $E$ and $(m - 1)$ are also upper bounds of $E$.
+* Suppose $n = 1$ and all the elements in $\{m: L < m \le K  \}$ are upper bounds of $E$ and $(m - 1)$ are also upper bounds of $E$. Obviously, $L + 1$ is in this set but $L$ is not an upper bound of $E$, then a contradiction. Thus when $n = 1$, there exists some elements such that the conclusion of this exercise. Skip the step of hypothesis, we show the conclusion when $n = k++$.  
+* Suppose $L / (k++)$ is an not upper bound for $E$, $K / (k++)$ is an upper bound for $E$. Let $E^\prime = kE$, then $L / k$ is an not upper bound for $E^\prime$, $K / k$ is an upper bound for $E^\prime$(Skip the proof of this statement). For $E^\prime$, we have an integer $m(L < m \le K)$ that $m / k$ is an upper bound for $E^\prime$, but that $(m − 1) / k$ is not an upper bound for $E^\prime$. Obviously, $m / (k++)$ is an upper bound for $E$, but $(m - 1) / (k++)$ is not an upper bound(Skip the proof of this statement).  
 
 Exercise 5.5.3. Let $E$ be a non-empty subset of $R$, let $n \ge 1$ be an integer, and let $m, m^\prime$ be integers with the properties that $m / n$ and $m^\prime / n$ are upper bounds for $E$, but $(m − 1) / n$ and $(m^\prime − 1) / n$ are not upper bounds for $E$. Show that $m = m^\prime$. This shows that the integer $m$ constructed in Exercise 5.5.2 is unique. (Hint: again, drawing a picture will be helpful.)  
+* Suppose $m \ne m^\prime$, and let $m - 1 < m \le m^\prime - 1 < m^\prime$, then $m / n$ could not be a an upper bound since $m / n \le (m^\prime - 1) / n$, this is a contradiction with $m / n$ is an upper bound for $E$.  
 
 Exercise 5.5.4. Let $q_1, q_2, q_3, ...$  be a sequence of rational numbers with the property that $|q_n − q_{n^\prime}| \le 1 / M$ whenever $M \ge 1$ is an integer and $n, n^\prime \ge M$. Show that $q_1, q_2, q_3, ...$ is a Cauchy sequence. Furthermore, if $S := LIM_{n\rightarrow\infty}q_n$, show that $|q_M − S| \le 1 / M$ for every $M \ge 1$. (Hint: use Exercise 5.4.8.)  
+* $\forall \epsilon > 0, \exist m \in N \ st. \ \epsilon < m \Rightarrow 1 / \epsilon < 1 / m \Rightarrow |q_n - q_{n^\prime}| \le 1 / m < 1 / \epsilon$ and $n, n^\prime \ge m$. let $1 / \epsilon = \epsilon^\prime$ and for all $\epsilon^\prime > 0$, we could find a $m \in N$ such that $|q_n − q_{n^\prime}| < \epsilon^\prime$ for all $n, n^\prime \ge m$. Thus $q_n$ is a Cauchy sequence.  
+* 
 
 Exercise 5.5.5. Establish an analogue of Proposition 5.4.14, in which “rational” is replaced by “irrational”.  
 
