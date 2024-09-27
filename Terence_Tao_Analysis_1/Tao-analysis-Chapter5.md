@@ -101,6 +101,7 @@ Exercise 5.4.1. Prove Proposition 5.4.4. (Hint: if $x$ is not zero, and $x$ is t
 Exercise 5.4.2. Prove the remaining claims in Proposition 5.4.7.  
 Exercise 5.4.3. Show that for every real number $x$ there is exactly one integer $N$ such that $N \le x < N + 1$. (This integer $N$ is called the integer part of $x$, and is sometimes denoted $N =  \lfloor x \rfloor$.)  
 * Suppose $x > 0$, by Proposition 5.4.12, $\exists n + 1 \in N, st.\ x < n + 1$. Let $S = \lbrace n: x < n + 1 \rbrace$ and $n = min(S)$, then $n \le x < n + 1$.  
+* Suppose $x > 0$ and there has no natural number such that $N \le x < N + 1 \Rightarrow \forall n \in N, x < n$ and $x < n - 1$. Obviously, if $x < n - 1$ and $n - 1 \in N$, we also has $x < n - 1$ and $x < n - 2$ similarly, thus $(n, n - 1, n - 2,....)$ all the infinite descent natural number sequence is true for this statement, but in Exercise 4.4.2 (a) already prove that infinite descent natural number sequence is false. Contradiction.  
 
 Exercise 5.4.4. Show that for any positive real number $x > 0$ there exists a positive integer $N$ such that $x > 1 / N > 0$.  
 * $x > 0 \Rightarrow x^{-1} > 0 \Rightarrow x^{-1} < M + 1 = N \Rightarrow x > N^{-1}$.  
@@ -138,15 +139,9 @@ Exercise 5.5.3. Let $E$ be a non-empty subset of $R$, let $n \ge 1$ be an intege
 
 Exercise 5.5.4. Let $q_1, q_2, q_3, ...$  be a sequence of rational numbers with the property that $|q_n − q_{n^\prime}| \le 1 / M$ whenever $M \ge 1$ is an integer and $n, n^\prime \ge M$. Show that $q_1, q_2, q_3, ...$ is a Cauchy sequence. Furthermore, if $S := LIM_{n\rightarrow\infty}q_n$, show that $|q_M − S| \le 1 / M$ for every $M \ge 1$. (Hint: use Exercise 5.4.8.)  
 * $\forall \epsilon > 0, \exist m \in N \ st. \ \epsilon < m \Rightarrow 1 / \epsilon < 1 / m \Rightarrow |q_n - q_{n^\prime}| \le 1 / m < 1 / \epsilon$ and $n, n^\prime \ge m$. let $1 / \epsilon = \epsilon^\prime$ and for all $\epsilon^\prime > 0$, we could find a $m \in N$ such that $|q_n − q_{n^\prime}| < \epsilon^\prime$ for all $n, n^\prime \ge m$. Thus $q_n$ is a Cauchy sequence.  
-* 
+* $|q_n - q_M| \le 1 / M \Rightarrow q_n - 1 / M \le q_M \le q_n + 1 / M$ for all $n \ge M$. Let $\begin{matrix} p_n :=\begin{cases}q_M,&\text{if} ~ n < M \\q_n,&\text{if} ~ n \ge M\end{cases}\end{matrix}$. Obviously $LIM_{n\rightarrow\infty}q_n = LIM_{n\rightarrow\infty}p_n = S$ and $p_n - 1 / M \le q_M \le p_n + 1 / M$ for all $n \ge 1$. Use Exercise 5.4.8, $p_n - 1 / M \le q_M \le p_n + 1 / M \Rightarrow S - 1 / M \le q_M \le S + 1 / M \Rightarrow |q_M − S| \le 1 / M$.  
 
-Exercise 5.5.5. Establish an analogue of Proposition 5.4.14, in which “rational” is replaced by “irrational”.  
-
-* 5.5.1 Because M is sup(E), $M \ge x$ which x is in E. Then we could have $-M \le -x$ which x is in E. The set -E is -x which x in E, so -M is inf(-E).  
-* 5.5.2 Suppose there exists a natural number m ($L<m<K$) such that, $m/n$ and $(m - 1)/n$ are upper bound of E. If such property is true, then let $m - 1 = n$, we could deduce $n - 1$ is also an upper bound of E, induction on m eventually we could get L is an upper bound of E which is a contradiction to question setting.  
-* 5.5.3 Suppose $m \neq m^o$, then $m > m^o$ or $m < m^o$. We coulde select $m > m^o$ to prove. If $m > m^o$, then $m - 1 \ge m^o$, we know that $\frac{m - 1}{n}$ is not upper bounds for E, so $\frac{m - 1}{n} \ge \frac{m^o}{n}$ and $\frac{m^o}{n}$ is also not an upper bound for E which contradiction to question setting.  
-* 5.5.4 First question is no idea. The second question have a try: let such sequence $a_n = |q_m - q_n|$ for every $n \ge M \ge 1$, accordint to question setting we have $a_n = |q_m - q_n| \le \frac{1}{M}$ for every $n \ge 1$, use Exercise 5.4.8 get $a_n \le \frac{1}{M} \rightarrow |a_m - S| \le \frac{1}{M}$.  
-* 5.5.5 Try. If $x < y$, let $x := a_n$ and $y := b_n$, which $a_n$ and $b_n$ are rational numbers, soonly we could get $a_n < b_n$, and use Proposition 5.4.14 to get some rational number q such that $x < q < y$, let $c_n = q = q^o(q^o \in R)$ we have $a_n < c_n < b_n \rightarrow x < q^o < y$.  
+Exercise 5.5.5. Establish an analogue of Proposition 5.4.14, in which “rational” is replaced by “irrational”.   
 
 ## 5.6 Real exponentiation, Part I  
 ### Lemma 5.6.5 First, when x = 0, $x^{1/n} = [y \ge 0 \ and \  y^n \le 0]$, get E = {0}, then E is non-empty. If E is not bounded, then there will be $\forall a \in R$, we have $a \in E$. Obviously $a = x + 1 \ge x \ge y^n$, according to definition of E, it is a contradiction. Then E be bounded, and the sup(E) exists. $Exists of $x^{n/1}$ is true.  

@@ -174,17 +174,18 @@ Exercise 4.3.5. Prove that $2^N ≥ N$ for all positive integers $N$. (Hint: use
 
 ### Proposition 4.4.5. For every rational number $\epsilon > 0$, there exists a non-negative rational number $x$ such that $x^2 < 2 < (x + \epsilon)^2$.  
 * Suppose $\epsilon^2 > 2$, let $x = 0 \Rightarrow x^2 < 2$ and $2 < \epsilon^2 + x^2 \le \epsilon^2 + 2x\epsilon + x^2 = (x + \epsilon)^2$.  
-* Suppose $0 < \epsilon^2 < 2$, let $x \in Q, x > 0$ and one of rationals in $0 < 2 - \epsilon^2 < x^2 < 2$ is the number. Use proof of Proposition 4.4.3 let $x^2 = (4 - \epsilon^2) / 2$ could be the anwser.  
+* Suppose $1 \le \epsilon < 2$, let $x = 1 \Rightarrow 0 < 1 < 2 < (1 + \epsilon)^2 \Rightarrow 0 < x^2 < 2 < (x + \epsilon)^2$.  
+* Suppose $0 < \epsilon < 1$, let $\epsilon = p / q$ which $q = p + d$ and $p > 0, q > 0, d > 0$. Let $x = 1 + d / p + 1 / (p + 1)$
 
 ### Exercise  
 Exercise 4.4.1. Prove Proposition 4.4.1. (Hint: use Proposition 2.3.9.)  
 Exercise 4.4.2. A definition: a sequence $a_0, a_1, a_2, ...$ of numbers (natural numbers, integers, rationals, or reals) is said to be in infinite descent if we have $a_n > a_{n+1}$ for all natural numbers $n$ (i.e., $a_0 > a_1 > a_2 > ....$).  
 (a) Prove the principle of infinite descent: that it is not possible to have a sequence of natural numbers which is in infinite descent. (Hint: assume for sake of contradiction that you can find a sequence of natural numbers which is in infinite descent. Since all the $a_n$ are natural numbers, you know that $a_n \ge 0$ for all $n$. Now use induction to show in fact that $a_n \ge k$ for all $k \in N$ and all $n \in N$, and obtain a contradiction.)  
-* Suppose there exists a sequence($a_n$) of natural numbers which is in infinite descent. Since $a_n \in N$ then $a_n \ge 0$, and Suppose $a_n \ge k$ consider $a_n \ge k++$
+* Suppose there exists a sequence($a_n$) of natural numbers which is in infinite descent. Since $a_n \in N$ then $a_n \ge 0$, and Suppose $a_n \ge k$ consider $a_n \ge k++$. $a_n > a_{n + 1} \ge k \Rightarrow a_n \ge k ++$. Thus $a_n \ge k$ for all $k \in N$ and all $n \in N$. Let $a_n = k^\prime, k^\prime \in N$, we could find $k^\prime ++ > k^\prime$, contradiction.  
 
 (b) Does the principle of infinite descent work if the sequence $a_1, a_2, a_3, ...$ is allowed to take integer values instead of natural number values? What about if it is allowed to take positive rational values instead of natural numbers? Explain.  
-* Taking integer values instead of natural number values is allowed. $\forall p \in Z$, it's easy to get $p - q < p, q \in Z, q > 0$.  
-* Taking positive rational values instead of natural numbers is not allowed. $\forall x \in Q^+, x = p / q$ and $p, q \in N, q \ne 0$. See $(p, q) \rightarrow x$, then it's still a sequence of natural numbers which is in infinite descent. Thus it's not allowed.  
+* Taking integer values instead of natural number values is allowed. For example, $a_{n + 1} = a_n - 1, a_n \in Z$.  
+* Taking positive rational values instead of natural numbers is allowed. For example, $a_{n + 1} = a_n / 2, a_n \in Z$.  
 
 Exercise 4.4.3. Fill in the gaps marked (why?) in the proof of Proposition 4.4.4.  
 (a) Every natural number is either even or odd, but not both (why?)  
