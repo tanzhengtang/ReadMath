@@ -17,7 +17,7 @@
 ### Lemma 3.1.6 (Single choice). Let A be a non-empty set. Then there exists an object $x$ such that $x \in A$.
 * Because the statment is that exists an object $x$ such that $x \in A$, so suppose that for every object $x$ have $x \notin A$, according to axiom 3.2, we could get $A$ is empty set, then have a contradiction, so this lemma is true.  
 
-### Lemma 3.1.13. If $a$ and $b$ are objects, then $\lbrace a, b \rbrace = \lbrace a \rbrace \ \cup\  \lbrace b \rbrace$. If $A, B, C$ are sets, then the union operation is commutative (i.e., $A \ \cup\  B = B \ \cup\  A$) and associative (i.e., $(A \ \cup\  B) \ \cup\  C = A \ \cup\  (B \ \cup\  C)$). Also, we have $A \ \cup\  A = A \ \cup\  \varnothing = \varnothing \ \cup\  A = A$.  
+### Lemma 3.1.13. If $a$ and $b$ are objects, then $\lbrace a, b \rbrace = \lbrace a \rbrace \ \cup\  \lbrace b \rbrace$. If $A, B, C$ are sets, then the union operation is commutative (i.e., $A \ \cup\  B = B \ \cup\  A$) and associative (i.e. $(A \ \cup\  B) \ \cup\  C = A \ \cup\  (B \ \cup\  C)$). Also, we have $A \ \cup\  A = A \ \cup\  \varnothing = \varnothing \ \cup\  A = A$.  
 * Commutative, if $x$ is any element of $A \ \cup\  B$, we get $x \in A$ or $x \in B$, then it also means $x \in B$ or $x \in A$, and by this way get $x \in B \ \cup\  A$, then we know the elements of $A \ \cup\  B$ is equal to $B \ \cup\  A$.  
 * Associative: $(A \ \cup\  B) \ \cup\  C = A \ \cup\  B \ \cup\  C = A \ \cup\  (B \ \cup\  C)$.  
 * Suppose we have $A \ \cup\  A$. Obviously $A \ \cup\  A = A$. If we have $A \ \cup\  \varnothing$, then $A \ \cup\  \varnothing = \varnothing \ \cup\  A$ according to commutative, and because no element in $\varnothing$, then $A \ \cup\  \varnothing = A = A \ \cup\  A$.  
@@ -103,7 +103,7 @@ Exercise 3.2.2. Use the axiom of regularity (and the singleton set axiom) to sho
 * If $A \in B$ and $B \in A, A \cup B = \lbrace A, B \rbrace = A$, then $\lbrace A, B \rbrace$ just contain $A$ which is not disjoint from itself, contradiction to axiom 3.9.  
 
 Exercise 3.2.3. Show (assuming the other axioms of set theory) that the universal specification axiom, Axiom 3.8, is equivalent to an axiom postulating the existence of a “universal set” $\Omega$ consisting of all objects (i.e., for all objects $x$, we have $x \in \Omega$). In other words, if Axiom 3.8 is true, then a universal set exists, and conversely, if a universal set exists, then Axiom 3.8 is true. (This may explain why Axiom 3.8 is called the axiom of universal specification). Note that if a universal set $\Omega$ existed, then we would have $\Omega \in \Omega$ by Axiom 3.1, contradicting Exercise 3.2.2. Thus the axiom of foundation specifically rules out the axiom of universal specification.  
-* If universal specification axiom, then we can assign such property that contain all objects to a set, get the $\Omega$ set. If $\Omega$ exists, use axiom 3.5, we can assign any property to the objects in $\Omega$ to get any sets, so we get Axiom 3.8.   
+* If universal specification axiom, then we can assign such property that contain all objects to a set, get the $\Omega$ set. If $\Omega$ exists, use axiom 3.5, we can assign any property to the objects in $\Omega$ to get any set, so we get Axiom 3.8.   
 
 ## 3.3 Functions  
 ### Definitions  
