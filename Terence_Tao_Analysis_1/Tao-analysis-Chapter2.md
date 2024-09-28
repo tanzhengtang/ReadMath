@@ -8,7 +8,7 @@
 * 2.5 Principle of mathematical induction. Let $P(n)$ be any property pertaining to a natural number $n$. Suppose that $P(0)$ is true, and suppose that whenever $P(n)$ is true, $P(n++)$ is also true. Then $P(n)$ is true for every natural number $n$.  
 
 ### Definition  
-* 2.1.1 (Informal)  A natural number is any element of the set $N := \{0, 1, 2, 3, ....\}$.  
+* 2.1.1 (Informal)  A natural number is any element of the set $N := \lbrace 0, 1, 2, 3, ....\rbrace$.  
 
 ### 2.1.4 Proposition: 3 is a natural number   
 * We know that $2$ is natural number, and $3$ is $2++$,so $3$ is natural number.  
@@ -48,7 +48,7 @@
 * If $(a++) + b = (a++) + c$, then $(a + b)++ = (a + c)++$, according to axiom 2.4, different natural numbers must have different successors, so $(a + b)$ must be equal to $(a + c)$, according to the assumption, so for $a++$, also get the $b = c$. 
 
 ### 2.2.8 Proposition: If $a$ is positive and $b$ is a natural number, then $a + b$ is positive (and hence $b + a$ is also, by Proposition 2.2.4)  
-If $a$ is positive,then $a$ is not equal to $0$, and $b \geq 0$(informal), so $a + b$ must be successor of natural number, and according to Axiom 2.3, $a + b$ can not be 0, then $a + b$ is positive.  
+If $a$ is positive,then $a$ is not equal to $0$, and $b \ge 0$(informal), so $a + b$ must be successor of natural number, and according to Axiom 2.3, $a + b$ can not be 0, then $a + b$ is positive.  
 
 ### 2.2.9 Corollary: If a and b are natural numbers such that $a + b = 0$, then $a = 0$ and $b = 0$  
 * If $a$ not equal to 0 or $b$ not equal to $0$, use 2.2.8, then $a + b$ is positive.  
@@ -58,7 +58,7 @@ If $a$ is positive,then $a$ is not equal to $0$, and $b \geq 0$(informal), so $a
 
 ### 2.2.12 Proposition: (Basic properties of order for natural numbers).  
 (a) (Order is reflexive) $a \ge a$.  
-* $a \geq a$, because $a + 0 = a$, and 0 is natural number.  
+* $a \geq a$, because $a + 0 = a$, and 0 is an natural number.  
 
 (b) (Order is transitive) If $a \ge b$ and $b \ge c$, then $a \ge c$.  
 * If $a \geq b$ and $b \geq c$, then $a \geq c$. Because $b + m = a$, $c + n = b$, use $c + n$ to substitute $b$, have $c + n + m = a$, so $a \ge c$.  
@@ -87,9 +87,9 @@ Exercise 2.2.1 Prove Proposition 2.2.5
 Exercise 2.2.2 Prove Lemma 2.2.10
 Exercise 2.2.3 Prove Proposition 2.2.12
 Exercise 2.2.4 Justify the three statements marked (why?) in the proof of Proposition 2.2.13.  
-* *First why (When $a = 0$ we have $0 ≤b$ for all $b$):* this means for all natural number $b$ we have $b \ge 0$, use axiom 2.5, obviously when $b = 0$, this is true, suppose $b = n$ is true, we can also get $n + 1 > n \ge 0$ is true, so $b \ge 0$.  
-* *Second why (If $a > b$,then $a++ > b$):* use $a > b$, we have $b + n = a$, and $n$ is positvie, and $b + n + 1 = a + 1 = a++$, this is $b + 1 < a++$, and because $b < b + 1$, so $b < a++$.  
-* *Third why (If $a = b$,then $a++ > b$):* becasue $a++ = a + 1 = b + 1$, and 1 is positive, so $a++ > b$ is true.  
+* First why (When $a = 0$ we have $0 ≤b$ for all $b$): this means for all natural number $b$ we have $b \ge 0$, use axiom 2.5, obviously when $b = 0$, this is true, suppose $b = n$ is true, we can also get $n + 1 > n \ge 0$ is true, so $b \ge 0$.  
+* Second why (If $a > b$,then $a++ > b$): use $a > b$, we have $b + n = a$, and $n$ is positvie, and $b + n + 1 = a + 1 = a++$, this is $b + 1 < a++$, and because $b < b + 1$, so $b < a++$.  
+* Third why (If $a = b$,then $a++ > b$): becasue $a++ = a + 1 = b + 1$, and 1 is positive, so $a++ > b$ is true.  
 
 Exercise 2.2.5 Prove Proposition 2.2.14  
 Exercise 2.2.6 Let $n$ be a natural number, and let $P(m)$ be a property pertaining to the natural numbers such that whenever $P(m++)$ is true, then $P(m)$ is true. Suppose that $P(n)$ is also true. Prove that $P(m)$ is true for all natural numbers $m ≤ n$; this is known as the principle of backwards induction. (Hint: apply induction to the variable $n$.)  

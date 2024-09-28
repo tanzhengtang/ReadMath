@@ -4,52 +4,52 @@
 * 3.1 (Sets are objects). If $A$ is a set, then $A$ is also an object. In particular, given two sets $A$ and $B$, it is meaningful to ask whether $A$ is also an element of $B$.  
 * 3.2 (Empty set). There exists a set $\varnothing$, known as the empty set, which contains no elements, i.e., for every object $x$ we have $x \in \varnothing$.  
 * 3.3 (Singleton sets and pair sets). If $a$ is an object, then there exists $a$ set $\{a\}$ whose only element is $a$, i.e., for every object $y$, we have $y \in \{a\}$ if and only if $y = a$; we refer to $\{a\}$ as the singleton set whose element is $a$. Furthermore, if $a$ and $b$ are objects, then there exists a set $\{a, b\}$ whose only elements are $a$ and $b$; i.e., for every object $y$, we have $y \in \{a, b\}$ if and only if $y = a$ or $y = b$; we refer to this set as the pair set formed by $a$ and $b$.  
-* 3.4 (Pairwise union). Given any two sets $A, B$, there exists a set $A ~\cup~ B$, called the union $A ~\cup~ B$ of $A$ and $B$, whose elements consists of all the elements which belong to $A$ or $B$ or both. In other words, for any object $x$, $x \in A ~\cup~ B \Leftrightarrow (x \in A \text{~or~} x \in B)$.  
-* 3.5 (Axiom of specification). Let $A$ be a set, and for each $x \in A$, let $P(x)$ be a property pertaining to $x$ (i.e., $P(x)$ is either a true statement or a false statement). Then there exists a set, called $\{x \in A: P(x) \text{~is~true~}\}$ (or simply $\{x \in A:P(x)\}$ for short), whose elements are precisely the elements $x$ in $A$ for which $P(x)$ is true. In other words, for any object $y$, $y \in \{x \in A: P(x) \text{~is~true~}\} \Leftrightarrow (y \in A \text{~and~} P(y) \text{~is~true})$.  
-* 3.6 (Replacement). Let $A$ be a set. For any object $x \in A$, and any object $y$, suppose we have a statement $P(x, y)$ pertaining to $x$ and $y$, such that for each $x \in A$ there is at most one $y$ for which $P(x, y)$ is true. Then there exists a set $\{y : P(x, y) \text{~is~true~for~some~} x \in A\}$, such that for any object $z, z \in \{y: \exist x \in A ~ st.~P(x, y)\} \Leftrightarrow P(x, z) \text{~is~true~for~some~} x \in A$
+* 3.4 (Pairwise union). Given any two sets $A, B$, there exists a set $A \ \cup\  B$, called the union $A \ \cup\  B$ of $A$ and $B$, whose elements consists of all the elements which belong to $A$ or $B$ or both. In other words, for any object $x$, $x \in A \ \cup\  B \Leftrightarrow (x \in A \text{ \ or \ } x \in B)$.  
+* 3.5 (Axiom of specification). Let $A$ be a set, and for each $x \in A$, let $P(x)$ be a property pertaining to $x$ (i.e., $P(x)$ is either a true statement or a false statement). Then there exists a set, called $\{x \in A: P(x) \text{\ is\ true\ }\}$ (or simply $\{x \in A:P(x)\}$ for short), whose elements are precisely the elements $x$ in $A$ for which $P(x)$ is true. In other words, for any object $y$, $y \in \{x \in A: P(x) \text{\ is\ true\ }\} \Leftrightarrow (y \in A \text{\ and\ } P(y) \text{\ is\ true})$.  
+* 3.6 (Replacement). Let $A$ be a set. For any object $x \in A$, and any object $y$, suppose we have a statement $P(x, y)$ pertaining to $x$ and $y$, such that for each $x \in A$ there is at most one $y$ for which $P(x, y)$ is true. Then there exists a set $\{y : P(x, y) \text{\ is\ true\ for\ some\ } x \in A\}$, such that for any object $z, z \in \{y: \exist x \in A \  st.\ P(x, y)\} \Leftrightarrow P(x, z) \text{\ is\ true\ for\ some\ } x \in A$
 
 ### Definitions  
 * 3.1.4 (Equality of sets). Two sets $A$ and $B$ are equal, $A = B$, iff every element of $A$ is an element of $B$ and vice versa. To put it another way, $A = B$ if and only if every element $x$ of $A$ belongs also to $B$, and every element $y$ of $B$ belongs also to $A$.  
 * 3.1.15 (Subsets). Let $A, B$ be sets. We say that $A$ is a subset of $B$, denoted $A \subseteq B$, iff every element of $A$ is also an element of $B$, i.e. For any object $x, x \in A \Rightarrow x \in B$. We say that $A$ is a proper subset of $B$, denoted $A \subsetneq B$, if $A \subseteq B$ and $A \ne B$.  
-* 3.1.23 (Intersections). The intersection $S_1 ~\cap~ S_2$ of two sets is defined to be the set $S_1 ~\cap~ S_2:= \{x \in S_1: x \in S_2\}$. In other words, $S_1 ~\cap~ S_2$ consists of all the elements which belong to both S1 and S2. Thus, for all objects $x, x \in S_1 ~\cap~ S_2 \Leftrightarrow x \in S_1 \text{~and~} x \in S_2$.  
+* 3.1.23 (Intersections). The intersection $S_1 \ \cap\  S_2$ of two sets is defined to be the set $S_1 \ \cap\  S_2:= \{x \in S_1: x \in S_2\}$. In other words, $S_1 \ \cap\  S_2$ consists of all the elements which belong to both S1 and S2. Thus, for all objects $x, x \in S_1 \ \cap\  S_2 \Leftrightarrow x \in S_1 \text{\ and\ } x \in S_2$.  
 * 3.1.27 (Difference sets). Given two sets $A$ and $B$, we define the set $A − B$ or $A / B$ to be the set $A$ with any elements of $B$ removed: $A / B:= \{x \in A : x \notin B\}$.  
 
 ### Lemma 3.1.6 (Single choice). Let A be a non-empty set. Then there exists an object $x$ such that $x \in A$.
 * Because the statment is that exists an object $x$ such that $x \in A$, so suppose that for every object $x$ have $x \notin A$, according to axiom 3.2, we could get $A$ is empty set, then have a contradiction, so this lemma is true.  
 
-### Lemma 3.1.13. If $a$ and $b$ are objects, then $\{a, b\} = \{a\} ~\cup~ \{b\}$. If $A, B, C$ are sets, then the union operation is commutative (i.e., $A ~\cup~ B = B ~\cup~ A$) and associative (i.e., $(A ~\cup~ B) ~\cup~ C = A ~\cup~ (B ~\cup~ C)$). Also, we have $A ~\cup~ A = A ~\cup~ \varnothing = \varnothing ~\cup~ A = A$.  
-* Commutative, if $x$ is any element of $A ~\cup~ B$, we get $x \in A$ or $x \in B$, then it also means $x \in B$ or $x \in A$, and by this way get $x \in B ~\cup~ A$, then we know the elements of $A ~\cup~ B$ is equal to $B ~\cup~ A$.  
-* Associative: $(A ~\cup~ B) ~\cup~ C = A ~\cup~ B ~\cup~ C = A ~\cup~ (B ~\cup~ C)$.  
-* Suppose we have $A ~\cup~ A$. Obviously $A ~\cup~ A = A$. If we have $A ~\cup~ \varnothing$, then $A ~\cup~ \varnothing = \varnothing ~\cup~ A$ according to commutative, and because no element in $\varnothing$, then $A ~\cup~ \varnothing = A = A ~\cup~ A$.  
+### Lemma 3.1.13. If $a$ and $b$ are objects, then $\{a, b\} = \{a\} \ \cup\  \{b\}$. If $A, B, C$ are sets, then the union operation is commutative (i.e., $A \ \cup\  B = B \ \cup\  A$) and associative (i.e., $(A \ \cup\  B) \ \cup\  C = A \ \cup\  (B \ \cup\  C)$). Also, we have $A \ \cup\  A = A \ \cup\  \varnothing = \varnothing \ \cup\  A = A$.  
+* Commutative, if $x$ is any element of $A \ \cup\  B$, we get $x \in A$ or $x \in B$, then it also means $x \in B$ or $x \in A$, and by this way get $x \in B \ \cup\  A$, then we know the elements of $A \ \cup\  B$ is equal to $B \ \cup\  A$.  
+* Associative: $(A \ \cup\  B) \ \cup\  C = A \ \cup\  B \ \cup\  C = A \ \cup\  (B \ \cup\  C)$.  
+* Suppose we have $A \ \cup\  A$. Obviously $A \ \cup\  A = A$. If we have $A \ \cup\  \varnothing$, then $A \ \cup\  \varnothing = \varnothing \ \cup\  A$ according to commutative, and because no element in $\varnothing$, then $A \ \cup\  \varnothing = A = A \ \cup\  A$.  
 
 ### Proposition 3.1.18 (Sets are partially ordered by set inclusion). Let $A,B,C$ be sets. If $A \subseteq B$ and $B \subseteq C$ then $A \subseteq C$. If $A \subseteq B$ and $B \subseteq A$, then $A = B$. Finally, if $A \subsetneq B$ and $B \subsetneq C$ then $A \subsetneq C$.  
 * Suppose $A \subseteq B$ and $B \subseteq A$. If $A \ne B$, there exists some objects $x \in A$ and $x \notin B$ or $y \in B$ and $y \notin A$, whatever status will make a contradiction. Thus $A = B$.  
 * Suppose $A \subsetneq B$ and $B \subsetneq C$. We already prove that $A \subseteq C$, just need prove that $A \ne C$. If $A = C$, we have $A \subsetneq B \Rightarrow C \subsetneq B$ and $B \subsetneq C$, which is a contradiction. Thus $A \subsetneq C$.  
 
 ### Proposition 3.1.28 (Sets form a boolean algebra). Let $A, B, C$ be sets,and let $X$ be a set containing $A, B, C$ as subsets.  
-(a) (Minimal element) We have $A ~\cup~ \varnothing = A \text{~and~} A ~\cap~ \varnothing = \varnothing$.  
-* $A ~\cap~ \varnothing$ means $x \in A$ and $x \in \varnothing$, because axiom 3.2, know that there is no element in $\varnothing$, so no element statisfy this property, then $A ~\cap~ \varnothing$ is a empty set, it means $A ~\cap~ \varnothing = \varnothing$.  
+(a) (Minimal element) We have $A \ \cup\  \varnothing = A \text{\ and\ } A \ \cap\  \varnothing = \varnothing$.  
+* $A \ \cap\  \varnothing$ means $x \in A$ and $x \in \varnothing$, because axiom 3.2, know that there is no element in $\varnothing$, so no element statisfy this property, then $A \ \cap\  \varnothing$ is a empty set, it means $A \ \cap\  \varnothing = \varnothing$.  
 
-(b) (Maximal element) We have $A ~\cup~ X = X$ and $A ~\cap~ X = A$.  
-* $\forall x \in A$, because $A \subset X$, then $x \in X$. Thus $x \in A$ and $x \in X$ is true, we have $A \subset A ~\cap~ X$.  
+(b) (Maximal element) We have $A \ \cup\  X = X$ and $A \ \cap\  X = A$.  
+* $\forall x \in A$, because $A \subset X$, then $x \in X$. Thus $x \in A$ and $x \in X$ is true, we have $A \subset A \ \cap\  X$.  
 
-(c) (Identity) We have $A ~\cup~ A = A$ and $A ~\cap~ A = A$.  
+(c) (Identity) We have $A \ \cup\  A = A$ and $A \ \cap\  A = A$.  
 
-(d) (Commutativity) We have $A ~\cup~ B = B ~\cup~ A$ and $A ~\cap~ B = B ~\cap~ A$.  
+(d) (Commutativity) We have $A \ \cup\  B = B \ \cup\  A$ and $A \ \cap\  B = B \ \cap\  A$.  
 
-(e) (Associativity) We have $(A ~\cup~ B) ~\cup~ C = A ~\cup~ (B ~\cup~ C)$ and $(A ~\cap~ B) ~\cap~ C = A ~\cap~ (B ~\cap~ C)$.  
+(e) (Associativity) We have $(A \ \cup\  B) \ \cup\  C = A \ \cup\  (B \ \cup\  C)$ and $(A \ \cap\  B) \ \cap\  C = A \ \cap\  (B \ \cap\  C)$.  
 
-(f) (Distributivity) We have $A ~\cap~ (B ~\cup~ C) = (A ~\cap~ B) ~\cup~ (A ~\cap~ C)$ and $A ~\cup~ (B ~\cap~ C) = (A ~\cup~ B) ~\cap~ (A ~\cup~ C)$.  
-* $\forall x \in A ~\cap~ (B ~\cup~ C) \Leftrightarrow x \in A$ and $x \in B ~\cup~ C \Leftrightarrow (x \in A$ and $x \in B)$ or $(x \in A \text{~and~} x \in C) \Leftrightarrow (A ~\cap~ B) ~\cup~ (A ~\cap~ C)$.  
-* $\forall x \in A ~\cup~ (B ~\cap~ C) \Leftrightarrow x \in A$ or $x \in B ~\cap~ C \Leftrightarrow x \in A$ or $x \in A ~\cap~ B$ or $x \in A ~\cap~ C$ or $x \in B ~\cap~ C \Leftrightarrow x \in A ~\cup~ (A ~\cap~ B) ~\cup~ (A ~\cap~ C) ~\cup~ (B ~\cap~ C) \Leftrightarrow A ~\cup~ (A ~\cap~ B) ~\cup~ (C ~\cap~ (A ~\cup~ B)) \Leftrightarrow A ~\cup~ (A ~\cap~ B) ~\cup~ (C ~\cap~ (A ~\cup~ B)) \Leftrightarrow  (A ~\cap~ A) ~\cup~ (A ~\cap~ B) ~\cup~ (C ~\cap~ (A ~\cup~ B)) \Leftrightarrow (A ~\cap~ (A ~\cup~ B)) ~\cup~ (C ~\cap~ (A ~\cup~ B)) \Leftrightarrow (A ~\cap~ B) ~\cup~ (A ~\cap~ C)$.  
+(f) (Distributivity) We have $A \ \cap\  (B \ \cup\  C) = (A \ \cap\  B) \ \cup\  (A \ \cap\  C)$ and $A \ \cup\  (B \ \cap\  C) = (A \ \cup\  B) \ \cap\  (A \ \cup\  C)$.  
+* $\forall x \in A \ \cap\  (B \ \cup\  C) \Leftrightarrow x \in A$ and $x \in B \ \cup\  C \Leftrightarrow (x \in A$ and $x \in B)$ or $(x \in A \text{\ and\ } x \in C) \Leftrightarrow (A \ \cap\  B) \ \cup\  (A \ \cap\  C)$.  
+* $\forall x \in A \ \cup\  (B \ \cap\  C) \Leftrightarrow x \in A$ or $x \in B \ \cap\  C \Leftrightarrow x \in A$ or $x \in A \ \cap\  B$ or $x \in A \ \cap\  C$ or $x \in B \ \cap\  C \Leftrightarrow x \in A \ \cup\  (A \ \cap\  B) \ \cup\  (A \ \cap\  C) \ \cup\  (B \ \cap\  C) \Leftrightarrow A \ \cup\  (A \ \cap\  B) \ \cup\  (C \ \cap\  (A \ \cup\  B)) \Leftrightarrow A \ \cup\  (A \ \cap\  B) \ \cup\  (C \ \cap\  (A \ \cup\  B)) \Leftrightarrow  (A \ \cap\  A) \ \cup\  (A \ \cap\  B) \ \cup\  (C \ \cap\  (A \ \cup\  B)) \Leftrightarrow (A \ \cap\  (A \ \cup\  B)) \ \cup\  (C \ \cap\  (A \ \cup\  B)) \Leftrightarrow (A \ \cap\  B) \ \cup\  (A \ \cap\  C)$.  
 
-(g) (Partition) We have $A ~\cup~ (X / A) = X$ and $A ~\cap~ (X / A) = \varnothing$.  
-* Suppose $A ~\cup~ (X / A) \ne X$, then $\exist x \in X st. x \notin A ~\cup~ (X / A)$. If $x \notin A$, and we have $x \in X$ then $x \in X / A$ which is a contradiction. If $x \notin X \ A$, then $x \in A$, which also a contradcition.  
+(g) (Partition) We have $A \ \cup\  (X / A) = X$ and $A \ \cap\  (X / A) = \varnothing$.  
+* Suppose $A \ \cup\  (X / A) \ne X$, then $\exist x \in X st. x \notin A \ \cup\  (X / A)$. If $x \notin A$, and we have $x \in X$ then $x \in X / A$ which is a contradiction. If $x \notin X \ A$, then $x \in A$, which also a contradcition.  
 
-(h) (De Morgan laws) We have $X / (A ~\cup~ B) = (X / A) ~\cap~ (X / B)$ and $X / (A ~\cap~ B) = (X / A) ~\cup~ (X / B)$.  
-* $\forall x \in X / (A ~\cup~ B) \Leftrightarrow x \in X$ and $x \notin A ~\cup~ B$, because $X$ contain the elements of $A ~\cup~ B$, which means that $X$ will remove the elements of $A$ and the elements of $B$, thus $x \notin A$ and $x \notin B$, we could get $X / (A ~\cup~ B) = (X / A) ~\cap~ (X / B)$.  
-* $\forall x \in (X / A) ~\cup~ (X / B)$, suppose $x \in X / A$ with generality, then $x \in X$ and $x \notin A$, since $A = (A / B) \cup (A \cap B)$ we could get $x \notin A \cap B$. Thus $x \in X / (A \cap B)$.  
-* $\forall x \in X / (A ~\cap~ B) \Rightarrow x \in X$ and $x \notin A \cap B$, because $A \subseteq X$ we could say $x \in A$ or $x \in X / A$ then we have $x \in A$ and $x \notin A \cap B$ or $x \in X / A$ and $x \notin A \cap B \Rightarrow x \in X / A$. Similarly, we could also get $x \in X / B$ from $x \in X / (A ~\cap~ B)$. Thus $X / (A ~\cap~ B) \Rightarrow (X / A) \cup (X / B)$.  
+(h) (De Morgan laws) We have $X / (A \ \cup\  B) = (X / A) \ \cap\  (X / B)$ and $X / (A \ \cap\  B) = (X / A) \ \cup\  (X / B)$.  
+* $\forall x \in X / (A \ \cup\  B) \Leftrightarrow x \in X$ and $x \notin A \ \cup\  B$, because $X$ contain the elements of $A \ \cup\  B$, which means that $X$ will remove the elements of $A$ and the elements of $B$, thus $x \notin A$ and $x \notin B$, we could get $X / (A \ \cup\  B) = (X / A) \ \cap\  (X / B)$.  
+* $\forall x \in (X / A) \ \cup\  (X / B)$, suppose $x \in X / A$ with generality, then $x \in X$ and $x \notin A$, since $A = (A / B) \cup (A \cap B)$ we could get $x \notin A \cap B$. Thus $x \in X / (A \cap B)$.  
+* $\forall x \in X / (A \ \cap\  B) \Rightarrow x \in X$ and $x \notin A \cap B$, because $A \subseteq X$ we could say $x \in A$ or $x \in X / A$ then we have $x \in A$ and $x \notin A \cap B$ or $x \in X / A$ and $x \notin A \cap B \Rightarrow x \in X / A$. Similarly, we could also get $x \in X / B$ from $x \in X / (A \ \cap\  B)$. Thus $X / (A \ \cap\  B) \Rightarrow (X / A) \cup (X / B)$.  
 
 ### Exercises 
 Exercise 3.1.1. Show that the definition of equality in Definition 3.1.4 is reflexive, symmetric, and transitive.  
@@ -60,19 +60,19 @@ Exercise 3.1.2. Using only Definition 3.1.4, Axiom 3.1, Axiom 3.2, and Axiom 3.3
 
 Exercise 3.1.3. Prove the remaining claims in Lemma 3.1.13.  
 Exercise 3.1.4. Prove the remaining claims in Proposition 3.1.18.  
-Exercise 3.1.5. Let $A, B$ be sets. Show that the three statements $A \subseteq B, A ~\cup~ B = B, A ~\cap~ B = A$ are logically equivalent (any one of them implies the other two).  
-* If $A \subseteq B, \forall x \in A ~\cup~ B \Leftrightarrow x \in B$, then $A ~\cup~ B = B$. If $A ~\cup~ B = B$, then $A \subseteq A ~\cup~ B = B$. Thus we have $A \subseteq B \Leftrightarrow A ~\cup~ B = B$.  
-* If $A ~\cup~ B = B, \forall x \in A \Rightarrow x \in B \Rightarrow x \in A ~\cap~ B$, then $A ~\cap~ B = B$. If $A ~\cap~ B = A, \forall x \in A ~\cup~ B \Rightarrow x \in A$ or $x \in B$, suppose $x \in A \Rightarrow x \in B$ since $A ~\cap~ B = A$, then we have $A ~\cup~ B = B$. Thus we have $A ~\cup~ B = B \Leftrightarrow A ~\cap~ B = A$.  
+Exercise 3.1.5. Let $A, B$ be sets. Show that the three statements $A \subseteq B, A \ \cup\  B = B, A \ \cap\  B = A$ are logically equivalent (any one of them implies the other two).  
+* If $A \subseteq B, \forall x \in A \ \cup\  B \Leftrightarrow x \in B$, then $A \ \cup\  B = B$. If $A \ \cup\  B = B$, then $A \subseteq A \ \cup\  B = B$. Thus we have $A \subseteq B \Leftrightarrow A \ \cup\  B = B$.  
+* If $A \ \cup\  B = B, \forall x \in A \Rightarrow x \in B \Rightarrow x \in A \ \cap\  B$, then $A \ \cap\  B = B$. If $A \ \cap\  B = A, \forall x \in A \ \cup\  B \Rightarrow x \in A$ or $x \in B$, suppose $x \in A \Rightarrow x \in B$ since $A \ \cap\  B = A$, then we have $A \ \cup\  B = B$. Thus we have $A \ \cup\  B = B \Leftrightarrow A \ \cap\  B = A$.  
 
 Exercise 3.1.6. Prove Proposition 3.1.28. (Hint: one can use some of these claims to prove others. Some of the claims have also appeared previously in Lemma 3.1.13.)  
-Exercise 3.1.7. Let $A,B,C$ be sets. Show that $A ~\cap~ B \subseteq A$ and $A ~\cap~ B \subseteq B$. Furthermore,show that $C \subseteq A$ and $C \subseteq B$ if and only if $C \subseteq A ~\cap~ B$. In a similar spirit, show that $A \subseteq A ~\cup~ B$ and $B \subseteq A ~\cup~ B$, and furthermore that $A \subseteq C$ and $B \subseteq C$ if and only if $A ~\cup~ B \subseteq C$.  
-* It's obviously that if we get any element in $A ~\cap~ B$, then immediately we can know that the element is in $A$ and $B$. So get $A ~\cap~ B \subseteq A$ and $A ~\cap~ B \subseteq B$.  
-* If $C \subseteq A$ and $C \subseteq B$, it means every element in $C$ is also in $A$ and $B$, quickly implies that $C \subseteq A ~\cap~ B$. Skip the rest.  
-* If $A \subseteq C$ and $B \subseteq C$, it means that every element in $A$ or every element in $B$, we can get the element is also in $C$, then $A ~\cup~ B \subseteq C$. Skip the rest.  
+Exercise 3.1.7. Let $A,B,C$ be sets. Show that $A \ \cap\  B \subseteq A$ and $A \ \cap\  B \subseteq B$. Furthermore,show that $C \subseteq A$ and $C \subseteq B$ if and only if $C \subseteq A \ \cap\  B$. In a similar spirit, show that $A \subseteq A \ \cup\  B$ and $B \subseteq A \ \cup\  B$, and furthermore that $A \subseteq C$ and $B \subseteq C$ if and only if $A \ \cup\  B \subseteq C$.  
+* It's obviously that if we get any element in $A \ \cap\  B$, then immediately we can know that the element is in $A$ and $B$. So get $A \ \cap\  B \subseteq A$ and $A \ \cap\  B \subseteq B$.  
+* If $C \subseteq A$ and $C \subseteq B$, it means every element in $C$ is also in $A$ and $B$, quickly implies that $C \subseteq A \ \cap\  B$. Skip the rest.  
+* If $A \subseteq C$ and $B \subseteq C$, it means that every element in $A$ or every element in $B$, we can get the element is also in $C$, then $A \ \cup\  B \subseteq C$. Skip the rest.  
 
-Exercise 3.1.8. Let A, B be sets. Prove the absorption laws $A ~\cap~ (A ~\cup~ B) = A$ and $A ~\cup~ (A ~\cap~ B) = A$.  
-* $A \subseteq A ~\cup~ B$, use Exercise 3.1.5, we get $A ~\cap~ (A ~\cup~ B) = A$.  
-* $A ~\cap~ B \subseteq A$, use Exercise 3.1.5 again, get $A ~\cup~ (A ~\cap~ B) = A$.  
+Exercise 3.1.8. Let A, B be sets. Prove the absorption laws $A \ \cap\  (A \ \cup\  B) = A$ and $A \ \cup\  (A \ \cap\  B) = A$.  
+* $A \subseteq A \ \cup\  B$, use Exercise 3.1.5, we get $A \ \cap\  (A \ \cup\  B) = A$.  
+* $A \ \cap\  B \subseteq A$, use Exercise 3.1.5 again, get $A \ \cup\  (A \ \cap\  B) = A$.  
 
 Exercise 3.1.9. Let $A,B,X$ be sets such that $A \cup B = X$ and $A \cap B = \empty$. Show that $A = X / B$ and $B = X / A$.  
 * It's obviously that $A \subseteq X$ and $B \subseteq X$, quckily get $A \cup B = X = B \cup (X / B) \Rightarrow (B \cup (X / B)) / B = (A \cup B) / B \Rightarrow ((X / B) / B) \cup (B / B) = (A / B) \cup (B / B)$, Because $A \cap B = \empty, A / B = A$ and $(X / B) / B = X / B \Rightarrow X / B \cup \empty = A \cup \empty$, then $X / B = A$. Skip the rest.  
@@ -88,7 +88,7 @@ Exercise 3.1.11. Show that the axiom of replacement implies the axiom of specifi
 
 ## 3.2 Russell’s paradox (Optional)  
 ### Axioms  
-* 3.8 (Universal specification). (Dangerous!) Suppose for every object x we have a property P(x) pertaining to x (so that for every x, P(x) is either a true statement or a false statement). Then there exists a set $\{x : P(x) \text{~is~true~}\}$ such that for every object $y$, $y \in \{x: P(x) \text{~is~true~}\} \Leftrightarrow P(y)$ is true.   
+* 3.8 (Universal specification). (Dangerous!) Suppose for every object x we have a property P(x) pertaining to x (so that for every x, P(x) is either a true statement or a false statement). Then there exists a set $\{x : P(x) \text{\ is\ true\ }\}$ such that for every object $y$, $y \in \{x: P(x) \text{\ is\ true\ }\} \Leftrightarrow P(y)$ is true.   
 * 3.9 (Regularity). If $A$ is a non-empty set, then there is at least one element $x$ of $A$ which is either not a set, or is disjoint from $A$.  
 
 ### Exercises
@@ -133,11 +133,11 @@ Exercise 3.3.3. When is the empty function injective? surjective? bijective? Emp
 
 Exercise 3.3.4. In this section we give some cancellation laws for composition. Let $f: X \rightarrow Y, f^{\prime}: X \rightarrow Y, g: Y \rightarrow Z$ and $g^{\prime}: Y \rightarrow Z$ be functions. Show that if $g \circ f = g \circ f^{\prime}$ and $g$ is injective, then $f = f^{\prime}$. Is the same statement true if $g$ is not injective? Show that if $g \circ f = g^\prime \circ f$ and $f$ is surjective, then $g = g^\prime$. Is the same statement true if $f$ is not surjective?  
 * If $g \circ f = g \circ f^\prime, g \circ f$ and $g \circ f^\prime$ have the same domain and range,  $f$ and $f^\prime$ have the same domain. $\forall x \in X, g(f(x)) = g(f^\prime(x))$. Let $y = f(x), y^\prime = f^\prime(x)$, since $g$ is inective, $g(y) = g(y^\prime)$ when $y = y^\prime$. Then $f(x) = f^\prime(x)$ and $f = f^\prime$. If $g$ is not injective, the statment is not true.   
-* Suppose $g \circ f = g^\prime \circ f$. $\forall y \in Y, \exist x \in X ~ st.~ f(x) = y$. Because $g(f(x)) = g^\prime(f(x)) \Rightarrow g(y) = g^\prime(y)$ for every $y$ in $Y$. Thus $g = g^\prime$. If $f$ is not surjective, then there exist some $y^\prime \in Y ~st. \exists x^\prime \notin X, f(x^\prime) = y^\prime$, it's possible that $g(y^\prime) \ne g^\prime(y^\prime)$.  
+* Suppose $g \circ f = g^\prime \circ f$. $\forall y \in Y, \exist x \in X \  st.\  f(x) = y$. Because $g(f(x)) = g^\prime(f(x)) \Rightarrow g(y) = g^\prime(y)$ for every $y$ in $Y$. Thus $g = g^\prime$. If $f$ is not surjective, then there exist some $y^\prime \in Y \ st. \exists x^\prime \notin X, f(x^\prime) = y^\prime$, it's possible that $g(y^\prime) \ne g^\prime(y^\prime)$.  
 
 Exercise 3.3.5. Let $f: X \rightarrow Y$ and $g: Y \rightarrow Z$ be functions. Show that if $g \circ f$ is injective, then $f$ must be injective. Is it true that $g$ must also be injective? Show that if $g \circ f$ is surjective, then $g$ must be surjective. Is it true that $f$ must also be surjective?  
 * Suppose $f$ is not injective, then there exists differnt elements $x, x^\prime$ in $X$ such that $f(x) = f(x^\prime)$, and it will cause that $g(f(x)) = g(f(x^\prime))$ which means that $g \circ f$ is not injective, contradiction. If $g$ is not injective and $f$ is injective, $g \circ f$ is also injective.  
-* Suppose $g$ is not surjective, then $\exist z \in Z ~st. \exist y \notin Y, g(y) = z$ because $y = f(x)$ then we could not find a such $x$ that $g(f(x)) = z$. Thus $g \circ f$ is not surjective, contradiction. $f$ could not be surjective.  
+* Suppose $g$ is not surjective, then $\exist z \in Z \ st. \exist y \notin Y, g(y) = z$ because $y = f(x)$ then we could not find a such $x$ that $g(f(x)) = z$. Thus $g \circ f$ is not surjective, contradiction. $f$ could not be surjective.  
 
 Exercise 3.3.6. Let $f: X \rightarrow Y$ be a bijective function, and let $f^{−1}: Y \rightarrow X$ be its inverse. Verify the cancellation laws $f^{−1}(f(x)) = x$ for all $x \in X$ and $f(f^{−1}(y)) = y$ for all $y \in Y$. Conclude that $f^{−1}$ is also invertible, and has $f$ as its inverse (thus $(f^{−1})^{−1} = f$).  
 * $\forall x \in X, f(x) = y$ and $f^{-1}(y) = x$ thus $f^{−1}(f(x)) = x$. $\forall y \in Y, f^{-1}(y) = x$ and $f(x) = y$, thus $f(f^{−1}(y)) = y$.  
@@ -187,7 +187,7 @@ Exercise 3.4.5. Let $f: X \rightarrow Y$ be a function from one set $X$ to anoth
 * Combine with Exercise 3.4.2.  
 * Suppose $f$ is surjective. If $y \in S$, then there exists some element $x$ in $X$ such that $f(x) = y$. Now we think about $x$, because $f(x) = y$, then $x \in \{x \in X: f(x) \in S\}$. Thus $y \in f(f^{−1}(S)) \Rightarrow S \subseteq f(f^{−1}(S))$.  
 * Suppose $S \subseteq f(f^{−1}(S))$, $\forall y \in Y$, because $Y \subseteq Y$, we have $Y \subseteq f(f^{−1}(Y))$, also $y \in f(f^{−1}(Y))$, then $y = f(x), x \in f^{-1}(Y) \Rightarrow$ for each $y$ there exists some elements $x \in X$ such that $y = f(x)$, thus $f$ is surjective.   
-* Suppose $f$ is injective. Suppose $f^{−1}(f(S)) \not\subseteq S$ and let $x \in f^{−1}(f(S))$ and $x \notin S$. Also $f(x) \in f(S)$. Then suppose $x^\prime \in S ~st. f(x^\prime) = f(x)$, because $f$ is injective we have $x = x^\prime \Rightarrow x \in S$ which is a contradiction. Thus $f^{−1}(f(S)) \subseteq S$.  
+* Suppose $f$ is injective. Suppose $f^{−1}(f(S)) \not\subseteq S$ and let $x \in f^{−1}(f(S))$ and $x \notin S$. Also $f(x) \in f(S)$. Then suppose $x^\prime \in S \ st. f(x^\prime) = f(x)$, because $f$ is injective we have $x = x^\prime \Rightarrow x \in S$ which is a contradiction. Thus $f^{−1}(f(S)) \subseteq S$.  
 * Suppose $f^{−1}(f(S)) \subseteq S$. If $f$ is not injective, let $f(x) = f(x^\prime), x \in S, x^\prime \in S^\prime, S \cap S^\prime = \empty$, obviously $x^\prime \in f^{−1}(f(S))$ and $x^\prime \notin S$ which is a contradiction with $f^{−1}(f(S)) = S$ for every $S \subseteq X$. Thus $f$ is injective.  
 
 Exercise 3.4.6. Prove Lemma 3.4.9. (Hint: start with the set $\{0, 1\}^X$ and apply the replacement axiom, replacing each function $f$ with the object $f^{−1}(\{1\})$.)See also Exercise 3.5.11.  
@@ -198,29 +198,29 @@ Exercise 3.4.7. Let $X, Y$ be sets. Define a partial function from $X$ to $Y$ to
 Exercise 3.4.8. Show that Axiom 3.4 can be deduced from Axiom 3.1, Axiom 3.3 and Axiom 3.11.  
 * Give two sets $A, B$. $A$ and $B$ are objects by Axiom 3.1, and we have $\{A, B\}$ by Axiom 3.3, then we could get the set $A \cup B$ exists by Axiom 3.11.  
 
-Exercise 3.4.9. Show that if $\beta$ and $\beta^\prime$ are two elements of a set $I$, and to each $\alpha \in I$ we assign a set $A_\alpha$, then $\{x \in A_\beta: x \in A_\alpha \text{~for~all~} \alpha \in I\} = \{x \in A_{β^\prime} : x \in A_\alpha \text{~for~all~} \alpha \in I\}$, and so the definition of $\bigcap_{\alpha \in I} A_\alpha$ defined in (3.3) does not depend on $\beta$. Also explain why (3.4) is true.  
-* 3.3 equation is $\bigcap_{\alpha \in I} A_\alpha := \{x \in A_\beta: x \in A_\alpha \text{~for~all~} \alpha \in I\}$, 3.4 is $y \in \bigcap_{\alpha \in I} A_\alpha \Leftrightarrow$ ($y \in A_\alpha$ for all $\alpha \in I$).  
-* If the definition of $\bigcap_{\alpha \in I} A_\alpha$ defined in (3.3) does not depend on $\beta$, let $\beta = \alpha \in I$, then $y \in \{x \in A_\alpha: x \in A_\alpha \text{~for~all~} \alpha \in I\}$, by specificatiom axiom geting the $y \in A_\alpha$ for all $\alpha \in I$ is true.  
+Exercise 3.4.9. Show that if $\beta$ and $\beta^\prime$ are two elements of a set $I$, and to each $\alpha \in I$ we assign a set $A_\alpha$, then $\{x \in A_\beta: x \in A_\alpha \text{\ for\ all\ } \alpha \in I\} = \{x \in A_{β^\prime} : x \in A_\alpha \text{\ for\ all\ } \alpha \in I\}$, and so the definition of $\bigcap_{\alpha \in I} A_\alpha$ defined in (3.3) does not depend on $\beta$. Also explain why (3.4) is true.  
+* 3.3 equation is $\bigcap_{\alpha \in I} A_\alpha := \{x \in A_\beta: x \in A_\alpha \text{\ for\ all\ } \alpha \in I\}$, 3.4 is $y \in \bigcap_{\alpha \in I} A_\alpha \Leftrightarrow$ ($y \in A_\alpha$ for all $\alpha \in I$).  
+* If the definition of $\bigcap_{\alpha \in I} A_\alpha$ defined in (3.3) does not depend on $\beta$, let $\beta = \alpha \in I$, then $y \in \{x \in A_\alpha: x \in A_\alpha \text{\ for\ all\ } \alpha \in I\}$, by specificatiom axiom geting the $y \in A_\alpha$ for all $\alpha \in I$ is true.  
 
 Exercise 3.4.10. Suppose that $I$ and $J$ are two sets, and for all $\alpha \in I \cup J$ let $A_\alpha$ be a set. Show that $(\bigcup_{\alpha \in I} A_\alpha) \cup (\bigcup_{\alpha \in J} A_\alpha) = \bigcup_{\alpha \in I \cup J} A_\alpha$. If $I$ and $J$ are non-empty, show that $(\bigcap_{\alpha \in I} A_\alpha) \cap (\bigcap_{\alpha \in J} A_\alpha) = \bigcap_{\alpha \in I \cup J} A_\alpha$.  
-* $x \in (\bigcup_{\alpha \in I} A_\alpha) \cup (\bigcup_{\alpha \in J} A_\alpha) \Leftrightarrow x \in A_\alpha \text{~for~some~} \alpha \in I$ or $x \in A_\alpha \text{~for~some~} \alpha \in J \Leftrightarrow x \in A_\alpha \text{~for~some~} \alpha \in I \text{~or~} \alpha \in J \Leftrightarrow x \in \bigcup_{\alpha \in I \cup J} A_\alpha$.  
-* $x \in (\bigcap_{\alpha \in I} A_\alpha) \cap (\bigcap_{\alpha \in J} A_\alpha) \Leftrightarrow x \in A_\alpha \text{~for~all~} \alpha \in I$ and $x \in A_\alpha \text{~for~all~} \alpha \in J \Leftrightarrow x \in A_\alpha \text{~for~every~elements~} \alpha \text{~both~in~I~and~J~} \Leftrightarrow x \in A_\alpha \text{~for~all~} \alpha \in I \cup J$.  
+* $x \in (\bigcup_{\alpha \in I} A_\alpha) \cup (\bigcup_{\alpha \in J} A_\alpha) \Leftrightarrow x \in A_\alpha \text{\ for\ some\ } \alpha \in I$ or $x \in A_\alpha \text{\ for\ some\ } \alpha \in J \Leftrightarrow x \in A_\alpha \text{\ for\ some\ } \alpha \in I \text{\ or\ } \alpha \in J \Leftrightarrow x \in \bigcup_{\alpha \in I \cup J} A_\alpha$.  
+* $x \in (\bigcap_{\alpha \in I} A_\alpha) \cap (\bigcap_{\alpha \in J} A_\alpha) \Leftrightarrow x \in A_\alpha \text{\ for\ all\ } \alpha \in I$ and $x \in A_\alpha \text{\ for\ all\ } \alpha \in J \Leftrightarrow x \in A_\alpha \text{\ for\ every\ elements\ } \alpha \text{\ both\ in\ I\ and\ J\ } \Leftrightarrow x \in A_\alpha \text{\ for\ all\ } \alpha \in I \cup J$.  
 
 Exercise 3.4.11. Let $X$ be a set, let $I$ be a non-empty set, and for all $\alpha ∈ I$, let $A_\alpha$ be a subset of $X$. Show that $X / \bigcup_{\alpha \in I} A_\alpha = \bigcap_{\alpha \in I} (X / A_\alpha)$ and $X / \bigcap_{\alpha \in I} A_\alpha = \bigcup_{\alpha \in I} (X / A_\alpha)$. This should be compared with de Morgan’s laws in Proposition 3.1.28 (although one cannot derive the above identities directly from de Morgan’s laws, as $I$ could be infinite).  
 * $\forall x \in X / \bigcup_{\alpha \in I} A_\alpha \Leftrightarrow x \in X$ and $x \notin \bigcup_{\alpha \in I} A_\alpha \Leftrightarrow x \in X$ and $x \notin A_\alpha$ for all $\alpha \in I \Leftrightarrow \bigcap_{\alpha \in I} (X / A_\alpha)$.  
 
 ## 3.5 Cartesian products  
 ### Definitions  
-* 3.5.1 (Ordered pair). If $x$ and $y$ are any objects (possibly equal), we define the ordered pair $(x, y)$ to be a new object, consisting of $x$ as its first component and $y$ as its second component. Two ordered pairs $(x, y)$ and $(x^\prime, y^\prime)$ are considered equal if and only if both their components match, i.e $(x, y) = (x^\prime, y^\prime) \Leftrightarrow (x = x^\prime \text{~and~} y = y^\prime)$.  
-* 3.5.4 (Cartesian product). If $X$ and $Y$ are sets, then we define the Cartesian product $X * Y$ to be the collection of ordered pairs, whose first component lies in $X$ and second component lies in $Y$ , thus $X * Y = \{(x, y): x \in X, y \in Y\}$ or equivalently $a \in (X, Y) \Leftrightarrow (a = (x, y) \text{~for~some~} x \in X \text{~and~} y \in Y)$.  
-* 3.5.7 (Ordered $n$-tuple and $n$-fold Cartesian product). Let $n$ be a natural number. An ordered $n$-tuple $(x_i)_{1 \le i \le n}$ (also denoted $(x_1, ..., x_n)$) is a collection of objects $x_i$, one for every natural number $i$ between $i$ and $n$; we refer to $x_i$ as the ith component of the ordered $n$-tuple. Two ordered $n$-tuples $(x_i)_{1 \le i \le n}$ and $(y_i)_{1 \le i \le n}$ are said to be equal iff $x_i = y_i$ for all $1 \le i \le n$. If $(X_i)_{1 \le i \le n}$ is an ordered $n$-tuple of sets, we define their Cartesian product $\prod_{1 \le i \le n} X_i$ (also denoted $\prod_{i = 1}^n X_i \text{~or~} X_1 * . . . * X_n$) by $\prod_{1 \le i \le n} X_i := \{(x_i)_{1 \le i \le n} : x_i \in X_i \text{~for~all~} 1 \le i \le n\}$.  
+* 3.5.1 (Ordered pair). If $x$ and $y$ are any objects (possibly equal), we define the ordered pair $(x, y)$ to be a new object, consisting of $x$ as its first component and $y$ as its second component. Two ordered pairs $(x, y)$ and $(x^\prime, y^\prime)$ are considered equal if and only if both their components match, i.e $(x, y) = (x^\prime, y^\prime) \Leftrightarrow (x = x^\prime \text{\ and\ } y = y^\prime)$.  
+* 3.5.4 (Cartesian product). If $X$ and $Y$ are sets, then we define the Cartesian product $X * Y$ to be the collection of ordered pairs, whose first component lies in $X$ and second component lies in $Y$ , thus $X * Y = \{(x, y): x \in X, y \in Y\}$ or equivalently $a \in (X, Y) \Leftrightarrow (a = (x, y) \text{\ for\ some\ } x \in X \text{\ and\ } y \in Y)$.  
+* 3.5.7 (Ordered $n$-tuple and $n$-fold Cartesian product). Let $n$ be a natural number. An ordered $n$-tuple $(x_i)_{1 \le i \le n}$ (also denoted $(x_1, ..., x_n)$) is a collection of objects $x_i$, one for every natural number $i$ between $i$ and $n$; we refer to $x_i$ as the ith component of the ordered $n$-tuple. Two ordered $n$-tuples $(x_i)_{1 \le i \le n}$ and $(y_i)_{1 \le i \le n}$ are said to be equal iff $x_i = y_i$ for all $1 \le i \le n$. If $(X_i)_{1 \le i \le n}$ is an ordered $n$-tuple of sets, we define their Cartesian product $\prod_{1 \le i \le n} X_i$ (also denoted $\prod_{i = 1}^n X_i \text{\ or\ } X_1 * . . . * X_n$) by $\prod_{1 \le i \le n} X_i := \{(x_i)_{1 \le i \le n} : x_i \in X_i \text{\ for\ all\ } 1 \le i \le n\}$.  
 
 ### Lemma 3.5.12 (Finite choice). Let $n \ge 1$ be a natural number, and for each natural number $1 \le i \le n$, let $X_i$ be a non-empty set. Then there exists an $n$-tuple $(x_i)_{1 \le i \le n}$ such that $x_i \in X_i$ for all $1 \le i \le n$. In other words, if each $X_i$ is non-empty, then the set $\prod_{1 \le i \le n} X_i$ is also non-empty.  
 * Use induction to prove.  
 
 ### Exercise  
 Exercise 3.5.1. Suppose we define the ordered pair $(x, y)$ for any objects $x$ and $y$ by the formula $(x, y) := \{\{x\}, \{x, y\}\}$ (thus using several applications of Axiom 3.3). Thus for instance $(1, 2)$ is the set $\{\{1\}, \{1, 2\}\}, (2, 1)$ is the set $\{\{2\}, \{2, 1\}\}$, and $(1, 1)$ is the set $\{\{1\}\}$. Show that such a definition indeed obeys the property (3.5), and also whenever $X$ and $Y$ are sets, the Cartesian product $X * Y$ is also a set. Thus this definition can be validly used as a definition of an ordered pair. For an additional challenge, show that the alternate definition $(x, y) := \{x, \{x, y\}\}$ also verifies (3.5) and is thus also an acceptable definition of ordered pair. (For this latter task one needs the axiom of regularity, and in particular Exercise 3.2.2.)  
-* Formula 3.5 is $a \in (X, Y) \Leftrightarrow (a = (x, y) \text{~for~some~} x \in X \text{~and~} y \in Y)$.  
+* Formula 3.5 is $a \in (X, Y) \Leftrightarrow (a = (x, y) \text{\ for\ some\ } x \in X \text{\ and\ } y \in Y)$.  
 * We need to prove that $(x, y) := \{\{x\}, \{x, y\}\}$ is a ordered pair. If $(x, y) = (x^\prime, y^\prime) \Rightarrow \{\{x\}, \{x, y\}\} = \{\{x^\prime\}, \{x^\prime, y^\prime\}\} \Rightarrow x = x^\prime, y = y^\prime$. If $x = x^\prime, y = y^\prime$, then $(x, y) = \{\{x\}, \{x, y\}\} = \{\{x^\prime\}, \{x^\prime, y^\prime\}\} = (x, y)$. Thus $\{\{x\}, \{x, y\}\}$ is ordered pair.  
 * The rest is skip.  
 
@@ -231,11 +231,11 @@ Exercise 3.5.2. Suppose we define an ordered $n$-tuple to be a surjective functi
 Exercise 3.5.3. Show that the definitions of equality for ordered pair and ordered $n$-tuple obey the reflexivity, symmetry, and transitivity axioms.  
 
 Exercise 3.5.4. Let A, B, C be sets. Show that $A * (B \cup C) = (A * B) \cup (A * C)$, that $A * (B \cap C) = (A * B) \cap (A * C)$, and that $A * (B / C) = (A * B) / (A * C)$. (One can of course prove similar identities in which the roles of the left and right factors of the Cartesian product are reversed.)  
-* $\forall (x, y) \in A * (B \cup C) \Leftrightarrow x \in A$ and $y \in B \cup C \Leftrightarrow (x \in A \text{~and~} y \in B) \text{~or~} (x \in A \text{~and~} y \in C) \Leftrightarrow (x, y) \in (A * B) \cup (A * C)$.  
+* $\forall (x, y) \in A * (B \cup C) \Leftrightarrow x \in A$ and $y \in B \cup C \Leftrightarrow (x \in A \text{\ and\ } y \in B) \text{\ or\ } (x \in A \text{\ and\ } y \in C) \Leftrightarrow (x, y) \in (A * B) \cup (A * C)$.  
 * Skip the rest.  
 
 Exercise 3.5.5. Let $A, B, C, D$ be sets. Show that $(A * B) \cap (C * D) = (A \cap C) * (B \cap D)$. Is it true that $(A * B) \cup (C * D) = (A \cup C) * (B \cup D)$? Is it true that $(A * B) / (C * D) = (A / C) * (B / D)$?  
-* $\forall (x, y) \in (A * B) \cap (C * D) \Leftrightarrow (x, y) \in A * B \text{~and~} (x, y) \in C * D \Leftrightarrow (x \in A \text{~and~} y \in B) \text{~and~} (x \in C \text{~and~} y \in D) \Leftrightarrow (x, y) \in (A \cap C) * (B \cap D)$.  
+* $\forall (x, y) \in (A * B) \cap (C * D) \Leftrightarrow (x, y) \in A * B \text{\ and\ } (x, y) \in C * D \Leftrightarrow (x \in A \text{\ and\ } y \in B) \text{\ and\ } (x \in C \text{\ and\ } y \in D) \Leftrightarrow (x, y) \in (A \cap C) * (B \cap D)$.  
 * $(A * B) \cup (C * D) = (A \cup C) * (B \cup D)$ is false.  
 * $(A * B) / (C * D) = (A / C) * (B / D)$ is true.  
 
