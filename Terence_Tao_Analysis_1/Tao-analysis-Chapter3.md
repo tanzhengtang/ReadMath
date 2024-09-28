@@ -17,9 +17,9 @@
 ### Lemma 3.1.6 (Single choice). Let A be a non-empty set. Then there exists an object $x$ such that $x \in A$.
 * Because the statment is that exists an object $x$ such that $x \in A$, so suppose that for every object $x$ have $x \notin A$, according to axiom 3.2, we could get $A$ is empty set, then have a contradiction, so this lemma is true.  
 
-### Lemma 3.1.13. If $a$ and $b$ are objects, then $\lbrace a, b \rbrace = \lbrace a \rbrace \ \cup\  \lbrace b \rbrace$. If $A, B, C$ are sets, then the union operation is commutative (i.e., $A \ \cup\ B = B \ \cup\ A$) and associative (i.e., $(A \ \cup\  B) \ \cup\  C = A \ \cup\  (B \ \cup\ C)$). Also, we have $A \ \cup\ A = A \ \cup\ \varnothing = \varnothing \ \cup\ A = A$.  
+### Lemma 3.1.13. If $a$ and $b$ are objects, then $\lbrace a, b \rbrace = \lbrace a \rbrace \ \cup\  \lbrace b \rbrace$. If $A, B, C$ are sets, then the union operation is commutative (i.e., $A \ \cup\ B = B \ \cup\ A$) and associative $(i.e., \  (A \ \cup\  B) \ \cup\  C = A \ \cup\  (B \ \cup\ C))$. Also, we have $A \ \cup\ A = A \ \cup\ \varnothing = \varnothing \ \cup\ A = A$.  
 * Commutative, if $x$ is any element of $A \ \cup\  B$, we get $x \in A$ or $x \in B$, then it also means $x \in B$ or $x \in A$, and by this way get $x \in B \ \cup\  A$, then we know the elements of $A \ \cup\  B$ is equal to $B \ \cup\  A$.  
-* Associative: ($(A \ \cup\  B) \ \cup\  C = A \ \cup\  B \ \cup\  C = A \ \cup\  (B \ \cup\ C)$).  
+* Associative: $(A \ \cup\  B) \ \cup\  C = A \ \cup\  B \ \cup\  C = A \ \cup\  (B \ \cup\ C)$.  
 * Suppose we have $A \ \cup\  A$. Obviously $A \ \cup\  A = A$. If we have $A \ \cup\  \varnothing$, then $A \ \cup\  \varnothing = \varnothing \ \cup\  A$ according to commutative, and because no element in $\varnothing$, then $A \ \cup\  \varnothing = A = A \ \cup\  A$.  
 
 ### Proposition 3.1.18 (Sets are partially ordered by set inclusion). Let $A,B,C$ be sets. If $A \subseteq B$ and $B \subseteq C$ then $A \subseteq C$. If $A \subseteq B$ and $B \subseteq A$, then $A = B$. Finally, if $A \subsetneq B$ and $B \subsetneq C$ then $A \subsetneq C$.  
