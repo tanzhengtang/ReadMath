@@ -19,7 +19,7 @@
 
 ### Lemma 3.1.13. If $a$ and $b$ are objects, then $\lbrace a, b \rbrace = \lbrace a \rbrace \ \cup\  \lbrace b \rbrace$. If $A, B, C$ are sets, then the union operation is commutative (i.e., $A \ \cup\ B = B \ \cup\ A$) and associative (i.e., $(A \ \cup\  B) \ \cup\  C = A \ \cup\  (B \ \cup\ C)$). Also, we have $A \ \cup\ A = A \ \cup\ \varnothing = \varnothing \ \cup\ A = A$.  
 * Commutative, if $x$ is any element of $A \ \cup\  B$, we get $x \in A$ or $x \in B$, then it also means $x \in B$ or $x \in A$, and by this way get $x \in B \ \cup\  A$, then we know the elements of $A \ \cup\  B$ is equal to $B \ \cup\  A$.  
-* Associative: $(A \ \cup\  B) \ \cup\  C = A \ \cup\  B \ \cup\  C = A \ \cup\  (B \ \cup\ C)$.  
+* Associative: ($(A \ \cup\  B) \ \cup\  C = A \ \cup\  B \ \cup\  C = A \ \cup\  (B \ \cup\ C)$).  
 * Suppose we have $A \ \cup\  A$. Obviously $A \ \cup\  A = A$. If we have $A \ \cup\  \varnothing$, then $A \ \cup\  \varnothing = \varnothing \ \cup\  A$ according to commutative, and because no element in $\varnothing$, then $A \ \cup\  \varnothing = A = A \ \cup\  A$.  
 
 ### Proposition 3.1.18 (Sets are partially ordered by set inclusion). Let $A,B,C$ be sets. If $A \subseteq B$ and $B \subseteq C$ then $A \subseteq C$. If $A \subseteq B$ and $B \subseteq A$, then $A = B$. Finally, if $A \subsetneq B$ and $B \subsetneq C$ then $A \subsetneq C$.  
