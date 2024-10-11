@@ -49,6 +49,7 @@ Exercise 5.2.2. Let $\epsilon > 0$. Show that if $(a_n)^\infty_{n = 1}$ and $(b_
 ### Lemma 5.3.7 (Sums of equivalent Cauchy sequences are equivalent). Let $x = LIM_{n \rightarrow \infty} a_n$ an and $y = LIM_{n \rightarrow \infty} b_n$, and $x^\prime = LIM_{n \rightarrow \infty} a^\prime_n$ be real numbers. Suppose that $x = x^\prime$. Then we have $x + y = x^\prime + y$.  
 
 ### 5.3.10 (Multiplication is well defined). Let $x = LIM_{n \rightarrow \infty} a_n, y = LIM_{n \rightarrow \infty} b_n$, and $x^\prime = LIM_{n \rightarrow \infty} a^\prime_n$ be real numbers. Then $xy$ is also a real number. Furthermore, if $x = x^\prime$, then $xy = x^\prime y$.  
+* Let $\epsilon > 0, |a_n| \le q, |b_n| \le p$. For $\epsilon / 2q > 0, \epsilon / 2p > 0$ exists a natural number $M$ such that $\forall n \ge M, m \ge M, |a_n - a_m| \le \epsilon / p, |b_n - b_m| \le \epsilon / q$. Then $|a_nb_n - a_mb_m| = |a_nb_n - a_nb_m + a_nb_m - a_mb_m| = |a_n(b_n - b_m) + b_m(a_n - a_m)| \le |a_n||(b_n - b_m)| + |b_m||(a_n - a_m)| \le |q||(b_n - b_m)| + |p||(a_n - a_m)| \le (q)(\epsilon / 2q) + (p)(\epsilon / 2p) = \epsilon$. Closed.  
 
 ### Proposition 5.3.11. All the laws of algebra from Proposition 4.1.6 hold not only for the integers, but for the reals as well.  
 
