@@ -123,6 +123,7 @@ Exercise 5.4.8. Let $(a_n)^\infty_{n = 1}$ be a Cauchy sequence of rationals, an
 * 5.5.10 (Supremum). Let $E$ be a subset of the real numbers. If $E$ is non-empty and has some upper bound, we define $sup(E)$ to be the least upper bound of $E$ (this is well-defined by Theorem 5.5.9). We introduce two additional symbols, $+\infty$ and $−\infty$. If $E$ is non-empty and has no upper bound, we set $sup(E) := +\infty$; if $E$ is empty, we set $sup(E) := −\infty$. We refer to $sup(E)$ as the supremum of $E$, and also denote it by sup $E$.  
 
 ### Proposition 5.5.8 (Uniqueness of least upper bound). Let $E$ be a subset of $R$. Then $E$ can have at most one least upper bound.  
+* Suppose $M, M^\prime$ are least upper bounds, according to the definition, we have $M \ge M^\prime$ and $M \le M^\prime$, then $M = M^\prime$.  
 
 ### Theorem 5.5.9 (Existence of least upper bound). Let $E$ be a non-empty subset of $R$. If $E$ has an upper bound, (i.e., $E$ has some upper bound $M$), then it must have exactly one least upper bound.  
 
