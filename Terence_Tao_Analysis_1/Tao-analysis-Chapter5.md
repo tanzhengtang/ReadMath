@@ -147,23 +147,52 @@ Exercise 5.5.4. Let $q_1, q_2, q_3, ...$  be a sequence of rational numbers with
 Exercise 5.5.5. Establish an analogue of Proposition 5.4.14, in which “rational” is replaced by “irrational”.   
 
 ## 5.6 Real exponentiation, Part I  
-### Lemma 5.6.5 First, when x = 0, $x^{1/n} = [y \ge 0 \ and \  y^n \le 0]$, get E = {0}, then E is non-empty. If E is not bounded, then there will be $\forall a \in R$, we have $a \in E$. Obviously $a = x + 1 \ge x \ge y^n$, according to definition of E, it is a contradiction. Then E be bounded, and the sup(E) exists. $Exists of $x^{n/1}$ is true.  
+### Definitions  
+* 5.6.1 (Exponentiating a real by a natural number). Let $x$ be a real number. To raise $x$ to the power $0$, we define $x^0 := 1$. Now suppose recursively that $x^n$ has been defined for some natural number $n$, then we define $x^{n + 1} := x^n * x$.  
+* 5.6.2 (Exponentiating a real by an integer). Let $x$ be a non-zero real number. Then for any negative integer $-n$, we define $x^{-n} := 1/x^{n}$.  
+* 5.6.4 Let $x \ge 0$ be a non-negative real, and let $n \ge 1$ be a positive integer. We define $x^{1 / n}$, also known as the $n^{th}$ root of $x$, by the formula $x^{1 / n} := sup \lbrace y \in R: y \ge 0 \ and \ y^n \le x \rbrace$.  
+* 5.6.7. Let $x > 0$ be a positive real number, and let $q$ be a rational number. To define $x^q$, we write $q = a/b$ for some integer $a$ and positive integer $b$, and define $x^q := (x^{1/b})^a$.  
 
-### Lemma  5.6.6  
-(a) If $y = x^{n/1}$, supposed $y^n \neq x$, we could get $y^n < x$ or $y^n > x$. When x > 1, if $y^n > x$, then $y \notin E$ and $y > sup(E) \rightarrow y \neq x^{1/n}$, contradicition. The rest is skip.  
-(b) Skip.  
-(c) No idea. But I think the proving of $x^{1/n} \neq 0$ is the point.  
-(d) Skip.  
-(e) Skip.  
-(f) Suppose $(xy)^{1/n} = a \rightarrow a^n = xy$, $x^{1/n} = b \rightarrow b^n = x$, and $y^{1/n} = c \rightarrow c^n = y$. We could have $c^n * b^n = x*y \rightarrow (cb)^n = xy \rightarrow (xy)^{1/n} = cb \rightarrow x^{1/n}y^{1/n} = (xy)^{1/n}$.  
-(g) Suppose $x^{1/nm} = a$, we have $x^{1/nm} = a\Longleftrightarrow a^{nm} = x \Longleftrightarrow (a^n)^m = x \Longleftrightarrow x^{1/m} = a^n \Longleftrightarrow (x^{1/m})^{1/n} = a$, and we have $x^{1/nm} = a$, then $(x^{1/m})^{1/n} = a = x^{1/nm} \Longleftrightarrow (x^{1/m})^{1/n} = x^{1/nm}$.  
+### Proposition 5.6.3. All the properties in Propositions 4.3.10 and 4.3.12 remain valid if $x$ and $y$ are assumed to be real numbers instead of rational numbers.  
 
-### Lemma 5.6.9. 
-(a) Suppose $x^q = (x^{1/b})^a$, according to lemma 5.6.6 (c), $x^{1/b} > 0$, then no matter what a is, $x^q > 0$.  
-(b) First, suppose $q = a/b$, $r = c/d$, $x^{q+r} = x^{ad+bc/bd} = (x^{1/bd})^{ad+bc} = (x^{1/bd})^{ad}(x^{1/bd})^{bc} = x^qx^r$.  
-(c) Suppose $q = a/b$, $x^{-q} = (x^{1/b})^{-1*a} = ((x^{1/b})^a)^{-1} = 1/((x^{1/b})^a) = 1/x^q$.  
-(d) Let $q = a/b$. If $x > y$, we have $x^q = (x^{1/b})^a$ and $y^q = (y^{1/b})^a$, then $x^{1/b} > y^{1/b}$ according to Lemma5.6.6 (d), and we have $x^q > y^q$. The rest is skipped.  
-(e) Suppose $x > 1$, $ q = a/b$ and $r = c/d$. If $q > r \rightarrow q = r + d$ which $d > 0$, we have $x^q - x^r = x^{d+r} - x^r = x^rx^d - x^r = x^r(x^d - 1)$, obviously $x > 1$ and $d > 0$ we have $x^d > 1$, then $x^r(x^d - 1) > 0 \rightarrow x^q > x^r$. If $x^q > x^r$, suppose $q = r$ or $q < r$. If $q = r \rightarrow x^q = x^r$,contradiction. If $q < r$, by what we already proved, get $x^q < x^r$, also contradiction.  
+### Lemma 5.6.5 (Existence of $n^{th}$ roots). Let $x \ge 0$ be a non-negative real, and let $n \ge 1$ be a positive integer. Then the set $E := \lbrace y \in R : y \ge 0 \ and \ y^n \le x \rbrace$ is non-empty and is also bounded above. In particular, $x^{1/n}$ is a real number.  
+
+### Lemma 5.6.6 Let $x, y \ge 0$ be non-negative reals, and let $n, m \ge 1$ be positive integers.  
+(a) If $y = x^{1/n}$, then $y^n = x$.  
+(b) Conversely, if $y^n = x$, then $y = x^{1/n}$.  
+* Let $d = x^{1/n}$, by (a), we have $d^n = x = y^n \Rightarrow d = y = x^{1/n}$.  
+
+(c) $x^{1/n}$ is a positive real number.  
+(d) We have $x > y$ if and only if $x^{1/n} > y^{1/n}$.  
+* Suppose $a^n = x, b^n = y$. If $x > y \Rightarrow a^n > b^n \Rightarrow a > b \Rightarrow x^{1/n} > y^{1/n}$.  
+
+(e) If $x > 1$, then $x^{1/k}$ is a decreasing function of $k$. If $x < 1$, then $x^{1/k}$ is an increasing function of $k$. If $x = 1$ , then $x^{1/k} = 1$ for all $k$.  
+* Suppose $k, j, d \in N, k = j + d, d > 0, a^j = x, b^k = x$.  
+* $x > 1  \Rightarrow a, b > 1$ and $a^ja^d > b^k = x \Rightarrow a^j > b^j \Rightarrow a > b \Rightarrow x^{1/j} > x^{1/k}$. 
+
+(f) We have $(xy)^{1/n} = x^{1/n}y^{1/n}$.  
+* Suppose $a = x^{1/n}, b = y^{1/n}$, then $(ab)^n = xy \Rightarrow (xy)^{1/n} = ab = x^{1/n}y^{1/n}$.  
+
+(g) We have $(x^{1/n})^{1/m} = x^{1/nm}$.  
+* Suppose $x^{1/nm} = a$, we have $x^{1/nm} = a\Longleftrightarrow a^{nm} = x \Longleftrightarrow (a^n)^m = x \Longleftrightarrow x^{1/m} = a^n \Longleftrightarrow (x^{1/m})^{1/n} = a$, and we have $x^{1/nm} = a$, then $(x^{1/m})^{1/n} = a = x^{1/nm} \Longleftrightarrow (x^{1/m})^{1/n} = x^{1/nm}$.  
+
+### Lemma 5.6.8. Let $a, a^\prime$ be integers and $b, b^\prime$ be positive integers such that $a/b = a^\prime/b^\prime$, and let $x$ be a positive real number. Then we have $(x^{1/b^\prime})a^\prime = (x^{1/b})^a$.  
+
+### Lemma 5.6.9 Let $x, y > 0$ be positive reals, and let $q, r$ be rationals.  
+(a) $x^q$ is a positive real.  
+(b) $x^{q+r} = x^qx^r$ and $(x^q)^r = x^{qr}$.  
+* Suppose $q = a/b$, $r = c/d$, $x^{q+r} = x^{ad+bc/bd} = (x^{1/bd})^{ad+bc} = (x^{1/bd})^{ad}(x^{1/bd})^{bc} = x^qx^r$.  
+* $x^{qr} = x^{ac/bd} = (x^{1/bd})^{ac} = ((x^{1/bd})^a)^c = (x^{a/bd})^c$. Now show $x^{a/bd} = (x^{a/b})^{1/d}$, because $(x^{a/bd})^d = x^{a/b} = ((x^{a/b})^{1/d})^d \Rightarrow x^{a/bd} = (x^{a/b})^{1/d}$. Thus $(x^{a/bd})^c = ((x^{a/b})^{1/d})^c = (x^{a/b})^{c/d} = (x^q)^r$.  
+
+(c) $x^{-q} = 1 /x^q$.  
+* Suppose $q = a/b$, $x^{-q} = (x^{1/b})^{-1*a} = ((x^{1/b})^a)^{-1} = 1/((x^{1/b})^a) = 1/x^q$.  
+
+(d) If $q > 0$, then $x > y$ if and only if $x^q > y^q$.  
+* Let $q = a/b$. If $x > y$, we have $x^q = (x^{1/b})^a$ and $y^q = (y^{1/b})^a$, then $x^{1/b} > y^{1/b}$ according to Lemma5.6.6 (d), and we have $x^q > y^q$. The rest is skipped.  
+
+(e) If $x > 1$, then $x^q > x^r$ if and only if $q > r$. If $x < 1$, then $x^q > x^r$
+if and only if $q < r$.  
+* Suppose $x > 1$, $ q = a/b$ and $r = c/d$. If $q > r \rightarrow q = r + d$ which $d > 0$, we have $x^q - x^r = x^{d+r} - x^r = x^rx^d - x^r = x^r(x^d - 1)$, obviously $x > 1$ and $d > 0$ we have $x^d > 1$, then $x^r(x^d - 1) > 0 \rightarrow x^q > x^r$. If $x^q > x^r$, suppose $q = r$ or $q < r$. If $q = r \rightarrow x^q = x^r$,contradiction. If $q < r$, by what we already proved, get $x^q < x^r$, also contradiction.  
 
 ### Exercises
 * 5.6.1 See Lemma 5.6.6  
