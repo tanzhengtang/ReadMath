@@ -71,6 +71,7 @@ Exercise 5.3.4. Let $(a_n)^\infty_{n = 0}$ be a sequence of rational numbers whi
 * Because $a_n = b_n$, them are eventually $\epsilon$-close, and $b_n$ is bounded by Exercise 5.2.2.  
 
 Exercise 5.3.5. Show that $LIM_{n \rightarrow \infty} 1 / n = 0$.  
+* Show $a_n = 1 / n$ and $b_n = 0$ are equivalent sequences.  
 
 ## 5.4 Ordering the reals  
 ### Definitions  
@@ -192,9 +193,12 @@ Exercise 5.5.5. Establish an analogue of Proposition 5.4.14, in which “rationa
 
 (e) If $x > 1$, then $x^q > x^r$ if and only if $q > r$. If $x < 1$, then $x^q > x^r$
 if and only if $q < r$.  
-* Suppose $x > 1$, $ q = a/b$ and $r = c/d$. If $q > r \rightarrow q = r + d$ which $d > 0$, we have $x^q - x^r = x^{d+r} - x^r = x^rx^d - x^r = x^r(x^d - 1)$, obviously $x > 1$ and $d > 0$ we have $x^d > 1$, then $x^r(x^d - 1) > 0 \rightarrow x^q > x^r$. If $x^q > x^r$, suppose $q = r$ or $q < r$. If $q = r \rightarrow x^q = x^r$,contradiction. If $q < r$, by what we already proved, get $x^q < x^r$, also contradiction.  
+* Suppose $x > 1$, $ q = a/b$ and $r = c/d$. If $q > r \Rightarrow q = r + d$ which $d > 0$, we have $x^q - x^r = x^{d+r} - x^r = x^rx^d - x^r = x^r(x^d - 1)$, obviously $x > 1$ and $d > 0$ we have $x^d > 1$, then $x^r(x^d - 1) > 0 \Rightarrow x^q > x^r$. If $x^q > x^r$, suppose $q = r$ or $q < r$. If $q = r \Rightarrow x^q = x^r$,contradiction. If $q < r$, by what we already proved, get $x^q < x^r$, also contradiction.  
 
 ### Exercises
-* 5.6.1 See Lemma 5.6.6  
-* 5.6.2 See Lemma 5.6.9
-* If $x = 0$, $x^2 = 0 \rightarrow (x^2)^{1/2} = 0 \rightarrow (x^2)^{1/2} = x = 0$. If $x > 0$, $(x^2)^{1/2} = y \rightarrow x^2 = y^2 \rightarrow x = y = (x^2)^{1/2}$. If $x < 0$, let $x = -y$ which $y > 0$, $(x^2)^{1/2} = (-y * -y)^{1/2} = (y^2)^{1/2}$, by what we already proved $y > 0 \rightarrow y = (y^2)^{1/2}$, then $|x| = -x = y = (-y*-y)^{1/2} = (x^2)^{1/2} \rightarrow |x| = (x^2)^{1/2}.$  
+Exercise 5.6.1. Prove Lemma 5.6.6. (Hints: review the proof of Proposition 5.5.12. Also, you will find proof by contradiction a useful tool, especially when combined with the trichotomy of order in Proposition 5.4.7 and Proposition 5.4.12. The earlier parts of the lemma can be used to prove later parts of the lemma. With part (e), first show that if $x > 1$ then $x^{1/n} > 1$, and if $x < 1$ then $x^{1/n} < 1$.)  
+Exercise 5.6.2. Prove Lemma 5.6.9. (Hint: you should rely mainly on Lemma 5.6.6 and on algebra.)  
+Exercise 5.6.3. If $x$ is a real number, show that $|x| = (x^2)^{1/2}$.  
+* If $x = 0$, $x^2 = 0 \Rightarrow (x^2)^{1/2} = 0 \Rightarrow (x^2)^{1/2} = x = 0$.  
+* If $x > 0, (x^2)^{1/2} = y \Rightarrow x^2 = y^2 \Rightarrow x = y = (x^2)^{1/2}$.  
+* If $x < 0$, let $x = -y$ which $y > 0$, $(x^2)^{1/2} = (-y * -y)^{1/2} = (y^2)^{1/2}$, by what we already proved $y > 0 \Rightarrow y = (y^2)^{1/2}$, then $|x| = -x = y = (-y*-y)^{1/2} = (x^2)^{1/2} \Rightarrow |x| = (x^2)^{1/2}.$  
