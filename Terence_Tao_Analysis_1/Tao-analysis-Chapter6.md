@@ -59,4 +59,53 @@ Exercise 6.1.10. Show that the concept of equivalent Cauchy sequence, as defined
 ### Definitions  
 * 6.2.1 (Extended real number system). The extended real number system $R^∗$ is the real line $R$ with two additional elements attached, called $+\infty$ and $-\infty$. These elements are distinct from each other and also distinct from every real number. An extended real number $x$ is called finite iff it is a real number, and infinite iff it is equal to $+\infty$ or $-\infty$. (This definition is not directly related to the notion of finite and infinite sets in Section 3.6, though it is of course similar in spirit.)  
 * 6.2.2 (Negation of extended reals) . The operation of negation $x \mapsto -x$ on $R$, we now extend to $R^∗$ by defining $−(+\infty) := −\infty$ and $−(−\infty) := +\infty$.  
-* 
+* 6.2.3 (Ordering of extended reals). Let $x$ and $y$ be extended real numbers. We say that $x \le y$, i.e., $x$ is less than or equal to $y$, iff one of the following three statements is true: (a) $x$ and $y$ are real numbers, and $x \le y$ as real numbers. (b) $y = + \infty$. (c) $x = −\infty$. We say that $x < y$ if we have $x \le y$ and $x \ne y$. We sometimes write $x < y$ as $y > x$, and $x \le y$ as $y \ge x$.  
+* (Supremum of sets of extended reals). Let $E$ be a subset of $R^∗$. Then we define the supremum $sup(E)$ or least upper bound of $E$ by the following rule. (a) If $E$ is contained in $R$ (i.e., $+\infty$ and $−\infty$ are not elements of $E$), then we let $sup(E)$ be as defined in Definition 5.5.10. (b) If $E$ contains $+\infty$, then we set $sup(E) := + \infty$. (c) If $E$ does not contain $+\infty$ but does contain $−\infty$, then we set $sup(E) := sup(E / \lbrace−\infty\rbrace)$ (which is a subset of $R$ and thus falls under case (a)).  
+
+### Proposition 6.2.5. Let $x, y, z$ be extended real numbers. Then the following statements are true.  
+(a) (Reflexivity) We have $x \le x$.  
+(b) (Trichotomy) Exactly one of the statements $x < y , x = y$, or $x > y$ is true.  
+(c) (Transitivity) If $x \le y$ and $y \le z$, then $x \le z$.  
+(d) (Negation reverses order) If $x \le y$, then $−y \le − x$.  
+
+### Theorem 6.2.11. Let $E$ be a subset of $R^∗$. Then the following statements are true.  
+(a) For every $x \in E$ we have $x \le sup(E)$ and $x \ge inf(E)$.  
+(b) Suppose that $M \in R^∗$ is an upper bound for $E$, i.e., $x \le M$ for all $x \in E$. Then we have $sup(E) \le M$.  
+(c) Suppose that $M \in R^∗$ is a lower bound for $E$, i.e., $x \ge M$ for all $x \in E$. Then we have $inf(E) \ge M$.  
+
+### Exercises  
+Exercise 6.2.1. Prove Proposition 6.2.5. (Hint: you may need Proposition 5.4.7.)  
+Exercise 6.2.2. Prove Theorem 6.2.11. (Hint: you may need to break into cases depending on whether $+\infty$ or $−\infty$ belongs to $E$. You can of course use Definition 5.5.10, provided that $E$ consists only of real numbers.)  
+
+## 6.3 Suprema and Infima of sequences  
+### Definitions  
+* 6.3.1 (Sup and inf of sequences). Let $(a_n)^\infty_{n = m}$ be a sequence of real numbers. Then we define $sup((a_n))^\infty_{n = m}$ to be the supremum of the set $\lbrace a_n : n \ge m \rbrace$, and $inf((a_n))^\infty_{n = m}$ to the infimum of the same set $\lbrace a_n : n \ge m \rbrace$.  
+
+
+### Proposition 6.3.6 (Least upper bound property). Let $(a_n)^\infty_{n = m}$ be a sequence of real numbers, and let x be the extended real number $x := sup((a_n))^\infty_{n = m}$. Then we have $a_n \le x$ for all $n \ge m$. Also, whenever $M \in R^∗$ is an upper bound for $a_n$ (i.e., $a_n le M$ for all $n \ge m$), we have $x \le M$. Finally, for every extended real number $y$ for which $y < x$, there exists at least one $n \le m$ for which $y < a_n \le x$.  
+
+### Proposition 6.3.8 (Monotone bounded sequences converge). Let $(a_n)^\infty_{n = m}$ be a sequence of real numbers which has some finite upper bound $M \in R$, and which is also increasing (i.e., $a_{n+1} \ge a_n$ for all $n \ge m$). Then $(a_n)^\infty_{n = m}$ is convergent, and in fact $\lim_{n \rightarrow \infty} a_n = sup(a_n)^\infty_{n = m} \le M$.  
+* Suppose $sup(a_n) = x$ and $\epsilon > 0$,
+
+### Proposition 6.3.10. Let $0 < x < 1$. Then we have $\lim_{n \rightarrow \infty} x^n = 0$.  
+
+### Exercise  
+Exercise 6.3.1. Verify the claim in Example 6.3.4.  
+* example 6.3.4. Let $a_n := 1/n$; thus $(a_n)^\infty_{n = 1}$ is the sequence $1, 1/2, 1/3, ...$. Then the set {an : n ≥ 1} is the countable set {1, 1/2, 1/3, 1/4, . . . }. Thus $sup((a_n))^\infty_{n = 1} = 1$ and $inf(a_n)^\infty_{n = 1} = 0$.  
+
+Exercise 6.3.2. Prove Proposition 6.3.6. (Hint: use Theorem 6.2.11.)  
+Exercise 6.3.3. Prove Proposition 6.3.8. (Hint: use Proposition 6.3.6, together with the assumption that $a_n$ is increasing, to show that an converges to $sup(a_n)^\infty_{n = m}$.)  
+Exercise 6.3.4. Explain why Proposition 6.3.10 fails when $x > 1$. In fact, show that the sequence $(x_n)^\infty_{n = 1}$ diverges when $x > 1$. (Hint: prove by contradiction and use the identity $(1/x)^nx^n = 1$ and the limit laws in Theorem 6.1.19.) Compare this with the argument in Example 1.2.3; can you now explain the flaws in the reasoning in that example?  
+
+## 6.4 Limsup, Liminf, and limit points  
+### Definitions  
+* 6.4.1 (Limit points). Let $(a_n)^\infty_{n = m}$ be a sequence of real numbers, let $x$ be a real number, and let $\epsilon > 0$ be a real number. We say that $x$ is $\epsilon$-adherent to $(a_n)^\infty_{n = m}$ iff there exists an n ≥ m such that an is ε-close to x. We say that x is continually $\epsilon$-adherent to $(a_n)^\infty_{n = m}$ iff it is $\epsilon$-adherent to $(a_n)^\infty_{n = N}$ for every $N \ge m$. We say that $x$ is a limit point or adherent point of $(a_n)^\infty_{n = m}$ iff it is continually $\epsilon$-adherent to $(a_n)^\infty_{n = m}$ for every $\epsilon > 0$.  
+* 6.4.6 (Limit superior and limit inferior). Suppose that $(a_n)^\infty_{n = m}$ is a sequence. We define a new sequence $(a_N^+)^\infty_{N = m}$ by the formula $a_N^+ = sup(a_n)^\infty_{n = N}$. More informally, $a_N^+$ is the supremum of all the elements in the sequence from $a^N$ onwards. We then define the limit superior of the sequenc $(a_n)^\infty_{n = m}$, denoted $lim \ sup_{n \rightarrow \infty} a_n$, by the formula $lim \ sup_{n \rightarrow \infty} a_n = inf(a_N^+)^\infty_{N = m}$. Similarly, we can define $a_N^- = inf(a_n)^\infty_{n = N}$ and define the limit inferior of the sequence $(a_n)^\infty_{n = m}$, denoted $lim \ inf_{n \rightarrow \infty} a_n$, by the formula $lim \ inf_{n \rightarrow \infty} a_n = sup(a_N^+)^\infty_{N = m}$.
+
+### Proposition 6.4.5 (Limits are limit points). Let $(a_n)^\infty_{n = m}$ be a sequence which converges to a real number $c$. Then $c$ is a limit point of $(a_n)^\infty_{n = m}$, and in fact it is the only limit point of $(a_n)^\infty_{n = m}$.  
+* Let $\epsilon > 0$, then $\exists j \ st. \ |a_n - c| < \epsilon$ for all $n \ge j$. Thus $\forall N \ge m, (a_n)^\infty_{n = N}, \exists n \ st. \ |a_n - c| \le \epsilon$.  
+* Suppse there another limit point $d$, 
+
+### Proposition 6.4.12. Let $(a_n)^\infty_{n = m}$ be a sequence of real numbers, let $L^+$ be the limit superior of this sequence, and let $L^−$ be the limit inferior of this sequence (thus both $L^+$ and $L^−$ are extended real numbers).  
+(a) For every $x > L^+$, there exists an $N \ge m$ such that $a_n < x$ for all $n \ge N$. (In other words, for every $x > L^+$, the elements of the sequence $(a_n)^\infty_{n = m}$ are eventually less than $x$.) Similarly, for every $y < L^−$ there exists an $N \ge m$ such that $a_n > y$ for all $n \ge N$.  
+(b) For every $x < L^+$, and every $N \ge m$, there exists an $n \ge N$ such that $a_n > x$. (In other words, for every $x < L^+$, the elements of the sequence $(a_n)^\infty_{n = m}$ exceed $x$ infinitely often.) Similarly, for every $y > L^−$ and every $N \ge m$, there exists an $n \ge N$ such that $a_n < y$.  
