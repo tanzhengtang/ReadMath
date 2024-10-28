@@ -103,16 +103,16 @@ Exercise 6.3.4. Explain why Proposition 6.3.10 fails when $x > 1$. In fact, show
 ### Proposition 6.4.5 (Limits are limit points). Let $(a_n)^\infty_{n = m}$ be a sequence which converges to a real number $c$. Then $c$ is a limit point of $(a_n)^\infty_{n = m}$, and in fact it is the only limit point of $(a_n)^\infty_{n = m}$.  
 * Let $\epsilon > 0$, then $\exists j \ st. \ |a_n - c| < \epsilon$ for all $n \ge j$. Thus $\forall N \ge m, (a_n)^\infty_{n = N}, \exists n \ st. \ |a_n - c| \le \epsilon$.  
 
-### Proposition 6.4.12. Let $(a_n)^\infty_{n = m}$ be a sequence of real numbers, let $L^+$ be the limit superior of this sequence, and let $L^−$ be the limit inferior of this sequence (thus both $L^+$ and $L^−$ are extended real numbers).  
-(a) For every $x > L^+$, there exists an $N \ge m$ such that $a_n < x$ for all $n \ge N$. (In other words, for every $x > L^+$, the elements of the sequence $(a_n)^\infty_{n = m}$ are eventually less than $x$.) Similarly, for every $y < L^−$ there exists an $N \ge m$ such that $a_n > y$ for all $n \ge N$.  
+### Proposition 6.4.12. Let $(a_n)^\infty_{n = m}$ be a sequence of real numbers, let $L^+$ be the limit superior of this sequence, and let $L^-$ be the limit inferior of this sequence (thus both $L^+$ and $L^-$ are extended real numbers).  
+(a) For every $x > L^+$, there exists an $N \ge m$ such that $a_n < x$ for all $n \ge N$. (In other words, for every $x > L^+$, the elements of the sequence $(a_n)^\infty_{n = m}$ are eventually less than $x$.) Similarly, for every $y < L^-$ there exists an $N \ge m$ such that $a_n > y$ for all $n \ge N$.  
 * By Proposition 6.3.6, $\exists N^\prime \ st. \ L^+ \le a_{N^\prime}^+ < x \Rightarrow sup(a_n)^\infty_{n = N^\prime} < x \Rightarrow \forall n \ge N^\prime, a_n \le sup(a_n)^\infty_{n = N^\prime} < x$.  
 
-(b) For every $x < L^+$, and every $N \ge m$, there exists an $n \ge N$ such that $a_n > x$. (In other words, for every $x < L^+$, the elements of the sequence $(a_n)^\infty_{n = m}$ exceed $x$ infinitely often.) Similarly, for every $y > L^−$ and every $N \ge m$, there exists an $n \ge N$ such that $a_n < y$.  
-* $x < L^+ \Rightarrow x < sup(a_n)^\infty_{n = m}$, and by Proposition 6.3.6 again, we could get $N \ge m$ such that $x < a_N \le sup(a_n)^\infty_{n = m}$.  
+(b) For every $x < L^+$, and every $N \ge m$, there exists an $n \ge N$ such that $a_n > x$. (In other words, for every $x < L^+$, the elements of the sequence $(a_n)^\infty_{n = m}$ exceed $x$ infinitely often.) Similarly, for every $y > L^-$ and every $N \ge m$, there exists an $n \ge N$ such that $a_n < y$.  
+* $x < L^+ \Rightarrow \forall N \ge m, x < a_N^+ \Rightarrow \forall N \ge m, x < sup(a_n)^\infty_{n = N}$, and by Proposition 6.3.6 again, we could get $N^\prime \ge m$ such that $x < a_{N^\prime} \le sup(a_n)^\infty_{n = N}$.  
 
-(c) We have $inf(a_n)^\infty_{n = m} \le L^− \le L^+ \le sup(a_n)^\infty_{n = m}$.  
+(c) We have $inf(a_n)^\infty_{n = m} \le L^- \le L^+ \le sup(a_n)^\infty_{n = m}$.  
 * Suppose $L^- > L^+$, then $\exist N \ st. \ a_n < L^-$ for all $n \ge N$ and $\exist N^\prime \ st. \ a_n > L^+$ for all $n \ge N^\prime$. 
 
-(d) If $c$ is any limit point of $(a_n)^\infty_{n = m}$, then we have $L^− \le c \le L^+$.  
-(e) If $L^+$ is finite, then it is a limit point of $(a_n)^\infty_{n = m}$. Similarly, if $L^−$ is finite, then it is a limit point of $(a_n)^\infty_{n = m}$.  
-(f) Let $c$ be a real number. If $(a_n)^\infty_{n = m}$ converges to $c$, then we must have $L^+ = L^− = c$. Conversely, if $L^+ = L^− = c$, then $(a_n)^\infty_{n = m}$ converges to $c$.
+(d) If $c$ is any limit point of $(a_n)^\infty_{n = m}$, then we have $L^- \le c \le L^+$.  
+(e) If $L^+$ is finite, then it is a limit point of $(a_n)^\infty_{n = m}$. Similarly, if $L^-$ is finite, then it is a limit point of $(a_n)^\infty_{n = m}$.  
+(f) Let $c$ be a real number. If $(a_n)^\infty_{n = m}$ converges to $c$, then we must have $L^+ = L^- = c$. Conversely, if $L^+ = L^- = c$, then $(a_n)^\infty_{n = m}$ converges to $c$.  
