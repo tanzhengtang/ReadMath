@@ -79,13 +79,11 @@ Exercise 6.2.2. Prove Theorem 6.2.11. (Hint: you may need to break into cases de
 
 ## 6.3 Suprema and Infima of sequences  
 ### Definitions  
-* 6.3.1 (Sup and inf of sequences). Let $(a_n)^\infty_{n = m}$ be a sequence of real numbers. Then we define $sup((a_n))^\infty_{n = m}$ to be the supremum of the set $\lbrace a_n : n \ge m \rbrace$, and $inf((a_n))^\infty_{n = m}$ to the infimum of the same set $\lbrace a_n : n \ge m \rbrace$.  
+* 6.3.1 (Sup and inf of sequences). Let $(a_n)^\infty_{n = m}$ be a sequence of real numbers. Then we define $sup(a_n)^\infty_{n = m}$ to be the supremum of the set $\lbrace a_n : n \ge m \rbrace$, and $inf(a_n)^\infty_{n = m}$ to the infimum of the same set $\lbrace a_n : n \ge m \rbrace$.  
 
-
-### Proposition 6.3.6 (Least upper bound property). Let $(a_n)^\infty_{n = m}$ be a sequence of real numbers, and let x be the extended real number $x := sup((a_n))^\infty_{n = m}$. Then we have $a_n \le x$ for all $n \ge m$. Also, whenever $M \in R^∗$ is an upper bound for $a_n$ (i.e., $a_n le M$ for all $n \ge m$), we have $x \le M$. Finally, for every extended real number $y$ for which $y < x$, there exists at least one $n \le m$ for which $y < a_n \le x$.  
+### Proposition 6.3.6 (Least upper bound property). Let $(a_n)^\infty_{n = m}$ be a sequence of real numbers, and let $x$ be the extended real number $x := sup(a_n)^\infty_{n = m}$. Then we have $a_n \le x$ for all $n \ge m$. Also, whenever $M \in R^∗$ is an upper bound for $a_n$ (i.e., $a_n \le M$ for all $n \ge m$), we have $x \le M$. Finally, for every extended real number $y$ for which $y < x$, there exists at least one $n \le m$ for which $y < a_n \le x$.  
 
 ### Proposition 6.3.8 (Monotone bounded sequences converge). Let $(a_n)^\infty_{n = m}$ be a sequence of real numbers which has some finite upper bound $M \in R$, and which is also increasing (i.e., $a_{n+1} \ge a_n$ for all $n \ge m$). Then $(a_n)^\infty_{n = m}$ is convergent, and in fact $\lim_{n \rightarrow \infty} a_n = sup(a_n)^\infty_{n = m} \le M$.  
-* Suppose $sup(a_n) = x$ and $\epsilon > 0$,
 
 ### Proposition 6.3.10. Let $0 < x < 1$. Then we have $\lim_{n \rightarrow \infty} x^n = 0$.  
 
@@ -99,13 +97,22 @@ Exercise 6.3.4. Explain why Proposition 6.3.10 fails when $x > 1$. In fact, show
 
 ## 6.4 Limsup, Liminf, and limit points  
 ### Definitions  
-* 6.4.1 (Limit points). Let $(a_n)^\infty_{n = m}$ be a sequence of real numbers, let $x$ be a real number, and let $\epsilon > 0$ be a real number. We say that $x$ is $\epsilon$-adherent to $(a_n)^\infty_{n = m}$ iff there exists an n ≥ m such that an is ε-close to x. We say that x is continually $\epsilon$-adherent to $(a_n)^\infty_{n = m}$ iff it is $\epsilon$-adherent to $(a_n)^\infty_{n = N}$ for every $N \ge m$. We say that $x$ is a limit point or adherent point of $(a_n)^\infty_{n = m}$ iff it is continually $\epsilon$-adherent to $(a_n)^\infty_{n = m}$ for every $\epsilon > 0$.  
+* 6.4.1 (Limit points). Let $(a_n)^\infty_{n = m}$ be a sequence of real numbers, let $x$ be a real number, and let $\epsilon > 0$ be a real number. We say that $x$ is $\epsilon$-adherent to $(a_n)^\infty_{n = m}$ iff there exists an $n \ge m$ such that $a_n$ is $\epsilon$-close to $x$. We say that $x$ is continually $\epsilon$-adherent to $(a_n)^\infty_{n = m}$ iff it is $\epsilon$-adherent to $(a_n)^\infty_{n = N}$ for every $N \ge m$. We say that $x$ is a limit point or adherent point of $(a_n)^\infty_{n = m}$ iff it is continually $\epsilon$-adherent to $(a_n)^\infty_{n = m}$ for every $\epsilon > 0$.  
 * 6.4.6 (Limit superior and limit inferior). Suppose that $(a_n)^\infty_{n = m}$ is a sequence. We define a new sequence $(a_N^+)^\infty_{N = m}$ by the formula $a_N^+ = sup(a_n)^\infty_{n = N}$. More informally, $a_N^+$ is the supremum of all the elements in the sequence from $a^N$ onwards. We then define the limit superior of the sequenc $(a_n)^\infty_{n = m}$, denoted $lim \ sup_{n \rightarrow \infty} a_n$, by the formula $lim \ sup_{n \rightarrow \infty} a_n = inf(a_N^+)^\infty_{N = m}$. Similarly, we can define $a_N^- = inf(a_n)^\infty_{n = N}$ and define the limit inferior of the sequence $(a_n)^\infty_{n = m}$, denoted $lim \ inf_{n \rightarrow \infty} a_n$, by the formula $lim \ inf_{n \rightarrow \infty} a_n = sup(a_N^+)^\infty_{N = m}$.
 
 ### Proposition 6.4.5 (Limits are limit points). Let $(a_n)^\infty_{n = m}$ be a sequence which converges to a real number $c$. Then $c$ is a limit point of $(a_n)^\infty_{n = m}$, and in fact it is the only limit point of $(a_n)^\infty_{n = m}$.  
 * Let $\epsilon > 0$, then $\exists j \ st. \ |a_n - c| < \epsilon$ for all $n \ge j$. Thus $\forall N \ge m, (a_n)^\infty_{n = N}, \exists n \ st. \ |a_n - c| \le \epsilon$.  
-* Suppse there another limit point $d$, 
 
 ### Proposition 6.4.12. Let $(a_n)^\infty_{n = m}$ be a sequence of real numbers, let $L^+$ be the limit superior of this sequence, and let $L^−$ be the limit inferior of this sequence (thus both $L^+$ and $L^−$ are extended real numbers).  
 (a) For every $x > L^+$, there exists an $N \ge m$ such that $a_n < x$ for all $n \ge N$. (In other words, for every $x > L^+$, the elements of the sequence $(a_n)^\infty_{n = m}$ are eventually less than $x$.) Similarly, for every $y < L^−$ there exists an $N \ge m$ such that $a_n > y$ for all $n \ge N$.  
+* By Proposition 6.3.6, $\exists N^\prime \ st. \ L^+ \le a_{N^\prime}^+ < x \Rightarrow sup(a_n)^\infty_{n = N^\prime} < x \Rightarrow \forall n \ge N^\prime, a_n \le sup(a_n)^\infty_{n = N^\prime} < x$.  
+
 (b) For every $x < L^+$, and every $N \ge m$, there exists an $n \ge N$ such that $a_n > x$. (In other words, for every $x < L^+$, the elements of the sequence $(a_n)^\infty_{n = m}$ exceed $x$ infinitely often.) Similarly, for every $y > L^−$ and every $N \ge m$, there exists an $n \ge N$ such that $a_n < y$.  
+* $x < L^+ \Rightarrow x < sup(a_n)^\infty_{n = m}$, and by Proposition 6.3.6 again, we could get $N \ge m$ such that $x < a_N \le sup(a_n)^\infty_{n = m}$.  
+
+(c) We have $inf(a_n)^\infty_{n = m} \le L^− \le L^+ \le sup(a_n)^\infty_{n = m}$.  
+* Suppose $L^- > L^+$, then $\exist N \ st. \ a_n < L^-$ for all $n \ge N$ and $\exist N^\prime \ st. \ a_n > L^+$ for all $n \ge N^\prime$. 
+
+(d) If $c$ is any limit point of $(a_n)^\infty_{n = m}$, then we have $L^− \le c \le L^+$.  
+(e) If $L^+$ is finite, then it is a limit point of $(a_n)^\infty_{n = m}$. Similarly, if $L^−$ is finite, then it is a limit point of $(a_n)^\infty_{n = m}$.  
+(f) Let $c$ be a real number. If $(a_n)^\infty_{n = m}$ converges to $c$, then we must have $L^+ = L^− = c$. Conversely, if $L^+ = L^− = c$, then $(a_n)^\infty_{n = m}$ converges to $c$.
