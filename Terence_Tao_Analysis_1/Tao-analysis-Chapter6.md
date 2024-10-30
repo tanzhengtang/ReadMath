@@ -89,7 +89,7 @@ Exercise 6.2.2. Prove Theorem 6.2.11. (Hint: you may need to break into cases de
 
 ### Exercise  
 Exercise 6.3.1. Verify the claim in Example 6.3.4.  
-* example 6.3.4. Let $a_n := 1/n$; thus $(a_n)^\infty_{n = 1}$ is the sequence $1, 1/2, 1/3, ...$. Then the set {an : n ≥ 1} is the countable set {1, 1/2, 1/3, 1/4, . . . }. Thus $sup((a_n))^\infty_{n = 1} = 1$ and $inf(a_n)^\infty_{n = 1} = 0$.  
+* example 6.3.4. Let $a_n := 1/n$; thus $(a_n)^\infty_{n = 1}$ is the sequence $1, 1/2, 1/3, ...$. Then the set $\lbrace a_n : n \ge 1 \rbrace$ is the countable set $\lbrace 1, 1/2, 1/3, 1/4, ... \rbrace$. Thus $sup(a_n)^\infty_{n = 1} = 1$ and $inf(a_n)^\infty_{n = 1} = 0$.  
 
 Exercise 6.3.2. Prove Proposition 6.3.6. (Hint: use Theorem 6.2.11.)  
 Exercise 6.3.3. Prove Proposition 6.3.8. (Hint: use Proposition 6.3.6, together with the assumption that $a_n$ is increasing, to show that an converges to $sup(a_n)^\infty_{n = m}$.)  
@@ -111,8 +111,13 @@ Exercise 6.3.4. Explain why Proposition 6.3.10 fails when $x > 1$. In fact, show
 * $x < L^+ \Rightarrow \forall N \ge m, x < a_N^+ \Rightarrow \forall N \ge m, x < sup(a_n)^\infty_{n = N}$, and by Proposition 6.3.6 again, we could get $N^\prime \ge m$ such that $x < a_{N^\prime} \le sup(a_n)^\infty_{n = N}$.  
 
 (c) We have $inf(a_n)^\infty_{n = m} \le L^- \le L^+ \le sup(a_n)^\infty_{n = m}$.  
-* Suppose $L^- > L^+$, then $\exist N \ st. \ a_n < L^-$ for all $n \ge N$ and $\exist N^\prime \ st. \ a_n > L^+$ for all $n \ge N^\prime$. 
+* Suppose $L^- > L^+$, then $L^- > a_N^+ \ge L^+$ for some $N$ and use (a) again we have $L^- \ge a_M^- > a_N^+ \ge L^+$. Let $Q = Max(M, N)$, then $a_Q \le a_N^+ < a_M^- \le a_Q$, which is a contradiction for $a_Q < a_Q$.  
 
 (d) If $c$ is any limit point of $(a_n)^\infty_{n = m}$, then we have $L^- \le c \le L^+$.  
+* Suppose $c > L^+$ or $c < L^-$. For one of those hypothesis about $c > L^+$, then there exists an $N \ge m$ such that $a_n < c$ for all $n \ge N$ and if let $\epsilon^\prime = a_n - c$, when $n \ge N$, we could find a $\epsilon < \epsilon^\prime$ such that $a_n$ is not $\epsilon$-close to $c$ which lead a contradiction with $c$ is a limit point.  
+
 (e) If $L^+$ is finite, then it is a limit point of $(a_n)^\infty_{n = m}$. Similarly, if $L^-$ is finite, then it is a limit point of $(a_n)^\infty_{n = m}$.  
+* $\forall \epsilon > 0, x = L^+ - \epsilon < L^+$, and use (b) for every $N \ge m$, there exists an $n \ge N$ such that $L^+ > a_n > x \Rightarrow d(L^+, a_n) < \epsilon$. Thus $L^+$ is a limit point.  
+
 (f) Let $c$ be a real number. If $(a_n)^\infty_{n = m}$ converges to $c$, then we must have $L^+ = L^- = c$. Conversely, if $L^+ = L^- = c$, then $(a_n)^\infty_{n = m}$ converges to $c$.  
+* 
