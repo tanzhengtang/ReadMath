@@ -120,4 +120,5 @@ Exercise 6.3.4. Explain why Proposition 6.3.10 fails when $x > 1$. In fact, show
 * $\forall \epsilon > 0, x = L^+ - \epsilon < L^+$, and use (b) for every $N \ge m$, there exists an $n \ge N$ such that $L^+ > a_n > x \Rightarrow d(L^+, a_n) < \epsilon$. Thus $L^+$ is a limit point.  
 
 (f) Let $c$ be a real number. If $(a_n)^\infty_{n = m}$ converges to $c$, then we must have $L^+ = L^- = c$. Conversely, if $L^+ = L^- = c$, then $(a_n)^\infty_{n = m}$ converges to $c$.  
-* 
+* Suppose $L^+$ is infinite, then use (b), there always exists an $n \ge N$ such that $a_n > c + 1$ since $c + 1 < L^+$, which lead a contradiction with $(a_n)^\infty_{n = m}$ converges to $c$. Similarly, we could prove that $L^-$ is also finite. Thus by (e) and Proposition 6.4.5, we get $L^+ = L^- = c$.  
+* Use (a) could prove that $a_n$ converges to $c$.  
