@@ -122,3 +122,14 @@ Exercise 6.3.4. Explain why Proposition 6.3.10 fails when $x > 1$. In fact, show
 (f) Let $c$ be a real number. If $(a_n)^\infty_{n = m}$ converges to $c$, then we must have $L^+ = L^- = c$. Conversely, if $L^+ = L^- = c$, then $(a_n)^\infty_{n = m}$ converges to $c$.  
 * Suppose $L^+$ is infinite, then use (b), there always exists an $n \ge N$ such that $a_n > c + 1$ since $c + 1 < L^+$, which lead a contradiction with $(a_n)^\infty_{n = m}$ converges to $c$. Similarly, we could prove that $L^-$ is also finite. Thus by (e) and Proposition 6.4.5, we get $L^+ = L^- = c$.  
 * Use (a) could prove that $a_n$ converges to $c$.  
+
+### Lemma 6.4.13 (Comparison principle). Suppose that $(a_n)^\infty_{n = m}$ and $(b_n)^\infty_{n = m}$ are two sequences of real numbers such that $a_n \le b_n$ for all $n \ge m$. Then we have the inequalities 
+(a) $sup(a_n)^\infty_{n = m} \le sup(b_n)^\infty_{n = m}$  
+* Suppose $sup(a_n)^\infty_{n = m} > sup(b_n)^\infty_{n= m} \Rightarrow \exist \ N \ st. \ a_N > sup(b_n)^\infty_{n= m}$ which is a contradiction.  
+
+(b) $inf(a_n)^\infty_{n = m} \le inf(b_n)^\infty_{n = m}$  
+(c) $lim \ sup_{n \rightarrow \infty} a_n \le lim \ sup_{n \rightarrow \infty} b_n$  
+(d) $lim \ inf_{n \rightarrow \infty} a_n \le lim \ inf_{n \rightarrow \infty} b_n$  
+* Since $lim \ inf_{n \rightarrow \infty} a_n = sup(a_N^-)^\infty_{N = m}, lim \ inf_{n \rightarrow \infty} b_n = sup(b_N^-)^\infty_{N = m}$, and $\forall N, inf(a_n)^\infty_{n = N} \le inf(b_n)^\infty_{n = N}$ by (b) then $a_N^- \le b_N^-$ for all $N$, use (a) on $a_N^-$ and $b_N^-$ we have $sup(a_N^-)^\infty_{N = m} \le sup(b_N^-)^\infty_{N = m}$.  
+
+Corollary 6.4.14 (Squeeze test). Let $(a_n)^\infty_{n = m},(b_n)^\infty_{n = m},(c_n)^\infty_{n = m}$ be sequences of real numbers such that $a_n \le b_n \le c_n$ for all $n \ge m$. Suppose also that $(a_n)^\infty_{n = m}$ and $(c_n)^\infty_{n = m}$ both converge to the same limit $L$. Then $(b_n)^\infty_{n = m}$ is also convergent to $L$.  
