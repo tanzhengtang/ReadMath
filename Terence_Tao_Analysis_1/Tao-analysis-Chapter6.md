@@ -120,7 +120,7 @@ Exercise 6.3.4. Explain why Proposition 6.3.10 fails when $x > 1$. In fact, show
 * $\forall \epsilon > 0, x = L^+ - \epsilon < L^+$, and use (b) for every $N \ge m$, there exists an $n \ge N$ such that $L^+ > a_n > x \Rightarrow d(L^+, a_n) < \epsilon$. Thus $L^+$ is a limit point.  
 
 (f) Let $c$ be a real number. If $(a_n)^\infty_{n = m}$ converges to $c$, then we must have $L^+ = L^- = c$. Conversely, if $L^+ = L^- = c$, then $(a_n)^\infty_{n = m}$ converges to $c$.  
-* Suppose $L^+$ is infinite, then use (b), there always exists an $n \ge N$ such that $a_n > c + 1$ since $c + 1 < L^+$, which lead a contradiction with $(a_n)^\infty_{n = m}$ converges to $c$. Similarly, we could prove that $L^-$ is also finite. Thus by (e) and Proposition 6.4.5, we get $L^+ = L^- = c$.  
+* Suppose $L^+$ is infinite, and let $\epsilon > 0$, since $(a_n)^\infty_{n = m}$ converges to $c$, there exists $m$ such that $\forall n \ge m, |a_n - c| < \epsilon$. But if $L^+$ is infinite, use (b) there always exists an $n \ge m$ such that $a_n > c + \epsilon$ since $c + \epsilon < L^+$ which lead a contradiction with $|a_n - c| < \epsilon$. Similarly, we could prove that $L^-$ is also finite. Thus by (e) and Proposition 6.4.5, we get $L^+ = L^- = c$.  
 * Use (a) could prove that $a_n$ converges to $c$.  
 
 ### Lemma 6.4.13 (Comparison principle). Suppose that $(a_n)^\infty_{n = m}$ and $(b_n)^\infty_{n = m}$ are two sequences of real numbers such that $a_n \le b_n$ for all $n \ge m$. Then we have the inequalities 
@@ -132,4 +132,25 @@ Exercise 6.3.4. Explain why Proposition 6.3.10 fails when $x > 1$. In fact, show
 (d) $lim \ inf_{n \rightarrow \infty} a_n \le lim \ inf_{n \rightarrow \infty} b_n$  
 * Since $lim \ inf_{n \rightarrow \infty} a_n = sup(a_N^-)^\infty_{N = m}, lim \ inf_{n \rightarrow \infty} b_n = sup(b_N^-)^\infty_{N = m}$, and $\forall N, inf(a_n)^\infty_{n = N} \le inf(b_n)^\infty_{n = N}$ by (b) then $a_N^- \le b_N^-$ for all $N$, use (a) on $a_N^-$ and $b_N^-$ we have $sup(a_N^-)^\infty_{N = m} \le sup(b_N^-)^\infty_{N = m}$.  
 
-Corollary 6.4.14 (Squeeze test). Let $(a_n)^\infty_{n = m},(b_n)^\infty_{n = m},(c_n)^\infty_{n = m}$ be sequences of real numbers such that $a_n \le b_n \le c_n$ for all $n \ge m$. Suppose also that $(a_n)^\infty_{n = m}$ and $(c_n)^\infty_{n = m}$ both converge to the same limit $L$. Then $(b_n)^\infty_{n = m}$ is also convergent to $L$.  
+### Corollary 6.4.14 (Squeeze test). Let $(a_n)^\infty_{n = m},(b_n)^\infty_{n = m},(c_n)^\infty_{n = m}$ be sequences of real numbers such that $a_n \le b_n \le c_n$ for all $n \ge m$. Suppose also that $(a_n)^\infty_{n = m}$ and $(c_n)^\infty_{n = m}$ both converge to the same limit $L$. Then $(b_n)^\infty_{n = m}$ is also convergent to $L$.  
+* Use (c) and (d) of Lemma 6.4.13, $lim \ sup_{n \rightarrow \infty} a_n \le lim \ sup_{n \rightarrow \infty} b_n \le lim \ sup_{n \rightarrow \infty} c_n$ and $lim \ inf_{n \rightarrow \infty} a_n \le lim \ inf_{n \rightarrow \infty} b_n \le lim \ inf_{n \rightarrow \infty} c_n$, and by (f) of Proposition 6.4.12 $L \le lim \ sup_{n \rightarrow \infty} b_n \le L$ and $L \le lim \ inf_{n \rightarrow \infty} b_n \le L \Rightarrow (b_n)^\infty_{n = m}$ is also convergent to $L$.  
+
+### Corollary 6.4.17 (Zero test for sequences). Let $(a_n)^\infty_{n = M}$ be a sequence of real numbers. Then the limit $lim_{n \rightarrow \infty} a_n$ exists and is equal to zero if and only if the limit $lim_{n \rightarrow \infty} |a_n|$ exists and is equal to zero.  
+
+### Theorem 6.4.18 (Completeness of the reals). A sequence $(a_n)^\infty_{n = 1}$ of real numbers is a Cauchy sequence if and only if it is convergent.  
+
+### Exercise  
+Exercise 6.4.1. Prove Proposition 6.4.5.  
+Exercise 6.4.2. State and prove analogues of Exercises 6.1.3 and 6.1.4 for limit points, limit superior, and limit inferior.  
+Exercise 6.4.3. Prove parts (c),(d),(e),(f) of Proposition 6.4.12. (Hint: you can use earlier parts of the proposition to prove later ones.)  
+Exercise 6.4.4. Prove Lemma 6.4.13.  
+Exercise 6.4.5. Use Lemma 6.4.13 to prove Corollary 6.4.14.  
+Exercise 6.4.6. Give an example of two bounded sequences $(a_n)^\infty_{n = 1}$ and $(b_n)^\infty_{n = 1}$ such that $a_n < b_n$ for all $n \ge 1$, but that $sup(a_n)^\infty_{n = 1} \not < (b_n)^\infty_{n = 1}$. Explain why this does not contradict Lemma 6.4.13.  
+
+Exercise 6.4.7. Prove Corollary 6.4.17. Is the corollary still true if we replace zero in the statement of this Corollary by some other number?  
+
+Exercise 6.4.8. Let us say that a sequence $(a_n)^\infty_{n = M}$ of real numbers has $+\infty$ as a limit point iff it has no finite upper bound, and that it has $-\infty$ as a limit point iff it has no finite lower bound. With this definition, show that lim supn→∞ an is a limit point of $(a_n)^\infty_{n = M}$ , and furthermore that it is larger than all the other limit points of $(a_n)^\infty_{n = M}$; in other words, the limit superior is the largest limit point of a sequence. Similarly, show that the limit inferior is the smallest limit point of a sequence. (One can use Proposition 6.4.12 in the course of the proof.)  
+
+Exercise 6.4.9. Using the definition in Exercise 6.4.8, construct a sequence $(a_n)^\infty_{n = 1}$ which has exactly three limit points, at $-\infty, 0$, and $+\infty$.  
+
+Exercise 6.4.10. Let $(a_n)^\infty_{n = N}$ be a sequence of real numbers, and let $(b_m)^\infty_{m = M}$ be another sequence of real numbers such that each $b_m$ is a limit point of $(a_n)^\infty_{n = N}$. Let $c$ be a limit point of $(b_m)^\infty_{m = M}$. Prove that $c$ is also a limit point of $(a_n)^\infty_{n = N}$. (In other words, limit points of limit points are themselves limit points of the original sequence.)  
