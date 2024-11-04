@@ -145,11 +145,11 @@ Exercise 6.4.2. State and prove analogues of Exercises 6.1.3 and 6.1.4 for limit
 Exercise 6.4.3. Prove parts (c),(d),(e),(f) of Proposition 6.4.12. (Hint: you can use earlier parts of the proposition to prove later ones.)  
 Exercise 6.4.4. Prove Lemma 6.4.13.  
 Exercise 6.4.5. Use Lemma 6.4.13 to prove Corollary 6.4.14.  
-Exercise 6.4.6. Give an example of two bounded sequences $(a_n)^\infty_{n = 1}$ and $(b_n)^\infty_{n = 1}$ such that $a_n < b_n$ for all $n \ge 1$, but that $sup(a_n)^\infty_{n = 1} \not < (b_n)^\infty_{n = 1}$. Explain why this does not contradict Lemma 6.4.13.  
+Exercise 6.4.6. Give an example of two bounded sequences $(a_n)^\infty_{n = 1}$ and $(b_n)^\infty_{n = 1}$ such that $a_n < b_n$ for all $n \ge 1$, but that $sup(a_n)^\infty_{n = 1} \not < sup(b_n)^\infty_{n = 1}$. Explain why this does not contradict Lemma 6.4.13.  
 
 Exercise 6.4.7. Prove Corollary 6.4.17. Is the corollary still true if we replace zero in the statement of this Corollary by some other number?  
 
-Exercise 6.4.8. Let us say that a sequence $(a_n)^\infty_{n = M}$ of real numbers has $+\infty$ as a limit point iff it has no finite upper bound, and that it has $-\infty$ as a limit point iff it has no finite lower bound. With this definition, show that lim supn→∞ an is a limit point of $(a_n)^\infty_{n = M}$ , and furthermore that it is larger than all the other limit points of $(a_n)^\infty_{n = M}$; in other words, the limit superior is the largest limit point of a sequence. Similarly, show that the limit inferior is the smallest limit point of a sequence. (One can use Proposition 6.4.12 in the course of the proof.)  
+Exercise 6.4.8. Let us say that a sequence $(a_n)^\infty_{n = M}$ of real numbers has $+\infty$ as a limit point iff it has no finite upper bound, and that it has $-\infty$ as a limit point iff it has no finite lower bound. With this definition, show that $lim \ sup_{n \rightarrow \infty} a_n$ is a limit point of $(a_n)^\infty_{n = M}$ , and furthermore that it is larger than all the other limit points of $(a_n)^\infty_{n = M}$; in other words, the limit superior is the largest limit point of a sequence. Similarly, show that the limit inferior is the smallest limit point of a sequence. (One can use Proposition 6.4.12 in the course of the proof.)  
 
 Exercise 6.4.9. Using the definition in Exercise 6.4.8, construct a sequence $(a_n)^\infty_{n = 1}$ which has exactly three limit points, at $-\infty, 0$, and $+\infty$.  
 
