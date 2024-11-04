@@ -146,11 +146,23 @@ Exercise 6.4.3. Prove parts (c),(d),(e),(f) of Proposition 6.4.12. (Hint: you ca
 Exercise 6.4.4. Prove Lemma 6.4.13.  
 Exercise 6.4.5. Use Lemma 6.4.13 to prove Corollary 6.4.14.  
 Exercise 6.4.6. Give an example of two bounded sequences $(a_n)^\infty_{n = 1}$ and $(b_n)^\infty_{n = 1}$ such that $a_n < b_n$ for all $n \ge 1$, but that $sup(a_n)^\infty_{n = 1} \not < sup(b_n)^\infty_{n = 1}$. Explain why this does not contradict Lemma 6.4.13.  
-
 Exercise 6.4.7. Prove Corollary 6.4.17. Is the corollary still true if we replace zero in the statement of this Corollary by some other number?  
-
 Exercise 6.4.8. Let us say that a sequence $(a_n)^\infty_{n = M}$ of real numbers has $+\infty$ as a limit point iff it has no finite upper bound, and that it has $-\infty$ as a limit point iff it has no finite lower bound. With this definition, show that $lim \ sup_{n \rightarrow \infty} a_n$ is a limit point of $(a_n)^\infty_{n = M}$ , and furthermore that it is larger than all the other limit points of $(a_n)^\infty_{n = M}$; in other words, the limit superior is the largest limit point of a sequence. Similarly, show that the limit inferior is the smallest limit point of a sequence. (One can use Proposition 6.4.12 in the course of the proof.)  
 
 Exercise 6.4.9. Using the definition in Exercise 6.4.8, construct a sequence $(a_n)^\infty_{n = 1}$ which has exactly three limit points, at $-\infty, 0$, and $+\infty$.  
 
 Exercise 6.4.10. Let $(a_n)^\infty_{n = N}$ be a sequence of real numbers, and let $(b_m)^\infty_{m = M}$ be another sequence of real numbers such that each $b_m$ is a limit point of $(a_n)^\infty_{n = N}$. Let $c$ be a limit point of $(b_m)^\infty_{m = M}$. Prove that $c$ is also a limit point of $(a_n)^\infty_{n = N}$. (In other words, limit points of limit points are themselves limit points of the original sequence.)  
+
+## 6.5 Some standard limits  
+### Corollary 6.5.1. We have $lim_{n \rightarrow \infty} 1/n^{1/k} = 0$ for every integer $k \ge 1$.  
+
+### Lemma 6.5.2. Let $x$ be a real number. Then the limit $lim_{n \rightarrow \infty} x^n$ exists and is equal to zero when $|x| < 1$, exists and is equal to $1$ when $x = 1$, and diverges when $x = -1$ or when $|x| > 1$.  
+
+### Lemma 6.5.3. For any $x > 0$, we have $lim_{n \rightarrow \infty} x^{1/n} = 1$.  
+
+### Exercises  
+Exercise 6.5.1. Show that $lim_{n \rightarrow \infty} 1/n^q = 0$ for any rational $q > 0$. (Hint: use Corollary 6.5.1 and the limit laws, Theorem 6.1.19.) Conclude that the limit $lim_{n \rightarrow \infty} n^q$ does not exist. (Hint: argue by contradiction using Theorem 6.1.19(e).)  
+
+Exercise 6.5.2. Prove Lemma 6.5.2. (Hint: use Proposition 6.3.10, Exercise 6.3.4, and the squeeze test.)  
+
+Exercise 6.5.3. Prove Lemma 6.5.3. (Hint: you may need to treat the cases $x \ge 1$ and $x < 1$ separately. You might wish to first use Lemma 6.5.2 to prove the preliminary result that for every $\epsilon > 0$ and every real number $M > 0$, there exists an $n$ such that $M^{1/n} \le 1 + \epsilon$.)  
