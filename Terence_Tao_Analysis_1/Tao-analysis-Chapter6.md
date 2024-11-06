@@ -166,3 +166,19 @@ Exercise 6.5.1. Show that $lim_{n \rightarrow \infty} 1/n^q = 0$ for any rationa
 Exercise 6.5.2. Prove Lemma 6.5.2. (Hint: use Proposition 6.3.10, Exercise 6.3.4, and the squeeze test.)  
 
 Exercise 6.5.3. Prove Lemma 6.5.3. (Hint: you may need to treat the cases $x \ge 1$ and $x < 1$ separately. You might wish to first use Lemma 6.5.2 to prove the preliminary result that for every $\epsilon > 0$ and every real number $M > 0$, there exists an $n$ such that $M^{1/n} \le 1 + \epsilon$.)  
+
+## 6.6 Subsequences  
+### Defnitions  
+* 6.6.1 (Subsequences). Let $(a_n)^\infty_{n = 0}$ and $(b_n)^\infty_{n = 0}$ be sequences of real numbers. We say that $(b_n)^\infty_{n = 0}$ is a subsequence of $(a_n)^\infty_{n = 0}$ iff there exists a function $f : N \rightarrow N$ which is strictly increasing (i.e., $f(n + 1) > f (n)$ for all $n \in N$) such that $b_n = a_{f((n))}$ for all $n \in N$.  
+
+### Lemma 6.6.4. Let $(a_n)^\infty_{n = 0}, (b_n)^\infty_{n = 0}$, and $(c_n)^\infty_{n = 0}$ be sequences of real numbers. Then $(a_n)^\infty_{n = 0}$ is a subsequence of $(a_n)^\infty_{n = 0}$. Furthermore, if $(b_n)^\infty_{n = 0}$ is a subsequence of $(a_n)^\infty_{n = 0}$, and $(c_n)^\infty_{n = 0}$ is a subsequence of $(b_n)^\infty_{n = 0}$, then $(c_n)^\infty_{n = 0}$ is a subsequence of $(a_n)^\infty_{n = 0}$.  
+
+### Proposition 6.6.5 (Subsequences related to limits). Let $(a_n)^\infty_{n = 0}$ be a sequence of real numbers, and let $L$ be a real number. Then the following two statements are logically equivalent (each one implies the other):  
+(a) The sequence $(a_n)^\infty_{n = 0}$ converges to $L$.  
+(b) Every subsequence of $(a_n)^\infty_{n = 0}$ converges to $L$.  
+
+### Proposition 6.6.6 (Subsequences related to limit points). Let $(a_n)^\infty_{n = 0}$ be a sequence of real numbers, and let $L$ be a real number. Then the following two statements are logically equivalent.
+(a) $L$ is a limit point of $(a_n)^\infty_{n = 0}$. 
+(b) There exists a subsequence of $(a_n)^\infty_{n = 0}$ which converges to $L$.  
+
+### Theorem 6.6.8 (Bolzano-Weierstrass theorem). Let $(a_n)^\infty_{n = 0}$ be a bounded sequence (i.e., there exists a real number $M > 0$ such that $|a_n| \le M$ for all $n \in N$). Then there is at least one subsequence of $(a_n)^\infty_{n = 0}$ which converges.  
