@@ -1,4 +1,4 @@
-# Chapter 6  
+# Chapter 6 Limits of sequences  
 ## 6.1 Convergence and limit laws  
 ### Definitions  
 * 6.1.1 (Distance between two real numbers). Given two real numbers $x$ and $y$, we define their distance $d(x, y)$ to be $d(x, y) := |x − y|$.  
@@ -168,7 +168,7 @@ Exercise 6.5.2. Prove Lemma 6.5.2. (Hint: use Proposition 6.3.10, Exercise 6.3.4
 Exercise 6.5.3. Prove Lemma 6.5.3. (Hint: you may need to treat the cases $x \ge 1$ and $x < 1$ separately. You might wish to first use Lemma 6.5.2 to prove the preliminary result that for every $\epsilon > 0$ and every real number $M > 0$, there exists an $n$ such that $M^{1/n} \le 1 + \epsilon$.)  
 
 ## 6.6 Subsequences  
-### Defnitions  
+### Definitions  
 * 6.6.1 (Subsequences). Let $(a_n)^\infty_{n = 0}$ and $(b_n)^\infty_{n = 0}$ be sequences of real numbers. We say that $(b_n)^\infty_{n = 0}$ is a subsequence of $(a_n)^\infty_{n = 0}$ iff there exists a function $f : N \rightarrow N$ which is strictly increasing (i.e., $f(n + 1) > f (n)$ for all $n \in N$) such that $b_n = a_{f((n))}$ for all $n \in N$.  
 
 ### Lemma 6.6.4. Let $(a_n)^\infty_{n = 0}, (b_n)^\infty_{n = 0}$, and $(c_n)^\infty_{n = 0}$ be sequences of real numbers. Then $(a_n)^\infty_{n = 0}$ is a subsequence of $(a_n)^\infty_{n = 0}$. Furthermore, if $(b_n)^\infty_{n = 0}$ is a subsequence of $(a_n)^\infty_{n = 0}$, and $(c_n)^\infty_{n = 0}$ is a subsequence of $(b_n)^\infty_{n = 0}$, then $(c_n)^\infty_{n = 0}$ is a subsequence of $(a_n)^\infty_{n = 0}$.  
@@ -181,4 +181,25 @@ Exercise 6.5.3. Prove Lemma 6.5.3. (Hint: you may need to treat the cases $x \ge
 (a) $L$ is a limit point of $(a_n)^\infty_{n = 0}$. 
 (b) There exists a subsequence of $(a_n)^\infty_{n = 0}$ which converges to $L$.  
 
-### Theorem 6.6.8 (Bolzano-Weierstrass theorem). Let $(a_n)^\infty_{n = 0}$ be a bounded sequence (i.e., there exists a real number $M > 0$ such that $|a_n| \le M$ for all $n \in N$). Then there is at least one subsequence of $(a_n)^\infty_{n = 0}$ which converges.  
+### Theorem 6.6.8 (Bolzano-Weierstrass theorem). Let $(a_n)^\infty_{n = 0}$ be a bounded sequence (i.e., there exists a real number $M > 0$ such that $|a_n| \le M$ for all $n \in N$). Then there is at least one subsequence of $(a_n)^\infty_{n = 0}$ which converges. 
+
+### Exercises  
+Exercise 6.6.1. Prove Lemma 6.6.4.  
+Exercise 6.6.2. Can you find two sequences $(a_n)^\infty_{n = 0}$ and $(b_n)^\infty_{n = 0}$ which are not the same sequence, but such that each is a subsequence of the other?  
+
+Exercise 6.6.3. Let $(a_n)^\infty_{n = 0}$ be a sequence which is not bounded. Show that there exists a subsequence $(b_n)^\infty_{n = 0}$ of $(a_n)^\infty_{n = 0}$ such that $lim_{n \rightarrow \infty} 1 / b_n$ exists and is equal to zero. (Hint: for each natural number $j$, recursively introduce the quantity $n_j := min \lbrace n \in N : |a_n| \ge j; n > n_{j - 1} \rbrace$ (omitting the condition $n > n_{j - 1}$ when $j = 0$), first explaining why the set $\lbrace |a_n| \ge j; n > n_{j - 1} \rbrace$ is non-empty. Then set $b_j := a_{n_j}$.)  
+* $\forall \epsilon > 0$, let $j \in N, j \ge 1 / \epsilon \Rightarrow b_j \ge j \ge 1 / \epsilon \Rightarrow 1 / b_j \le \epsilon$. Thus $lim_{n \rightarrow \infty} 1 / b_n$ exists and is equal to zero.  
+
+Exercise 6.6.4. Prove Proposition 6.6.5. (Note that one of the two implications has a very short proof.)  
+Exercise 6.6.5. Prove Proposition 6.6.6. (Hint: to show that (a) implies (b), define the numbers $n_j$ for each natural numbers $j$ by the formula $n_j := min \lbrace n > n_{j-1} : |a_n - L| \le 1/j \rbrace$, with the convention $n_0 := 0$, explaining why the set $\lbrace n > n_{j-1} : |a_n - L| \le 1/j \rbrace$ is non-empty. Then consider the sequence $a_{n_j}$.)  
+
+## 6.7 Real exponentiation, part II  
+### Definitions  
+* 6.7.2 (Exponentiation to a real exponent). Let $x > 0$ be real, and let $\alpha$ be a real number. We define the quantity $x^\alpha$ by the formula $x^\alpha = lim_{n \rightarrow \infty} x^{q_n}$, where $(q_n)^\infty_{n = 1}$ is any sequence of rational numbers converging to $\alpha$.  
+
+### Lemma 6.7.1 (Continuity of exponentiation). Let $x > 0$, and let $\alpha$ be a real number. Let $(q_n)^\infty_{n = 1}$ be any sequence of rational numbers converging to $\alpha$. Then $(x^{q_n})^\infty_{n = 1}$ is also a convergent sequence. Furthermore, if $(q_n^\prime)^\infty_{n = 1}$ is any other sequence of rational numbers converging to $\alpha$, then $(x^{q_n^\prime})^\infty_{n = 1}$ has the same limit as $(x^{q_n})^\infty_{n = 1}$: $lim_{n \rightarrow \infty} x^{q_n} = lim_{n \rightarrow \infty} x^{q_n^\prime}$.  
+
+### 6.7.3. All the results of Lemma 5.6.9, which held for rational numbers $q$ and $r$,continue to hold for real numbers $q$ and $r$.  
+
+### Exercises  
+Exercise 6.7.1. Prove the remaining components of Proposition 6.7.3.  
