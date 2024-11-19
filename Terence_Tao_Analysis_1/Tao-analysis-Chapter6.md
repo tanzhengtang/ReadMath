@@ -1,6 +1,6 @@
 # Chapter 6 Limits of sequences  
 ## 6.1 Convergence and limit laws  
-### Definitions  
+### Definitions  \
 * 6.1.1 (Distance between two real numbers). Given two real numbers $x$ and $y$, we define their distance $d(x, y)$ to be $d(x, y) := |x − y|$.  
 * 6.1.2 ($\epsilon$-close real numbers). Let $\epsilon > 0$ be a real number. We say that two real numbers $x, y$ are $\epsilon$-close iff we have $d(y, x) \le \epsilon$.  
 * 6.1.3 (Cauchy sequences of reals). Let $\epsilon > 0$ be a real number. A sequence $(a_n)^\infty_{n = N}$ of real numbers starting at some integer index $N$ is said to be $\epsilon$-steady iff $a_j$ and $a_k$ are $\epsilon$-close for every $j, k \ge N$. A sequence $(a_n)^\infty_{n = m}$ starting at some integer index $m$ is said to be eventually $\epsilon$-steady iff there exists an $N \ge m$ such that $(a_n)^\infty_{n = N}$ is $\epsilon$-steady. We say that $(a_n)^\infty_{n = m}$ is a Cauchy sequence iff it is eventually $\epsilon$-steady for every $\epsilon > 0$.  

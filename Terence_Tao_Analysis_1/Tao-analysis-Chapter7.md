@@ -59,7 +59,20 @@ Exercise 7.1.5. Let $X$ be a finite set, let $m$ be an integer, and for each $x 
 ### Definitions  
 * 7.2.1 (Formal infinite series). A (formal) infinite series is any expression of the form $\sum_{n = m}^\infty a_n$ where $m$ is an integer, and $a_n$ is a real number for any integer $n \ge m$. We sometimes write this series as $a_m + a_{m+1} + a_{m+2} + ...$.  
 * 7.2.2 (Convergence of series). Let $\sum_{n = m}^\infty a_n$ be a formal infinite series. For any integer $N \ge m$, we define the $N$th partial sum $S_N$ of this series to be $S_N := \sum_{n=m}^N a_n$; of course, $S_N$ is a real number. If the sequence $(S_N)_{N=m}^\infty$ converges to some limit $L$ as $N \rightarrow \infty$ , then we say that the infinite series $\sum_{n = m}^\infty a_n$ is convergent, and converges to $L$; we also write $L = \sum_{n = m}^\infty a_n$, and say that $L$ is the sum of the infinite series $\sum_{n = m}^\infty a_n$. If the partial sums $S_N$ diverge, then we say that the infinite series $\sum_{n = m}^\infty a_n$ is divergent, and we do not assign any real number value to that series.  
-* 
+* 7.2.8 (Absolute convergence). Let $\sum_{n = m}^\infty a_n$ an be a formal series of real numbers. We say that this series is absolutely convergent iff the series $\sum_{n = m}^\infty |a_n|$ is convergent. In order to distinguish convergence from absolute convergence, we sometimes refer to the former as conditional convergence.  
 
 ### Proposition 7.2.5. Let $\sum_{n = m}^\infty a_n$ be a formal series of real numbers. Then $\sum_{n = m}^\infty a_n$ converges if and only if, for every real number $\epsilon > 0$, there exists an integer $N \ge m$ such that $|\sum_{n = p}^q a_n| \le \epsilon$ for all $p, q \ge N$.  
-* If $\sum_{n = m}^\infty a_n$ converges $L$, then $\forall \epsilon > 0, \exists N \ st. \ |\sum_{n = m}^N a_n - L| \le \epsilon$ for all $p \ge N$. And for all $q \ge m, |\sum_{n = m}^N a_n - L| = |\sum_{n = m}^q a_n + \sum_{n = q + 1}^N a_n - L|$
+* $S_N$ is also a Cauchy sequence, then for all $\epsilon >0, \exists N \ st. \ |S_p - S_q| < \epsilon$ for all $p, q \ge N$. And $S_p - S_q = \sum_{n = m}^p a_n - \sum_{n = m}^q a_n = \sum_{n = p}^q a_n$, which we want to prove.  
+* If $S_N$ is not convergent, then $\exist \epsilon > 0, \forall N, \exist p, q \ge N \ st. \ |S_p - S_q| > \epsilon$ which lead a contradiction.  
+* Seemly, the Proposition 6.1.12 is enough to prove this prosition.  
+
+### Corollary 7.2.6 (Zero test). Let $\sum_{n = m}^\infty a_n$ be a convergent series of real numbers. Then we must have $\lim_{n \rightarrow \infty} a_n = 0$. To put this another way, if $\lim_{n \rightarrow \infty} a_n$ is non-zero or divergent, then the series $\sum_{n = m}^\infty a_n$ is divergent.  
+* For all $\epsilon > 0, \exist N \ st. \ |\sum_{n = p}^q a_n| \le \epsilon$ for all $p, q \ge N$. Let $q = p, |\sum_{n = p}^q a_n| = |a_p| \le \epsilon$ for all $p \ge N$. Thus $\lim_{n \rightarrow \infty} a_n = 0$.  
+* Suppose $\sum_{n = m}^\infty a_n$ is convergent, which will lead to $\lim_{n \rightarrow \infty} a_n = 0$, which is a contradiction with $\lim_{n \rightarrow \infty} a_n$ is non-zero or divergent.  
+
+### Proposition 7.2.9 (Absolute convergence test). Let $\sum_{n = m}^\infty a_n$ be a formal series of real numbers. If this series is absolutely convergent, then it is also conditionally convergent. Furthermore, in this case we have the triangle inequality $|\sum_{n = m}^\infty a_n| \le \sum_{n = m}^\infty |a_n|$.  
+* First to prove $|\sum_{n = m}^\infty a_n| \le \sum_{n = m}^\infty |a_n|$ by induction on $p$ of $N = m + p$.  
+* If $\sum_{n = m}^\infty |a_n|$ is convergent, by Proposition 7.2.5 $|\sum_{n = p}^q |a_n|| \le \epsilon$ for all $p, q \ge N$ and $|\sum_{n = m}^\infty a_n| \le \sum_{n = m}^\infty |a_n|  = |\sum_{n = p}^q |a_n|| \le \epsilon$, then by Proposition 7.2.5 again, the $\sum_{n = m}^\infty a_n$ is convergent as desired.  
+
+### Proposition 7.2.12 (Alternating series test). Let $(a_n)_{n=m}^\infty$ be a sequence of real numbers which are non-negative and decreasing, thus $a_n \ge 0$ and $a_n \ge a_{n+1}$ for every $n \ge m$. Then the series $\sum_{n = m}^\infty (-1)^na_n$ is convergent if and only if the sequence $a_n$ converges to $0$ as $n \rightarrow \infty$.  
+* 
