@@ -3,7 +3,7 @@
 ### Definitions  
 * 5.1.1 (Sequences). Let $m$ be an integer. A sequence $(a_n)^\infty_{n = m}$ of rational numbers is any function from the set $\{n \in Z: n \ge m\}$ to $Q$, i.e., a mapping which assigns to each integer $n$ greater than or equal to $m$, a rational number $a_n$. More informally, a sequence $(a_n)^\infty_{n = 0}$ of rational numbers is a collection of rationals $a_m, a_{m + 1}, a_{m + 2}, ....$  
 * 5.1.3 ($\epsilon$-steadiness). Let $\epsilon > 0$. A sequence $(a_n)^\infty_{n = 0}$ is said to be $\epsilon$-steady iff each pair $a_j, a_k$ of sequence elements is $\epsilon$-close for every natural number $j, k$. In other words, the sequence $a_0, a_1, a_2, ...$  is $\epsilon$-steady iff $d(a_j, a_k) \le \epsilon$ for all $j, k$.  
-* 5.1.6 (Eventual $\epsilon$-steadiness). Let $\epsilon > 0$. A sequence $(a_n)^\infty_{n = 0}$ is said to be eventually $\epsilon$-steady iff the sequence $a_N, a_{N + 1}, a_{N + 2}, ...$  is $\epsilon$-steady for some natural number $N \ge 0$. In other words, the sequence $a_0, a_1, a_2, ...$ is eventually $\epsilon$-steady iff there exists an $N \ge 0$ such that $d(a_j, a_k) \ge \epsilon$ for all $j, k \ge N$.  
+* 5.1.6 (Eventual $\epsilon$-steadiness). Let $\epsilon > 0$. A sequence $(a_n)^\infty_{n = 0}$ is said to be eventually $\epsilon$-steady iff the sequence $a_N, a_{N + 1}, a_{N + 2}, ...$  is $\epsilon$-steady for some natural number $N \ge 0$. In other words, the sequence $a_0, a_1, a_2, ...$ is eventually $\epsilon$-steady iff there exists an $N \ge 0$ such that $d(a_j, a_k) \le \epsilon$ for all $j, k \ge N$.  
 * 5.1.8 (Cauchy sequences). A sequence $(a_n)^\infty_{n = 0}$ of rational numbers is said to be a Cauchy sequence iff for every rational $\epsilon > 0$, the sequence $(a_n)^\infty_{n = 0}$ is eventually $\epsilon$-steady. In other words, the sequence $a_0, a_1, a_2, ...$ is a Cauchy sequence iff for every $\epsilon > 0$, there exists an $N \ge 0$ such that $d(a_j, a_k) \le \epsilon$ for all $j, k \ge N$.  
 * 5.1.12 (Bounded sequences). Let $M \ge 0$ be rational. A finite sequence $a_0, a_1, a_2, ...a_n$ is bounded by $M$ iff $|a_i| \le M$ for all $1 \le i \le n$. An infinite sequence $(a_n)^\infty_{n = m}$ is bounded by $M$ iff $|a_i| \le M$ for all $i \ge 1$. A sequence is said to be bounded iff it is bounded by $M$ for some rational $M \ge 0$.  
 
@@ -28,11 +28,10 @@ Exercise 5.1.1. Prove Lemma 5.1.15. (Hint: use the fact that an is eventually $1
 
 ### Exercise  
 Exercise 5.2.1. Show that if $(a_n)^\infty_{n = 1}$ and $(b_n)^\infty_{n = 1}$ are equivalent sequences of rationals, then $(a_n)^\infty_{n = 1}$ is a Cauchy sequence if and only if $(b_n)^\infty_{n = 1}$ is a Cauchy sequence.  
-* Skip some steps of proof.  
-* Suppose $(a_n)^\infty_{n = 1}$ is a Cauchy sequence. $\forall \epsilon > 0, |b_i - b_j| = |(b_i - a_i) + (a_i - b_j)| \le |b_i - a_i| + |a_i - b_j| \le 3 / \epsilon + |(a_i - a_j) + (a_j - b_j)| \le 3 / \epsilon + |a_i - a_j| + |a_j - a_j| \le 3 / \epsilon + 3 / \epsilon + 3 / \epsilon = \epsilon$.  
+* Suppose $(a_n)^\infty_{n = 1}$ is a Cauchy sequence. $\forall \epsilon > 0, \epsilon / 3 > 0, \exist N \ st. \ |a_i - a_j| \le \epsilon / 3$ and $|a_i - b_i| \le \epsilon / 3$ for all $i, j \ge N$. Then $|b_i - b_j| = |(b_i - a_i) + (a_i - b_j)| \le |b_i - a_i| + |a_i - b_j| \le \epsilon / 3   + |(a_i - a_j) + (a_j - b_j)| \le \epsilon / 3 + |a_i - a_j| + |a_j - a_j| \le \epsilon / 3 + \epsilon / 3 + \epsilon / 3 = \epsilon$. Thus $(b_n)^\infty_{n = 1}$ is also a Cauchy sequence.  
 
 Exercise 5.2.2. Let $\epsilon > 0$. Show that if $(a_n)^\infty_{n = 1}$ and $(b_n)^\infty_{n = 1}$ are eventually $\epsilon$-close, then $(a_n)^\infty_{n = 1}$ is bounded if and only if $(b_n)^\infty_{n = 1}$ is bounded.  
-* Suppose $(a_n)^\infty_{n = 1}$ is bounded. $\forall \epsilon > 0, |a_n - b_n| < \epsilon \Rightarrow a_n - \epsilon < b_n < a_n + \epsilon \Rightarrow (b_n)^\infty_{n = 1}$ is bounded.  
+* Suppose $(a_n)^\infty_{n = 1}$ is bounded. For $\epsilon > 0, \exist N \ st. \ |a_n - b_n| \le \epsilon$ for all $n \ge N \Rightarrow a_n - \epsilon \le b_n \le a_n + \epsilon$ for all $n \ge N \Rightarrow (b_n)^\infty_{n = 1}$ is bounded.  
 
 ## 5.3 The construction of the real numbers  
 ### Definitions  
@@ -47,6 +46,7 @@ Exercise 5.2.2. Let $\epsilon > 0$. Show that if $(a_n)^\infty_{n = 1}$ and $(b_
 ### Lemma 5.3.6 (Sum of Cauchy sequences is Cauchy). Let $x = LIM_{n \rightarrow \infty} a_n$ an and $y = LIM_{n \rightarrow \infty} b_n$ be real numbers. Then $x + y$ is also a real number (i.e., $(a_n + b_n)^\infty_{n = 1}$ is a Cauchy sequence of rationals ).  
 
 ### Lemma 5.3.7 (Sums of equivalent Cauchy sequences are equivalent). Let $x = LIM_{n \rightarrow \infty} a_n$ an and $y = LIM_{n \rightarrow \infty} b_n$, and $x^\prime = LIM_{n \rightarrow \infty} a^\prime_n$ be real numbers. Suppose that $x = x^\prime$. Then we have $x + y = x^\prime + y$.  
+* Let $x + y = LIM_{n \rightarrow \infty} a_n + b_n = LIM_{n \rightarrow \infty} c_n, x^\prime + y = LIM_{n \rightarrow \infty} a_n^\prime + b_n = LIM_{n \rightarrow \infty} c_n^\prime$. Obviously, $|c_n - c_n^\prime| = |a_n - a_n^\prime|$, then $c_n, c_n^\prime$ are equivalent Cauchy sequences. Thus $x + y = x^\prime + y$.  
 
 ### 5.3.10 (Multiplication is well defined). Let $x = LIM_{n \rightarrow \infty} a_n, y = LIM_{n \rightarrow \infty} b_n$, and $x^\prime = LIM_{n \rightarrow \infty} a^\prime_n$ be real numbers. Then $xy$ is also a real number. Furthermore, if $x = x^\prime$, then $xy = x^\prime y$.  
 * Let $\epsilon > 0, |a_n| \le q, |b_n| \le p$. For $\epsilon / 2q > 0, \epsilon / 2p > 0$ exists a natural number $M$ such that $\forall n \ge M, m \ge M, |a_n - a_m| \le \epsilon / p, |b_n - b_m| \le \epsilon / q$. Then $|a_nb_n - a_mb_m| = |a_nb_n - a_nb_m + a_nb_m - a_mb_m| = |a_n(b_n - b_m) + b_m(a_n - a_m)| \le |a_n||(b_n - b_m)| + |b_m||(a_n - a_m)| \le |q||(b_n - b_m)| + |p||(a_n - a_m)| \le (q)(\epsilon / 2q) + (p)(\epsilon / 2p) = \epsilon$. Closed.  
@@ -54,12 +54,14 @@ Exercise 5.2.2. Let $\epsilon > 0$. Show that if $(a_n)^\infty_{n = 1}$ and $(b_
 ### Proposition 5.3.11. All the laws of algebra from Proposition 4.1.6 hold not only for the integers, but for the reals as well.  
 
 ### Lemma 5.3.14. Let $x$ be a non-zero real number. Then $x = LIM_{n \rightarrow \infty} a_n$ for some Cauchy sequence $(a_n)^\infty_{n = 1}$ which is bounded away from zero.  
-* $x \ne 0 \Rightarrow (a_n)^\infty_{n = 1} \ne (0)^\infty_{n = 1} \Rightarrow \exists \epsilon > 0, \exists N_0 > 0, \ st. \ n \ge N_0, |a_n - 0| \ge \epsilon$. And $(a_n)^\infty_{n = 1}$ is a Cauchy sequence, then $\exists N_a > 0, \ st. n, m \ge N_a \ |a_n - a_m| \le \epsilon$. If $n, m \ge max(N_0, N_a)$ then $|a_n - a_m| \le \epsilon$ and $|a_n| \ge \epsilon, |a_m| \ge \epsilon$. Obviously, $a_ma_n > 0$ must be true.  
-* Let $c \ne 0$ and $\begin{matrix} b_n :=\begin{cases}c,&\text{if} ~ n \le N \\a_n,&\text{if} ~ n \ge N\end{cases}\end{matrix}$. Obviously $b_n = a_n$, and $b_n$ is bounded away from zero.  
+* $x \ne 0 \Rightarrow (a_n)^\infty_{n = 1} \ne (0)^\infty_{n = 1} \Rightarrow \exists \epsilon > 0, \forall N, \exists n \ge N, \ st. \ |a_n - 0| > \epsilon$. And $(a_n)^\infty_{n = 1}$ is a Cauchy sequence, then $\exists N^\prime > 0, \ st. \ n, m \ge N^\prime, |a_n - a_m| \le \epsilon$. If $N \ge N^\prime$ then $\exists n \ st. \ |a_m - a_n| \le \epsilon$ and $|a_n| > \epsilon$ for all $m \ge N$. If $|a_m| = 0$ then $|a_n| \le \epsilon$ and $|a_n| > \epsilon$ will be a contradiction. Thus $|a_m| \ne 0$ for all $m \ge N$.  
+* Let $c \ne 0$ and $\begin{matrix} b_n :=\begin{cases}c,&\text{if} ~ n < N \\a_n,&\text{if} ~ n \ge N\end{cases}\end{matrix}$. Obviously $b_n = a_n$, and $b_n$ is bounded away from zero.  
 
 ### Lemma 5.3.15. Suppose that $(a_n)^\infty_{n = 1}$ is a Cauchy sequence which is bounded away from zero. Then the sequence $(a_n^{-1})^\infty_{n = 1}$ is also a Cauchy sequence.  
+* Obviously, $c \le |a_n| \le m$. Let $\epsilon > 0, c\epsilon > 0$ then $\exists N \ st. \ |a_n - a_m| \le c\epsilon$ for all $n, m \ge N$. Since $|\frac{1}{a_n} - \frac{1}{a_m}| = |\frac{a_n - a_m}{a_na_m}| \le \frac{|a_n - a_m|}{c} \le \epsilon$. Thus $(a_n^{-1})^\infty_{n = 1}$ is also a Cauchy sequence.  
 
 ### Lemma 5.3.17 (Reciprocation is well defined). Let $(a_n)^\infty_{n = 1}$ and $(b_n)^\infty_{n = 1}$ be two Cauchy sequences bounded away from zero such that $LIM_{n \rightarrow \infty} a_n = LIM_{n \rightarrow \infty} b_n$ (i.e., the two sequences are equivalent). Then $LIM_{n \rightarrow \infty} a_n^{-1} = LIM_{n \rightarrow \infty} b_n^{-1}$.  
+* $LIM_{n \rightarrow \infty} b_n^{-1} = LIM_{n \rightarrow \infty} b_n^{-1} * LIM_{n \rightarrow \infty} a_n * LIM_{n \rightarrow \infty} a_n^{-1} = LIM_{n \rightarrow \infty} b_n^{-1} * LIM_{n \rightarrow \infty} b_n * LIM_{n \rightarrow \infty} a_n^{-1} = LIM_{n \rightarrow \infty} a_n^{-1}$.  
 
 ### Exercise  
 Exercise 5.3.1. Prove Proposition 5.3.3. (Hint: you may find Proposition 4.3.7 to be useful.)  
@@ -68,7 +70,7 @@ Exercise 5.3.3. Let $a, b$ be rational numbers. Show that $a = b$ if and only if
 * If $LIM_{n\rightarrow \infty}a = LIM_{n\rightarrow \infty}b \rightarrow |a - b| < \epsilon$ for every $\epsilon > 0$. If $a \neq b$, we will find a rational number $\epsilon$ such that $|a - b| = d > ε$, then contradiction.  
 
 Exercise 5.3.4. Let $(a_n)^\infty_{n = 0}$ be a sequence of rational numbers which is bounded. Let $(b_n)^\infty_{n = 0}$ be another sequence of rational numbers which is equivalent to $(a_n)^\infty_{n = 0}$. Show that $(b_n)^\infty_{n = 0}$ is also bounded. (Hint: use Exercise 5.2.2.)  
-* Because $a_n = b_n$, them are eventually $\epsilon$-close, and $b_n$ is bounded by Exercise 5.2.2.  
+* Let $\epsilon > 0$, because $a_n = b_n$, them are eventually $\epsilon$-close, and $b_n$ is bounded by Exercise 5.2.2.  
 
 Exercise 5.3.5. Show that $LIM_{n \rightarrow \infty} 1 / n = 0$.  
 * Show $a_n = 1 / n$ and $b_n = 0$ are equivalent sequences.  
@@ -81,7 +83,7 @@ Exercise 5.3.5. Show that $LIM_{n \rightarrow \infty} 1 / n = 0$.
 * 5.4.6 (Ordering of the real numbers). Let $x$ and $y$ be real numbers. We say that $x$ is greater than $y$, and write $x > y$, if $x − y$ is a positive real number, and $x < y$ iff $x − y$ is a negative real number. We define $x \ge y$ iff $x > y$ or $x = y$, and similarly define $x \le y$.  
 
 ### Proposition 5.4.4 (Basic properties of positive reals). For every real number $x$, exactly one of the following three statements is true: (a) $x$ is zero; (b) $x$ is positive; (c) $x$ is negative. A real number $x$ is negative if and only if $−x$ is positive. If $x$ and $y$ are positive, then so are $x + y$ and $xy$.  
-* For $0 \in R$, and $x = 0$ or $x \ne 0$ will be true. If $x \ne 0$, we could get $x = LIM_{n \rightarrow \infty} a_n$ which there exists $\epsilon > 0 \ st. \ |a_n| > \epsilon$ (for $x \ne LIM_{n \rightarrow \infty} 0$). For this $\epsilon$ value, also have $M \in N \ st. \ |a_n - a_m| \le \epsilon$ for every $n \ge M, m \ge M$. Suppose some $a_{n0} > 0, a_{m0} < 0$ in there, obviously $a_{n0} > \epsilon, a_{m0} < -\epsilon$ which will lead $|a_{n0} - a_{m0}| \ge \epsilon$ and this a contradiction with $|a_n - a_m| \le \epsilon$. Then for all $a_n$ must have the same sign (positive or negative).  
+* For $0 \in R$, and $x = 0$ or $x \ne 0$ will be true. If $x \ne 0$, we could get $x = LIM_{n \rightarrow \infty} a_n$ which there exists $\epsilon > 0, \forall N , \exists n \ge N \ st. \ |a_n| > \epsilon$ (for $x \ne LIM_{n \rightarrow \infty} 0$). For this $\epsilon$ value, also have $M \in N \ st. \ |a_n - a_m| \le \epsilon$ for every $m \ge M$. Suppose $a_n > 0, a_m < 0$ in there, obviously will lead $|a_{n} - a_{m}| > \epsilon$ and this a contradiction with $|a_n - a_m| \le \epsilon$. Then for all $a_m$ must have the same sign (positive or negative).  
 * For $a_n$ is a rational number, it only be one of being positive and negative, then we could get $a_n$ only be one of entirely positive and negative. Closed.  
 
 ### Proposition 5.4.7. All the claims in Proposition 4.2.9 which held for rationals, continue to hold for real numbers.  
@@ -127,6 +129,7 @@ Exercise 5.4.8. Let $(a_n)^\infty_{n = 1}$ be a Cauchy sequence of rationals, an
 * Suppose $M, M^\prime$ are least upper bounds, according to the definition, we have $M \ge M^\prime$ and $M \le M^\prime$, then $M = M^\prime$.  
 
 ### Theorem 5.5.9 (Existence of least upper bound). Let $E$ be a non-empty subset of $R$. If $E$ has an upper bound, (i.e., $E$ has some upper bound $M$), then it must have exactly one least upper bound.  
+* Suppose the upper bound of $E$ is $M$.
 
 ### Proposition 5.5.12. There exists a positive real number $x$ such that $x^2 = 2$.  
 
@@ -177,7 +180,8 @@ Exercise 5.5.5. Establish an analogue of Proposition 5.4.14, in which “rationa
 (g) We have $(x^{1/n})^{1/m} = x^{1/nm}$.  
 * Suppose $x^{1/nm} = a$, we have $x^{1/nm} = a\Longleftrightarrow a^{nm} = x \Longleftrightarrow (a^n)^m = x \Longleftrightarrow x^{1/m} = a^n \Longleftrightarrow (x^{1/m})^{1/n} = a$, and we have $x^{1/nm} = a$, then $(x^{1/m})^{1/n} = a = x^{1/nm} \Longleftrightarrow (x^{1/m})^{1/n} = x^{1/nm}$.  
 
-### Lemma 5.6.8. Let $a, a^\prime$ be integers and $b, b^\prime$ be positive integers such that $a/b = a^\prime/b^\prime$, and let $x$ be a positive real number. Then we have $(x^{1/b^\prime})a^\prime = (x^{1/b})^a$.  
+### Lemma 5.6.8. Let $a, a^\prime$ be integers and $b, b^\prime$ be positive integers such that $a/b = a^\prime/b^\prime$, and let $x$ be a positive real number. Then we have $(x^{1/b^\prime})^{a^\prime} = (x^{1/b})^a$.  
+* $x^{1/ab^\prime} = x^{1/a^\prime b} \Leftrightarrow x^{1/b^\prime} = (x^{1/a^\prime b})^a \Leftrightarrow (x^{1/b^\prime})^{a^\prime} = (x^{1/a^\prime b})^{aa^\prime} \Leftrightarrow (x^{1/b^\prime})^{a^\prime} = (x^{1/b})^a$
 
 ### Lemma 5.6.9 Let $x, y > 0$ be positive reals, and let $q, r$ be rationals.  
 (a) $x^q$ is a positive real.  

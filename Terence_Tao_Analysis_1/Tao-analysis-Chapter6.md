@@ -1,6 +1,6 @@
 # Chapter 6 Limits of sequences  
 ## 6.1 Convergence and limit laws  
-### Definitions  \
+### Definitions  
 * 6.1.1 (Distance between two real numbers). Given two real numbers $x$ and $y$, we define their distance $d(x, y)$ to be $d(x, y) := |x − y|$.  
 * 6.1.2 ($\epsilon$-close real numbers). Let $\epsilon > 0$ be a real number. We say that two real numbers $x, y$ are $\epsilon$-close iff we have $d(y, x) \le \epsilon$.  
 * 6.1.3 (Cauchy sequences of reals). Let $\epsilon > 0$ be a real number. A sequence $(a_n)^\infty_{n = N}$ of real numbers starting at some integer index $N$ is said to be $\epsilon$-steady iff $a_j$ and $a_k$ are $\epsilon$-close for every $j, k \ge N$. A sequence $(a_n)^\infty_{n = m}$ starting at some integer index $m$ is said to be eventually $\epsilon$-steady iff there exists an $N \ge m$ such that $(a_n)^\infty_{n = N}$ is $\epsilon$-steady. We say that $(a_n)^\infty_{n = m}$ is a Cauchy sequence iff it is eventually $\epsilon$-steady for every $\epsilon > 0$.  
@@ -9,10 +9,14 @@
 * 6.1.16 (Bounded sequences). A sequence $(a_n)^\infty_{n = m}$ of real numbers is bounded by a real number $M$ iff we have $|a_n| \le M$ for all $n \ge m$. We say that $(a_n)^\infty_{n = m}$ is bounded iff it is bounded by $M$ for some real number $M > 0$.  
 
 ### Proposition 6.1.4. Let $(a_n)^\infty_{n = m}$ be a sequence of rational numbers starting at some integer index $m$. Then $(a_n)^\infty_{n = m}$ is a Cauchy sequence in the sense of Definition 5.1.8 if and only if it is a Cauchy sequence in the sense of Definition 6.1.3.  
+* If $(a_n)^\infty_{n = m}$ is a Cauchy sequence in the sense of Definition 5.1.8, then $\forall \epsilon \in R, \exists \epsilon^\prime \in Q, \ st. \ \epsilon^\prime < \epsilon$, and this is enough to get that $(a_n)^\infty_{n = m}$ is also a Cauchy sequence in the sense of Definition Definition 6.1.3.  
+* If $(a_n)^\infty_{n = m}$ is a Cauchy sequence in the sense of Definition 6.1.3, simliarly, $\forall \epsilon \in Q, \exists \epsilon^\prime \in R, \ st. \ \epsilon^\prime < \epsilon$ which is also enough to get right conclusion.  
 
 ### Proposition 6.1.7 (Uniqueness of limits). Let $(a_n)^\infty_{n = m}$ be a real sequence starting at some integer index $m$, and let $L \ne L^\prime$ be two distinct real numbers. Then it is not possible for $(a_n)^\infty_{n = m}$ to converge to $L$ while also converging to $L^\prime$.  
+* Suppoe $L \ne L^\prime$ and $(a_n)^\infty_{n = m}$ converges to $L, L^\prime$ both. Let $\epsilon = L - L^\prime$(suppose $L > L^\prime$), and $\epsilon / 3 > 0, \exists N \ st. \ |a_m - L| < \epsilon / 3, |a_m - L^\prime| < \epsilon / 3$ for all $m \ge N$. Then $|a_m - L| + |a_m - L^\prime| \ge |L - a_m + a_m - L^\prime| = |L - L^\prime| = \epsilon$, but we already have $|a_m - L| + |a_m - L^\prime| \le \epsilon / 3 + \epsilon / 3 = 2\epsilon / 3$ which get $\epsilon \le |a_m - L| + |a_m - L^\prime| \le 2\epsilon / 3$. This is a contradiction.  
 
 ### Proposition 6.1.11. We have $\lim_{n \rightarrow \infty} 1/n = 0$.  
+* By Exercise 5.4.4, $\forall \epsilon \in R$ and $\epsilon > 0$, there exists $N$ such that $\epsilon > 1 / N$. Then for all $n \ge N$ we have $\epsilon > 1 / n \Rightarrow |1 / n| < \epsilon$ for all $n \ge N$. Thus $\lim_{n \rightarrow \infty} 1/n = 0$.  
 
 ### Proposition 6.1.12 (Convergent sequences are Cauchy). Suppose that $(a_n)^\infty_{n = m}$ is a convergent sequence of real numbers. Then $(a_n)^\infty_{n = m}$ is also a Cauchy sequence.  
 * Suppose $a_n$ is a convergent sequence, $L = \lim_{n \rightarrow \infty} a_n$. Let $\epsilon > 0 \Rightarrow \epsilon / 2 > 0 \Rightarrow \ \exist j \ st. \ n \ge j, |a_n - L| < \epsilon / 2 \Rightarrow \forall n, m \ge j, |a_n - a_m| = |a_n - L + L - a_m| \le |a_n - L| + |a_m - L| \le \epsilon / 2 + \epsilon / 2 \le \epsilon$. Then $a_n$ is a Cauchy seqencue.  
