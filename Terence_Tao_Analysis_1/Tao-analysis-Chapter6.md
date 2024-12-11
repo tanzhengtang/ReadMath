@@ -22,9 +22,12 @@
 * Suppose $a_n$ is a convergent sequence, $L = \lim_{n \rightarrow \infty} a_n$. Let $\epsilon > 0 \Rightarrow \epsilon / 2 > 0 \Rightarrow \ \exist j \ st. \ n \ge j, |a_n - L| < \epsilon / 2 \Rightarrow \forall n, m \ge j, |a_n - a_m| = |a_n - L + L - a_m| \le |a_n - L| + |a_m - L| \le \epsilon / 2 + \epsilon / 2 \le \epsilon$. Then $a_n$ is a Cauchy seqencue.  
 
 ### Proposition 6.1.15 (Formal limits are genuine limits). Suppose that $(a_n)^\infty_{n = 1}$ is a Cauchy sequence of rational numbers. Then $(a_n)^\infty_{n = 1}$ converges to $LIM_{n \rightarrow \infty} a_n$.  
-* See Exercise 6.1.6    
+* See Exercise 6.1.6  
+* Suppose $(a_n)^\infty_{n = 1}$ does not converges to $LIM_{n \rightarrow \infty} a_n = L$. Then $\exists \epsilon > 0, \forall N, \exists n \ge N \ st. \ |a_n - L| > \epsilon$.  
+* If $L = 0$, then $|a_n| > \epsilon$ and $a_na_m > 0 \Rightarrow a_m > 0$ for all $m \ge N \Rightarrow LIM_{n \rightarrow \infty} a_n > L = 0$ which lead a contradiction.  
 
 ### Corollary 6.1.17. Every convergent sequence of real numbers is bounded.  
+* By Proposition 6.1.12 convergent sequences are Cauchy sequences, and for every Cauchy sequence is bounded.  
 
 ### Theorem 6.1.19 (Limit Laws). Let $(a_n)^\infty_{n = m}$ and $(b_n)^\infty_{n = m}$ be convergent sequences of real numbers, and let $x, y$ be the real numbers $x := \lim_{n \rightarrow \infty} a_n$ and $y := \lim_{n \rightarrow \infty} b_n$.  
 (a) The sequence $(a_n + b_n)^\infty_{n = m}$ converges to $x + y$; in other words, $\lim_{n \rightarrow \infty} (a_n + b_n) = \lim_{n \rightarrow \infty} a_n + \lim_{n \rightarrow \infty} b_n$.  
@@ -57,6 +60,8 @@ Exercise 6.1.7. Show that Definition 6.1.16 is consistent with Definition 5.1.12
 
 Exercise 6.1.8. Prove Theorem 6.1.19. (Hint: you can use some parts of the theorem to prove others, e.g., (b) can be used to prove (c); (a),(c) can be used to prove (d); and (b), (e) can be used to prove (f). The proofs are similar to those of Lemma 5.3.6, Proposition 5.3.10, and Lemma 5.3.15. For (e), you may need to first prove the auxiliary result that any sequence whose elements are non-zero, and which converges to a non-zero limit, is bounded away from zero.)  
 Exercise 6.1.9. Explain why Theorem 6.1.19(f) fails when the limit of the denominator is 0. (To repair that problem requires L’Hopital’s rule, see Section 10.5.)  
+* Suppose $b_n$ converges to $0$ and $c_n = a_n / b_n$ also $L$, then $c_n * b_n = a_n$ and we will get $a_n$ converges to $0$ whatever $a_n$ is , which is obviously impossible. 
+
 Exercise 6.1.10. Show that the concept of equivalent Cauchy sequence, as defined in Definition 5.2.6, does not change if $\epsilon$ is required to be positive real instead of positive rational. More precisely, if $(a_n)^\infty_{n = 0}$ and $(b_n)^\infty_{n = 0}$ are sequences of reals, show that $(a_n)^\infty_{n = 0}$ and $(b_n)^\infty_{n = 0}$ are eventually $\epsilon$-close for every rational $\epsilon > 0$ if and only if they are eventually $\epsilon$-close for every real $\epsilon > 0$. (Hint: modify the proof of Proposition 6.1.4.)  
 
 ## 6.2 The Extended real number system  
@@ -86,18 +91,25 @@ Exercise 6.2.2. Prove Theorem 6.2.11. (Hint: you may need to break into cases de
 * 6.3.1 (Sup and inf of sequences). Let $(a_n)^\infty_{n = m}$ be a sequence of real numbers. Then we define $sup(a_n)^\infty_{n = m}$ to be the supremum of the set $\lbrace a_n : n \ge m \rbrace$, and $inf(a_n)^\infty_{n = m}$ to the infimum of the same set $\lbrace a_n : n \ge m \rbrace$.  
 
 ### Proposition 6.3.6 (Least upper bound property). Let $(a_n)^\infty_{n = m}$ be a sequence of real numbers, and let $x$ be the extended real number $x := sup(a_n)^\infty_{n = m}$. Then we have $a_n \le x$ for all $n \ge m$. Also, whenever $M \in R^∗$ is an upper bound for $a_n$ (i.e., $a_n \le M$ for all $n \ge m$), we have $x \le M$. Finally, for every extended real number $y$ for which $y < x$, there exists at least one $n \le m$ for which $y < a_n \le x$.  
+* Suppose for all $a_n$ such that $a_n < y$, then $y$ is an upper bound for $a_n$ which will lead $y \ge x$. And this is a contradiction with $y < x$.  
 
-### Proposition 6.3.8 (Monotone bounded sequences converge). Let $(a_n)^\infty_{n = m}$ be a sequence of real numbers which has some finite upper bound $M \in R$, and which is also increasing (i.e., $a_{n+1} \ge a_n$ for all $n \ge m$). Then $(a_n)^\infty_{n = m}$ is convergent, and in fact $\lim_{n \rightarrow \infty} a_n = sup(a_n)^\infty_{n = m} \le M$.  
+### Remark 6.3.7. There is a corresponding Proposition 6.3.6 for infima, but with all the references to order reversed, e.g., all upper bounds should now be lower bounds, etc. The proof is exactly the same.  
+
+### Proposition 6.3.8 (Monotone bounded sequences converge). Let $(a_n)^\infty_{n = m}$ be a sequence of real numbers which has some finite upper bound $M \in R$, and which is also increasing (i.e., $a_{n+1} \ge a_n$ for all $n \ge m$). Then $(a_n)^\infty_{n = m}$ is convergent, and in fact $\lim_{n \rightarrow \infty} a_n = sup(a_n)^\infty_{n = m} \le M$.  One can similarly prove that if a sequence $(a_n)^\infty_{n = m}$ is bounded below and decreasing (i.e., $a_{n+1} \le a_n$ ), then it is convergent, and that the limit is equal to the infimum.   
+* For all real number $\epsilon > 0$, by Proposition 6.3.6 we have $sup(a_n)^\infty_{n = m} - \epsilon < a_n \le sup(a_n)^\infty_{n = m}$ for some $n \ge m$, and because $a_n \le a_{n + 1} \le ... \le a_{n + k} \le sup(a_n)^\infty_{n = m}$ for all $k \ge 0$, then $|a_{n^\prime} - sup(a_n)^\infty_{n = m}| < \epsilon$ for all $n^\prime \ge n$. Thus $\lim_{n \rightarrow \infty} a_n = sup(a_n)^\infty_{n = m} \le M$.  
 
 ### Proposition 6.3.10. Let $0 < x < 1$. Then we have $\lim_{n \rightarrow \infty} x^n = 0$.  
 
 ### Exercise  
 Exercise 6.3.1. Verify the claim in Example 6.3.4.  
-* example 6.3.4. Let $a_n := 1/n$; thus $(a_n)^\infty_{n = 1}$ is the sequence $1, 1/2, 1/3, ...$. Then the set $\lbrace a_n : n \ge 1 \rbrace$ is the countable set $\lbrace 1, 1/2, 1/3, 1/4, ... \rbrace$. Thus $sup(a_n)^\infty_{n = 1} = 1$ and $inf(a_n)^\infty_{n = 1} = 0$.  
+* Example 6.3.4. Let $a_n := 1/n$; thus $(a_n)^\infty_{n = 1}$ is the sequence $1, 1/2, 1/3, ...$. Then the set $\lbrace a_n : n \ge 1 \rbrace$ is the countable set $\lbrace 1, 1/2, 1/3, 1/4, ... \rbrace$. Thus $sup(a_n)^\infty_{n = 1} = 1$ and $inf(a_n)^\infty_{n = 1} = 0$.  
+* $a_n := 1/n$ is a decreasing sequence, then for every $n \in N, a_n \le a_1 \Rightarrow sup(a_n)^\infty_{n = 1} = 1$. If $inf(a_n)^\infty_{n = 1} \ne 0$ and $inf(a_n)^\infty_{n = 1} = \epsilon$, by Exercise 5.4.3, there exists $N$ such that $N \le \epsilon^{-1} < N + 1 \Rightarrow 1 / (N + 1) < \epsilon \le 1 / N$ which lead a contradiction $\epsilon \le a_n$ for all $n \in N$.  
 
 Exercise 6.3.2. Prove Proposition 6.3.6. (Hint: use Theorem 6.2.11.)  
 Exercise 6.3.3. Prove Proposition 6.3.8. (Hint: use Proposition 6.3.6, together with the assumption that $a_n$ is increasing, to show that an converges to $sup(a_n)^\infty_{n = m}$.)  
-Exercise 6.3.4. Explain why Proposition 6.3.10 fails when $x > 1$. In fact, show that the sequence $(x_n)^\infty_{n = 1}$ diverges when $x > 1$. (Hint: prove by contradiction and use the identity $(1/x)^nx^n = 1$ and the limit laws in Theorem 6.1.19.) Compare this with the argument in Example 1.2.3; can you now explain the flaws in the reasoning in that example?  
+Exercise 6.3.4. Explain why Proposition 6.3.10 fails when $x > 1$. In fact, show that the sequence $(x^n)^\infty_{n = 1}$ diverges when $x > 1$. (Hint: prove by contradiction and use the identity $(1/x)^nx^n = 1$ and the limit laws in Theorem 6.1.19.) Compare this with the argument in Example 1.2.3; can you now explain the flaws in the reasoning in that example?  
+* Suppose $(x^n)^\infty_{n = 1} (x > 1)$ converges to $L$, then $\lim_{n \rightarrow \infty} 1 / x^n$ also converges to $0$ by Proposition 6.3.8, $\lim_{n \rightarrow \infty} (1 / x)^n(x^n) = 1 = L*0$ which lead a obvious contradiction.  
+* Note: Limit Laws will be used when sure the sequence is convergent.  
 
 ## 6.4 Limsup, Liminf, and limit points  
 ### Definitions  
