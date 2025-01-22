@@ -182,11 +182,16 @@ Exercise 6.4.10. Let $(a_n)^\infty_{n = N}$ be a sequence of real numbers, and l
 
 ## 6.5 Some standard limits  
 ### Corollary 6.5.1. We have $lim_{n \rightarrow \infty} 1/n^{1/k} = 0$ for every integer $k \ge 1$.  
-* 
+* Obviously, $a_n = (1 / n)^{1 / k}$ is a decreasing sequence, and $0 \le a_n \le 1$, thus by Proposition 6.3.8, $a_n$ is convergent. We already know that $lim_{n \rightarrow \infty} 1 / n = 0$, use Theorem 6.1.19, $(a_n)^k = 1 / n \Rightarrow (lim_{n \rightarrow \infty} 1/n^{1/k})^k = lim_{n \rightarrow \infty} 1 / n = 0 \Rightarrow lim_{n \rightarrow \infty} 1/n^{1/k} = 0$.  
 
 ### Lemma 6.5.2. Let $x$ be a real number. Then the limit $lim_{n \rightarrow \infty} x^n$ exists and is equal to zero when $|x| < 1$, exists and is equal to $1$ when $x = 1$, and diverges when $x = -1$ or when $|x| > 1$.  
+* If $|x| < 1$, then $b_n = |x|^n$ is a decreasing sequence and $0 \le |x|^n \le 1$, thus by Proposition 6.3.8, $b_n$ is convergent. Let $b = lim_{n \rightarrow \infty} |x|^n, c_n = |x|^{n + 1}$. Since $\forall \epsilon > 0, \exists N \ st. \ |b_n - b| \le \epsilon$ for all $n \ge N$ and $c_n = b_{n + 1}$ then we also get $|c_n - b| \le \epsilon$ for all $n \ge N + 1$. Now $lim_{n \rightarrow \infty} b_n = lim_{n \rightarrow \infty} c_n = lim_{n \rightarrow \infty} x * b_n = x lim_{n \rightarrow \infty} b_n \Rightarrow b = x * b \Rightarrow b * (x - 1) = 0 \ and \ x - 1 \ne 0 \Rightarrow b = 0 \Rightarrow lim_{n \rightarrow \infty} |x|^n = 0$. And use Corollary 6.4.17 we could get $lim_{n \rightarrow \infty} x^n = 0$ when $|x| < 1$.  
+* If $|x| > 1$, let $y = 1 / x$ and $|y| < 1$, for previous proof we could get $y^n$ is convergent. Suppose $x^n$ is convergent then $lim_{n \rightarrow \infty} x^n * y^n = lim_{n \rightarrow \infty} 1 = lim_{n \rightarrow \infty} x^n * lim_{n \rightarrow \infty} y^n = lim_{n \rightarrow \infty} x^n * 0 = 0 \Rightarrow 1 = 0$ which is a contradiction. Thus $x^n$ is not convergent.  
 
 ### Lemma 6.5.3. For any $x > 0$, we have $lim_{n \rightarrow \infty} x^{1/n} = 1$.  
+* If $x = 1$, obviously $lim_{n \rightarrow \infty} x^{1/n} = 1$.  
+* If $x > 1$, $x^{1 / n} \ge 1$ because if $x^{1 / n} < 1 \Rightarrow (x^{1 / n})^n = x < 1$ contradiction with $x > 1$. Suppose $f = inf(x^{1 / n}) > 1$, by Lemma 6.5.2, $f^n$ is diverges and the limit of $f^n$ is $+\infty$, then we could find a $N$ such that $f^N > x \Rightarrow f > x^{1 / N}$ which will lead a contradiction with $inf(x^{1/n}) = f \le x^{1 / N}$. Thus $inf(x^{1/n}) = 1$. Since $\frac{x^{1/n}}{x^{1/(n + 1)}} = x^{1 / n(n + 1)} > 1 \Rightarrow frac{x^{1 / n}}{x^{1 / (n + 1)}} > 1 \Rightarrow x^{1 / n} > x^{1 / (n + 1)} \Rightarrow x^n$ is a decreasing sequence. Use Proposition 6.3.8 we could get $lim_{n \rightarrow \infty} x^{1/n} = 1$.  
+* If $0 < x < 1$, the proof is also like $x > 1$ by using Proposition 6.3.8. Skip.  
 
 ### Exercises  
 Exercise 6.5.1. Show that $lim_{n \rightarrow \infty} 1/n^q = 0$ for any rational $q > 0$. (Hint: use Corollary 6.5.1 and the limit laws, Theorem 6.1.19.) Conclude that the limit $lim_{n \rightarrow \infty} n^q$ does not exist. (Hint: argue by contradiction using Theorem 6.1.19(e).)  
