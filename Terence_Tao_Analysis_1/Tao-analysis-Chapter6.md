@@ -190,7 +190,7 @@ Exercise 6.4.10. Let $(a_n)^\infty_{n = N}$ be a sequence of real numbers, and l
 
 ### Lemma 6.5.3. For any $x > 0$, we have $lim_{n \rightarrow \infty} x^{1/n} = 1$.  
 * If $x = 1$, obviously $lim_{n \rightarrow \infty} x^{1/n} = 1$.  
-* If $x > 1$, $x^{1 / n} \ge 1$ because if $x^{1 / n} < 1 \Rightarrow (x^{1 / n})^n = x < 1$ contradiction with $x > 1$. Suppose $f = inf(x^{1 / n}) > 1$, by Lemma 6.5.2, $f^n$ is diverges and the limit of $f^n$ is $+\infty$, then we could find a $N$ such that $f^N > x \Rightarrow f > x^{1 / N}$ which will lead a contradiction with $inf(x^{1/n}) = f \le x^{1 / N}$. Thus $inf(x^{1/n}) = 1$. Since $\frac{x^{1/n}}{x^{1/(n + 1)}} = x^{1 / n(n + 1)} > 1 \Rightarrow frac{x^{1 / n}}{x^{1 / (n + 1)}} > 1 \Rightarrow x^{1 / n} > x^{1 / (n + 1)} \Rightarrow x^n$ is a decreasing sequence. Use Proposition 6.3.8 we could get $lim_{n \rightarrow \infty} x^{1/n} = 1$.  
+* If $x > 1$, $x^{1 / n} \ge 1$ because if $x^{1 / n} < 1 \Rightarrow (x^{1 / n})^n = x < 1$ contradiction with $x > 1$. Suppose $f = inf(x^{1 / n}) > 1$, by Lemma 6.5.2, $f^n$ is diverges and the limit of $f^n$ is $+\infty$, then we could find a $N$ such that $f^N > x \Rightarrow f > x^{1 / N}$ which will lead a contradiction with $inf(x^{1/n}) = f \le x^{1 / N}$. Thus $inf(x^{1/n}) = 1$. Since $\frac{x^{1/n}}{x^{1/(n + 1)}} = x^{1 / n(n + 1)} > 1 \Rightarrow \frac{x^{1 / n}}{x^{1 / (n + 1)}} > 1 \Rightarrow x^{1 / n} > x^{1 / (n + 1)} \Rightarrow x^n$ is a decreasing sequence. Use Proposition 6.3.8 we could get $lim_{n \rightarrow \infty} x^{1/n} = 1$.  
 * If $0 < x < 1$, the proof is also like $x > 1$ by using Proposition 6.3.8. Skip.  
 
 ### Exercises  
