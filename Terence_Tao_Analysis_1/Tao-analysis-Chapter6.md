@@ -195,6 +195,8 @@ Exercise 6.4.10. Let $(a_n)^\infty_{n = N}$ be a sequence of real numbers, and l
 
 ### Exercises  
 Exercise 6.5.1. Show that $lim_{n \rightarrow \infty} 1/n^q = 0$ for any rational $q > 0$. (Hint: use Corollary 6.5.1 and the limit laws, Theorem 6.1.19.) Conclude that the limit $lim_{n \rightarrow \infty} n^q$ does not exist. (Hint: argue by contradiction using Theorem 6.1.19(e).)  
+* Let $q = j / k$ which $j, k \in Z, k \ge 1$. By Corollary 6.5.1, $lim_{n \rightarrow \infty} 1/n^{1 / k} = 0$. And use the limit laws $lim_{n \rightarrow \infty} (1/n^{1 / k})^j = lim_{n \rightarrow \infty} 1/n^q = (lim_{n \rightarrow \infty} 1/n^{1 / k})^j = (0)^j = 0$.  
+* If the limit $lim_{n \rightarrow \infty} n^q$ exists, then $lim_{n \rightarrow \infty} (n^q)^{-1}$ also exist, and $lim_{n \rightarrow \infty} (n^q)^{-1} = (lim_{n \rightarrow \infty} n^q)^{-1} \Rightarrow 0 = (lim_{n \rightarrow \infty} n^q)^{-1}$. Obviously, this is a contradiction.
 
 Exercise 6.5.2. Prove Lemma 6.5.2. (Hint: use Proposition 6.3.10, Exercise 6.3.4, and the squeeze test.)  
 
@@ -202,13 +204,17 @@ Exercise 6.5.3. Prove Lemma 6.5.3. (Hint: you may need to treat the cases $x \ge
 
 ## 6.6 Subsequences  
 ### Definitions  
-* 6.6.1 (Subsequences). Let $(a_n)^\infty_{n = 0}$ and $(b_n)^\infty_{n = 0}$ be sequences of real numbers. We say that $(b_n)^\infty_{n = 0}$ is a subsequence of $(a_n)^\infty_{n = 0}$ iff there exists a function $f : N \rightarrow N$ which is strictly increasing (i.e., $f(n + 1) > f (n)$ for all $n \in N$) such that $b_n = a_{f((n))}$ for all $n \in N$.  
+* 6.6.1 (Subsequences). Let $(a_n)^\infty_{n = 0}$ and $(b_n)^\infty_{n = 0}$ be sequences of real numbers. We say that $(b_n)^\infty_{n = 0}$ is a subsequence of $(a_n)^\infty_{n = 0}$ iff there exists a function $f : N \rightarrow N$ which is strictly increasing (i.e., $f(n + 1) > f (n)$ for all $n \in N$) such that $b_n = a_{f(n)}$ for all $n \in N$.  
 
 ### Lemma 6.6.4. Let $(a_n)^\infty_{n = 0}, (b_n)^\infty_{n = 0}$, and $(c_n)^\infty_{n = 0}$ be sequences of real numbers. Then $(a_n)^\infty_{n = 0}$ is a subsequence of $(a_n)^\infty_{n = 0}$. Furthermore, if $(b_n)^\infty_{n = 0}$ is a subsequence of $(a_n)^\infty_{n = 0}$, and $(c_n)^\infty_{n = 0}$ is a subsequence of $(b_n)^\infty_{n = 0}$, then $(c_n)^\infty_{n = 0}$ is a subsequence of $(a_n)^\infty_{n = 0}$.  
+* Let $f(n) = n, a_{f(n)}$ is a subsequence of $a_n$ and it's easy to see $a_{f(n)} = a_n$. Thus $(a_n)^\infty_{n = 0}$ is a subsequence of $(a_n)^\infty_{n = 0}$.  
+* Let $a_{f(n)} = b_n, b_{g(n)} = c_n, \forall n \in N, b_{f(n)} = c_n$ and $a_{f(g(n))} = b_{f(n)} = c_n$. It's obvious that $g \circ f$ is an increasing function. Thus $(c_n)^\infty_{n = 0}$ is a subsequence of $(a_n)^\infty_{n = 0}$.  
 
 ### Proposition 6.6.5 (Subsequences related to limits). Let $(a_n)^\infty_{n = 0}$ be a sequence of real numbers, and let $L$ be a real number. Then the following two statements are logically equivalent (each one implies the other):  
 (a) The sequence $(a_n)^\infty_{n = 0}$ converges to $L$.  
 (b) Every subsequence of $(a_n)^\infty_{n = 0}$ converges to $L$.  
+* If $(a_n)^\infty_{n = 0}$ converges to $L$, then $\forall \epsilon, \exists i \in N \ st. \ |a_n - L| < \epsilon$ for all $n \ge i$. Let $a_{f(n)} = b_n, f$ is an increasing function from $N$ to $N$, thus for $i \in N$, the set $S = \lbrace j \in N: f(j) = i \rbrace$ is not empty, and we could have $m = inf(S)$. For $b_n$, if $n \ge m$ then $f(n) \ge i$ and $b_n \in \lbrace a_n: n \ge i \rbrace$. Thus $\forall \epsilon$ and for every $b_n$ we could find a $m$ such that $|b_n - L| < \epsilon$ for all $n \ge m$.  
+* Suppose the sequence $(a_n)^\infty_{n = 0}$ not converges to $L$. Then $f(n) = n + 1, b_n = a_{f(n)}, b_n$ also not converges to $L$ which make a contradiction.  
 
 ### Proposition 6.6.6 (Subsequences related to limit points). Let $(a_n)^\infty_{n = 0}$ be a sequence of real numbers, and let $L$ be a real number. Then the following two statements are logically equivalent.
 (a) $L$ is a limit point of $(a_n)^\infty_{n = 0}$. 
