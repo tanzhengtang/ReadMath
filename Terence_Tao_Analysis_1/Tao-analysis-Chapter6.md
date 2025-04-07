@@ -219,12 +219,17 @@ Exercise 6.5.3. Prove Lemma 6.5.3. (Hint: you may need to treat the cases $x \ge
 ### Proposition 6.6.6 (Subsequences related to limit points). Let $(a_n)^\infty_{n = 0}$ be a sequence of real numbers, and let $L$ be a real number. Then the following two statements are logically equivalent.
 (a) $L$ is a limit point of $(a_n)^\infty_{n = 0}$. 
 (b) There exists a subsequence of $(a_n)^\infty_{n = 0}$ which converges to $L$.  
+* Hint: to show that (a) implies (b), define the numbers $n_j$ for each natural numbers $j$ by the formula $n_j := min \lbrace n > n_{j-1} : |a_n - L| \le 1/j \rbrace$, with the convention $n_0 := 0$, explaining why the set $\lbrace n > n_{j-1} : |a_n - L| \le 1/j \rbrace$ is non-empty. Then consider the sequence $a_{n_j}$.  
+* Let $b_j = a_{n_j}$, and it's easy to see $b_j$ is a subsequence of $a_n$. $\forall \epsilon > 0, \exists k \in N, k \ge 1 / \epsilon \Rightarrow 1 / k \le \epsilon$. Then $|a_{n_k}(b_k) - L| \le 1 / k \le \epsilon \Rightarrow b_j$ converges to $L$.  
+* Let $b_n$ be the subsequence of $(a_n)^\infty_{n = 0}$ which converges to $L$ and $f$ denote the increasing function such that $b_n = a_{f(n)}$. $\forall \epsilon, \forall N, \exists k \ge N \ st. \ |b_k - L| \le \epsilon$. Since $a_{f(k)} = b_k$, we have to show that $f(k) \ge k$. If $f(k) < k$, then $f(0) < 0$ which make a contradiction with $f(n) \ge 0$. Thus $f(k) \ge k \ge N$ and $L$ is a limit point of $(a_n)^\infty_{n = 0}$.  
 
-### Theorem 6.6.8 (Bolzano-Weierstrass theorem). Let $(a_n)^\infty_{n = 0}$ be a bounded sequence (i.e., there exists a real number $M > 0$ such that $|a_n| \le M$ for all $n \in N$). Then there is at least one subsequence of $(a_n)^\infty_{n = 0}$ which converges. 
+### Theorem 6.6.8 (Bolzano-Weierstrass theorem). Let $(a_n)^\infty_{n = 0}$ be a bounded sequence (i.e., there exists a real number $M > 0$ such that $|a_n| \le M$ for all $n \in N$). Then there is at least one subsequence of $(a_n)^\infty_{n = 0}$ which converges.  
+*  Let $L^+$ denoted the limit superior of the sequence $(a_n)^\infty_{n = m}$. Since $a_n$ is bounded, $L^+$ is finite and by (e) of Proposition 6.4.12, $L^+$ is also a limit point of $a_n$. Then use Proposition 6.6.6 we could conclude that Theorem 6.6.8 is true.  
 
 ### Exercises  
 Exercise 6.6.1. Prove Lemma 6.6.4.  
 Exercise 6.6.2. Can you find two sequences $(a_n)^\infty_{n = 0}$ and $(b_n)^\infty_{n = 0}$ which are not the same sequence, but such that each is a subsequence of the other?  
+* $a_n = 1,0,1,0,......$ and $b_n = 0,1,0,1,0,.....$
 
 Exercise 6.6.3. Let $(a_n)^\infty_{n = 0}$ be a sequence which is not bounded. Show that there exists a subsequence $(b_n)^\infty_{n = 0}$ of $(a_n)^\infty_{n = 0}$ such that $lim_{n \rightarrow \infty} 1 / b_n$ exists and is equal to zero. (Hint: for each natural number $j$, recursively introduce the quantity $n_j := min \lbrace n \in N : |a_n| \ge j; n > n_{j - 1} \rbrace$ (omitting the condition $n > n_{j - 1}$ when $j = 0$), first explaining why the set $\lbrace |a_n| \ge j; n > n_{j - 1} \rbrace$ is non-empty. Then set $b_j := a_{n_j}$.)  
 * $\forall \epsilon > 0$, let $j \in N, j \ge 1 / \epsilon \Rightarrow b_j \ge j \ge 1 / \epsilon \Rightarrow 1 / b_j \le \epsilon$. Thus $lim_{n \rightarrow \infty} 1 / b_n$ exists and is equal to zero.  
