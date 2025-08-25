@@ -79,7 +79,7 @@ If $a$ is positive,then $a$ is not equal to $0$, and $b \ge 0$(informal), so $a 
 n
 ### 2.2.14 Proposition: (Strong principle of induction). Let $m_0$ be a natural number, and let $P(m)$ be a property pertaining to an arbitrary natural number $m$. Suppose that for each $m \ge m_0$, we have the following implication: if $P(m^{\prime})$ is true for all natural numbers $m_0 \le m^{\prime} < m$, then $P(m)$ is also true. (In particular, this means that $P(m_0)$ is true, since in this case the hypothesis is vacuous.) Then we can conclude that $P(m)$ is true for all natural numbers $m ≥ m_0$.  
 * Hint: define $Q(n)$ to be the property that $P(m)$ is true for all $m_0 ≤ m < n$. Let $n = 0$ then $Q(n)$ is vacuous true(In fact, $Q(n)$ is equal to that if $m_0 ≤ m < n$ then $P(m)$ is true). Skip the hypothesis of induction, show that $Q(n++)$ is true. Since $Q(n)$ is true, we have $P(m)$ is true for $m_0 \le m < n$ and by the implication of 2.2.14 Proposition, $P(n)$ is also true. Now $P(m)$ is true for that $m_0 \le m \le n < n++$ which means that $Q(n++)$ is true. For each natural number $n \ge m_0$ we have $Q(n)$ is true and conclude that $P(m)$ is true for $m_0 \le m < n \Rightarrow P(n)$ is true for $m_0 \le n$ by the implication of 2.2.14 Proposition again. Closed.  
-* If no anwser, please see: https://solverer.com/library/terence_tao/analysis_i/exercise_2-2-5.  
+* If have confusion, please see: https://solverer.com/library/terence_tao/analysis_i/exercise_2-2-5.  
 
 
 ### Exercise
@@ -93,9 +93,6 @@ Exercise 2.2.4 Justify the three statements marked (why?) in the proof of Propos
 
 Exercise 2.2.5 Prove Proposition 2.2.14  
 Exercise 2.2.6 Let $n$ be a natural number, and let $P(m)$ be a property pertaining to the natural numbers such that whenever $P(m++)$ is true, then $P(m)$ is true. Suppose that $P(n)$ is also true. Prove that $P(m)$ is true for all natural numbers $m ≤ n$; this is known as the principle of backwards induction. (Hint: apply induction to the variable $n$.)  
-* Let $Q(n)$ is such property that $P(m)$ is true for all natural numbers $m \leq n$ when $P(n)$ is true.  
-* Let $n = 0$, so $m$ must be 0, so $P(m) = P(n)$ is true, then $Q(n)$ is true when $n = 0$. Suppose $Q(n)$ is true, consider $Q(n++)$.  
-* So we have $m \leq n < n++$, because $P(n++)$ is true, then $P(n)$ is true, then $P(m)$ is true (because suppose $Q(n)$ is true), so $Q(n++)$ is true.  
 
 ## 2.3 Multiplication  
 ### Definition  
