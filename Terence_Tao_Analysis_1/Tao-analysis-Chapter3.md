@@ -15,7 +15,7 @@
 * 3.1.27 (Difference sets). Given two sets $A$ and $B$, we define the set $A − B$ or $A / B$ to be the set $A$ with any elements of $B$ removed: $A / B:= \lbrace x \in A : x \notin B \rbrace$.  
 
 ### Lemma 3.1.6 (Single choice). Let A be a non-empty set. Then there exists an object $x$ such that $x \in A$.
-* Because the statment is that exists an object $x$ such that $x \in A$, so suppose that for every object $x$ have $x \notin A$, according to axiom 3.2, we could get $A$ is empty set, then have a contradiction, so this lemma is true.  
+* Because the statment is that exists an object $x$ such that $x \in A$, so suppose that for every object $x$ have $x \notin A$, according to Axiom 3.2, we could get $A$ is empty set, then have a contradiction, so this lemma is true.  
 
 ### Lemma 3.1.13. If $a$ and $b$ are objects, then $\lbrace a, b \rbrace = \lbrace a \rbrace \ \cup\  \lbrace b \rbrace$. If $A, B, C$ are sets, then the union operation is commutative (i.e., $A \ \cup\ B = B \ \cup\ A$) and associative $(i.e., \  (A \ \cup\  B) \ \cup\  C = A \ \cup\  (B \ \cup\ C))$. Also, we have $A \ \cup\ A = A \ \cup\ \varnothing = \varnothing \ \cup\ A = A$.  
 * Commutative, if $x$ is any element of $A \ \cup\  B$, we get $x \in A$ or $x \in B$, then it also means $x \in B$ or $x \in A$, and by this way get $x \in B \ \cup\  A$, then we know the elements of $A \ \cup\  B$ is equal to $B \ \cup\  A$.  
