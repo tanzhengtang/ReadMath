@@ -178,7 +178,7 @@ Exercise 6.4.8. Let us say that a sequence $(a_n)^\infty_{n = M}$ of real number
 Exercise 6.4.9. Using the definition in Exercise 6.4.8, construct a sequence $(a_n)^\infty_{n = 1}$ which has exactly three limit points, at $-\infty, 0$, and $+\infty$.  
 
 Exercise 6.4.10. Let $(a_n)^\infty_{n = N}$ be a sequence of real numbers, and let $(b_m)^\infty_{m = M}$ be another sequence of real numbers such that each $b_m$ is a limit point of $(a_n)^\infty_{n = N}$. Let $c$ be a limit point of $(b_m)^\infty_{m = M}$. Prove that $c$ is also a limit point of $(a_n)^\infty_{n = N}$. (In other words, limit points of limit points are themselves limit points of the original sequence.)  
-* $\forall \epsilon > 0, \exists j, i \ st. \ |b_j - c| \le \epsilon / 2, |a_i - b_j| \le \epsilon \Rightarrow |a_i - c| = |a_i - b_j + b_j - c| \le |a_i - b_j| + |b_j - c| \le \epsilon$. Thus $c$ is a limit point of $(a_n)^\infty_{n = N}$.  
+* $\forall \epsilon > 0, \exists j, i \ st. \ |b_j - c| \le \epsilon / 2, |a_i - b_j| \le \epsilon / 2 \Rightarrow |a_i - c| = |a_i - b_j + b_j - c| \le |a_i - b_j| + |b_j - c| \le \epsilon$. Thus $c$ is a limit point of $(a_n)^\infty_{n = N}$.  
 
 ## 6.5 Some standard limits  
 ### Corollary 6.5.1. We have $lim_{n \rightarrow \infty} 1/n^{1/k} = 0$ for every integer $k \ge 1$.  
