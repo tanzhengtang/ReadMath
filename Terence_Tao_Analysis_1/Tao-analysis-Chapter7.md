@@ -132,6 +132,7 @@ Exercise 7.2.6. Prove Lemma 7.2.15. (Hint: First work out what the partial sums 
 
 ## 7.3 Sums of non-negative numbers  
 ### Proposition 7.3.1. Let $\sum_{n = m}^\infty a_{n}$ an be a formal series of non-negative real numbers. Then this series is convergent if and only if there is a real number $M$ such that $\sum_{n = m}^N a_{n} \le M$ for all integers $N \ge m$.  
+* If $\sum_{n = m}^N a_{n} \le M$ for all integers $N \ge m$, then $\forall \epsilon > 0, \exists m \ st. M - \epsilon \le a_m \le M$. For all $p, q \ge m$ that $|a_p - a_q| \le |M - (M - \epsilon)| \le \epsilon$, and use Proposition 7.2.5 we know that this series is convergent.  
 
 ### Corollary 7.3.2 (Comparison test). Let $\sum_{n = m}^\infty a_{n}$ and $\sum_{n = m}^\infty b_{n}$ be two formal series of real numbers, and suppose that $|a_n| \le b_n$ for all $n \ge m$. Then if $\sum_{n = m}^\infty b_{n}$ is convergent, then $\sum_{n = m}^\infty a_{n}$ is absolutely convergent, and in fact $|\sum_{n = m}^\infty a_{n}| \le \sum_{n = m}^\infty |a_{n}| \le \sum_{n = m}^\infty b_{n}$.  
 * Prove $\sum_{n = m}^N |a_n| \le \sum_{n = m}^N b_n$ by induction on $p$ of $N = m + p$.  
