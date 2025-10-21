@@ -162,7 +162,8 @@ Exercise 7.3.3. $\sum_{n = 0}^\infty a_{n}$ be an absolutely convergent series o
 
 ### Exercises  
 Exercise 7.4.1. Let $\sum_{n = 0}^\infty a_{n}$ be an absolutely convergent series of real numbers. Let $f : N \rightarrow N$ be an increasing function (i.e., $f(n + 1) > f (n)$ for all $n \in N$). Show that $\sum_{n = 0}^\infty a_{f(n)}$ is also an absolutely convergent series. (Hint: try to compare each partial sum of $\sum_{n = 0}^\infty a_{f(n)}$ with a (slightly different) partial sum of $\sum_{n = 0}^\infty a_{n}$.).  
-* If $f : N \rightarrow N$ be an increasing function, then $f(n) \ge n$. Use Proposition 7.2.5 for every real number $\epsilon > 0$, there exists an integer $N \ge 0$ such that $|\sum_{n = p}^q |a_n|| \le \epsilon$ for all $p, q \ge N$. And obviously $\sum_{n = f(p)}^{f(q)} |a_n| \le \epsilon$. Consider $\lbrace f(n): p \le n \le q \rbrace \subseteq \lbrace f(p) \le m \le f(q) \rbrace$, thus $\sum_{n = p}^q |a_{f(n)}| = \sum_{n \in \lbrace f(n): p \le n \le q \rbrace} |a_n| \le \sum_{n = f(p)}^{f(q)} |a_n| \le \epsilon$. And use Proposition 7.2.5 again, we conclude that $\sum_{n = 0}^\infty a_{f(n)}$ is also an absolutely convergent series.  
+* If $f : N \rightarrow N$ be an increasing function, then $f(n) \ge n$. Use Proposition 7.2.5 for every real number $\epsilon > 0$, there exists an integer $M \ge 0$ such that $|\sum_{n = p}^q |a_n|| \le \epsilon$ for all $p, q \ge M$. And obviously $\sum_{n = f(p)}^{f(q)} |a_n| \le \epsilon$. Consider $\lbrace f(n): p \le n \le q \rbrace \subseteq \lbrace f(p) \le m \le f(q) \rbrace$, thus $\sum_{n = p}^q |a_{f(n)}| = \sum_{n \in \lbrace f(n): p \le n \le q \rbrace} |a_n| \le \sum_{n = f(p)}^{f(q)} |a_n| \le \epsilon$. And use Proposition 7.2.5 again, we conclude that $\sum_{n = 0}^\infty a_{f(n)}$ is also an absolutely convergent series.  
+*  Let $f(0) = m$, then $\sum_{n = 0}^q |a_{f(n)|} \le \sum_{n = m}^{f(q)} |a_n| \le \sum_{n = 0}^{f(q)} |a_{n}|$ for every $q \in N$. Then use Corollary 7.3.2 we could get that $\sum_{n = 0}^\infty a_{f(n)}$ is also an absolutely convergent series.
 
 ## 7.5 The root and ratio tests  
 ### Theorem 7.5.1 (Root test). Let $\sum_{n = m}^\infty a_{n}$ be a series of real numbers, and let $\alpha := \lim sup_{n \rightarrow \infty} |a_n|^{1/n}$.  
@@ -170,4 +171,11 @@ Exercise 7.4.1. Let $\sum_{n = 0}^\infty a_{n}$ be an absolutely convergent seri
 (b) If $\alpha > 1$, then the series $\sum_{n = m}^\infty a_{n}$ is not conditionally convergent.(and hence cannot be absolutely convergent either).  
 (c) If $\alpha = 1$, we can not assert any conclusion.  
 
-Lemma 7.5.2. Let $(c_n)_{n=m}^\infty$ be a sequence of positive numbers. Then we have $\lim inf_{n \rightarrow \infty} \frac{c_{n + 1}}{c_n} \le \lim inf_{n \rightarrow \infty} c_n^{1/n} \le \lim sup_{n \rightarrow \infty} c_n^{1/n} \le \lim sup_{n \rightarrow \infty} \frac{c_{n + 1}}{c_n}$.  
+### Lemma 7.5.2. Let $(c_n)_{n=m}^\infty$ be a sequence of positive numbers. Then we have $\lim inf_{n \rightarrow \infty} \frac{c_{n + 1}}{c_n} \le \lim inf_{n \rightarrow \infty} c_n^{1/n} \le \lim sup_{n \rightarrow \infty} c_n^{1/n} \le \lim sup_{n \rightarrow \infty} \frac{c_{n + 1}}{c_n}$.  
+
+### Corollary 7.5.3 (Ratio test). Let $\sum_{n = m}^\infty a_{n}$ be a series of non-zero numbers. (The non-zero hypothesis is required so that the ratios $|a_{n + 1}| / |a_n|$ appearing below are well-defined.)  
+(a) If $\lim sup_{n \rightarrow \infty} \frac{|a_{n+1}|}{|a_{n}|} < 1$, then the series $\sum_{n = m}^\infty a_{n}$ is absolutely convergent (hence conditionally convergent).  
+(b) If $\lim inf_{n \rightarrow \infty} \frac{|a_{n+1}|}{|a_{n}|} > 1$, then the series $\sum_{n = m}^\infty a_{n}$ is not conditionally convergent (and thus cannot be absolutely convergent).  
+(c) In the remaining cases, we cannot assert any conclusion.  
+
+### Proposition 7.5.4. We have $\lim sup_{n \rightarrow \infty} n^{1 / n} < 1$.  
