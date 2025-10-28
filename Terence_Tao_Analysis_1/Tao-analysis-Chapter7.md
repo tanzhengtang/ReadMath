@@ -179,3 +179,8 @@ Exercise 7.4.1. Let $\sum_{n = 0}^\infty a_{n}$ be an absolutely convergent seri
 (c) In the remaining cases, we cannot assert any conclusion.  
 
 ### Proposition 7.5.4. We have $\lim sup_{n \rightarrow \infty} n^{1 / n} < 1$.  
+
+### Exercises  
+Exercise 7.5.1. Prove the first inequality in Lemma 7.5.2.  
+Exercise 7.5.2. Let $x$ be a real number with $|x| < 1$, and $q$ be a real number. Show that the series $\sum_{n = 1}^\infty n^qx^n$ is absolutely convergent, and that $\lim_{n \rightarrow \infty} n^qx^n = 0$.  
+Exercise 7.5.3. Give an example of a divergent series $\sum_{n = 1}^\infty a_n$ of positive numbers an such that $\lim_{n \rightarrow \infty} a_{n + 1} / a_n = \lim_{n \rightarrow \infty} a^{1 / n}_n = 1$, and give an example of a convergent series $\sum_{n = 1}^\infty b_n$ of positive numbers bn such that $\lim_{n \rightarrow \infty} b_{n + 1} / b_n = \lim_{n \rightarrow \infty} b^{1 / n}_n = 1$. (Hint: use Corollary 7.3.7.) This shows that the ratio and root tests can be inconclusive even when the summands are positive and all the limits converge.  
