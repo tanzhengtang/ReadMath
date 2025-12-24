@@ -149,6 +149,7 @@ Exercise 5.5.4. Let $q_1, q_2, q_3, ...$  be a sequence of rational numbers with
 * $|q_n - q_M| \le 1 / M \Rightarrow q_n - 1 / M \le q_M \le q_n + 1 / M$ for all $n \ge M$. Let $\begin{matrix} p_n :=\begin{cases}q_M,&\text{if} ~ n < M \\q_n,&\text{if} ~ n \ge M\end{cases}\end{matrix}$. Obviously $LIM_{n\rightarrow\infty}q_n = LIM_{n\rightarrow\infty}p_n = S$ and $p_n - 1 / M \le q_M \le p_n + 1 / M$ for all $n \ge 1$. Use Exercise 5.4.8, $p_n - 1 / M \le q_M \le p_n + 1 / M \Rightarrow S - 1 / M \le q_M \le S + 1 / M \Rightarrow |q_M − S| \le 1 / M$.  
 
 Exercise 5.5.5. Establish an analogue of Proposition 5.4.14, in which “rational” is replaced by “irrational”.   
+* let $d = y - x$, and $\sqrt{2}$ is an irrational number. Obviously, $\sqrt{2} > 1 \Rightarrow d / \sqrt{2} < d \Rightarrow x < x + d / \sqrt{2} < x + d < y$. Show the $x + d / \sqrt{2}$ is irrational. If $x$ is rational, then $x = q / j$ for $q, j$ are integers.
 
 ## 5.6 Real exponentiation, Part I  
 ### Definitions  
